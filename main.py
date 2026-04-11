@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 from datetime import datetime
 
-from config import DAILY_CANDIDATE_POOL, GENERATE_LLM_PROMPT, WATCHLIST, normalize_symbol
+from app_config import DAILY_CANDIDATE_POOL, GENERATE_LLM_PROMPT, WATCHLIST, normalize_symbol
 from modules.analysis_service import (
     analyze_market,
     get_nightly_positive_watchlist,

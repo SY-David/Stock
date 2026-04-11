@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from config import OUTPUT_DIR, RECOMMENDATION_MIN_SCORE, RECOMMENDATION_TOP_N, REPORT_TOP_N
+from app_config import OUTPUT_DIR, RECOMMENDATION_MIN_SCORE, RECOMMENDATION_TOP_N, REPORT_TOP_N
 
 
 class AIReporter:

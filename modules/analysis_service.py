@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from config import ENABLE_NIGHTLY_CONTEXT, REPORT_TOP_N
+from app_config import ENABLE_NIGHTLY_CONTEXT, REPORT_TOP_N
 from modules.ai_reporter import AIReporter
 from modules.nightly_engine import NightlyEngine
 from modules.scoring_engine import ScoringEngine

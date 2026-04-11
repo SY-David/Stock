@@ -9,7 +9,7 @@ from xml.etree import ElementTree
 
 import requests
 
-from config import CACHE_DIR, NIGHTLY_NEWS_LIMIT, NIGHTLY_REQUEST_TIMEOUT
+from app_config import CACHE_DIR, NIGHTLY_NEWS_LIMIT, NIGHTLY_REQUEST_TIMEOUT
 
 
 class NightlyEngine:

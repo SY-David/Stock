@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 from datetime import datetime
 
-from config import SNAPSHOT_PATH, normalize_symbol
+from app_config import SNAPSHOT_PATH, normalize_symbol
 from modules.site_snapshot import (
     build_snapshot,
     load_snapshot,

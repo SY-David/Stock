@@ -6,7 +6,7 @@ from pathlib import Path
 
 import requests
 
-from config import CACHE_DIR, LOOKBACK_DAYS, ML_LOOKBACK_DAYS, REQUEST_TIMEOUT, normalize_symbol
+from app_config import CACHE_DIR, LOOKBACK_DAYS, ML_LOOKBACK_DAYS, REQUEST_TIMEOUT, normalize_symbol
 
 
 class TWSEClient:

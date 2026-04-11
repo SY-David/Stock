@@ -5,7 +5,7 @@ from dataclasses import asdict, dataclass
 from datetime import datetime
 from pathlib import Path
 
-from config import (
+from app_config import (
     DAILY_CANDIDATE_POOL,
     GENERATE_LLM_PROMPT,
     HISTORY_DIR,

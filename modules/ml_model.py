@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 import pandas as pd
 
-from config import ML_PREDICTION_HORIZON_DAYS
+from app_config import ML_PREDICTION_HORIZON_DAYS
 
 try:
     from sklearn.linear_model import LogisticRegression

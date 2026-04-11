@@ -5,7 +5,7 @@ from datetime import datetime
 import pandas as pd
 import streamlit as st
 
-from config import DAILY_CANDIDATE_POOL, HISTORY_DIR, SNAPSHOT_PATH, UPDATE_STATUS_PATH, WATCHLIST, normalize_symbol
+from app_config import DAILY_CANDIDATE_POOL, HISTORY_DIR, SNAPSHOT_PATH, UPDATE_STATUS_PATH, WATCHLIST, normalize_symbol
 from modules.analysis_service import (
     analyze_market,
     get_nightly_positive_watchlist,

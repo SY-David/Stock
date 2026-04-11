@@ -4,7 +4,7 @@ import math
 
 import pandas as pd
 
-from config import ALERT_RULES
+from app_config import ALERT_RULES
 from modules.ml_model import SimpleQuantML
 
 
