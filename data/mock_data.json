@@ -1,0 +1,28 @@
+{
+    "2344.TW": {
+        "info": {"name": "華邦電", "sector": "半導體業"},
+        "technical": [
+            {"date": "2024-04-08", "close": 27.5, "volume": 35000, "ma20": 26.8, "ma60": 27.0},
+            {"date": "2024-04-09", "close": 28.1, "volume": 85000, "ma20": 26.9, "ma60": 27.0}
+        ],
+        "institutional": {
+            "foreign_inv_net_buy_3d": 15000,
+            "investment_trust_net_buy_3d": 5000
+        },
+        "valuation": {"pe_ratio": 15.2, "pb_ratio": 1.2, "yield": 4.5},
+        "events": ["法說會即將召開"]
+    },
+    "0050.TW": {
+        "info": {"name": "元大台灣50", "sector": "ETF"},
+        "technical": [
+            {"date": "2024-04-08", "close": 156.4, "volume": 12000, "ma20": 153.2, "ma60": 148.5},
+            {"date": "2024-04-09", "close": 157.0, "volume": 14000, "ma20": 153.5, "ma60": 148.8}
+        ],
+        "institutional": {
+            "foreign_inv_net_buy_3d": -2000,
+            "investment_trust_net_buy_3d": 1000
+        },
+        "valuation": {"pe_ratio": 18.5, "pb_ratio": 2.1, "yield": 3.8},
+        "events": []
+    }
+}

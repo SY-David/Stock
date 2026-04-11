@@ -1,0 +1,21 @@
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "7860:7860"
+    environment:
+      TZ: Asia/Taipei
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+
+  refresh:
+    build: .
+    profiles: ["jobs"]
+    environment:
+      TZ: Asia/Taipei
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+    command: ["python", "refresh_snapshot.py"]

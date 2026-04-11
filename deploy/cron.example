@@ -1,0 +1,4 @@
+CRON_TZ=Asia/Taipei
+
+# 每個交易日 15:10 更新網站快照
+10 15 * * 1-5 cd /opt/tw_stock_assistant && /usr/bin/docker compose run --rm refresh
