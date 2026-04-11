@@ -3,10 +3,22 @@ from __future__ import annotations
 import math
 from datetime import date
 from pathlib import Path
+from urllib.parse import urlparse
 
 import requests
+import urllib3
 
-from app_config import CACHE_DIR, LOOKBACK_DAYS, ML_LOOKBACK_DAYS, REQUEST_TIMEOUT, normalize_symbol
+from app_config import (
+    ALLOW_INSECURE_TWSE_SSL_FALLBACK,
+    CACHE_DIR,
+    LOOKBACK_DAYS,
+    ML_LOOKBACK_DAYS,
+    REQUEST_TIMEOUT,
+    normalize_symbol,
+)
+
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 class TWSEClient:
@@ -15,6 +27,7 @@ class TWSEClient:
 
     def __init__(self, timeout: int = 20):
         self.timeout = timeout
+        self.allow_insecure_ssl_fallback = ALLOW_INSECURE_TWSE_SSL_FALLBACK
         self.session = requests.Session()
         self.session.headers.update(
             {
@@ -37,7 +50,12 @@ class TWSEClient:
         if cache_path and cache_path.exists():
             return self._read_cache(cache_path)
 
-        response = self.session.get(url, params=params, timeout=self.timeout)
+        try:
+            response = self.session.get(url, params=params, timeout=self.timeout)
+        except requests.exceptions.SSLError:
+            if not self._should_retry_without_verify(url):
+                raise
+            response = self.session.get(url, params=params, timeout=self.timeout, verify=False)
         response.raise_for_status()
         payload = response.json()
 
@@ -51,6 +69,12 @@ class TWSEClient:
         import json
 
         return json.loads(cache_path.read_text(encoding="utf-8"))
+
+    def _should_retry_without_verify(self, url: str) -> bool:
+        if not self.allow_insecure_ssl_fallback:
+            return False
+        hostname = (urlparse(url).hostname or "").lower()
+        return hostname.endswith("twse.com.tw")
 
 
 class DataStorage:

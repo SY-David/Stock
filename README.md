@@ -31,6 +31,7 @@ RECOMMENDATION_TOP_N=3
 RECOMMENDATION_MIN_SCORE=65
 HISTORY_LIMIT=30
 REQUEST_TIMEOUT=20
+ALLOW_INSECURE_TWSE_SSL_FALLBACK=true
 ENABLE_NIGHTLY_CONTEXT=true
 NIGHTLY_REQUEST_TIMEOUT=12
 NIGHTLY_NEWS_LIMIT=4
@@ -92,6 +93,7 @@ GUI 會顯示：
 
 網站若找到 `data/site_snapshot.json`，會優先讀取快照；沒有快照時才會即時抓資料。
 若排程更新失敗，會沿用上一版快照並在頁面上顯示 fallback 提示。
+若雲端環境對 TWSE 歷史月資料出現 SSL 驗證不相容，程式會對該公開端點自動退回不驗證重試；可用 `ALLOW_INSECURE_TWSE_SSL_FALLBACK=false` 關掉。
 
 ## 分享給朋友看
 
