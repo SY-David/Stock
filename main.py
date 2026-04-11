@@ -6,6 +6,8 @@ from datetime import datetime
 from config import DAILY_CANDIDATE_POOL, GENERATE_LLM_PROMPT, WATCHLIST, normalize_symbol
 from modules.analysis_service import (
     analyze_market,
+    get_nightly_positive_watchlist,
+    get_nightly_risk_watchlist,
     get_overheated_watchlist,
     get_rebound_watchlist,
     get_recommendations,
@@ -35,7 +37,7 @@ def main() -> None:
     candidate_pool = [normalize_symbol(item) for item in (args.candidate_pool or DAILY_CANDIDATE_POOL)]
 
     print("啟動台股自選股研究助理...")
-    print("資料來源: TWSE 官方資料 + 本地快取")
+    print("資料來源: TWSE 官方資料 + 本地快取 + 夜間事件層")
     print(f"固定追蹤: {', '.join(watchlist)}")
     print(f"每日候選池: {', '.join(candidate_pool)}")
 
@@ -51,8 +53,6 @@ def main() -> None:
             continue
         stock_name = bundle.raw_data[symbol]["info"]["name"]
         print(f"  -> 固定追蹤 {symbol} {stock_name}")
-        if symbol not in bundle.evaluations and bundle.raw_data[symbol].get("warnings"):
-            print(f"     資料警示: {'；'.join(bundle.raw_data[symbol]['warnings'])}")
 
     for symbol in candidate_pool:
         if symbol not in bundle.raw_data:
@@ -60,8 +60,6 @@ def main() -> None:
             continue
         stock_name = bundle.raw_data[symbol]["info"]["name"]
         print(f"  -> 候選池 {symbol} {stock_name}")
-        if symbol not in bundle.evaluations and bundle.raw_data[symbol].get("warnings"):
-            print(f"     資料警示: {'；'.join(bundle.raw_data[symbol]['warnings'])}")
 
     if not bundle.evaluations:
         print("\n沒有足夠的線上資料可產生日報。")
@@ -70,13 +68,25 @@ def main() -> None:
     daily_recommendations = get_recommendations(bundle)
     rebound_watchlist = get_rebound_watchlist(bundle)
     overheated_watchlist = get_overheated_watchlist(bundle)
+    nightly_positive_watchlist = get_nightly_positive_watchlist(bundle)
+    nightly_risk_watchlist = get_nightly_risk_watchlist(bundle)
 
-    print("\n今日推薦:")
+    print("\n今晚到明早總覽:")
+    print(
+        f"  - 夜間市場偏向: {bundle.nightly_market.get('market_bias', '中性')} | "
+        f"分數 {bundle.nightly_market.get('macro_score', 0)} | "
+        f"{bundle.nightly_market.get('summary', '夜間消息偏中性')}"
+    )
+
+    print("\n明日推薦:")
     if daily_recommendations:
         for item in daily_recommendations:
             print(
-                f"  - {item['symbol']} {item['symbol_name']} | {item['score']} 分 | "
-                f"{item['signal_strength']} | {item['action']}"
+                f"  - {item['symbol']} {item['symbol_name']} | "
+                f"{item.get('tomorrow_light', '黃燈')} | "
+                f"明日分數 {item.get('tomorrow_score', item['score'])} | "
+                f"{item.get('tomorrow_action', item['action'])} | "
+                f"{item.get('recommendation_reason', '無')}"
             )
     else:
         print("  - 今天沒有達到門檻的新推薦。")
@@ -84,7 +94,11 @@ def main() -> None:
     print("\n固定追蹤摘要:")
     if bundle.watchlist_results:
         for item in bundle.watchlist_results:
-            print(f"  - {item['symbol']} {item['symbol_name']} | {item['score']} 分 | {item['rating']}")
+            print(
+                f"  - {item['symbol']} {item['symbol_name']} | "
+                f"{item.get('tomorrow_light', '黃燈')} | "
+                f"明日分數 {item.get('tomorrow_score', item['score'])}"
+            )
     else:
         print("  - 固定追蹤清單沒有足夠資料。")
 
@@ -102,6 +116,26 @@ def main() -> None:
     else:
         print("  - 目前沒有明顯短線過熱的標的。")
 
+    print("\n夜間消息偏多:")
+    if nightly_positive_watchlist:
+        for item in nightly_positive_watchlist:
+            print(
+                f"  - {item['symbol']} {item['symbol_name']} | 夜間分數 {item.get('night_score', 0)} | "
+                f"{item.get('headline_summary', '夜間消息偏中性')}"
+            )
+    else:
+        print("  - 今晚沒有明顯偏多事件加分。")
+
+    print("\n夜間消息偏空:")
+    if nightly_risk_watchlist:
+        for item in nightly_risk_watchlist:
+            print(
+                f"  - {item['symbol']} {item['symbol_name']} | 夜間分數 {item.get('night_score', 0)} | "
+                f"{item.get('headline_summary', '夜間消息偏中性')}"
+            )
+    else:
+        print("  - 今晚沒有明顯偏空事件風險。")
+
     today_str = datetime.now().strftime("%Y-%m-%d")
     print("\n正在產生日報...")
 
@@ -112,6 +146,9 @@ def main() -> None:
         candidate_results=bundle.candidate_results,
         rebound_watchlist=rebound_watchlist,
         overheated_watchlist=overheated_watchlist,
+        nightly_market=bundle.nightly_market,
+        nightly_positive_watchlist=nightly_positive_watchlist,
+        nightly_risk_watchlist=nightly_risk_watchlist,
     )
     report_path = reporter.save_report(report_md, f"daily_report_{today_str}.md")
     print(f"[Success] 日報已輸出: {report_path}")
@@ -125,6 +162,9 @@ def main() -> None:
             candidate_results=bundle.candidate_results,
             rebound_watchlist=rebound_watchlist,
             overheated_watchlist=overheated_watchlist,
+            nightly_market=bundle.nightly_market,
+            nightly_positive_watchlist=nightly_positive_watchlist,
+            nightly_risk_watchlist=nightly_risk_watchlist,
         )
         prompt_path = reporter.save_report(prompt_text, f"chatgpt_input_{today_str}.txt")
         print(f"[Success] LLM prompt 已輸出: {prompt_path}")

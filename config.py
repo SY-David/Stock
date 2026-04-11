@@ -13,7 +13,9 @@ BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
 OUTPUT_DIR = BASE_DIR / "output"
 CACHE_DIR = DATA_DIR / "cache"
+HISTORY_DIR = DATA_DIR / "history"
 SNAPSHOT_PATH = DATA_DIR / "site_snapshot.json"
+UPDATE_STATUS_PATH = DATA_DIR / "update_status.json"
 
 if load_dotenv:
     load_dotenv(BASE_DIR / ".env")
@@ -51,8 +53,12 @@ ML_PREDICTION_HORIZON_DAYS = int(os.getenv("ML_PREDICTION_HORIZON_DAYS", "5"))
 REPORT_TOP_N = int(os.getenv("REPORT_TOP_N", "5"))
 RECOMMENDATION_TOP_N = int(os.getenv("RECOMMENDATION_TOP_N", "3"))
 RECOMMENDATION_MIN_SCORE = int(os.getenv("RECOMMENDATION_MIN_SCORE", "65"))
+HISTORY_LIMIT = int(os.getenv("HISTORY_LIMIT", "30"))
 GENERATE_LLM_PROMPT = _parse_bool(os.getenv("GENERATE_LLM_PROMPT"), default=True)
 REQUEST_TIMEOUT = int(os.getenv("REQUEST_TIMEOUT", "20"))
+ENABLE_NIGHTLY_CONTEXT = _parse_bool(os.getenv("ENABLE_NIGHTLY_CONTEXT"), default=True)
+NIGHTLY_REQUEST_TIMEOUT = int(os.getenv("NIGHTLY_REQUEST_TIMEOUT", "12"))
+NIGHTLY_NEWS_LIMIT = int(os.getenv("NIGHTLY_NEWS_LIMIT", "4"))
 
 
 ALERT_RULES = {

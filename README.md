@@ -7,6 +7,7 @@
 - 每天從候選池挑出 1 到 3 檔推薦
 - 用價格、均線、量能加上 CPU 友善的 `Logistic Regression` 做輔助評分
 - 額外整理 `超跌反彈觀察` 和 `超漲轉弱觀察` 兩個特殊榜單
+- 新增夜間事件層，整理今晚到明早的新聞與風險
 - 輸出 CLI 日報與 Streamlit GUI
 
 ## 安裝
@@ -28,7 +29,11 @@ ML_LOOKBACK_DAYS=960
 ML_PREDICTION_HORIZON_DAYS=5
 RECOMMENDATION_TOP_N=3
 RECOMMENDATION_MIN_SCORE=65
+HISTORY_LIMIT=30
 REQUEST_TIMEOUT=20
+ENABLE_NIGHTLY_CONTEXT=true
+NIGHTLY_REQUEST_TIMEOUT=12
+NIGHTLY_NEWS_LIMIT=4
 ```
 
 ## CLI 用法
@@ -74,15 +79,19 @@ python -m streamlit run app.py
 ```
 
 GUI 會顯示：
-- 今日推薦
+- 明日推薦
+- 今晚到明早總覽
 - 候選池前段班 / 偏弱股
 - 超跌反彈觀察 / 超漲轉弱觀察
+- 夜間消息偏多 / 夜間消息偏空
+- 歷史紀錄
 - 固定追蹤明細
 - 候選池明細
 - 中學生版欄位說明
 - 日報與 prompt 匯出
 
 網站若找到 `data/site_snapshot.json`，會優先讀取快照；沒有快照時才會即時抓資料。
+若排程更新失敗，會沿用上一版快照並在頁面上顯示 fallback 提示。
 
 ## 分享給朋友看
 
@@ -165,5 +174,6 @@ python refresh_snapshot.py --no-prompt
 
 - 目前推薦主要依賴價格、均線、量能與 ML 歷史特徵
 - 法人、估值、月營收在這版沒有額外接入
+- 夜間事件層目前以公開新聞標題規則判讀為主，不是完整 NLP
 - ML 是 CPU 友善小模型，不是大型深度學習
 - 這是研究輔助工具，不是交易保證

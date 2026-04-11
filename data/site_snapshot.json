@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-11T11:27:20",
+  "generated_at": "2026-04-11T15:39:41",
   "watchlist_symbols": [
     "0050",
     "2344"
@@ -89651,7 +89651,36 @@
       "revenue_yoy": null,
       "revenue_mom": null,
       "latest_revenue_month": null,
-      "margin_usage": null
+      "margin_usage": null,
+      "night_score": -3,
+      "night_bias": "中性",
+      "tomorrow_score": 61,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "獲利"
+      ],
+      "headline_summary": "利多：停火；利空：暴跌；利空：戰爭",
+      "headlines": [
+        {
+          "title": "一周熱門零股／0050、台積電 交投重心 - 經濟日報",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5FRGFVWk52YWlUVlNFYXg4MGRpS3lRNXFmYWlsTVNyeEltdy1pUTFiREtrb2tiMm5TdkN1OFkzMU54MlM4YlhCZVF4dnAtVGhqTUlyTHcwTGxHUdIBX0FVX3lxTE56bUs4SlFvcFJndDlHS0M0TkhvUmdQMjU0SjR6bFZKNnMzN1JZZjlTQlZvRFo0Q0NwYVNfZE43aVVEUktxVlAxODJVS2V3Smt2dHZZc2RoMmNHZXZnUWZV?oc=5",
+          "published": "Fri, 10 Apr 2026 16:17:21 GMT"
+        },
+        {
+          "title": "274萬多人小確幸！0050規模破1.5兆元 調降費用率 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMitAJBVV95cUxNNWF6VXVSNGJxdXpjVkFDZjR3Z3hzc0JTTWV6aVIyam5zSTdnSUFLSmJKM0s1TXl4a0gzX3EtdV9lNHZQSkdPajE4Mjc2ajJrMjh1eFU2Y0N0V0tjU2FKcHdsdTZwSkFqa3NPR3hwLXBta1doOGs1QTFNWWVjNktjQXRPd2c2cTA1THd5X3hsS3M4YlJwZ1pvUTd1NlhGWFJVUUtIUjNWU0YybDVYaHFObGo2N04xMXhTWHJheW55REUtOXRBQmZBUXdPRFU2Vnh0Wk0tVVo3a3VQR2JpTk1xVVlQTkVkQzM5RHZublZpR3lfLTFkN2lBMFo0STdWSUZ2aUtLeXctb0MxT1VxRnZyeW1MakJBalNONVpVSG9YTHg3SzJ2RUlLbEhHcTRsMHFwRXlCeQ?oc=5",
+          "published": "Fri, 10 Apr 2026 09:01:25 GMT"
+        },
+        {
+          "title": "元大台灣50(0050) 個股概覽 | 個股 - 股市 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE56czBuWjhEY0s2amt0RUVWLUJpMUdCYzV3LVdKNExyS0pHNkVzR2QzX0FkTzZ1NmllMk1qalVyaDk3NG9JaXJRbUdyTHNnU19vVU00?oc=5",
+          "published": "Fri, 10 Apr 2026 15:29:43 GMT"
+        }
+      ]
     },
     "2344": {
       "symbol": "2344",
@@ -89702,7 +89731,36 @@
       "revenue_yoy": null,
       "revenue_mom": null,
       "latest_revenue_month": null,
-      "margin_usage": null
+      "margin_usage": null,
+      "night_score": -5,
+      "night_bias": "中性",
+      "tomorrow_score": 28,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "獲利"
+      ],
+      "headline_summary": "利空：賣超",
+      "headlines": [
+        {
+          "title": "全球首檔記憶體ETF「DRAM」登場 台灣南亞科、華邦電雙雙入列，大戶投複委託也可以交易｜美股觀察 - sinotrade.com.tw",
+          "link": "https://news.google.com/rss/articles/CBMivgRBVV95cUxQRjRQMjJkVzRkdmZ2c1BTeHlfZlJPVkVjZWRPc1FHdnByN0tfNDJDc0NYMXBoVF85akZqNzJDWU1rX2lua1dsbG5xbXltZVJQR1hrNGdKV2lMaGw5QUZxaVFsRE5LRVBkNEg0LWdjSHZOeng0MU41T1hmUE5lT2ppVmtjeHQyanRaeFllQnEzOTFrOGFnVDNHQjhYdmRka0dhY21xQzlUenRVRFdzejlSanQyQ1dsam9KaGY1WGROU1NtTEoyZmJ4R01xSlBZQ2gzSEpaN1RoeDNhWXUtdXhTVTBMaDlEbGpPNGs5U29yQmtJYWhFbUp6Q1UtYmhSenpXSHpmVVp0NVZxSEtJckJNWFRZUFU0a2didkM0Q3pHNldNQ3JhVk1Sa2ZxaElaWGR2SkctVERBejZoeTZuRzdCUlNWUkdvY2hyS25idnRiNnZwbUsyUHlOWWc2MXB0SWJhQ2xVMWRSdEU4T3l2VmlQQS1BTndaN2UxVEF3LWxvaldZaDIwUHJmcllLdHR5VDJmTVhrWWNhaUxMclViT3lJUmp6eXdFVXRnb0gwQkRHT0dNcl9UQUJDWkVCVHE1aEl3Umk4NEVibWZBQThUUm0zWmdCMG52MG5nWnlpUkpONnBfemJxdkdsb3JKeW9VVlFpQzVtM2pJY3JaMGx1a3B6aEphUGYxM3hzUWFYUEpuUzFndjlqZE1IMTE5NEhfTmZqcWpsRUFrand3eHZ6WWVyQ3p5X1JBT1ZFQlE1emJn?oc=5",
+          "published": "Fri, 10 Apr 2026 05:32:39 GMT"
+        },
+        {
+          "title": "台股大漲657點投信前10大賣超出爐！華邦電、旺宏等記憶體不是最慘 它才是最大苦主 - 自由財經",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE45U1JIRjZ6ZUZOendtSHJnemdQRTRLYnUxVDBiRTZyRDFpcHJIaGxNbE5Ua2FaLVNGUDJWWF9BdWx5M1luYm1GN0JJbjQxTWJyMlFWbkZRUVEtS014d1VR0gFkQVVfeXFMTVlCdTRNVmxvVkFRcGRuQmJWaF9OY0ZuZF9HTV9fWkd2OVFIVkloQVZZbExiWG9DVFhpNWUtSW5lTHg2VWJneUduYWNsRmdNNTVsY3ZoYWNRVGZ0eDROdkdCNDBqTw?oc=5",
+          "published": "Tue, 07 Apr 2026 09:06:29 GMT"
+        },
+        {
+          "title": "【Hot台股】華邦電一度挫8%跌破百元大關...網哀「連彈都彈不起來」分析師揭關鍵支撐價位 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMinARBVV95cUxPbTl1SzBKUkc5YWJkeXg2OTdnYVcyQUhlSHdfdC1UMTQwUl9VeDYwaFF3Rm02OVRuTWRrc0cwb1U1Ui1QVUFfdjRwemNVRm9nX195NXY3MW9Jc0hyVG9JMmxORW41QnVSWk81eThfVUI5VkFVU0ZTd0ZTdF8yT1luZjI0T0djV185b213MVVJOU5mRXQzYko0Nncyby1MWnpOUS1sUklBZS1WaUNGRnVtMW1OVktUSU8tVnM1TUswZ1JfOU81aHdaY3dxaGQ5ODFSQXdnUzlJV1ZvN1NoSUhRcTFJR1I1cGlxN3h1YVg0a0RmQWZ0WU9vMzZfeTdwMnRiM3F5V0VxMUZGV2NDaHdHVDA0Yi1yWjZIaXJ5anRKRmM2dWc0dDlOcEJpTUtmVm5vTTJSa2NYSTVoZFlkWUFxemlISXVDVEU0TnZzUmd0VGN4MlVhamE2bkxWNDlpejlRNWpmbTh1cG5PRWhodk5nUGNqVjd4ZjBIdUVldUZIU29aT3YzRmd2U0Q5eFRjaTFBRmpfeHg0LVJXcVpLNTA5N0JPVFRLWGQxeFd6Zjl4ZS1pcmlGUkhwZVdEQ3NqWlRxRERLUEV5WWUxdkViNjJTcEpOeVFweGFNcTJYNkJqT1hzeHcwR2ZzNzBfR1BqbmtTQWFsajhic1VUdFNGcXU2ME9kNEtfempFZ0l2b1FVbXJtOEZqTDZkZzNkMTM?oc=5",
+          "published": "Mon, 23 Mar 2026 07:00:00 GMT"
+        }
+      ]
     },
     "2330": {
       "symbol": "2330",
@@ -89754,7 +89812,36 @@
       "revenue_yoy": null,
       "revenue_mom": null,
       "latest_revenue_month": null,
-      "margin_usage": null
+      "margin_usage": null,
+      "night_score": -3,
+      "night_bias": "中性",
+      "tomorrow_score": 62,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "法說"
+      ],
+      "headline_summary": "利多：停火；利空：暴跌；利空：戰爭",
+      "headlines": [
+        {
+          "title": "【即時新聞】台積電(2330)本周領軍攻高帶動台股大漲8.74%，指數重返35000點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPa2VqTG9IV3lrQ09FVXB1c1RQNlctNVAzRWhVWGpSbi1sd1NCQVhUdGtiaTJEcnFWYzI1cWd1VXRhdmI4am5BU1d4NXJTQ0FRY2pqUEdUbDBXNWdQNGpBclh2dWh4ajNWZ0UwRnJNdHFjWHlPdEZMcGh1SVRDeVVfQW1sVEhZekdYbjdWbmx0NTY?oc=5",
+          "published": "Fri, 10 Apr 2026 11:33:18 GMT"
+        },
+        {
+          "title": "權王台積電法說行情助攻 台股再飆新高站上35,417點 - Yahoo新聞",
+          "link": "https://news.google.com/rss/articles/CBMizAJBVV95cUxNZnlkZjJBMmxGbW50QTRzVEtqMGtpWUJuZFR6cklqbVI5cUZZdDR1T1VCSm9YNWdzVm9pY3NGY2RxVFlPd1dUeDZuU2pvVldnZENaRmRMdlBVZE9meUZINDZXQjRydzI1TkFxcy1PNERMMXBCdXBqaU9xUW5jOXhVMktka21pb04zNmNzWm5remdLSzZZdGc4NDNQWWMtWTItX2dHMkdVVlRfMXRWa202VVZHbUhjRTRHa1R4czRlSmkwSXhjd0w2LWFabnh5bklsdVZyT3pHY1lPWDQ5QjEyS1Y3WFV6bklfREtMUmF1RGVsS0xKbTAzbVZLdHJ0clhQVHJKZU9ZMXhXQ0lHWDItZHZ3LWxoVTRON1NSV21yM1ppYlp2ZEt3QW1ueDJ5VVBNbGY0alpJMjNJZmxkNlRTS3kzMzJ2MGdRMDE0RA?oc=5",
+          "published": "Fri, 10 Apr 2026 22:39:11 GMT"
+        },
+        {
+          "title": "台積電、國巨 內外資力挺 | 市場焦點 | 證券 - 經濟日報",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8yLVlXRUVrUDlFdVlEaEZ6eHFJZ3lWTFFFWFhQcXdoN1lBcXRtUWxDdWVSOVpPbnlISWNxc3NCeDV5SndPTWFhQWx5anlDLTZZRDJoUWVid3lSdw?oc=5",
+          "published": "Fri, 10 Apr 2026 16:51:45 GMT"
+        }
+      ]
     },
     "2317": {
       "symbol": "2317",
@@ -89804,7 +89891,36 @@
       "revenue_yoy": null,
       "revenue_mom": null,
       "latest_revenue_month": null,
-      "margin_usage": null
+      "margin_usage": null,
+      "night_score": 0,
+      "night_bias": "中性",
+      "tomorrow_score": 35,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "獲利"
+      ],
+      "headline_summary": "利多：回升",
+      "headlines": [
+        {
+          "title": "鴻海(2317)合理價多少？股價192元是低點嗎？台股老手揭外資成本價「當前下跌是錯殺」：這訊號出現就會回補 - 今周刊",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPVXBXYkt5ZGlDZ0xrZG52OWdoMFJNTFpKZXQyZ0pneWZrYVJWM1VrcWh6RG5MT0lrd3RDTGlzM2o3Z2hRaUQ3TEZvdXZwNWxMVFJib0NxMHNJNGlydHpTNV9UZHdlSVhab0c3b1NFV1RwenJkM1lfZE1GRThwLUJUMg?oc=5",
+          "published": "Tue, 07 Apr 2026 09:00:00 GMT"
+        },
+        {
+          "title": "2317 鴻海 - 台股震盪怎麼賺？跟「峰」抄底就對了！ 戰事干擾、台股震盪加劇... - 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBKVG5WSkw1cGNFd3hIWE91TWdnekVuY2VncVBwVmlIVnBzcy10Yktwamo0bG9MOG83Yno2SDVQNkFmbWEyUHctSUhhRGpISkNTNTF3RVNTbjU?oc=5",
+          "published": "Wed, 08 Apr 2026 18:57:44 GMT"
+        },
+        {
+          "title": "鴻海(2317)AI光環碎了一地？三率三降、獲利警訊大解析！股魚：這指標沒回升前，別被出貨量騙了！ - 優分析UAnalyze",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5Dd2M3elRZeVQ3eWZmd09iY2E2b0xRblBBX3dlcGIzRkFNVFRCcm5CZjVMbjQ5cUtzSjF0bUs5Q3Z0NzdMNmhtUWxBczNNakdRN2hOWmZn?oc=5",
+          "published": "Wed, 08 Apr 2026 12:00:00 GMT"
+        }
+      ]
     },
     "2454": {
       "symbol": "2454",
@@ -89854,7 +89970,36 @@
       "revenue_yoy": null,
       "revenue_mom": null,
       "latest_revenue_month": null,
-      "margin_usage": null
+      "margin_usage": null,
+      "night_score": -3,
+      "night_bias": "中性",
+      "tomorrow_score": 37,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "獲利"
+      ],
+      "headline_summary": "利多：停火；利空：暴跌；利空：戰爭",
+      "headlines": [
+        {
+          "title": "【Hot台股】聯發科罕亮燈撐盤！網驚「發哥挖到黃金？」 分析師：那個男人要來了 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMihARBVV95cUxONnVUVlI1M3FORjIwN0xMQnRTUVJWTF9jLXpoOFR4cF8tMXh4Q0pLU2tiY2xobmwwNko0d3ZuXzhYZ2JmeTVlMXd6Ym5sWnVlUkxuWk0yeG9MS1RxaTI1eFI5aWdraXNuWE8yZFBDdlpxQmthUWtpSDRzS19GY19QSkR4UGJYSEVKNjdscGd2RjRKMU85YUpmZk1PM1NnTENycHYyNnhzNjA3WUFrYlNOQVRRZHBTUG9lb0txLUtXWnluWUxCalZ0TXFJMXRqMm9JcnZqX1FwMkptTG5XRHN1a2xxeF80Rm1uRndhRlZENkluSE1DUDFFUWdHNmRDRkxzaFZER3BCTmE0dVpDY08wdFFEY0MzRW5ja0hsSHp4VnVTejBYc2NKWnlrek9EUzR6UU0wS3VocFZVVzBubFFfQ1I1b3FkMjNWeEJpTmVXcmY5V1oxWFlmWlVvQzJjQTB3N25pWG5JaElaNGRwRVZUazVuSWh2NUZpN0h6VW9UbkNGODJRRnYtN0VFX3N0SHhLdlBRMFp4ZXd3OGtTUXFJU0hEbFpmbXU5N2hJZ1RQMkl5QnNoVDQzZzdyaUt5S1ZUd1Y2N0duTnNYZkhIY2kzYTQ1akl3dGp3Z2oxYjhYT0lvSUlyZDNwenR2V1E4elVRRlVVM0h3N0ZDWGxzT01WeldQR3M?oc=5",
+          "published": "Thu, 22 Jan 2026 08:00:00 GMT"
+        },
+        {
+          "title": "聯發科(2454)股價鎖漲停1630元！台股衝破30000點，現在上車還來得及嗎？資金流向一次看| 林家群| 全解析 - 風傳媒",
+          "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5VTV90SEEzTHh5bkd6UXkySTFIUDQzNFZPemhGZFVjWDRNWWVKR1VpdkZpX2xiLVZGd25lcDAzakxBZEVkUW5LanRwUkxEdw?oc=5",
+          "published": "Fri, 23 Jan 2026 08:00:00 GMT"
+        },
+        {
+          "title": "焦點股》聯發科：近1個月重挫22.37％ 逆勢抗跌 - 自由財經",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBFWVJJaGRmd2YxVDk1LTJlRWNaOVNnaVNoZkszNkRscXA0SjJwUlJoWTJXRENSRGdCNE1idHpIa2Q4WUZ0VW5wMXBpUzZFcDBOQlhnNXp0MnlJZG5TSWEw0gFkQVVfeXFMTkJCSVlZNnpjNWhBTzZ4X0NtVU5tYU1ZLXJPMW5YcGN6bE1sSm5Ec1JMVnlvdURzQWF5QVVwZi1ubE1fZTBYNGpFZ1VKZVFaUHU3WjBSblY3QzJFLTJFNVVwZjRsdw?oc=5",
+          "published": "Tue, 31 Mar 2026 07:00:00 GMT"
+        }
+      ]
     },
     "2382": {
       "symbol": "2382",
@@ -89908,7 +90053,36 @@
       "revenue_yoy": null,
       "revenue_mom": null,
       "latest_revenue_month": null,
-      "margin_usage": null
+      "margin_usage": null,
+      "night_score": -3,
+      "night_bias": "中性",
+      "tomorrow_score": 75,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "獲利"
+      ],
+      "headline_summary": "利多：停火；利空：暴跌；利空：戰爭",
+      "headlines": [
+        {
+          "title": "廣達（2382）站上三年新高！他看好後市「不容易虧錢」引多空交鋒 - 聯合新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE41eUN2aFRTRk44NUxDU25WNWdPTm1VT0xwMnN5WkJjNFdlWlM3VlNaMk1CU0VyeDVwUE8xekFYZkw3bzhzTkpndFhpdlQ2b1p0QXfSAVdBVV95cUxPc1N5elpUOUE0Y3g0N1NQVXdJMUtDcmxnZ2g1VTJjc0tZSnNQXzhlSHNFME1sTXJGaG9DNkNLV2tWY0hmRWxMZTNiSjE1REwxdlVRS3c4TWc?oc=5",
+          "published": "Fri, 10 Apr 2026 01:03:40 GMT"
+        },
+        {
+          "title": "〈電子五哥營收〉廣達GB300出貨動能強勁 3月、Q1營收雙寫新猷 - news.cnyes.com",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBaRjNTcUlWdVlJcXo5cDZDNHBjMDB1V1l1LWwzMG11ZUtCYkJrWUlfNVMtRm96NTBxTm42c2tkeTltYktjNWRqU203UGp3MmM?oc=5",
+          "published": "Wed, 08 Apr 2026 09:49:06 GMT"
+        },
+        {
+          "title": "荷姆茲海峽停航震撼彈！台股衝高後15分鐘內跳水翻黑 台積電領跌、聯發科、廣達淪重災區 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMikwRBVV95cUxNV1RCQ3Utcjhoa1hSZkpzV2NKVnVUU3E2OWI2akpzY2tSWDhHd3FZTUlSRWpHVHVqZVpFSy1BWkFRcFpuekYxYXBEY0RfZmx0ZjhlbTVSNTd4ZEItWWJIOEx4YmNkWlpqSm85NVRKY2NkVjAtNkMtRm5QY1NFV3pwQkFNbmFLdUxZYmE2b1o3U25EWWRSY1dsYVBjUXhhaDh4NlBTMzZTNjhybWxpNm9JVm5USHlCeEpPY1pfZjRIdGFPbkxjUWhrQ0R2cDY5MXhBNHI5QWtpNF9sZ1U3VC15MGpiYXVaektvS3BxQ1RRLVNBNGZ4ZnBFRVRiUktJakNtUmN0VmFIWkZMcXBPZWVxVmpBVTEzVG45YWxGeVdxd0hRWXcxLWswUHlfWmJMRF81bGNNREhWdi1zMlNkUFV1NTlCWjFOQ2ZRNVc3Z1AwLU5hVUUyZGZpZi11NjhVOW9rWXBxaFp0eTEwTUFXbDAxV3ZsMU9ZclhVaVItYy15cmYtMFAxNnFxZmhEYU4yQ3I3VV9kMU41RTBaM3h5YWZhUlN2eXV2TzRKQWVkYUxMa0tsUXE0dkk0LUlYR0Vzb2VSVDRBR1dQZkxjUXhKUWZuQmwydzZvem5BT3lpQm9MLTY1MEVOekhBYU1NX3c3V3NBSjRJcXpESnRQSHYtWUhIQVQ0cnB4TWJmTGsySDJ1UmVRNGc?oc=5",
+          "published": "Thu, 09 Apr 2026 01:37:38 GMT"
+        }
+      ]
     },
     "2308": {
       "symbol": "2308",
@@ -89961,7 +90135,36 @@
       "revenue_yoy": null,
       "revenue_mom": null,
       "latest_revenue_month": null,
-      "margin_usage": null
+      "margin_usage": null,
+      "night_score": -3,
+      "night_bias": "中性",
+      "tomorrow_score": 67,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "獲利"
+      ],
+      "headline_summary": "利多：停火；利空：暴跌；利空：戰爭",
+      "headlines": [
+        {
+          "title": "第二座神山在崛起？台達電市值衝破4.5兆元大關 成台股史上唯二 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMiowNBVV95cUxNQ3ZzU3pRWHdwRTlIM0Y5ZlFJNHFPUExwTFctMXlYZklFal9FU1lUYkxYMFpzQ0k1ZDY1S1BMNWVQeTQ4NkMxcUJwNi0wQ1A1UTBzSTlzbTBqLVc4QTE3c2JnZnFkVi0wUEQwLUd2N0ppY0VaS3BVb3JJVHMtS3JGX3paMFlMaU5DbFFycGs4b2k1N3VTRnFOLUxsb0hWRndzcENyV0YyaV9HNC1XZmk0SU81bEtnR3d5aW9xYjU0eEx6LVQ4akkySWg5VmhFd0hwQTZWYXBVZXpGRXJqa0p1aE43NHJNYzhHQTVOZ09KVnR5VDVIYVRyTHFHT3k3WE9wUnVDVGZmWHdpWVZwQXltMWhMQUxobnRZZkh4aTlhRDJ5RFNyY3E3V2Nja2JDdzhxT18tRW0wVXlKWG9Rc1ZQR0pKa1YweTJ1VVFjYmJuTXNLTXRKTHZOU296VVUxUzhlWFNXQV80eWM3OWJlcFZocGNFRy1Vb2N0cWQyZWxHVWxDMlNsbjhEMWZ1WERidHhUR1U2VUFwM3V2T2lwd0hQcXBVSQ?oc=5",
+          "published": "Fri, 10 Apr 2026 03:14:05 GMT"
+        },
+        {
+          "title": "台達電(2308) 個股概覽 | 個股 - 股市 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBYSC1FOXZmSnVKcWVpck5EYjRvcjRCWjE0eDVtaUQ1cFpvRmEyb2VGNlZvdEwtUXg1OUM0aVNrNmFlWkF1eWwtMmtTM2x0OEVvUFVn?oc=5",
+          "published": "Fri, 10 Apr 2026 21:50:44 GMT"
+        },
+        {
+          "title": "台達電(2308)股價1700元能買？最新目標價曝光！台股老手：就算美伊談判破裂，也能大膽作多的3檔口袋名單 - 今周刊",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNYXJLbk9hYUZ4QlE0Z2pnVDhpUi1zU1BQNG1QbnN2aDIwT1BQT3dYVFV2dU12WGlDR2VUdjk1OVE5VUJocDVUeDdKSUwxckhqaEJpczBxMm5hUGdvTFFfQS1QWGVXOVYtc25EaWNqRHJBSGJkN1A4ZUJTQkpVdThjNQ?oc=5",
+          "published": "Fri, 10 Apr 2026 02:20:00 GMT"
+        }
+      ]
     },
     "3231": {
       "symbol": "3231",
@@ -90012,7 +90215,36 @@
       "revenue_yoy": null,
       "revenue_mom": null,
       "latest_revenue_month": null,
-      "margin_usage": null
+      "margin_usage": null,
+      "night_score": 1,
+      "night_bias": "中性",
+      "tomorrow_score": 50,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "獲利"
+      ],
+      "headline_summary": "利多：創高",
+      "headlines": [
+        {
+          "title": "營收速報 - 緯創(3231)3月營收3,330.43億元年增率高達117.7％｜新聞快訊｜豐雲學堂 - sinotrade.com.tw",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4yUmt6bFZxX3ZseFp4ZTFtXzhNOFBQMGZmSy1DVUdCc0ZLTjVxY2tDcnN0T0k4X1dyTmhLZ1dRdV9VRlRzcWI2MElfWXo3dGhCTENsaG9NWGNlRTZmNEFtbUlHaEJuXzMzdjF5TlR2UnNwZTdKMGc?oc=5",
+          "published": "Tue, 07 Apr 2026 15:16:00 GMT"
+        },
+        {
+          "title": "〈電子五哥營收〉緯創3月、Q1營收雙創高 預期Q2伺服器動能持續走強 - news.cnyes.com",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5NYTdVaFdkQldBUl8yN01Xb0NQX0ZsVVYwNjZQVGZyMDJxRVZVeHRHbFZ5T0VNSGgwTi1VYTZ4NEJfZl83clFUQ2xuWnVxb1E?oc=5",
+          "published": "Wed, 08 Apr 2026 09:28:21 GMT"
+        },
+        {
+          "title": "目標價全面大升！高盛點名「最強4台股」：鴻海列首選、緯穎衝6400元台廠營收連三月狂飆全面開火 - FTNN 新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9tU2xoV1Q0Vlc0Q0w4V2Q4S21QZjZ1TndQZFBodmxPRzBINWhNUzFpN1hUNTluOXVoSk9CX0lrVTdDWmYzc3BXcGV2UQ?oc=5",
+          "published": "Wed, 08 Apr 2026 02:25:00 GMT"
+        }
+      ]
     },
     "2603": {
       "symbol": "2603",
@@ -90063,7 +90295,36 @@
       "revenue_yoy": null,
       "revenue_mom": null,
       "latest_revenue_month": null,
-      "margin_usage": null
+      "margin_usage": null,
+      "night_score": -3,
+      "night_bias": "中性",
+      "tomorrow_score": 47,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "獲利"
+      ],
+      "headline_summary": "利多：停火；利空：暴跌；利空：戰爭",
+      "headlines": [
+        {
+          "title": "2603 長榮 - 📈 【台股戰情室】震盪中的指南針：核心產業與績優股介紹 最... - 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1BZERUX2wtY08xMHVDdGhNTmt5a3NLRFIwU0pmdVlWREhpaldFRWpGcTlNemVuQ01ja0tVblAtck9ZRzdfMHBPVjh6cktLWC13ZGJ6Q2RkbTA?oc=5",
+          "published": "Wed, 08 Apr 2026 19:36:13 GMT"
+        },
+        {
+          "title": "長榮股東紀念品送德國雙人全鋼刨刀 這天沒買想領也沒辦法 - 自由時報",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9JTVVNT1dSeTd3S2JaT2NteU9qQTNhRVFzc21KUUFNY3lwM0xGdFVkQXhKVU1BLVBjazY0M1NSUG11VHM4eE42R1hxdUdURDhRREFYaVZBYjg?oc=5",
+          "published": "Wed, 08 Apr 2026 00:59:58 GMT"
+        },
+        {
+          "title": "萬海、陽明、長榮…台股急殺逾700點，航運股照開船！美伊戰事受惠能多久？最新目標價曝光 - 今周刊",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxORlJzdDY4M1ctZjg2d0lIZFc5WURZb0FiSmVCRWtRREpiUXZoNVc1MTNneHM4ZTFkQXNPb0h0SlFZUnE3aFF1ZFZZaXp5WUtjUnBnOUczWFowMXBlOC1sdFJTUTZuNG5CSUlsWFI5LUVkc1dub2U1NFBpajAzRzVBVA?oc=5",
+          "published": "Tue, 03 Mar 2026 08:00:00 GMT"
+        }
+      ]
     },
     "2881": {
       "symbol": "2881",
@@ -90114,7 +90375,36 @@
       "revenue_yoy": null,
       "revenue_mom": null,
       "latest_revenue_month": null,
-      "margin_usage": null
+      "margin_usage": null,
+      "night_score": -3,
+      "night_bias": "中性",
+      "tomorrow_score": 50,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "法說"
+      ],
+      "headline_summary": "利多：停火；利空：暴跌；利空：戰爭",
+      "headlines": [
+        {
+          "title": "2026年9大金融股評比！中信金、玉山金、富邦金跌到多少能買？肥羊醫師公開甜甜價「這檔成就我1500萬賺到1億元」 - 今周刊",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQYkxadUxfSnVTZzZvMHdlcURZNXR4Q2FkV0hHVEllUUFqekRzZWEwVkUyVEJIc1BlT0dFYnpxYmwzWHRDUzliWExRa2JNZ3dydF9UR251Y0QtT042WC0zX1Q1RUZDdXN4UTFpS1NobEtiYmZsTEY0U0ljRHE2QkdCcA?oc=5",
+          "published": "Fri, 10 Apr 2026 08:44:00 GMT"
+        },
+        {
+          "title": "富邦金法說3》去年股海大賺1703億元 台股投報率28.8%冠壽險 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMi7wJBVV95cUxQelRqMG1jeFdZOVpQTE1LbHJpVlBjMWs2aWR4ZV9LNElQS3lmQVlod1hEc3RXVkpyVTlUeGpCOE8zVWo4U3ktaTNMTkRoYVNDR0h0UEdMZDVHS25abmNRSWprOGtmWFRISFFDa29yRFAwWDlBT2U3V2otWmktTUNKcU0xX19Ha1pkdm4xaVhLX0N0RmtQV09nVEdSYndmVkVqZkRiakdUem5EbllFWVVoMllJU0pCa0hoZjJYWXZEd3NObXE3ZlVqNVhCSjhuNzJMUzlpYWhESjB3bWF4aDI2bDB6UklQU0Q3WkRHNElWUG5fczdFX0xodGdWZXJWNjZKeGwwVV9CT0gxZGZINmtFbDRkSllQbXVVM1JUakQyajlIeUtnMFotS2FZNWVvaUllU2JWUmZPbGx0eWxlZG1EajBWVEtRUDVBdWJsSzZzQlhzRmcwTmhpdFRjQ1VmWjBVWU4xNjNYYU9oY0x2blM0?oc=5",
+          "published": "Mon, 16 Mar 2026 07:00:00 GMT"
+        },
+        {
+          "title": "富邦金(2881)- - 券商分點進出買賣統計 - 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE05RXRNclVZNHRiamlIR2FmUWJwNmtPcDJBa29OYTM3LWNYcUNZNEtYeEJvYVpNc0hhWTRxX1d0ZW1qQ2Y0c3VvdG5VLUNtOUhFX1BWdGdkMUl4c3FWTExVaEdWQU85MkVsNWc?oc=5",
+          "published": "Thu, 09 Apr 2026 17:51:00 GMT"
+        }
+      ]
     }
   },
   "recommendations": [],
@@ -90169,6 +90459,35 @@
       "revenue_mom": null,
       "latest_revenue_month": null,
       "margin_usage": null,
+      "night_score": -5,
+      "night_bias": "中性",
+      "tomorrow_score": 28,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "獲利"
+      ],
+      "headline_summary": "利空：賣超",
+      "headlines": [
+        {
+          "title": "全球首檔記憶體ETF「DRAM」登場 台灣南亞科、華邦電雙雙入列，大戶投複委託也可以交易｜美股觀察 - sinotrade.com.tw",
+          "link": "https://news.google.com/rss/articles/CBMivgRBVV95cUxQRjRQMjJkVzRkdmZ2c1BTeHlfZlJPVkVjZWRPc1FHdnByN0tfNDJDc0NYMXBoVF85akZqNzJDWU1rX2lua1dsbG5xbXltZVJQR1hrNGdKV2lMaGw5QUZxaVFsRE5LRVBkNEg0LWdjSHZOeng0MU41T1hmUE5lT2ppVmtjeHQyanRaeFllQnEzOTFrOGFnVDNHQjhYdmRka0dhY21xQzlUenRVRFdzejlSanQyQ1dsam9KaGY1WGROU1NtTEoyZmJ4R01xSlBZQ2gzSEpaN1RoeDNhWXUtdXhTVTBMaDlEbGpPNGs5U29yQmtJYWhFbUp6Q1UtYmhSenpXSHpmVVp0NVZxSEtJckJNWFRZUFU0a2didkM0Q3pHNldNQ3JhVk1Sa2ZxaElaWGR2SkctVERBejZoeTZuRzdCUlNWUkdvY2hyS25idnRiNnZwbUsyUHlOWWc2MXB0SWJhQ2xVMWRSdEU4T3l2VmlQQS1BTndaN2UxVEF3LWxvaldZaDIwUHJmcllLdHR5VDJmTVhrWWNhaUxMclViT3lJUmp6eXdFVXRnb0gwQkRHT0dNcl9UQUJDWkVCVHE1aEl3Umk4NEVibWZBQThUUm0zWmdCMG52MG5nWnlpUkpONnBfemJxdkdsb3JKeW9VVlFpQzVtM2pJY3JaMGx1a3B6aEphUGYxM3hzUWFYUEpuUzFndjlqZE1IMTE5NEhfTmZqcWpsRUFrand3eHZ6WWVyQ3p5X1JBT1ZFQlE1emJn?oc=5",
+          "published": "Fri, 10 Apr 2026 05:32:39 GMT"
+        },
+        {
+          "title": "台股大漲657點投信前10大賣超出爐！華邦電、旺宏等記憶體不是最慘 它才是最大苦主 - 自由財經",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE45U1JIRjZ6ZUZOendtSHJnemdQRTRLYnUxVDBiRTZyRDFpcHJIaGxNbE5Ua2FaLVNGUDJWWF9BdWx5M1luYm1GN0JJbjQxTWJyMlFWbkZRUVEtS014d1VR0gFkQVVfeXFMTVlCdTRNVmxvVkFRcGRuQmJWaF9OY0ZuZF9HTV9fWkd2OVFIVkloQVZZbExiWG9DVFhpNWUtSW5lTHg2VWJneUduYWNsRmdNNTVsY3ZoYWNRVGZ0eDROdkdCNDBqTw?oc=5",
+          "published": "Tue, 07 Apr 2026 09:06:29 GMT"
+        },
+        {
+          "title": "【Hot台股】華邦電一度挫8%跌破百元大關...網哀「連彈都彈不起來」分析師揭關鍵支撐價位 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMinARBVV95cUxPbTl1SzBKUkc5YWJkeXg2OTdnYVcyQUhlSHdfdC1UMTQwUl9VeDYwaFF3Rm02OVRuTWRrc0cwb1U1Ui1QVUFfdjRwemNVRm9nX195NXY3MW9Jc0hyVG9JMmxORW41QnVSWk81eThfVUI5VkFVU0ZTd0ZTdF8yT1luZjI0T0djV185b213MVVJOU5mRXQzYko0Nncyby1MWnpOUS1sUklBZS1WaUNGRnVtMW1OVktUSU8tVnM1TUswZ1JfOU81aHdaY3dxaGQ5ODFSQXdnUzlJV1ZvN1NoSUhRcTFJR1I1cGlxN3h1YVg0a0RmQWZ0WU9vMzZfeTdwMnRiM3F5V0VxMUZGV2NDaHdHVDA0Yi1yWjZIaXJ5anRKRmM2dWc0dDlOcEJpTUtmVm5vTTJSa2NYSTVoZFlkWUFxemlISXVDVEU0TnZzUmd0VGN4MlVhamE2bkxWNDlpejlRNWpmbTh1cG5PRWhodk5nUGNqVjd4ZjBIdUVldUZIU29aT3YzRmd2U0Q5eFRjaTFBRmpfeHg0LVJXcVpLNTA5N0JPVFRLWGQxeFd6Zjl4ZS1pcmlGUkhwZVdEQ3NqWlRxRERLUEV5WWUxdkViNjJTcEpOeVFweGFNcTJYNkJqT1hzeHcwR2ZzNzBfR1BqbmtTQWFsajhic1VUdFNGcXU2ME9kNEtfempFZ0l2b1FVbXJtOEZqTDZkZzNkMTM?oc=5",
+          "published": "Mon, 23 Mar 2026 07:00:00 GMT"
+        }
+      ],
       "theme": "oversold_rebound",
       "theme_score": 63,
       "theme_reason": "近 20 日已下跌 13.7%；收盤仍在 MA20 下方；目前仍是弱勢下彎"
@@ -90222,6 +90541,35 @@
       "revenue_mom": null,
       "latest_revenue_month": null,
       "margin_usage": null,
+      "night_score": -3,
+      "night_bias": "中性",
+      "tomorrow_score": 37,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "獲利"
+      ],
+      "headline_summary": "利多：停火；利空：暴跌；利空：戰爭",
+      "headlines": [
+        {
+          "title": "【Hot台股】聯發科罕亮燈撐盤！網驚「發哥挖到黃金？」 分析師：那個男人要來了 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMihARBVV95cUxONnVUVlI1M3FORjIwN0xMQnRTUVJWTF9jLXpoOFR4cF8tMXh4Q0pLU2tiY2xobmwwNko0d3ZuXzhYZ2JmeTVlMXd6Ym5sWnVlUkxuWk0yeG9MS1RxaTI1eFI5aWdraXNuWE8yZFBDdlpxQmthUWtpSDRzS19GY19QSkR4UGJYSEVKNjdscGd2RjRKMU85YUpmZk1PM1NnTENycHYyNnhzNjA3WUFrYlNOQVRRZHBTUG9lb0txLUtXWnluWUxCalZ0TXFJMXRqMm9JcnZqX1FwMkptTG5XRHN1a2xxeF80Rm1uRndhRlZENkluSE1DUDFFUWdHNmRDRkxzaFZER3BCTmE0dVpDY08wdFFEY0MzRW5ja0hsSHp4VnVTejBYc2NKWnlrek9EUzR6UU0wS3VocFZVVzBubFFfQ1I1b3FkMjNWeEJpTmVXcmY5V1oxWFlmWlVvQzJjQTB3N25pWG5JaElaNGRwRVZUazVuSWh2NUZpN0h6VW9UbkNGODJRRnYtN0VFX3N0SHhLdlBRMFp4ZXd3OGtTUXFJU0hEbFpmbXU5N2hJZ1RQMkl5QnNoVDQzZzdyaUt5S1ZUd1Y2N0duTnNYZkhIY2kzYTQ1akl3dGp3Z2oxYjhYT0lvSUlyZDNwenR2V1E4elVRRlVVM0h3N0ZDWGxzT01WeldQR3M?oc=5",
+          "published": "Thu, 22 Jan 2026 08:00:00 GMT"
+        },
+        {
+          "title": "聯發科(2454)股價鎖漲停1630元！台股衝破30000點，現在上車還來得及嗎？資金流向一次看| 林家群| 全解析 - 風傳媒",
+          "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5VTV90SEEzTHh5bkd6UXkySTFIUDQzNFZPemhGZFVjWDRNWWVKR1VpdkZpX2xiLVZGd25lcDAzakxBZEVkUW5LanRwUkxEdw?oc=5",
+          "published": "Fri, 23 Jan 2026 08:00:00 GMT"
+        },
+        {
+          "title": "焦點股》聯發科：近1個月重挫22.37％ 逆勢抗跌 - 自由財經",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBFWVJJaGRmd2YxVDk1LTJlRWNaOVNnaVNoZkszNkRscXA0SjJwUlJoWTJXRENSRGdCNE1idHpIa2Q4WUZ0VW5wMXBpUzZFcDBOQlhnNXp0MnlJZG5TSWEw0gFkQVVfeXFMTkJCSVlZNnpjNWhBTzZ4X0NtVU5tYU1ZLXJPMW5YcGN6bE1sSm5Ec1JMVnlvdURzQWF5QVVwZi1ubE1fZTBYNGpFZ1VKZVFaUHU3WjBSblY3QzJFLTJFNVVwZjRsdw?oc=5",
+          "published": "Tue, 31 Mar 2026 07:00:00 GMT"
+        }
+      ],
       "theme": "oversold_rebound",
       "theme_score": 52,
       "theme_reason": "收盤仍在 MA20 下方；目前仍是弱勢下彎；ML 勝率回到中性偏多"
@@ -90276,6 +90624,35 @@
       "revenue_mom": null,
       "latest_revenue_month": null,
       "margin_usage": null,
+      "night_score": -3,
+      "night_bias": "中性",
+      "tomorrow_score": 47,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "獲利"
+      ],
+      "headline_summary": "利多：停火；利空：暴跌；利空：戰爭",
+      "headlines": [
+        {
+          "title": "2603 長榮 - 📈 【台股戰情室】震盪中的指南針：核心產業與績優股介紹 最... - 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1BZERUX2wtY08xMHVDdGhNTmt5a3NLRFIwU0pmdVlWREhpaldFRWpGcTlNemVuQ01ja0tVblAtck9ZRzdfMHBPVjh6cktLWC13ZGJ6Q2RkbTA?oc=5",
+          "published": "Wed, 08 Apr 2026 19:36:13 GMT"
+        },
+        {
+          "title": "長榮股東紀念品送德國雙人全鋼刨刀 這天沒買想領也沒辦法 - 自由時報",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9JTVVNT1dSeTd3S2JaT2NteU9qQTNhRVFzc21KUUFNY3lwM0xGdFVkQXhKVU1BLVBjazY0M1NSUG11VHM4eE42R1hxdUdURDhRREFYaVZBYjg?oc=5",
+          "published": "Wed, 08 Apr 2026 00:59:58 GMT"
+        },
+        {
+          "title": "萬海、陽明、長榮…台股急殺逾700點，航運股照開船！美伊戰事受惠能多久？最新目標價曝光 - 今周刊",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxORlJzdDY4M1ctZjg2d0lIZFc5WURZb0FiSmVCRWtRREpiUXZoNVc1MTNneHM4ZTFkQXNPb0h0SlFZUnE3aFF1ZFZZaXp5WUtjUnBnOUczWFowMXBlOC1sdFJTUTZuNG5CSUlsWFI5LUVkc1dub2U1NFBpajAzRzVBVA?oc=5",
+          "published": "Tue, 03 Mar 2026 08:00:00 GMT"
+        }
+      ],
       "theme": "oversold_rebound",
       "theme_score": 44,
       "theme_reason": "收盤仍在 MA20 下方；ML 勝率回到中性偏多；近 5 日跌勢開始放緩"
@@ -90329,6 +90706,35 @@
       "revenue_mom": null,
       "latest_revenue_month": null,
       "margin_usage": null,
+      "night_score": 0,
+      "night_bias": "中性",
+      "tomorrow_score": 35,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "獲利"
+      ],
+      "headline_summary": "利多：回升",
+      "headlines": [
+        {
+          "title": "鴻海(2317)合理價多少？股價192元是低點嗎？台股老手揭外資成本價「當前下跌是錯殺」：這訊號出現就會回補 - 今周刊",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPVXBXYkt5ZGlDZ0xrZG52OWdoMFJNTFpKZXQyZ0pneWZrYVJWM1VrcWh6RG5MT0lrd3RDTGlzM2o3Z2hRaUQ3TEZvdXZwNWxMVFJib0NxMHNJNGlydHpTNV9UZHdlSVhab0c3b1NFV1RwenJkM1lfZE1GRThwLUJUMg?oc=5",
+          "published": "Tue, 07 Apr 2026 09:00:00 GMT"
+        },
+        {
+          "title": "2317 鴻海 - 台股震盪怎麼賺？跟「峰」抄底就對了！ 戰事干擾、台股震盪加劇... - 股市爆料同學會 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBKVG5WSkw1cGNFd3hIWE91TWdnekVuY2VncVBwVmlIVnBzcy10Yktwamo0bG9MOG83Yno2SDVQNkFmbWEyUHctSUhhRGpISkNTNTF3RVNTbjU?oc=5",
+          "published": "Wed, 08 Apr 2026 18:57:44 GMT"
+        },
+        {
+          "title": "鴻海(2317)AI光環碎了一地？三率三降、獲利警訊大解析！股魚：這指標沒回升前，別被出貨量騙了！ - 優分析UAnalyze",
+          "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5Dd2M3elRZeVQ3eWZmd09iY2E2b0xRblBBX3dlcGIzRkFNVFRCcm5CZjVMbjQ5cUtzSjF0bUs5Q3Z0NzdMNmhtUWxBczNNakdRN2hOWmZn?oc=5",
+          "published": "Wed, 08 Apr 2026 12:00:00 GMT"
+        }
+      ],
       "theme": "oversold_rebound",
       "theme_score": 40,
       "theme_reason": "收盤仍在 MA20 下方；目前仍是弱勢下彎；近 5 日跌勢開始放緩"
@@ -90387,6 +90793,35 @@
       "revenue_mom": null,
       "latest_revenue_month": null,
       "margin_usage": null,
+      "night_score": -3,
+      "night_bias": "中性",
+      "tomorrow_score": 67,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "獲利"
+      ],
+      "headline_summary": "利多：停火；利空：暴跌；利空：戰爭",
+      "headlines": [
+        {
+          "title": "第二座神山在崛起？台達電市值衝破4.5兆元大關 成台股史上唯二 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMiowNBVV95cUxNQ3ZzU3pRWHdwRTlIM0Y5ZlFJNHFPUExwTFctMXlYZklFal9FU1lUYkxYMFpzQ0k1ZDY1S1BMNWVQeTQ4NkMxcUJwNi0wQ1A1UTBzSTlzbTBqLVc4QTE3c2JnZnFkVi0wUEQwLUd2N0ppY0VaS3BVb3JJVHMtS3JGX3paMFlMaU5DbFFycGs4b2k1N3VTRnFOLUxsb0hWRndzcENyV0YyaV9HNC1XZmk0SU81bEtnR3d5aW9xYjU0eEx6LVQ4akkySWg5VmhFd0hwQTZWYXBVZXpGRXJqa0p1aE43NHJNYzhHQTVOZ09KVnR5VDVIYVRyTHFHT3k3WE9wUnVDVGZmWHdpWVZwQXltMWhMQUxobnRZZkh4aTlhRDJ5RFNyY3E3V2Nja2JDdzhxT18tRW0wVXlKWG9Rc1ZQR0pKa1YweTJ1VVFjYmJuTXNLTXRKTHZOU296VVUxUzhlWFNXQV80eWM3OWJlcFZocGNFRy1Vb2N0cWQyZWxHVWxDMlNsbjhEMWZ1WERidHhUR1U2VUFwM3V2T2lwd0hQcXBVSQ?oc=5",
+          "published": "Fri, 10 Apr 2026 03:14:05 GMT"
+        },
+        {
+          "title": "台達電(2308) 個股概覽 | 個股 - 股市 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBYSC1FOXZmSnVKcWVpck5EYjRvcjRCWjE0eDVtaUQ1cFpvRmEyb2VGNlZvdEwtUXg1OUM0aVNrNmFlWkF1eWwtMmtTM2x0OEVvUFVn?oc=5",
+          "published": "Fri, 10 Apr 2026 21:50:44 GMT"
+        },
+        {
+          "title": "台達電(2308)股價1700元能買？最新目標價曝光！台股老手：就算美伊談判破裂，也能大膽作多的3檔口袋名單 - 今周刊",
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNYXJLbk9hYUZ4QlE0Z2pnVDhpUi1zU1BQNG1QbnN2aDIwT1BQT3dYVFV2dU12WGlDR2VUdjk1OVE5VUJocDVUeDdKSUwxckhqaEJpczBxMm5hUGdvTFFfQS1QWGVXOVYtc25EaWNqRHJBSGJkN1A4ZUJTQkpVdThjNQ?oc=5",
+          "published": "Fri, 10 Apr 2026 02:20:00 GMT"
+        }
+      ],
       "theme": "overheated_pullback",
       "theme_score": 77,
       "theme_reason": "近 5 日漲幅 19.2%；近 20 日漲幅 27.5%；收盤高於 MA20 12.1%"
@@ -90442,6 +90877,35 @@
       "revenue_mom": null,
       "latest_revenue_month": null,
       "margin_usage": null,
+      "night_score": -3,
+      "night_bias": "中性",
+      "tomorrow_score": 61,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "獲利"
+      ],
+      "headline_summary": "利多：停火；利空：暴跌；利空：戰爭",
+      "headlines": [
+        {
+          "title": "一周熱門零股／0050、台積電 交投重心 - 經濟日報",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5FRGFVWk52YWlUVlNFYXg4MGRpS3lRNXFmYWlsTVNyeEltdy1pUTFiREtrb2tiMm5TdkN1OFkzMU54MlM4YlhCZVF4dnAtVGhqTUlyTHcwTGxHUdIBX0FVX3lxTE56bUs4SlFvcFJndDlHS0M0TkhvUmdQMjU0SjR6bFZKNnMzN1JZZjlTQlZvRFo0Q0NwYVNfZE43aVVEUktxVlAxODJVS2V3Smt2dHZZc2RoMmNHZXZnUWZV?oc=5",
+          "published": "Fri, 10 Apr 2026 16:17:21 GMT"
+        },
+        {
+          "title": "274萬多人小確幸！0050規模破1.5兆元 調降費用率 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMitAJBVV95cUxNNWF6VXVSNGJxdXpjVkFDZjR3Z3hzc0JTTWV6aVIyam5zSTdnSUFLSmJKM0s1TXl4a0gzX3EtdV9lNHZQSkdPajE4Mjc2ajJrMjh1eFU2Y0N0V0tjU2FKcHdsdTZwSkFqa3NPR3hwLXBta1doOGs1QTFNWWVjNktjQXRPd2c2cTA1THd5X3hsS3M4YlJwZ1pvUTd1NlhGWFJVUUtIUjNWU0YybDVYaHFObGo2N04xMXhTWHJheW55REUtOXRBQmZBUXdPRFU2Vnh0Wk0tVVo3a3VQR2JpTk1xVVlQTkVkQzM5RHZublZpR3lfLTFkN2lBMFo0STdWSUZ2aUtLeXctb0MxT1VxRnZyeW1MakJBalNONVpVSG9YTHg3SzJ2RUlLbEhHcTRsMHFwRXlCeQ?oc=5",
+          "published": "Fri, 10 Apr 2026 09:01:25 GMT"
+        },
+        {
+          "title": "元大台灣50(0050) 個股概覽 | 個股 - 股市 - CMoney",
+          "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE56czBuWjhEY0s2amt0RUVWLUJpMUdCYzV3LVdKNExyS0pHNkVzR2QzX0FkTzZ1NmllMk1qalVyaDk3NG9JaXJRbUdyTHNnU19vVU00?oc=5",
+          "published": "Fri, 10 Apr 2026 15:29:43 GMT"
+        }
+      ],
       "theme": "overheated_pullback",
       "theme_score": 34,
       "theme_reason": "近 5 日漲幅 9.4%；漲多後量能沒有跟上；ML 已降到中性"
@@ -90499,6 +90963,35 @@
       "revenue_mom": null,
       "latest_revenue_month": null,
       "margin_usage": null,
+      "night_score": -3,
+      "night_bias": "中性",
+      "tomorrow_score": 75,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "獲利"
+      ],
+      "headline_summary": "利多：停火；利空：暴跌；利空：戰爭",
+      "headlines": [
+        {
+          "title": "廣達（2382）站上三年新高！他看好後市「不容易虧錢」引多空交鋒 - 聯合新聞網",
+          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE41eUN2aFRTRk44NUxDU25WNWdPTm1VT0xwMnN5WkJjNFdlWlM3VlNaMk1CU0VyeDVwUE8xekFYZkw3bzhzTkpndFhpdlQ2b1p0QXfSAVdBVV95cUxPc1N5elpUOUE0Y3g0N1NQVXdJMUtDcmxnZ2g1VTJjc0tZSnNQXzhlSHNFME1sTXJGaG9DNkNLV2tWY0hmRWxMZTNiSjE1REwxdlVRS3c4TWc?oc=5",
+          "published": "Fri, 10 Apr 2026 01:03:40 GMT"
+        },
+        {
+          "title": "〈電子五哥營收〉廣達GB300出貨動能強勁 3月、Q1營收雙寫新猷 - news.cnyes.com",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBaRjNTcUlWdVlJcXo5cDZDNHBjMDB1V1l1LWwzMG11ZUtCYkJrWUlfNVMtRm96NTBxTm42c2tkeTltYktjNWRqU203UGp3MmM?oc=5",
+          "published": "Wed, 08 Apr 2026 09:49:06 GMT"
+        },
+        {
+          "title": "荷姆茲海峽停航震撼彈！台股衝高後15分鐘內跳水翻黑 台積電領跌、聯發科、廣達淪重災區 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMikwRBVV95cUxNV1RCQ3Utcjhoa1hSZkpzV2NKVnVUU3E2OWI2akpzY2tSWDhHd3FZTUlSRWpHVHVqZVpFSy1BWkFRcFpuekYxYXBEY0RfZmx0ZjhlbTVSNTd4ZEItWWJIOEx4YmNkWlpqSm85NVRKY2NkVjAtNkMtRm5QY1NFV3pwQkFNbmFLdUxZYmE2b1o3U25EWWRSY1dsYVBjUXhhaDh4NlBTMzZTNjhybWxpNm9JVm5USHlCeEpPY1pfZjRIdGFPbkxjUWhrQ0R2cDY5MXhBNHI5QWtpNF9sZ1U3VC15MGpiYXVaektvS3BxQ1RRLVNBNGZ4ZnBFRVRiUktJakNtUmN0VmFIWkZMcXBPZWVxVmpBVTEzVG45YWxGeVdxd0hRWXcxLWswUHlfWmJMRF81bGNNREhWdi1zMlNkUFV1NTlCWjFOQ2ZRNVc3Z1AwLU5hVUUyZGZpZi11NjhVOW9rWXBxaFp0eTEwTUFXbDAxV3ZsMU9ZclhVaVItYy15cmYtMFAxNnFxZmhEYU4yQ3I3VV9kMU41RTBaM3h5YWZhUlN2eXV2TzRKQWVkYUxMa0tsUXE0dkk0LUlYR0Vzb2VSVDRBR1dQZkxjUXhKUWZuQmwydzZvem5BT3lpQm9MLTY1MEVOekhBYU1NX3c3V3NBSjRJcXpESnRQSHYtWUhIQVQ0cnB4TWJmTGsySDJ1UmVRNGc?oc=5",
+          "published": "Thu, 09 Apr 2026 01:37:38 GMT"
+        }
+      ],
       "theme": "overheated_pullback",
       "theme_score": 26,
       "theme_reason": "近 5 日漲幅 12.4%；收盤高於 MA20 8.4%"
@@ -90554,11 +91047,165 @@
       "revenue_mom": null,
       "latest_revenue_month": null,
       "margin_usage": null,
+      "night_score": -3,
+      "night_bias": "中性",
+      "tomorrow_score": 62,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "法說"
+      ],
+      "headline_summary": "利多：停火；利空：暴跌；利空：戰爭",
+      "headlines": [
+        {
+          "title": "【即時新聞】台積電(2330)本周領軍攻高帶動台股大漲8.74%，指數重返35000點 - CMoney投資網誌",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPa2VqTG9IV3lrQ09FVXB1c1RQNlctNVAzRWhVWGpSbi1sd1NCQVhUdGtiaTJEcnFWYzI1cWd1VXRhdmI4am5BU1d4NXJTQ0FRY2pqUEdUbDBXNWdQNGpBclh2dWh4ajNWZ0UwRnJNdHFjWHlPdEZMcGh1SVRDeVVfQW1sVEhZekdYbjdWbmx0NTY?oc=5",
+          "published": "Fri, 10 Apr 2026 11:33:18 GMT"
+        },
+        {
+          "title": "權王台積電法說行情助攻 台股再飆新高站上35,417點 - Yahoo新聞",
+          "link": "https://news.google.com/rss/articles/CBMizAJBVV95cUxNZnlkZjJBMmxGbW50QTRzVEtqMGtpWUJuZFR6cklqbVI5cUZZdDR1T1VCSm9YNWdzVm9pY3NGY2RxVFlPd1dUeDZuU2pvVldnZENaRmRMdlBVZE9meUZINDZXQjRydzI1TkFxcy1PNERMMXBCdXBqaU9xUW5jOXhVMktka21pb04zNmNzWm5remdLSzZZdGc4NDNQWWMtWTItX2dHMkdVVlRfMXRWa202VVZHbUhjRTRHa1R4czRlSmkwSXhjd0w2LWFabnh5bklsdVZyT3pHY1lPWDQ5QjEyS1Y3WFV6bklfREtMUmF1RGVsS0xKbTAzbVZLdHJ0clhQVHJKZU9ZMXhXQ0lHWDItZHZ3LWxoVTRON1NSV21yM1ppYlp2ZEt3QW1ueDJ5VVBNbGY0alpJMjNJZmxkNlRTS3kzMzJ2MGdRMDE0RA?oc=5",
+          "published": "Fri, 10 Apr 2026 22:39:11 GMT"
+        },
+        {
+          "title": "台積電、國巨 內外資力挺 | 市場焦點 | 證券 - 經濟日報",
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8yLVlXRUVrUDlFdVlEaEZ6eHFJZ3lWTFFFWFhQcXdoN1lBcXRtUWxDdWVSOVpPbnlISWNxc3NCeDV5SndPTWFhQWx5anlDLTZZRDJoUWVid3lSdw?oc=5",
+          "published": "Fri, 10 Apr 2026 16:51:45 GMT"
+        }
+      ],
       "theme": "overheated_pullback",
       "theme_score": 26,
       "theme_reason": "近 5 日漲幅 11.1%；漲多後量能沒有跟上"
     }
   ],
-  "report_text": "# 台股自選股日報 (2026-04-11)\n\n## 市場總評\n- 候選池狀態：中性\n- 固定追蹤檔數：2\n- 每日候選池檔數：8\n- 候選池平均分數：55.0 / 100\n- 候選池強勢標的數：3 檔\n- 候選池偏弱標的數：3 檔\n\n## 今日推薦\n- 今天沒有達到門檻的新推薦。\n\n## 候選池前段班\n- 2382 廣達｜78 分｜Strong Watch｜56% (中性)\n- 2308 台達電｜70 分｜Watch｜49% (中性)\n- 2330 台積電｜65 分｜Watch｜52% (中性)\n- 2881 富邦金｜53 分｜Neutral｜54% (中性)\n- 2603 長榮｜50 分｜Neutral｜51% (中性)\n\n## 今日應保守處理\n- 3231 緯創｜49 分｜偏保守，只能等轉強｜MA20 129.00 仍低於 MA60 134.18，中期趨勢未翻正\n- 2454 聯發科｜40 分｜偏保守，只能等轉強｜收盤 1575.00 跌破 MA20 1620.75；MA20 1620.75 仍低於 MA60 1653.00，中期趨勢未翻正\n- 2317 鴻海｜35 分｜避免追價，先觀望｜收盤 200.00 跌破 MA20 202.53；MA20 202.53 仍低於 MA60 218.24，中期趨勢未翻正\n\n## 超跌反彈觀察\n- 2344 華邦電｜反彈觀察分 63｜近 20 日已下跌 13.7%；收盤仍在 MA20 下方；目前仍是弱勢下彎\n- 2454 聯發科｜反彈觀察分 52｜收盤仍在 MA20 下方；目前仍是弱勢下彎；ML 勝率回到中性偏多\n- 2603 長榮｜反彈觀察分 44｜收盤仍在 MA20 下方；ML 勝率回到中性偏多；近 5 日跌勢開始放緩\n- 2317 鴻海｜反彈觀察分 40｜收盤仍在 MA20 下方；目前仍是弱勢下彎；近 5 日跌勢開始放緩\n\n## 超漲轉弱觀察\n- 2308 台達電｜轉弱風險分 77｜近 5 日漲幅 19.2%；近 20 日漲幅 27.5%；收盤高於 MA20 12.1%\n- 0050 元大台灣50｜轉弱風險分 34｜近 5 日漲幅 9.4%；漲多後量能沒有跟上；ML 已降到中性\n- 2382 廣達｜轉弱風險分 26｜近 5 日漲幅 12.4%；收盤高於 MA20 8.4%\n- 2330 台積電｜轉弱風險分 26｜近 5 日漲幅 11.1%；漲多後量能沒有跟上\n\n## 固定追蹤清單\n### 0050 元大台灣50\n- 評級：Watch (64 分)\n- 規則分數：70 分\n- 建議：列入優先觀察\n- 趨勢：多頭延續\n- 量化訊號：49% (中性)\n- ML 模型：Logistic Regression｜49% (中性)｜驗證準確率 48.3%｜可用 987｜訓練 927｜驗證 60\n- 理由：收盤 79.15 站上 MA20 75.88；MA20 75.88 高於 MA60 74.34，中期趨勢仍偏多\n- 風險：近 5 日已上漲 9.4%，留意短線震盪\n- 關鍵數據：收盤 79.15｜5 日報酬 9.4%｜20 日報酬 5.3%｜量比 0.74\n\n### 2344 華邦電\n- 評級：Avoid (33 分)\n- 規則分數：24 分\n- 建議：避免追價，先觀望\n- 趨勢：弱勢下彎\n- 量化訊號：55% (中性)\n- ML 模型：Logistic Regression｜55% (中性)｜驗證準確率 53.3%｜可用 992｜訓練 932｜驗證 60\n- 理由：資料不足\n- 風險：收盤 91.00 跌破 MA20 103.51；MA20 103.51 仍低於 MA60 107.12，中期趨勢未翻正；近 20 日跌幅 13.7%\n- 關鍵數據：收盤 91.00｜5 日報酬 0.9%｜20 日報酬 -13.7%｜量比 0.68\n\n\n## 今日推薦詳細說明\n- 今天沒有達到門檻的新推薦。\n\n## 資料來源與限制\n- 資料來源：TWSE 官方公開資料，即時抓取並快取。\n- 報告用途：自選股研究整理，不是交易保證。\n- 目前版本以價格量能為主，未額外載入法人、估值、月營收資料。\n",
+  "nightly_positive_watchlist": [],
+  "nightly_risk_watchlist": [
+    {
+      "symbol": "2344",
+      "symbol_name": "華邦電",
+      "sector": "上市個股",
+      "market": "twse_open_data",
+      "has_institutional_data": false,
+      "has_valuation_data": false,
+      "has_revenue_data": false,
+      "rating": "Avoid",
+      "action": "避免追價，先觀望",
+      "score": 33,
+      "rule_score": 24,
+      "trend": "弱勢下彎",
+      "signal_strength": "55% (中性)",
+      "ml_source": "trained_model",
+      "ml_model_name": "Logistic Regression",
+      "ml_probability": 0.547464953556515,
+      "ml_validation_accuracy": 0.5333333333333333,
+      "ml_usable_samples": 992,
+      "ml_train_samples": 932,
+      "ml_validation_samples": 60,
+      "ml_features_used": 10,
+      "ml_note": "使用歷史日線與籌碼/估值特徵訓練",
+      "reasons": [],
+      "risks": [
+        "收盤 91.00 跌破 MA20 103.51",
+        "MA20 103.51 仍低於 MA60 107.12，中期趨勢未翻正",
+        "近 20 日跌幅 13.7%"
+      ],
+      "warnings": [],
+      "latest_price_date": "2026-04-09",
+      "close": 91.0,
+      "ma5": 92.17999999999999,
+      "ma20": 103.50999999999999,
+      "ma60": 107.12333333333335,
+      "return_5d": 0.008869179600886845,
+      "return_20d": -0.13744075829383884,
+      "volume": 135311587,
+      "volume_ratio": 0.6786011101439416,
+      "institutional_trend": "偏空",
+      "foreign_net_buy_3d": 0,
+      "trust_net_buy_3d": 0,
+      "dealer_net_buy_3d": 0,
+      "pe_ratio": null,
+      "pb_ratio": null,
+      "dividend_yield": null,
+      "revenue_yoy": null,
+      "revenue_mom": null,
+      "latest_revenue_month": null,
+      "margin_usage": null,
+      "night_score": -5,
+      "night_bias": "中性",
+      "tomorrow_score": 28,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "獲利"
+      ],
+      "headline_summary": "利空：賣超",
+      "headlines": [
+        {
+          "title": "全球首檔記憶體ETF「DRAM」登場 台灣南亞科、華邦電雙雙入列，大戶投複委託也可以交易｜美股觀察 - sinotrade.com.tw",
+          "link": "https://news.google.com/rss/articles/CBMivgRBVV95cUxQRjRQMjJkVzRkdmZ2c1BTeHlfZlJPVkVjZWRPc1FHdnByN0tfNDJDc0NYMXBoVF85akZqNzJDWU1rX2lua1dsbG5xbXltZVJQR1hrNGdKV2lMaGw5QUZxaVFsRE5LRVBkNEg0LWdjSHZOeng0MU41T1hmUE5lT2ppVmtjeHQyanRaeFllQnEzOTFrOGFnVDNHQjhYdmRka0dhY21xQzlUenRVRFdzejlSanQyQ1dsam9KaGY1WGROU1NtTEoyZmJ4R01xSlBZQ2gzSEpaN1RoeDNhWXUtdXhTVTBMaDlEbGpPNGs5U29yQmtJYWhFbUp6Q1UtYmhSenpXSHpmVVp0NVZxSEtJckJNWFRZUFU0a2didkM0Q3pHNldNQ3JhVk1Sa2ZxaElaWGR2SkctVERBejZoeTZuRzdCUlNWUkdvY2hyS25idnRiNnZwbUsyUHlOWWc2MXB0SWJhQ2xVMWRSdEU4T3l2VmlQQS1BTndaN2UxVEF3LWxvaldZaDIwUHJmcllLdHR5VDJmTVhrWWNhaUxMclViT3lJUmp6eXdFVXRnb0gwQkRHT0dNcl9UQUJDWkVCVHE1aEl3Umk4NEVibWZBQThUUm0zWmdCMG52MG5nWnlpUkpONnBfemJxdkdsb3JKeW9VVlFpQzVtM2pJY3JaMGx1a3B6aEphUGYxM3hzUWFYUEpuUzFndjlqZE1IMTE5NEhfTmZqcWpsRUFrand3eHZ6WWVyQ3p5X1JBT1ZFQlE1emJn?oc=5",
+          "published": "Fri, 10 Apr 2026 05:32:39 GMT"
+        },
+        {
+          "title": "台股大漲657點投信前10大賣超出爐！華邦電、旺宏等記憶體不是最慘 它才是最大苦主 - 自由財經",
+          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE45U1JIRjZ6ZUZOendtSHJnemdQRTRLYnUxVDBiRTZyRDFpcHJIaGxNbE5Ua2FaLVNGUDJWWF9BdWx5M1luYm1GN0JJbjQxTWJyMlFWbkZRUVEtS014d1VR0gFkQVVfeXFMTVlCdTRNVmxvVkFRcGRuQmJWaF9OY0ZuZF9HTV9fWkd2OVFIVkloQVZZbExiWG9DVFhpNWUtSW5lTHg2VWJneUduYWNsRmdNNTVsY3ZoYWNRVGZ0eDROdkdCNDBqTw?oc=5",
+          "published": "Tue, 07 Apr 2026 09:06:29 GMT"
+        },
+        {
+          "title": "【Hot台股】華邦電一度挫8%跌破百元大關...網哀「連彈都彈不起來」分析師揭關鍵支撐價位 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMinARBVV95cUxPbTl1SzBKUkc5YWJkeXg2OTdnYVcyQUhlSHdfdC1UMTQwUl9VeDYwaFF3Rm02OVRuTWRrc0cwb1U1Ui1QVUFfdjRwemNVRm9nX195NXY3MW9Jc0hyVG9JMmxORW41QnVSWk81eThfVUI5VkFVU0ZTd0ZTdF8yT1luZjI0T0djV185b213MVVJOU5mRXQzYko0Nncyby1MWnpOUS1sUklBZS1WaUNGRnVtMW1OVktUSU8tVnM1TUswZ1JfOU81aHdaY3dxaGQ5ODFSQXdnUzlJV1ZvN1NoSUhRcTFJR1I1cGlxN3h1YVg0a0RmQWZ0WU9vMzZfeTdwMnRiM3F5V0VxMUZGV2NDaHdHVDA0Yi1yWjZIaXJ5anRKRmM2dWc0dDlOcEJpTUtmVm5vTTJSa2NYSTVoZFlkWUFxemlISXVDVEU0TnZzUmd0VGN4MlVhamE2bkxWNDlpejlRNWpmbTh1cG5PRWhodk5nUGNqVjd4ZjBIdUVldUZIU29aT3YzRmd2U0Q5eFRjaTFBRmpfeHg0LVJXcVpLNTA5N0JPVFRLWGQxeFd6Zjl4ZS1pcmlGUkhwZVdEQ3NqWlRxRERLUEV5WWUxdkViNjJTcEpOeVFweGFNcTJYNkJqT1hzeHcwR2ZzNzBfR1BqbmtTQWFsajhic1VUdFNGcXU2ME9kNEtfempFZ0l2b1FVbXJtOEZqTDZkZzNkMTM?oc=5",
+          "published": "Mon, 23 Mar 2026 07:00:00 GMT"
+        }
+      ]
+    }
+  ],
+  "nightly_market": {
+    "market_bias": "偏空",
+    "macro_score": -13,
+    "summary": "利多：停火；利空：暴跌；利空：戰爭",
+    "tags": [
+      "AI",
+      "半導體",
+      "戰爭",
+      "油價",
+      "獲利",
+      "獲利率",
+      "關稅"
+    ],
+    "headlines": [
+      {
+        "title": "半導體概念股有哪些?台美股半導體投資一覽 - EBC Financial Group",
+        "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1KcHhQMXJrTGhVVzd2d1pqU3A2ekVZaElYaDZrX1NKZEd0YjFqaFZJcWlvbUlmYUJQaFRhUzFEc0lqQTVRLTRqcmRHOFAtYU1XS3RTaA?oc=5",
+        "published": "Wed, 08 Apr 2026 06:47:00 GMT"
+      },
+      {
+        "title": "地緣衝突只是洗牌！群益投信點名美股看電網設備、台股看光通訊 - TechNews 科技新報",
+        "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBBcFNCemNMS0JwTWUxOFVWVm1qMVRTWkRzU012TVI3RTNXcUlhYkxvNkw1VjB2RGZGenFmeUVON0doc0NpOVZtUzJITUVtUi1jSGpianZDX1Z3d2NvdnZoSl96RklwLTJlWUJzTQ?oc=5",
+        "published": "Wed, 08 Apr 2026 07:43:16 GMT"
+      },
+      {
+        "title": "美伊達成停火協議後油價暴跌，亞洲股市普遍大漲 - BBC",
+        "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4tVWpadjZpcWJSaERnMk9neWtjT1IzV3BpNlJYM2hGTFAyakpVZTRWbHJtaGpSWmNLb09wbEhRaTFMSnU4cmx2OWVTRVVwU3NLQUFxYlJJb0JIOW1uNjZ6WHE1d3lDZ9IBa0FVX3lxTE82V3dpTEh6WGhXMzFORjhtOXJoUWJVVGlyYlhyd3NONGcyNHNTbmtXbUx1STVtcXBZdTZDVkF4aWlKSHlaMkVHQUVnck5RZFpSRzd5OC1fQV9ReXRWemc0VVhZYUlaUkNLUTJn?oc=5",
+        "published": "Wed, 08 Apr 2026 03:26:33 GMT"
+      },
+      {
+        "title": "美伊戰爭衝擊石化供應鏈！不只油價飆升，食衣住行科技業影響一次看－中央社 - 商周",
+        "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9QTjhEZ2xTV1ZzdldSN1RVU0d0dFVzU2JNamlVRnRSYWs3UUo5MFhlWHBqT2l0WUFDVGplMGZEOC13OEpYT1Y3eW5KRFo5cU9jY1dKdDV6Y2VvRWE0WlZtTVNB?oc=5",
+        "published": "Tue, 07 Apr 2026 02:41:34 GMT"
+      },
+      {
+        "title": "美國半導體高階晶片關稅上路 KPMG：台廠應審慎評估成本並關注台美談判走向 - KPMG",
+        "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQdjgtZHU3b0RGLW9acnlhdlRRZm9wa1JpczZocHMySWJSVGFGMmd6SUN6SWdoMW94TEx4dDlRTHhoUUZlcFJJM0Rta1VqWE9naTdvdks3YmNnVE5Ybjk0YUI3eVJRUE9jZld4Zy1WR2dtSVcwU3ZZV2F6VjRvM2J2SlhGNnhqV3pFRHc?oc=5",
+        "published": "Wed, 01 Apr 2026 05:00:38 GMT"
+      }
+    ],
+    "warnings": []
+  },
+  "report_text": "# 台股自選股日報 (2026-04-11)\n\n## 市場總評\n- 候選池狀態：中性\n- 固定追蹤檔數：2\n- 每日候選池檔數：8\n- 候選池平均分數：55.0 / 100\n- 候選池強勢標的數：3 檔\n- 候選池偏弱標的數：3 檔\n\n## 今晚到明早總覽\n- 夜間市場偏向：偏空\n- 夜間市場分數：-13\n- 夜間摘要：利多：停火；利空：暴跌；利空：戰爭\n\n## 今日推薦\n- 今天沒有達到門檻的新推薦。\n\n## 候選池前段班\n- 2382 廣達｜78 分｜Strong Watch｜56% (中性)\n- 2308 台達電｜70 分｜Watch｜49% (中性)\n- 2330 台積電｜65 分｜Watch｜52% (中性)\n- 2881 富邦金｜53 分｜Neutral｜54% (中性)\n- 2603 長榮｜50 分｜Neutral｜51% (中性)\n\n## 今日應保守處理\n- 3231 緯創｜49 分｜偏保守，只能等轉強｜MA20 129.00 仍低於 MA60 134.18，中期趨勢未翻正\n- 2454 聯發科｜40 分｜偏保守，只能等轉強｜收盤 1575.00 跌破 MA20 1620.75；MA20 1620.75 仍低於 MA60 1653.00，中期趨勢未翻正\n- 2317 鴻海｜35 分｜避免追價，先觀望｜收盤 200.00 跌破 MA20 202.53；MA20 202.53 仍低於 MA60 218.24，中期趨勢未翻正\n\n## 超跌反彈觀察\n- 2344 華邦電｜反彈觀察分 63｜近 20 日已下跌 13.7%；收盤仍在 MA20 下方；目前仍是弱勢下彎\n- 2454 聯發科｜反彈觀察分 52｜收盤仍在 MA20 下方；目前仍是弱勢下彎；ML 勝率回到中性偏多\n- 2603 長榮｜反彈觀察分 44｜收盤仍在 MA20 下方；ML 勝率回到中性偏多；近 5 日跌勢開始放緩\n- 2317 鴻海｜反彈觀察分 40｜收盤仍在 MA20 下方；目前仍是弱勢下彎；近 5 日跌勢開始放緩\n\n## 超漲轉弱觀察\n- 2308 台達電｜轉弱風險分 77｜近 5 日漲幅 19.2%；近 20 日漲幅 27.5%；收盤高於 MA20 12.1%\n- 0050 元大台灣50｜轉弱風險分 34｜近 5 日漲幅 9.4%；漲多後量能沒有跟上；ML 已降到中性\n- 2382 廣達｜轉弱風險分 26｜近 5 日漲幅 12.4%；收盤高於 MA20 8.4%\n- 2330 台積電｜轉弱風險分 26｜近 5 日漲幅 11.1%；漲多後量能沒有跟上\n\n## 夜間消息偏多\n- 今晚沒有明顯偏多事件加分。\n\n## 夜間消息偏空\n- 2344 華邦電｜夜間分數 -5｜夜間消息偏中性｜利空：賣超\n\n## 固定追蹤清單\n### 0050 元大台灣50\n- 評級：Watch (64 分)\n- 規則分數：70 分\n- 建議：列入優先觀察\n- 趨勢：多頭延續\n- 量化訊號：49% (中性)\n- ML 模型：Logistic Regression｜49% (中性)｜驗證準確率 48.3%｜可用 987｜訓練 927｜驗證 60\n- 夜間評估：中性｜夜間分數 -3｜夜間消息偏中性｜AI、半導體、戰爭\n- 理由：收盤 79.15 站上 MA20 75.88；MA20 75.88 高於 MA60 74.34，中期趨勢仍偏多\n- 風險：近 5 日已上漲 9.4%，留意短線震盪\n- 關鍵數據：收盤 79.15｜5 日報酬 9.4%｜20 日報酬 5.3%｜量比 0.74\n\n### 2344 華邦電\n- 評級：Avoid (33 分)\n- 規則分數：24 分\n- 建議：避免追價，先觀望\n- 趨勢：弱勢下彎\n- 量化訊號：55% (中性)\n- ML 模型：Logistic Regression｜55% (中性)｜驗證準確率 53.3%｜可用 992｜訓練 932｜驗證 60\n- 夜間評估：中性｜夜間分數 -5｜夜間消息偏中性｜AI、半導體、戰爭\n- 理由：資料不足\n- 風險：收盤 91.00 跌破 MA20 103.51；MA20 103.51 仍低於 MA60 107.12，中期趨勢未翻正；近 20 日跌幅 13.7%\n- 關鍵數據：收盤 91.00｜5 日報酬 0.9%｜20 日報酬 -13.7%｜量比 0.68\n\n\n## 今日推薦詳細說明\n- 今天沒有達到門檻的新推薦。\n\n## 資料來源與限制\n- 資料來源：TWSE 官方公開資料，即時抓取並快取。\n- 報告用途：自選股研究整理，不是交易保證。\n- 目前版本以價格量能為主，未額外載入法人、估值、月營收資料。\n- 夜間事件層以公開新聞標題規則判讀為主，僅供輔助參考。\n",
   "prompt_text": null
 }
