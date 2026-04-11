@@ -310,6 +310,39 @@ def render_stock_detail(symbol: str, stock_data: dict, result: dict) -> None:
                 st.write(f"- {item}")
 
 
+def collect_bundle_warnings(bundle) -> list[str]:
+    warning_lines: list[str] = []
+
+    if not bundle.raw_data:
+        return ["這次即時抓取沒有拿到任何股票資料，可能是資料來源暫時失效或雲端環境被限制。"]
+
+    for symbol, stock_data in bundle.raw_data.items():
+        warnings = stock_data.get("warnings", [])
+        if warnings:
+            for warning in warnings:
+                warning_lines.append(f"{symbol}: {warning}")
+        elif not stock_data.get("prices"):
+            warning_lines.append(f"{symbol}: 沒有回傳可用價格資料。")
+
+    unique_lines: list[str] = []
+    seen = set()
+    for line in warning_lines:
+        if line in seen:
+            continue
+        seen.add(line)
+        unique_lines.append(line)
+    return unique_lines
+
+
+def render_live_refresh_error(error_payload: dict | None) -> None:
+    if not error_payload:
+        return
+
+    st.warning(error_payload.get("message", "即時重新分析失敗。"))
+    for line in error_payload.get("warnings", [])[:8]:
+        st.write(f"- {line}")
+
+
 def main() -> None:
     st.title("台股自選股研究助理")
     st.caption("以日線與夜間事件為主，適合盤後到隔天開盤前做決策。")
@@ -317,6 +350,7 @@ def main() -> None:
     reporter = AIReporter()
     default_watchlist_text = ", ".join(WATCHLIST)
     default_candidate_text = ", ".join(DAILY_CANDIDATE_POOL)
+    st.session_state.setdefault("live_refresh_error", None)
 
     with st.sidebar:
         st.header("設定")
@@ -348,6 +382,7 @@ def main() -> None:
             st.session_state["prompt_text"] = snapshot.prompt_text
             st.session_state["data_source_label"] = f"快照 {snapshot.generated_at}"
             st.session_state["update_status"] = update_status
+            st.session_state["live_refresh_error"] = None
         else:
             with st.spinner("正在抓取線上資料並建立分析..."):
                 bundle = load_analysis_bundle(default_watchlist_text, default_candidate_text)
@@ -390,6 +425,7 @@ def main() -> None:
                 )
                 st.session_state["data_source_label"] = "即時分析"
                 st.session_state["update_status"] = None
+                st.session_state["live_refresh_error"] = None
 
     if run_button:
         watchlist = parse_symbol_text(watchlist_text)
@@ -403,48 +439,55 @@ def main() -> None:
 
         with st.spinner("正在重新抓取資料、評分與夜間分析..."):
             bundle = load_analysis_bundle(",".join(watchlist), ",".join(candidate_pool))
-            recommendations = get_recommendations(bundle)
-            rebound_watchlist = get_rebound_watchlist(bundle)
-            overheated_watchlist = get_overheated_watchlist(bundle)
-            nightly_positive_watchlist = get_nightly_positive_watchlist(bundle)
-            nightly_risk_watchlist = get_nightly_risk_watchlist(bundle)
-            today_str = datetime.now().strftime("%Y-%m-%d")
-            st.session_state["bundle"] = bundle
-            st.session_state["watchlist"] = watchlist
-            st.session_state["candidate_pool"] = candidate_pool
-            st.session_state["recommendations"] = recommendations
-            st.session_state["rebound_watchlist"] = rebound_watchlist
-            st.session_state["overheated_watchlist"] = overheated_watchlist
-            st.session_state["nightly_positive_watchlist"] = nightly_positive_watchlist
-            st.session_state["nightly_risk_watchlist"] = nightly_risk_watchlist
-            st.session_state["nightly_market"] = bundle.nightly_market
-            st.session_state["report_text"] = reporter.generate_report(
-                date_str=today_str,
-                watchlist_results=bundle.watchlist_results,
-                daily_recommendations=recommendations,
-                candidate_results=bundle.candidate_results,
-                rebound_watchlist=rebound_watchlist,
-                overheated_watchlist=overheated_watchlist,
-                nightly_market=bundle.nightly_market,
-                nightly_positive_watchlist=nightly_positive_watchlist,
-                nightly_risk_watchlist=nightly_risk_watchlist,
-            )
-            st.session_state["prompt_text"] = reporter.generate_prompt(
-                date_str=today_str,
-                watchlist_results=bundle.watchlist_results,
-                daily_recommendations=recommendations,
-                candidate_results=bundle.candidate_results,
-                rebound_watchlist=rebound_watchlist,
-                overheated_watchlist=overheated_watchlist,
-                nightly_market=bundle.nightly_market,
-                nightly_positive_watchlist=nightly_positive_watchlist,
-                nightly_risk_watchlist=nightly_risk_watchlist,
-            )
-            st.session_state["data_source_label"] = f"即時分析 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
-            st.session_state["update_status"] = {
-                "status": "live",
-                "message": "目前頁面顯示即時分析結果，未覆蓋正式快照。",
-            }
+            if not bundle.evaluations:
+                st.session_state["live_refresh_error"] = {
+                    "message": "即時重新分析失敗，已保留上一版資料。",
+                    "warnings": collect_bundle_warnings(bundle),
+                }
+            else:
+                recommendations = get_recommendations(bundle)
+                rebound_watchlist = get_rebound_watchlist(bundle)
+                overheated_watchlist = get_overheated_watchlist(bundle)
+                nightly_positive_watchlist = get_nightly_positive_watchlist(bundle)
+                nightly_risk_watchlist = get_nightly_risk_watchlist(bundle)
+                today_str = datetime.now().strftime("%Y-%m-%d")
+                st.session_state["bundle"] = bundle
+                st.session_state["watchlist"] = watchlist
+                st.session_state["candidate_pool"] = candidate_pool
+                st.session_state["recommendations"] = recommendations
+                st.session_state["rebound_watchlist"] = rebound_watchlist
+                st.session_state["overheated_watchlist"] = overheated_watchlist
+                st.session_state["nightly_positive_watchlist"] = nightly_positive_watchlist
+                st.session_state["nightly_risk_watchlist"] = nightly_risk_watchlist
+                st.session_state["nightly_market"] = bundle.nightly_market
+                st.session_state["report_text"] = reporter.generate_report(
+                    date_str=today_str,
+                    watchlist_results=bundle.watchlist_results,
+                    daily_recommendations=recommendations,
+                    candidate_results=bundle.candidate_results,
+                    rebound_watchlist=rebound_watchlist,
+                    overheated_watchlist=overheated_watchlist,
+                    nightly_market=bundle.nightly_market,
+                    nightly_positive_watchlist=nightly_positive_watchlist,
+                    nightly_risk_watchlist=nightly_risk_watchlist,
+                )
+                st.session_state["prompt_text"] = reporter.generate_prompt(
+                    date_str=today_str,
+                    watchlist_results=bundle.watchlist_results,
+                    daily_recommendations=recommendations,
+                    candidate_results=bundle.candidate_results,
+                    rebound_watchlist=rebound_watchlist,
+                    overheated_watchlist=overheated_watchlist,
+                    nightly_market=bundle.nightly_market,
+                    nightly_positive_watchlist=nightly_positive_watchlist,
+                    nightly_risk_watchlist=nightly_risk_watchlist,
+                )
+                st.session_state["data_source_label"] = f"即時分析 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+                st.session_state["update_status"] = {
+                    "status": "live",
+                    "message": "目前頁面顯示即時分析結果，未覆蓋正式快照。",
+                }
+                st.session_state["live_refresh_error"] = None
 
     bundle = st.session_state.get("bundle")
     if bundle is None:
@@ -453,6 +496,8 @@ def main() -> None:
 
     if not bundle.evaluations:
         st.error("本次沒有拿到足夠資料，無法建立分析。")
+        for line in collect_bundle_warnings(bundle)[:8]:
+            st.write(f"- {line}")
         return
 
     watchlist = st.session_state.get("watchlist", WATCHLIST)
@@ -467,10 +512,12 @@ def main() -> None:
     prompt_text = st.session_state.get("prompt_text")
     data_source_label = st.session_state.get("data_source_label")
     update_status = st.session_state.get("update_status")
+    live_refresh_error = st.session_state.get("live_refresh_error")
 
     history_rows = load_history_rows(history_marker())
 
     render_status_banner(update_status, data_source_label)
+    render_live_refresh_error(live_refresh_error)
     render_metrics(bundle.watchlist_results, bundle.candidate_results, recommendations)
     render_nightly_market_overview(nightly_market)
     render_glossary()
