@@ -15,6 +15,7 @@ from modules.analysis_service import (
     get_recommendations,
 )
 from modules.ai_reporter import AIReporter
+from modules.paper_trading import simulate_paper_portfolio
 from modules.site_snapshot import load_snapshot, load_snapshot_history, load_update_status
 
 
@@ -54,6 +55,12 @@ def load_saved_status(status_mtime: float):
 def load_history_rows(history_marker: str):
     del history_marker
     return load_snapshot_history()
+
+
+@st.cache_data(ttl=60, show_spinner=False)
+def load_paper_trading_result(history_state: str, snapshot_mtime: float | None):
+    del history_state, snapshot_mtime
+    return simulate_paper_portfolio()
 
 
 def history_marker() -> str:
@@ -231,6 +238,112 @@ def render_history_table(rows: list[dict]) -> None:
         ]
     )
     st.dataframe(df, use_container_width=True, hide_index=True)
+
+
+def render_paper_trading(result) -> None:
+    st.subheader("模擬帳戶")
+    if result.snapshots_used == 0:
+        st.info("目前還沒有足夠的歷史快照可做模擬。")
+        return
+
+    col1, col2, col3, col4 = st.columns(4)
+    col1.metric("本金", f"{result.initial_cash:,.0f}")
+    col2.metric("總資產", f"{result.total_assets:,.0f}")
+    col3.metric("已實現損益", f"{result.realized_pnl:,.0f}")
+    col4.metric("總報酬率", f"{result.total_return_pct:.2f}%")
+
+    col5, col6, col7, col8 = st.columns(4)
+    col5.metric("現金", f"{result.cash:,.0f}")
+    col6.metric("持股市值", f"{result.market_value:,.0f}")
+    col7.metric("未實現損益", f"{result.unrealized_pnl:,.0f}")
+    col8.metric("使用快照天數", result.snapshots_used)
+
+    col9, col10, col11 = st.columns(3)
+    col9.metric("已完成交易", result.closed_trade_count)
+    col10.metric("勝率", f"{result.win_rate_pct:.2f}%")
+    col11.metric("平均每筆報酬率", f"{result.avg_closed_trade_return_pct:.2f}%")
+
+    if result.daily_records:
+        curve_df = pd.DataFrame(result.daily_records)
+        curve_df["date"] = pd.to_datetime(curve_df["date"])
+        st.line_chart(curve_df.set_index("date")[["total_assets"]], use_container_width=True)
+
+        daily_df = pd.DataFrame(
+            [
+                {
+                    "日期": row["date"],
+                    "現金": row["cash"],
+                    "持股市值": row["market_value"],
+                    "總資產": row["total_assets"],
+                    "已實現損益": row["realized_pnl"],
+                    "未實現損益": row["unrealized_pnl"],
+                    "持股數": row["position_count"],
+                    "待執行單": row["pending_orders"],
+                    "當日推薦數": row["recommendation_count"],
+                }
+                for row in result.daily_records[-10:]
+            ]
+        )
+        st.markdown("**最近 10 天結算**")
+        st.dataframe(daily_df, use_container_width=True, hide_index=True)
+
+    if result.positions:
+        positions_df = pd.DataFrame(
+            [
+                {
+                    "股票": f"{row['symbol']} {row['symbol_name']}",
+                    "張數": row["quantity"],
+                    "均價": row["avg_cost"],
+                    "現價": row["last_close"],
+                    "持有天數": row["days_held"],
+                    "市值": row["market_value"],
+                    "未實現損益": row["unrealized_pnl"],
+                }
+                for row in result.positions
+            ]
+        )
+        st.markdown("**目前持股**")
+        st.dataframe(positions_df, use_container_width=True, hide_index=True)
+    else:
+        st.info("目前模擬帳戶沒有持股。")
+
+    if result.pending_orders:
+        pending_df = pd.DataFrame(
+            [
+                {
+                    "方向": row["side"],
+                    "股票": f"{row['symbol']} {row['symbol_name']}",
+                    "訊號日": row["signal_date"],
+                    "待執行起始日": row["execute_on_or_after"],
+                    "預算": row.get("budget", 0.0),
+                    "原因": row["reason"],
+                }
+                for row in result.pending_orders
+            ]
+        )
+        st.markdown("**待執行單**")
+        st.dataframe(pending_df, use_container_width=True, hide_index=True)
+
+    if result.trades:
+        trades_df = pd.DataFrame(
+            [
+                {
+                    "日期": row["date"],
+                    "方向": row["side"],
+                    "股票": f"{row['symbol']} {row['symbol_name']}",
+                    "價格": row["price"],
+                    "數量": row["quantity"],
+                    "金額": row["amount"],
+                    "損益": row["pnl"] if row["pnl"] is not None else "",
+                    "報酬率": f"{row['return_pct']:.2f}%" if row.get("return_pct") is not None else "",
+                    "原因": row["reason"],
+                    "訊號日": row["signal_date"],
+                }
+                for row in result.trades[-20:]
+            ]
+        )
+        st.markdown("**最近 20 筆交易**")
+        st.dataframe(trades_df, use_container_width=True, hide_index=True)
 
 
 def render_glossary() -> None:
@@ -515,6 +628,8 @@ def main() -> None:
     live_refresh_error = st.session_state.get("live_refresh_error")
 
     history_rows = load_history_rows(history_marker())
+    snapshot_mtime = SNAPSHOT_PATH.stat().st_mtime if SNAPSHOT_PATH.exists() else None
+    paper_trading_result = load_paper_trading_result(history_marker(), snapshot_mtime)
 
     render_status_banner(update_status, data_source_label)
     render_live_refresh_error(live_refresh_error)
@@ -570,7 +685,7 @@ def main() -> None:
             nightly_risk_watchlist=nightly_risk_watchlist,
         )
 
-    tab1, tab2, tab3, tab4 = st.tabs(["固定追蹤", "候選池", "歷史紀錄", "匯出"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["固定追蹤", "候選池", "模擬帳戶", "歷史紀錄", "匯出"])
 
     with tab1:
         st.subheader("固定追蹤清單")
@@ -589,9 +704,12 @@ def main() -> None:
             render_stock_detail(symbol, bundle.raw_data[symbol], bundle.evaluations[symbol])
 
     with tab3:
-        render_history_table(history_rows)
+        render_paper_trading(paper_trading_result)
 
     with tab4:
+        render_history_table(history_rows)
+
+    with tab5:
         st.subheader("匯出內容")
         st.download_button("下載日報", data=report_text, file_name=f"daily_report_{today_str}.md", mime="text/markdown")
         st.markdown("**Markdown 日報**")

@@ -8,6 +8,7 @@
 - 用價格、均線、量能加上 CPU 友善的 `Logistic Regression` 做輔助評分
 - 額外整理 `超跌反彈觀察` 和 `超漲轉弱觀察` 兩個特殊榜單
 - 新增夜間事件層，整理今晚到明早的新聞與風險
+- 新增模擬帳戶，從 5 萬本金開始每天小額投入推薦股並結算
 - 輸出 CLI 日報與 Streamlit GUI
 
 ## 安裝
@@ -30,6 +31,11 @@ ML_PREDICTION_HORIZON_DAYS=5
 RECOMMENDATION_TOP_N=3
 RECOMMENDATION_MIN_SCORE=65
 HISTORY_LIMIT=30
+PAPER_INITIAL_CASH=50000
+PAPER_DAILY_BUDGET=5000
+PAPER_MAX_NEW_BUYS_PER_DAY=2
+PAPER_MAX_HOLD_DAYS=5
+PAPER_ALLOW_FRACTIONAL=true
 REQUEST_TIMEOUT=20
 ALLOW_INSECURE_TWSE_SSL_FALLBACK=true
 ENABLE_NIGHTLY_CONTEXT=true
@@ -85,6 +91,7 @@ GUI 會顯示：
 - 候選池前段班 / 偏弱股
 - 超跌反彈觀察 / 超漲轉弱觀察
 - 夜間消息偏多 / 夜間消息偏空
+- 模擬帳戶與交易紀錄
 - 歷史紀錄
 - 固定追蹤明細
 - 候選池明細
@@ -94,6 +101,18 @@ GUI 會顯示：
 網站若找到 `data/site_snapshot.json`，會優先讀取快照；沒有快照時才會即時抓資料。
 若排程更新失敗，會沿用上一版快照並在頁面上顯示 fallback 提示。
 若雲端環境對 TWSE 歷史月資料出現 SSL 驗證不相容，程式會對該公開端點自動退回不驗證重試；可用 `ALLOW_INSECURE_TWSE_SSL_FALLBACK=false` 關掉。
+
+## 模擬帳戶規則
+
+目前預設規則：
+- 本金 `50,000`
+- 每天最多投入 `5,000`
+- 最多買進 `2` 檔當日推薦
+- 用隔天開盤價成交
+- 持有滿 `5` 個交易日或轉紅燈時，下一個交易日開盤賣出
+- 預設允許零股模擬
+
+模擬帳戶是用 `data/history/site_snapshot_*.json` 加上目前的 `data/site_snapshot.json` 回放，不會真的下單。
 
 ## 分享給朋友看
 
