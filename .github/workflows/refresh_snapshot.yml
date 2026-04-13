@@ -32,6 +32,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/site_snapshot.json
+          git add data/history
+          git add data/update_status.json
           if git diff --cached --quiet; then
             echo "No snapshot changes to commit."
             exit 0

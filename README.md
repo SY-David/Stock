@@ -170,6 +170,7 @@ docker compose run --rm refresh
 - [refresh_snapshot.yml](/c:/Users/USER/Desktop/tw_stock_assistant/.github/workflows/refresh_snapshot.yml)
 
 它會在台北時間每個交易日約 `15:18` 自動更新 `data/site_snapshot.json`，並把變更 commit 回 GitHub。  
+同時也會保存 `data/history/` 與 `data/update_status.json`，讓歷史紀錄與模擬帳戶可以持續往前滾。  
 Streamlit Community Cloud 看到 repo 更新後，就會自動重新部署，網站內容也會跟著更新。
 
 第一次上 GitHub 之前，你至少要確保：
