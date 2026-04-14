@@ -5,7 +5,15 @@ from datetime import datetime
 import pandas as pd
 import streamlit as st
 
-from app_config import DAILY_CANDIDATE_POOL, HISTORY_DIR, SNAPSHOT_PATH, UPDATE_STATUS_PATH, WATCHLIST, normalize_symbol
+from app_config import (
+    AUTO_DAILY_CANDIDATE_COUNT,
+    DAILY_CANDIDATE_POOL,
+    HISTORY_DIR,
+    SNAPSHOT_PATH,
+    UPDATE_STATUS_PATH,
+    WATCHLIST,
+    normalize_symbol,
+)
 from modules.analysis_service import (
     analyze_market,
     get_nightly_positive_watchlist,
@@ -506,8 +514,8 @@ def main() -> None:
                 nightly_risk_watchlist = get_nightly_risk_watchlist(bundle)
                 today_str = datetime.now().strftime("%Y-%m-%d")
                 st.session_state["bundle"] = bundle
-                st.session_state["watchlist"] = parse_symbol_text(default_watchlist_text)
-                st.session_state["candidate_pool"] = parse_symbol_text(default_candidate_text)
+                st.session_state["watchlist"] = bundle.watchlist_symbols
+                st.session_state["candidate_pool"] = bundle.candidate_symbols
                 st.session_state["recommendations"] = recommendations
                 st.session_state["rebound_watchlist"] = rebound_watchlist
                 st.session_state["overheated_watchlist"] = overheated_watchlist
@@ -546,7 +554,7 @@ def main() -> None:
         if not watchlist:
             st.error("請至少輸入一檔固定追蹤股票。")
             return
-        if not candidate_pool:
+        if candidate_text.strip() and not candidate_pool:
             st.error("請至少輸入一檔候選池股票。")
             return
 
@@ -566,7 +574,7 @@ def main() -> None:
                 today_str = datetime.now().strftime("%Y-%m-%d")
                 st.session_state["bundle"] = bundle
                 st.session_state["watchlist"] = watchlist
-                st.session_state["candidate_pool"] = candidate_pool
+                st.session_state["candidate_pool"] = bundle.candidate_symbols
                 st.session_state["recommendations"] = recommendations
                 st.session_state["rebound_watchlist"] = rebound_watchlist
                 st.session_state["overheated_watchlist"] = overheated_watchlist

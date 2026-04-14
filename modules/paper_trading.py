@@ -7,6 +7,7 @@ from pathlib import Path
 from app_config import (
     HISTORY_DIR,
     PAPER_ALLOW_FRACTIONAL,
+    PAPER_CONTINUATION_MIN_SCORE,
     PAPER_DAILY_BUDGET,
     PAPER_INITIAL_CASH,
     PAPER_MAX_HOLD_DAYS,
@@ -62,11 +63,15 @@ def simulate_paper_portfolio() -> PaperTradingResult:
     pending_orders: list[dict] = []
     trades: list[dict] = []
     daily_records: list[dict] = []
+    market_value = 0.0
+    unrealized_pnl = 0.0
 
     for snapshot in snapshots:
         current_date = snapshot["generated_at"][:10]
         evaluations = snapshot.get("evaluations", {})
         recommendations = snapshot.get("recommendations", [])
+        candidate_symbols = set(snapshot.get("candidate_symbols", []))
+        recommended_symbols = {item["symbol"] for item in recommendations}
 
         pending_orders, trades, cash, realized_pnl = _execute_pending_orders(
             snapshot=snapshot,
@@ -87,6 +92,7 @@ def simulate_paper_portfolio() -> PaperTradingResult:
                 position["last_close"] = price_row["close"]
                 position["last_mark_date"] = current_date
                 position["days_held"] = position.get("days_held", 0) + 1
+
             market_price = position.get("last_close", position["avg_cost"])
             position["market_value"] = round(position["quantity"] * market_price, 2)
             position["unrealized_pnl"] = round(
@@ -99,11 +105,13 @@ def simulate_paper_portfolio() -> PaperTradingResult:
         pending_symbols = {order["symbol"] for order in pending_orders}
         for symbol, position in list(positions.items()):
             evaluation = evaluations.get(symbol, {})
-            exit_reason = None
-            if position.get("days_held", 0) >= PAPER_MAX_HOLD_DAYS:
-                exit_reason = f"持有滿 {PAPER_MAX_HOLD_DAYS} 個交易日"
-            elif evaluation.get("tomorrow_light") == "紅燈":
-                exit_reason = "明日燈號轉紅燈"
+            exit_reason = _build_exit_reason(
+                symbol=symbol,
+                position=position,
+                evaluation=evaluation,
+                candidate_symbols=candidate_symbols,
+                recommended_symbols=recommended_symbols,
+            )
 
             if exit_reason and symbol not in pending_symbols:
                 pending_orders.append(
@@ -172,7 +180,10 @@ def simulate_paper_portfolio() -> PaperTradingResult:
         key=lambda item: item["market_value"],
         reverse=True,
     )
-    pending_rows = sorted(pending_orders, key=lambda item: (item["execute_on_or_after"], item["side"], item["symbol"]))
+    pending_rows = sorted(
+        pending_orders,
+        key=lambda item: (item["execute_on_or_after"], item["side"], item["symbol"]),
+    )
     total_assets = round(cash + market_value, 2)
     total_return_pct = ((total_assets / PAPER_INITIAL_CASH) - 1) * 100 if PAPER_INITIAL_CASH else 0.0
     closed_trades = [trade for trade in trades if trade["side"] == "SELL" and trade.get("return_pct") is not None]
@@ -203,15 +214,37 @@ def simulate_paper_portfolio() -> PaperTradingResult:
     )
 
 
+def _build_exit_reason(
+    symbol: str,
+    position: dict,
+    evaluation: dict,
+    candidate_symbols: set[str],
+    recommended_symbols: set[str],
+) -> str | None:
+    if position.get("days_held", 0) >= PAPER_MAX_HOLD_DAYS:
+        return f"持有滿 {PAPER_MAX_HOLD_DAYS} 個交易日"
+    if evaluation.get("tomorrow_light") == "紅燈":
+        return "明日燈號轉紅燈"
+
+    continues_to_qualify = symbol in recommended_symbols or (
+        symbol in candidate_symbols
+        and evaluation
+        and evaluation.get("tomorrow_light") != "紅燈"
+        and float(evaluation.get("tomorrow_score", evaluation.get("score", 0))) >= PAPER_CONTINUATION_MIN_SCORE
+    )
+    if not continues_to_qualify:
+        return "未持續留在當日候選/推薦名單"
+    return None
+
+
 def _load_full_snapshots() -> list[dict]:
     payloads_by_date: dict[str, dict] = {}
 
     if HISTORY_DIR.exists():
         for path in sorted(HISTORY_DIR.glob("site_snapshot_*.json")):
             payload = _read_snapshot_file(path)
-            if not payload:
-                continue
-            payloads_by_date[payload["generated_at"][:10]] = payload
+            if payload:
+                payloads_by_date[payload["generated_at"][:10]] = payload
 
     if SNAPSHOT_PATH.exists():
         payload = _read_snapshot_file(SNAPSHOT_PATH)

@@ -43,10 +43,8 @@ def _parse_symbol_list(raw_value: str | None, default_symbols: list[str]) -> lis
 
 
 WATCHLIST = _parse_symbol_list(os.getenv("WATCHLIST"), ["0050", "2344"])
-DAILY_CANDIDATE_POOL = _parse_symbol_list(
-    os.getenv("DAILY_CANDIDATE_POOL"),
-    ["2330", "2317", "2454", "2382", "2308", "3231", "2603", "2881"],
-)
+DAILY_CANDIDATE_POOL = _parse_symbol_list(os.getenv("DAILY_CANDIDATE_POOL"), [])
+AUTO_DAILY_CANDIDATE_COUNT = int(os.getenv("AUTO_DAILY_CANDIDATE_COUNT", "10"))
 LOOKBACK_DAYS = int(os.getenv("LOOKBACK_DAYS", "480"))
 ML_LOOKBACK_DAYS = int(os.getenv("ML_LOOKBACK_DAYS", "960"))
 ML_PREDICTION_HORIZON_DAYS = int(os.getenv("ML_PREDICTION_HORIZON_DAYS", "5"))
@@ -58,6 +56,7 @@ PAPER_INITIAL_CASH = float(os.getenv("PAPER_INITIAL_CASH", "50000"))
 PAPER_DAILY_BUDGET = float(os.getenv("PAPER_DAILY_BUDGET", "5000"))
 PAPER_MAX_NEW_BUYS_PER_DAY = int(os.getenv("PAPER_MAX_NEW_BUYS_PER_DAY", "2"))
 PAPER_MAX_HOLD_DAYS = int(os.getenv("PAPER_MAX_HOLD_DAYS", "5"))
+PAPER_CONTINUATION_MIN_SCORE = int(os.getenv("PAPER_CONTINUATION_MIN_SCORE", "60"))
 PAPER_ALLOW_FRACTIONAL = _parse_bool(os.getenv("PAPER_ALLOW_FRACTIONAL"), default=True)
 GENERATE_LLM_PROMPT = _parse_bool(os.getenv("GENERATE_LLM_PROMPT"), default=True)
 REQUEST_TIMEOUT = int(os.getenv("REQUEST_TIMEOUT", "20"))

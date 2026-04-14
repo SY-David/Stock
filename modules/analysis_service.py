@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from app_config import ENABLE_NIGHTLY_CONTEXT, REPORT_TOP_N
+from app_config import AUTO_DAILY_CANDIDATE_COUNT, ENABLE_NIGHTLY_CONTEXT, REPORT_TOP_N
 from modules.ai_reporter import AIReporter
 from modules.nightly_engine import NightlyEngine
 from modules.scoring_engine import ScoringEngine
@@ -47,17 +47,24 @@ class AnalysisBundle:
 
 def analyze_market(
     watchlist_symbols: list[str],
-    candidate_symbols: list[str],
+    candidate_symbols: list[str] | None = None,
 ) -> AnalysisBundle:
     storage = DataStorage()
     engine = ScoringEngine()
 
     normalized_watchlist = _normalize_unique_symbols(watchlist_symbols)
-    normalized_candidates = [
-        symbol
-        for symbol in _normalize_unique_symbols(candidate_symbols)
-        if symbol not in normalized_watchlist
-    ]
+    requested_candidates = _normalize_unique_symbols(candidate_symbols or [])
+    if requested_candidates:
+        normalized_candidates = [
+            symbol
+            for symbol in requested_candidates
+            if symbol not in normalized_watchlist
+        ]
+    else:
+        normalized_candidates = storage.build_daily_candidate_pool(
+            exclude_symbols=normalized_watchlist,
+            limit=AUTO_DAILY_CANDIDATE_COUNT,
+        )
     symbols_to_fetch = normalized_watchlist + normalized_candidates
 
     raw_data: dict[str, dict] = {}

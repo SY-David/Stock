@@ -10,12 +10,14 @@ import urllib3
 
 from app_config import (
     ALLOW_INSECURE_TWSE_SSL_FALLBACK,
+    AUTO_DAILY_CANDIDATE_COUNT,
     CACHE_DIR,
     LOOKBACK_DAYS,
     ML_LOOKBACK_DAYS,
     REQUEST_TIMEOUT,
     normalize_symbol,
 )
+from modules.candidate_pool import generate_daily_candidate_pool
 
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -87,6 +89,14 @@ class DataStorage:
     def get_stock_data(self, symbol: str) -> dict | None:
         stock_id = normalize_symbol(symbol)
         return self._fetch_live_stock_data(stock_id)
+
+    def build_daily_candidate_pool(
+        self,
+        exclude_symbols: list[str] | None = None,
+        limit: int = AUTO_DAILY_CANDIDATE_COUNT,
+    ) -> list[str]:
+        snapshot = self._get_daily_snapshot()
+        return generate_daily_candidate_pool(snapshot, exclude_symbols=exclude_symbols or [], limit=limit)
 
     def _fetch_live_stock_data(self, stock_id: str) -> dict:
         warnings: list[str] = []
