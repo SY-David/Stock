@@ -1,8 +1,8 @@
 {
-  "status": "success",
-  "last_attempt_at": "2026-06-02T11:44:38",
+  "status": "fallback",
+  "last_attempt_at": "2026-06-03T12:13:47",
   "snapshot_generated_at": "2026-06-02T11:50:47",
   "snapshot_path": "/home/runner/work/Stock/Stock/data/site_snapshot.json",
-  "message": "快照更新成功",
-  "error": null
+  "message": "更新失敗，沿用 2026-06-02T11:50:47 的快照",
+  "error": "本次更新沒有取得任何可用評分結果"
 }
