@@ -4,9 +4,26 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "18 7 * * 1-5"
+  push:
+    branches:
+      - main
+    paths:
+      - "app_config.py"
+      - "refresh_snapshot.py"
+      - "requirements.txt"
+      - "modules/analysis_service.py"
+      - "modules/candidate_pool.py"
+      - "modules/scoring_engine.py"
+      - "modules/site_snapshot.py"
+      - "modules/paper_trading.py"
+      - "tools/optimize_streamlit_app.py"
 
 permissions:
   contents: write
+
+concurrency:
+  group: refresh-site-snapshot
+  cancel-in-progress: true
 
 jobs:
   refresh:
@@ -20,23 +37,39 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
 
       - name: Install dependencies
         run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
 
+      - name: Optimize Streamlit app
+        run: python tools/optimize_streamlit_app.py
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests
+
       - name: Refresh snapshot
+        id: refresh
+        continue-on-error: true
         run: python refresh_snapshot.py --no-prompt
 
-      - name: Commit snapshot if changed
+      - name: Commit optimized app, snapshot, and status if changed
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app.py
           git add data/site_snapshot.json
           git add data/history
           git add data/update_status.json
           if git diff --cached --quiet; then
-            echo "No snapshot changes to commit."
+            echo "No generated changes to commit."
             exit 0
           fi
-          git commit -m "chore: refresh site snapshot"
+          git commit -m "chore: optimize app and refresh site snapshot"
           git push
+
+      - name: Mark failed refresh
+        if: steps.refresh.outcome == 'failure'
+        run: exit 1
