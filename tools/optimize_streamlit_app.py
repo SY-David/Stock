@@ -3,10 +3,12 @@ from __future__ import annotations
 from pathlib import Path
 
 
-APP_PATH = Path(__file__).resolve().parents[1] / "app.py"
+ROOT = Path(__file__).resolve().parents[1]
+APP_PATH = ROOT / "app.py"
+PAPER_PATH = ROOT / "modules" / "paper_trading.py"
 
 
-def main() -> None:
+def optimize_app() -> None:
     text = APP_PATH.read_text(encoding="utf-8")
     if 'key="main_section"' in text:
         print("app.py is already optimized")
@@ -113,6 +115,34 @@ def main() -> None:
     compile(text, str(APP_PATH), "exec")
     APP_PATH.write_text(text, encoding="utf-8")
     print("Optimized app.py for lazy section rendering and bounded caches")
+
+
+def fix_paper_trading_price_lookup() -> None:
+    text = PAPER_PATH.read_text(encoding="utf-8")
+    old = (
+        '        if row_date == current_date:\n'
+        '            return row\n'
+        '        if row_date < current_date:\n'
+        '            break\n'
+    )
+    new = (
+        '        if row_date <= current_date:\n'
+        '            return row\n'
+    )
+    if old in text:
+        text = text.replace(old, new, 1)
+        compile(text, str(PAPER_PATH), "exec")
+        PAPER_PATH.write_text(text, encoding="utf-8")
+        print("Fixed paper-trading price lookup for holidays and non-trading days")
+    elif new in text:
+        print("paper_trading.py price lookup is already fixed")
+    else:
+        raise RuntimeError("Could not locate paper-trading price lookup")
+
+
+def main() -> None:
+    optimize_app()
+    fix_paper_trading_price_lookup()
 
 
 if __name__ == "__main__":
