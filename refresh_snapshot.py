@@ -30,8 +30,16 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    watchlist = [normalize_symbol(item) for item in args.watchlist] if args.watchlist else None
-    candidate_pool = [normalize_symbol(item) for item in args.candidate_pool] if args.candidate_pool else None
+    watchlist = (
+        [normalize_symbol(item) for item in args.watchlist]
+        if args.watchlist
+        else None
+    )
+    candidate_pool = (
+        [normalize_symbol(item) for item in args.candidate_pool]
+        if args.candidate_pool
+        else None
+    )
 
     previous_snapshot = load_snapshot()
     attempted_at = datetime.now().isoformat(timespec="seconds")
@@ -78,7 +86,7 @@ def main() -> None:
             )
             print(f"更新失敗，已沿用上一版快照: {previous_snapshot.generated_at}")
             print(f"錯誤原因: {exc}")
-            return
+            raise SystemExit(1) from exc
 
         save_update_status(
             {
