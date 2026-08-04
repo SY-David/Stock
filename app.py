@@ -40,32 +40,32 @@ def format_accuracy(value: float | None) -> str:
     return f"{value * 100:.1f}%"
 
 
-@st.cache_data(ttl=600, show_spinner=False)
+@st.cache_data(ttl=600, max_entries=2, show_spinner=False)
 def load_analysis_bundle(watchlist_key: str, candidate_key: str):
     watchlist = parse_symbol_text(watchlist_key)
     candidate_pool = parse_symbol_text(candidate_key)
     return analyze_market(watchlist, candidate_pool)
 
 
-@st.cache_data(ttl=60, show_spinner=False)
+@st.cache_resource(max_entries=2, show_spinner=False)
 def load_saved_snapshot(snapshot_mtime: float):
     del snapshot_mtime
     return load_snapshot()
 
 
-@st.cache_data(ttl=60, show_spinner=False)
+@st.cache_data(ttl=60, max_entries=2, show_spinner=False)
 def load_saved_status(status_mtime: float):
     del status_mtime
     return load_update_status()
 
 
-@st.cache_data(ttl=60, show_spinner=False)
+@st.cache_data(ttl=300, max_entries=2, show_spinner=False)
 def load_history_rows(history_marker: str):
     del history_marker
     return load_snapshot_history()
 
 
-@st.cache_data(ttl=60, show_spinner=False)
+@st.cache_data(ttl=300, max_entries=2, show_spinner=False)
 def load_paper_trading_result(history_state: str, snapshot_mtime: float | None):
     del history_state, snapshot_mtime
     return simulate_paper_portfolio()
@@ -477,8 +477,8 @@ def main() -> None:
         st.header("設定")
         watchlist_text = st.text_area("固定追蹤", value=default_watchlist_text, height=90)
         candidate_text = st.text_area("每日候選池", value=default_candidate_text, height=180)
-        run_button = st.button("重新分析", type="primary", use_container_width=True)
-        st.caption("若網站正在讀快照，重新分析只會更新目前這個頁面，不會覆蓋正式快照。")
+        reload_button = st.button("重新載入每日快照", type="primary", use_container_width=True)
+        st.caption("網站只讀取 GitHub Actions 產生的每日快照，避免在免費主機上重跑大量抓取與模型訓練。")
 
     if "bundle" not in st.session_state:
         snapshot = None
@@ -505,114 +505,34 @@ def main() -> None:
             st.session_state["update_status"] = update_status
             st.session_state["live_refresh_error"] = None
         else:
-            with st.spinner("正在抓取線上資料並建立分析..."):
-                bundle = load_analysis_bundle(default_watchlist_text, default_candidate_text)
-                recommendations = get_recommendations(bundle)
-                rebound_watchlist = get_rebound_watchlist(bundle)
-                overheated_watchlist = get_overheated_watchlist(bundle)
-                nightly_positive_watchlist = get_nightly_positive_watchlist(bundle)
-                nightly_risk_watchlist = get_nightly_risk_watchlist(bundle)
-                today_str = datetime.now().strftime("%Y-%m-%d")
-                st.session_state["bundle"] = bundle
-                st.session_state["watchlist"] = bundle.watchlist_symbols
-                st.session_state["candidate_pool"] = bundle.candidate_symbols
-                st.session_state["recommendations"] = recommendations
-                st.session_state["rebound_watchlist"] = rebound_watchlist
-                st.session_state["overheated_watchlist"] = overheated_watchlist
-                st.session_state["nightly_positive_watchlist"] = nightly_positive_watchlist
-                st.session_state["nightly_risk_watchlist"] = nightly_risk_watchlist
-                st.session_state["nightly_market"] = bundle.nightly_market
-                st.session_state["report_text"] = reporter.generate_report(
-                    date_str=today_str,
-                    watchlist_results=bundle.watchlist_results,
-                    daily_recommendations=recommendations,
-                    candidate_results=bundle.candidate_results,
-                    rebound_watchlist=rebound_watchlist,
-                    overheated_watchlist=overheated_watchlist,
-                    nightly_market=bundle.nightly_market,
-                    nightly_positive_watchlist=nightly_positive_watchlist,
-                    nightly_risk_watchlist=nightly_risk_watchlist,
-                )
-                st.session_state["prompt_text"] = reporter.generate_prompt(
-                    date_str=today_str,
-                    watchlist_results=bundle.watchlist_results,
-                    daily_recommendations=recommendations,
-                    candidate_results=bundle.candidate_results,
-                    rebound_watchlist=rebound_watchlist,
-                    overheated_watchlist=overheated_watchlist,
-                    nightly_market=bundle.nightly_market,
-                    nightly_positive_watchlist=nightly_positive_watchlist,
-                    nightly_risk_watchlist=nightly_risk_watchlist,
-                )
-                st.session_state["data_source_label"] = "即時分析"
-                st.session_state["update_status"] = None
-                st.session_state["live_refresh_error"] = None
+            st.session_state["snapshot_load_error"] = True
 
-    if run_button:
-        watchlist = parse_symbol_text(watchlist_text)
-        candidate_pool = parse_symbol_text(candidate_text)
-        if not watchlist:
-            st.error("請至少輸入一檔固定追蹤股票。")
-            return
-        if candidate_text.strip() and not candidate_pool:
-            st.error("請至少輸入一檔候選池股票。")
-            return
-
-        with st.spinner("正在重新抓取資料、評分與夜間分析..."):
-            bundle = load_analysis_bundle(",".join(watchlist), ",".join(candidate_pool))
-            if not bundle.evaluations:
-                st.session_state["live_refresh_error"] = {
-                    "message": "即時重新分析失敗，已保留上一版資料。",
-                    "warnings": collect_bundle_warnings(bundle),
-                }
-            else:
-                recommendations = get_recommendations(bundle)
-                rebound_watchlist = get_rebound_watchlist(bundle)
-                overheated_watchlist = get_overheated_watchlist(bundle)
-                nightly_positive_watchlist = get_nightly_positive_watchlist(bundle)
-                nightly_risk_watchlist = get_nightly_risk_watchlist(bundle)
-                today_str = datetime.now().strftime("%Y-%m-%d")
-                st.session_state["bundle"] = bundle
-                st.session_state["watchlist"] = watchlist
-                st.session_state["candidate_pool"] = bundle.candidate_symbols
-                st.session_state["recommendations"] = recommendations
-                st.session_state["rebound_watchlist"] = rebound_watchlist
-                st.session_state["overheated_watchlist"] = overheated_watchlist
-                st.session_state["nightly_positive_watchlist"] = nightly_positive_watchlist
-                st.session_state["nightly_risk_watchlist"] = nightly_risk_watchlist
-                st.session_state["nightly_market"] = bundle.nightly_market
-                st.session_state["report_text"] = reporter.generate_report(
-                    date_str=today_str,
-                    watchlist_results=bundle.watchlist_results,
-                    daily_recommendations=recommendations,
-                    candidate_results=bundle.candidate_results,
-                    rebound_watchlist=rebound_watchlist,
-                    overheated_watchlist=overheated_watchlist,
-                    nightly_market=bundle.nightly_market,
-                    nightly_positive_watchlist=nightly_positive_watchlist,
-                    nightly_risk_watchlist=nightly_risk_watchlist,
-                )
-                st.session_state["prompt_text"] = reporter.generate_prompt(
-                    date_str=today_str,
-                    watchlist_results=bundle.watchlist_results,
-                    daily_recommendations=recommendations,
-                    candidate_results=bundle.candidate_results,
-                    rebound_watchlist=rebound_watchlist,
-                    overheated_watchlist=overheated_watchlist,
-                    nightly_market=bundle.nightly_market,
-                    nightly_positive_watchlist=nightly_positive_watchlist,
-                    nightly_risk_watchlist=nightly_risk_watchlist,
-                )
-                st.session_state["data_source_label"] = f"即時分析 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
-                st.session_state["update_status"] = {
-                    "status": "live",
-                    "message": "目前頁面顯示即時分析結果，未覆蓋正式快照。",
-                }
-                st.session_state["live_refresh_error"] = None
+    if reload_button:
+        st.cache_data.clear()
+        st.cache_resource.clear()
+        for key in (
+            "bundle",
+            "watchlist",
+            "candidate_pool",
+            "recommendations",
+            "rebound_watchlist",
+            "overheated_watchlist",
+            "nightly_positive_watchlist",
+            "nightly_risk_watchlist",
+            "nightly_market",
+            "report_text",
+            "prompt_text",
+            "data_source_label",
+            "update_status",
+            "live_refresh_error",
+            "snapshot_load_error",
+        ):
+            st.session_state.pop(key, None)
+        st.rerun()
 
     bundle = st.session_state.get("bundle")
     if bundle is None:
-        st.error("目前沒有可用資料。")
+        st.error("目前沒有可用快照；請到 GitHub Actions 執行 Refresh Site Snapshot。")
         return
 
     if not bundle.evaluations:
@@ -634,10 +554,6 @@ def main() -> None:
     data_source_label = st.session_state.get("data_source_label")
     update_status = st.session_state.get("update_status")
     live_refresh_error = st.session_state.get("live_refresh_error")
-
-    history_rows = load_history_rows(history_marker())
-    snapshot_mtime = SNAPSHOT_PATH.stat().st_mtime if SNAPSHOT_PATH.exists() else None
-    paper_trading_result = load_paper_trading_result(history_marker(), snapshot_mtime)
 
     render_status_banner(update_status, data_source_label)
     render_live_refresh_error(live_refresh_error)
@@ -693,37 +609,67 @@ def main() -> None:
             nightly_risk_watchlist=nightly_risk_watchlist,
         )
 
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(["固定追蹤", "候選池", "模擬帳戶", "歷史紀錄", "匯出"])
+    section = st.radio(
+        "檢視內容",
+        ["固定追蹤", "候選池", "模擬帳戶", "歷史紀錄", "匯出"],
+        horizontal=True,
+        key="main_section",
+    )
 
-    with tab1:
-        st.subheader("固定追蹤清單")
-        for symbol in watchlist:
-            if symbol not in bundle.raw_data or symbol not in bundle.evaluations:
-                st.warning(f"{symbol} 目前沒有足夠資料。")
-                continue
+    if section == "固定追蹤":
+        available = [
+            symbol
+            for symbol in watchlist
+            if symbol in bundle.raw_data and symbol in bundle.evaluations
+        ]
+        if not available:
+            st.info("固定追蹤清單目前沒有足夠資料。")
+        else:
+            symbol = st.selectbox("選擇固定追蹤股票", available)
             render_stock_detail(symbol, bundle.raw_data[symbol], bundle.evaluations[symbol])
 
-    with tab2:
-        st.subheader("候選池")
-        for symbol in candidate_pool:
-            if symbol not in bundle.raw_data or symbol not in bundle.evaluations:
-                st.warning(f"{symbol} 目前沒有足夠資料。")
-                continue
+    elif section == "候選池":
+        available = [
+            symbol
+            for symbol in candidate_pool
+            if symbol in bundle.raw_data and symbol in bundle.evaluations
+        ]
+        if not available:
+            st.info("候選池目前沒有足夠資料。")
+        else:
+            symbol = st.selectbox("選擇候選股票", available)
             render_stock_detail(symbol, bundle.raw_data[symbol], bundle.evaluations[symbol])
 
-    with tab3:
+    elif section == "模擬帳戶":
+        with st.spinner("正在讀取精簡歷史資料並計算模擬帳戶..."):
+            snapshot_mtime = SNAPSHOT_PATH.stat().st_mtime if SNAPSHOT_PATH.exists() else None
+            paper_trading_result = load_paper_trading_result(
+                history_marker(), snapshot_mtime
+            )
         render_paper_trading(paper_trading_result)
 
-    with tab4:
+    elif section == "歷史紀錄":
+        with st.spinner("正在讀取歷史紀錄..."):
+            history_rows = load_history_rows(history_marker())
         render_history_table(history_rows)
 
-    with tab5:
+    else:
         st.subheader("匯出內容")
-        st.download_button("下載日報", data=report_text, file_name=f"daily_report_{today_str}.md", mime="text/markdown")
+        st.download_button(
+            "下載日報",
+            data=report_text,
+            file_name=f"daily_report_{today_str}.md",
+            mime="text/markdown",
+        )
         st.markdown("**Markdown 日報**")
         st.code(report_text, language="markdown")
         if prompt_text:
-            st.download_button("下載 Prompt", data=prompt_text, file_name=f"chatgpt_input_{today_str}.txt", mime="text/plain")
+            st.download_button(
+                "下載 Prompt",
+                data=prompt_text,
+                file_name=f"chatgpt_input_{today_str}.txt",
+                mime="text/plain",
+            )
             st.markdown("**LLM Prompt**")
             st.code(prompt_text, language="markdown")
         else:
