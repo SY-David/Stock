@@ -10,41 +10,98 @@ PAPER_PATH = ROOT / "modules" / "paper_trading.py"
 
 def optimize_app() -> None:
     text = APP_PATH.read_text(encoding="utf-8")
-    if 'key="main_section"' in text:
-        print("app.py is already optimized")
-        return
 
-    replacements = {
-        "@st.cache_data(ttl=600, show_spinner=False)\ndef load_analysis_bundle":
-            "@st.cache_data(ttl=600, max_entries=2, show_spinner=False)\ndef load_analysis_bundle",
-        "@st.cache_data(ttl=60, show_spinner=False)\ndef load_saved_snapshot":
-            "@st.cache_resource(max_entries=2, show_spinner=False)\ndef load_saved_snapshot",
-        "@st.cache_data(ttl=60, show_spinner=False)\ndef load_saved_status":
-            "@st.cache_data(ttl=60, max_entries=2, show_spinner=False)\ndef load_saved_status",
-        "@st.cache_data(ttl=60, show_spinner=False)\ndef load_history_rows":
-            "@st.cache_data(ttl=300, max_entries=2, show_spinner=False)\ndef load_history_rows",
-        "@st.cache_data(ttl=60, show_spinner=False)\ndef load_paper_trading_result":
-            "@st.cache_data(ttl=300, max_entries=2, show_spinner=False)\ndef load_paper_trading_result",
-        "    history_rows = load_history_rows(history_marker())\n"
-        "    snapshot_mtime = SNAPSHOT_PATH.stat().st_mtime if SNAPSHOT_PATH.exists() else None\n"
-        "    paper_trading_result = load_paper_trading_result(history_marker(), snapshot_mtime)\n\n": "",
-    }
-    for old, new in replacements.items():
-        if old not in text:
-            raise RuntimeError(f"Expected app.py fragment not found: {old[:80]!r}")
-        text = text.replace(old, new, 1)
+    if 'run_button = st.button("重新分析"' in text:
+        text = text.replace(
+            '        run_button = st.button("重新分析", type="primary", use_container_width=True)\n'
+            '        st.caption("若網站正在讀快照，重新分析只會更新目前這個頁面，不會覆蓋正式快照。")\n',
+            '        reload_button = st.button("重新載入每日快照", type="primary", use_container_width=True)\n'
+            '        st.caption("網站只讀取 GitHub Actions 產生的每日快照，避免在免費主機上重跑大量抓取與模型訓練。")\n',
+            1,
+        )
 
-    start_marker = (
-        '    tab1, tab2, tab3, tab4, tab5 = st.tabs('
-        '["固定追蹤", "候選池", "模擬帳戶", "歷史紀錄", "匯出"])\n'
-    )
-    end_marker = '\n\nif __name__ == "__main__":\n'
-    start = text.find(start_marker)
-    end = text.find(end_marker, start)
-    if start < 0 or end < 0:
-        raise RuntimeError("Could not locate the original tab section in app.py")
+        fallback_start = text.find(
+            '        else:\n            with st.spinner("正在抓取線上資料並建立分析..."):\n'
+        )
+        refresh_start = text.find('    if run_button:\n', fallback_start)
+        if fallback_start < 0 or refresh_start < 0:
+            raise RuntimeError("Could not locate the initial live-analysis fallback")
+        text = (
+            text[:fallback_start]
+            + '        else:\n            st.session_state["snapshot_load_error"] = True\n\n'
+            + text[refresh_start:]
+        )
 
-    lazy_section = '''    section = st.radio(
+        refresh_start = text.find('    if run_button:\n')
+        bundle_start = text.find(
+            '    bundle = st.session_state.get("bundle")\n', refresh_start
+        )
+        if refresh_start < 0 or bundle_start < 0:
+            raise RuntimeError("Could not locate the live refresh block")
+        reload_block = '''    if reload_button:
+        st.cache_data.clear()
+        st.cache_resource.clear()
+        for key in (
+            "bundle",
+            "watchlist",
+            "candidate_pool",
+            "recommendations",
+            "rebound_watchlist",
+            "overheated_watchlist",
+            "nightly_positive_watchlist",
+            "nightly_risk_watchlist",
+            "nightly_market",
+            "report_text",
+            "prompt_text",
+            "data_source_label",
+            "update_status",
+            "live_refresh_error",
+            "snapshot_load_error",
+        ):
+            st.session_state.pop(key, None)
+        st.rerun()
+
+'''
+        text = text[:refresh_start] + reload_block + text[bundle_start:]
+
+        text = text.replace(
+            '        st.error("目前沒有可用資料。")\n',
+            '        st.error("目前沒有可用快照；請到 GitHub Actions 執行 Refresh Site Snapshot。")\n',
+            1,
+        )
+
+    if 'key="main_section"' not in text:
+        replacements = {
+            "@st.cache_data(ttl=600, show_spinner=False)\ndef load_analysis_bundle":
+                "@st.cache_data(ttl=600, max_entries=2, show_spinner=False)\ndef load_analysis_bundle",
+            "@st.cache_data(ttl=60, show_spinner=False)\ndef load_saved_snapshot":
+                "@st.cache_resource(max_entries=2, show_spinner=False)\ndef load_saved_snapshot",
+            "@st.cache_data(ttl=60, show_spinner=False)\ndef load_saved_status":
+                "@st.cache_data(ttl=60, max_entries=2, show_spinner=False)\ndef load_saved_status",
+            "@st.cache_data(ttl=60, show_spinner=False)\ndef load_history_rows":
+                "@st.cache_data(ttl=300, max_entries=2, show_spinner=False)\ndef load_history_rows",
+            "@st.cache_data(ttl=60, show_spinner=False)\ndef load_paper_trading_result":
+                "@st.cache_data(ttl=300, max_entries=2, show_spinner=False)\ndef load_paper_trading_result",
+            "    history_rows = load_history_rows(history_marker())\n"
+            "    snapshot_mtime = SNAPSHOT_PATH.stat().st_mtime if SNAPSHOT_PATH.exists() else None\n"
+            "    paper_trading_result = load_paper_trading_result(history_marker(), snapshot_mtime)\n\n": "",
+        }
+        for old, new in replacements.items():
+            if old not in text:
+                raise RuntimeError(f"Expected app.py fragment not found: {old[:80]!r}")
+            text = text.replace(old, new, 1)
+
+        start_marker = (
+            '    tab1, tab2, tab3, tab4, tab5 = st.tabs('
+            '["固定追蹤", "候選池", "模擬帳戶", "歷史紀錄", "匯出"])\n'
+        )
+        end_marker = '\n\nif __name__ == "__main__":\n'
+        start = text.find(start_marker)
+        end = text.find(end_marker, start)
+        if start < 0 or end < 0:
+            raise RuntimeError("Could not locate the original tab section in app.py")
+
+        lazy_section = '''    section = st.radio(
         "檢視內容",
         ["固定追蹤", "候選池", "模擬帳戶", "歷史紀錄", "匯出"],
         horizontal=True,
@@ -110,11 +167,11 @@ def optimize_app() -> None:
         else:
             st.info("目前沒有產生 LLM Prompt。")
 '''
+        text = text[:start] + lazy_section + text[end:]
 
-    text = text[:start] + lazy_section + text[end:]
     compile(text, str(APP_PATH), "exec")
     APP_PATH.write_text(text, encoding="utf-8")
-    print("Optimized app.py for lazy section rendering and bounded caches")
+    print("Optimized app.py for snapshot-only, lazy rendering and bounded caches")
 
 
 def fix_paper_trading_price_lookup() -> None:
@@ -125,10 +182,7 @@ def fix_paper_trading_price_lookup() -> None:
         '        if row_date < current_date:\n'
         '            break\n'
     )
-    new = (
-        '        if row_date <= current_date:\n'
-        '            return row\n'
-    )
+    new = '        if row_date <= current_date:\n            return row\n'
     if old in text:
         text = text.replace(old, new, 1)
         compile(text, str(PAPER_PATH), "exec")
