@@ -6,6 +6,7 @@ from pathlib import Path
 
 from app_config import (
     HISTORY_DIR,
+    HISTORY_LIMIT,
     PAPER_ALLOW_FRACTIONAL,
     PAPER_CONTINUATION_MIN_SCORE,
     PAPER_DAILY_BUDGET,
@@ -14,7 +15,6 @@ from app_config import (
     PAPER_MAX_NEW_BUYS_PER_DAY,
     SNAPSHOT_PATH,
 )
-from modules.analysis_service import hydrate_decision_fields
 
 
 @dataclass
@@ -39,23 +39,7 @@ class PaperTradingResult:
 def simulate_paper_portfolio() -> PaperTradingResult:
     snapshots = _load_full_snapshots()
     if not snapshots:
-        return PaperTradingResult(
-            initial_cash=PAPER_INITIAL_CASH,
-            cash=PAPER_INITIAL_CASH,
-            market_value=0.0,
-            total_assets=PAPER_INITIAL_CASH,
-            realized_pnl=0.0,
-            unrealized_pnl=0.0,
-            total_return_pct=0.0,
-            closed_trade_count=0,
-            win_rate_pct=0.0,
-            avg_closed_trade_return_pct=0.0,
-            snapshots_used=0,
-            positions=[],
-            pending_orders=[],
-            trades=[],
-            daily_records=[],
-        )
+        return _empty_result()
 
     cash = PAPER_INITIAL_CASH
     realized_pnl = 0.0
@@ -71,7 +55,9 @@ def simulate_paper_portfolio() -> PaperTradingResult:
         evaluations = snapshot.get("evaluations", {})
         recommendations = snapshot.get("recommendations", [])
         candidate_symbols = set(snapshot.get("candidate_symbols", []))
-        recommended_symbols = {item["symbol"] for item in recommendations}
+        recommended_symbols = {
+            item.get("symbol", "") for item in recommendations if item.get("symbol")
+        }
 
         pending_orders, trades, cash, realized_pnl = _execute_pending_orders(
             snapshot=snapshot,
@@ -88,8 +74,8 @@ def simulate_paper_portfolio() -> PaperTradingResult:
         for symbol, position in positions.items():
             price_row = _get_price_row(snapshot, symbol, current_date)
             if price_row:
-                position["last_open"] = price_row["open"]
-                position["last_close"] = price_row["close"]
+                position["last_open"] = float(price_row["open"])
+                position["last_close"] = float(price_row["close"])
                 position["last_mark_date"] = current_date
                 position["days_held"] = position.get("days_held", 0) + 1
 
@@ -104,15 +90,13 @@ def simulate_paper_portfolio() -> PaperTradingResult:
 
         pending_symbols = {order["symbol"] for order in pending_orders}
         for symbol, position in list(positions.items()):
-            evaluation = evaluations.get(symbol, {})
             exit_reason = _build_exit_reason(
                 symbol=symbol,
                 position=position,
-                evaluation=evaluation,
+                evaluation=evaluations.get(symbol, {}),
                 candidate_symbols=candidate_symbols,
                 recommended_symbols=recommended_symbols,
             )
-
             if exit_reason and symbol not in pending_symbols:
                 pending_orders.append(
                     {
@@ -129,7 +113,9 @@ def simulate_paper_portfolio() -> PaperTradingResult:
         buy_candidates = [
             item
             for item in recommendations
-            if item["symbol"] not in positions and item["symbol"] not in pending_symbols
+            if item.get("symbol")
+            and item["symbol"] not in positions
+            and item["symbol"] not in pending_symbols
         ][:PAPER_MAX_NEW_BUYS_PER_DAY]
 
         total_buy_budget = min(PAPER_DAILY_BUDGET, cash)
@@ -140,11 +126,14 @@ def simulate_paper_portfolio() -> PaperTradingResult:
                     {
                         "side": "BUY",
                         "symbol": item["symbol"],
-                        "symbol_name": item["symbol_name"],
+                        "symbol_name": item.get("symbol_name", item["symbol"]),
                         "signal_date": current_date,
                         "execute_on_or_after": current_date,
                         "budget": round(per_order_budget, 2),
-                        "reason": item.get("recommendation_reason", item.get("action", "明日推薦")),
+                        "reason": item.get(
+                            "recommendation_reason",
+                            item.get("action", "明日推薦"),
+                        ),
                     }
                 )
 
@@ -171,7 +160,9 @@ def simulate_paper_portfolio() -> PaperTradingResult:
                 "quantity": position["quantity"],
                 "avg_cost": round(position["avg_cost"], 2),
                 "days_held": position.get("days_held", 0),
-                "last_close": round(position.get("last_close", position["avg_cost"]), 2),
+                "last_close": round(
+                    position.get("last_close", position["avg_cost"]), 2
+                ),
                 "market_value": round(position.get("market_value", 0.0), 2),
                 "unrealized_pnl": round(position.get("unrealized_pnl", 0.0), 2),
             }
@@ -182,13 +173,29 @@ def simulate_paper_portfolio() -> PaperTradingResult:
     )
     pending_rows = sorted(
         pending_orders,
-        key=lambda item: (item["execute_on_or_after"], item["side"], item["symbol"]),
+        key=lambda item: (
+            item["execute_on_or_after"],
+            item["side"],
+            item["symbol"],
+        ),
     )
     total_assets = round(cash + market_value, 2)
-    total_return_pct = ((total_assets / PAPER_INITIAL_CASH) - 1) * 100 if PAPER_INITIAL_CASH else 0.0
-    closed_trades = [trade for trade in trades if trade["side"] == "SELL" and trade.get("return_pct") is not None]
-    winning_trades = [trade for trade in closed_trades if (trade.get("pnl") or 0) > 0]
-    win_rate_pct = (len(winning_trades) / len(closed_trades) * 100) if closed_trades else 0.0
+    total_return_pct = (
+        ((total_assets / PAPER_INITIAL_CASH) - 1) * 100
+        if PAPER_INITIAL_CASH
+        else 0.0
+    )
+    closed_trades = [
+        trade
+        for trade in trades
+        if trade["side"] == "SELL" and trade.get("return_pct") is not None
+    ]
+    winning_trades = [
+        trade for trade in closed_trades if (trade.get("pnl") or 0) > 0
+    ]
+    win_rate_pct = (
+        len(winning_trades) / len(closed_trades) * 100 if closed_trades else 0.0
+    )
     avg_closed_trade_return_pct = (
         sum(trade["return_pct"] for trade in closed_trades) / len(closed_trades)
         if closed_trades
@@ -214,6 +221,26 @@ def simulate_paper_portfolio() -> PaperTradingResult:
     )
 
 
+def _empty_result() -> PaperTradingResult:
+    return PaperTradingResult(
+        initial_cash=PAPER_INITIAL_CASH,
+        cash=PAPER_INITIAL_CASH,
+        market_value=0.0,
+        total_assets=PAPER_INITIAL_CASH,
+        realized_pnl=0.0,
+        unrealized_pnl=0.0,
+        total_return_pct=0.0,
+        closed_trade_count=0,
+        win_rate_pct=0.0,
+        avg_closed_trade_return_pct=0.0,
+        snapshots_used=0,
+        positions=[],
+        pending_orders=[],
+        trades=[],
+        daily_records=[],
+    )
+
+
 def _build_exit_reason(
     symbol: str,
     position: dict,
@@ -230,7 +257,10 @@ def _build_exit_reason(
         symbol in candidate_symbols
         and evaluation
         and evaluation.get("tomorrow_light") != "紅燈"
-        and float(evaluation.get("tomorrow_score", evaluation.get("score", 0))) >= PAPER_CONTINUATION_MIN_SCORE
+        and float(
+            evaluation.get("tomorrow_score", evaluation.get("score", 0))
+        )
+        >= PAPER_CONTINUATION_MIN_SCORE
     )
     if not continues_to_qualify:
         return "未持續留在當日候選/推薦名單"
@@ -241,7 +271,8 @@ def _load_full_snapshots() -> list[dict]:
     payloads_by_date: dict[str, dict] = {}
 
     if HISTORY_DIR.exists():
-        for path in sorted(HISTORY_DIR.glob("site_snapshot_*.json")):
+        paths = sorted(HISTORY_DIR.glob("site_snapshot_*.json"))[-HISTORY_LIMIT:]
+        for path in paths:
             payload = _read_snapshot_file(path)
             if payload:
                 payloads_by_date[payload["generated_at"][:10]] = payload
@@ -257,21 +288,57 @@ def _load_full_snapshots() -> list[dict]:
 def _read_snapshot_file(path: Path) -> dict | None:
     try:
         payload = json.loads(path.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError):
+    except (OSError, json.JSONDecodeError, UnicodeDecodeError):
+        return None
+    if not isinstance(payload, dict) or not payload.get("generated_at"):
         return None
 
-    evaluations = payload.get("evaluations", {})
-    for item in evaluations.values():
-        hydrate_decision_fields(item)
+    current_date = str(payload["generated_at"])[:10]
+    evaluations = {
+        symbol: {
+            "score": item.get("score", 0),
+            "tomorrow_score": item.get("tomorrow_score", item.get("score", 0)),
+            "tomorrow_light": item.get("tomorrow_light", "黃燈"),
+        }
+        for symbol, item in (payload.get("evaluations") or {}).items()
+    }
+    recommendations = [
+        {
+            "symbol": item.get("symbol", ""),
+            "symbol_name": item.get("symbol_name", item.get("symbol", "")),
+            "score": item.get("score", 0),
+            "tomorrow_score": item.get("tomorrow_score", item.get("score", 0)),
+            "tomorrow_light": item.get("tomorrow_light", "黃燈"),
+            "action": item.get("action", "明日推薦"),
+            "recommendation_reason": item.get(
+                "recommendation_reason", item.get("tomorrow_reason", "明日推薦")
+            ),
+        }
+        for item in (payload.get("recommendations") or [])
+        if item.get("symbol")
+    ]
 
-    recommendations = payload.get("recommendations", [])
-    hydrated_recommendations: list[dict] = []
-    for row in recommendations:
-        cloned = dict(row)
-        hydrate_decision_fields(cloned)
-        hydrated_recommendations.append(cloned)
-    payload["recommendations"] = hydrated_recommendations
-    return payload
+    prices: dict[str, dict] = {}
+    for symbol, stock_data in (payload.get("raw_data") or {}).items():
+        row = _latest_price_on_or_before(stock_data.get("prices") or [], current_date)
+        if row is not None:
+            prices[symbol] = {"prices": [row]}
+
+    return {
+        "generated_at": str(payload["generated_at"]),
+        "candidate_symbols": list(payload.get("candidate_symbols") or []),
+        "evaluations": evaluations,
+        "recommendations": recommendations,
+        "raw_data": prices,
+    }
+
+
+def _latest_price_on_or_before(rows: list[dict], target_date: str) -> dict | None:
+    for row in reversed(rows):
+        row_date = str(row.get("date", ""))
+        if not target_date or row_date <= target_date:
+            return row
+    return None
 
 
 def _execute_pending_orders(
@@ -334,6 +401,7 @@ def _execute_pending_orders(
                     "quantity": quantity,
                     "amount": amount,
                     "pnl": None,
+                    "return_pct": None,
                     "reason": order["reason"],
                     "signal_date": order["signal_date"],
                 }
@@ -349,7 +417,11 @@ def _execute_pending_orders(
             amount = round(quantity * open_price, 2)
             cost_amount = round(quantity * position["avg_cost"], 2)
             pnl = round(quantity * (open_price - position["avg_cost"]), 2)
-            return_pct = ((open_price / position["avg_cost"]) - 1) * 100 if position["avg_cost"] else 0.0
+            return_pct = (
+                ((open_price / position["avg_cost"]) - 1) * 100
+                if position["avg_cost"]
+                else 0.0
+            )
             cash = round(cash + amount, 2)
             realized_pnl = round(realized_pnl + pnl, 2)
             trades.append(
@@ -377,9 +449,10 @@ def _execute_pending_orders(
 def _get_price_row(snapshot: dict, symbol: str, current_date: str) -> dict | None:
     rows = snapshot.get("raw_data", {}).get(symbol, {}).get("prices", [])
     for row in reversed(rows):
-        if row.get("date") == current_date:
+        row_date = str(row.get("date", ""))
+        if row_date == current_date:
             return row
-        if row.get("date", "") < current_date:
+        if row_date < current_date:
             break
     return None
 
@@ -387,6 +460,12 @@ def _get_price_row(snapshot: dict, symbol: str, current_date: str) -> dict | Non
 def _calc_quantity(budget: float, price: float) -> float:
     if price <= 0 or budget <= 0:
         return 0.0
+
+    whole_shares = int(budget // price)
     if PAPER_ALLOW_FRACTIONAL:
-        return round(budget / price, 3)
-    return float(int(budget // price))
+        # In Taiwan, odd-lot trading means whole shares below one board lot,
+        # not fractions of a share.
+        return float(whole_shares)
+
+    board_lot = 1000
+    return float((whole_shares // board_lot) * board_lot)
