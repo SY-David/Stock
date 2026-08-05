@@ -1,0 +1,274 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-08-05T10:04:52",
+  "candidate_symbols": [
+    "3231",
+    "3665",
+    "2408",
+    "2301",
+    "3008",
+    "6770",
+    "3653",
+    "2337",
+    "2492",
+    "8046"
+  ],
+  "evaluations": {
+    "0050": {
+      "symbol": "0050",
+      "symbol_name": "元大台灣50",
+      "score": 55,
+      "tomorrow_score": 45,
+      "tomorrow_light": "紅燈"
+    },
+    "2344": {
+      "symbol": "2344",
+      "symbol_name": "華邦電",
+      "score": 47,
+      "tomorrow_score": 48,
+      "tomorrow_light": "紅燈"
+    },
+    "3231": {
+      "symbol": "3231",
+      "symbol_name": "緯創",
+      "score": 65,
+      "tomorrow_score": 69,
+      "tomorrow_light": "黃燈"
+    },
+    "3665": {
+      "symbol": "3665",
+      "symbol_name": "貿聯-KY",
+      "score": 58,
+      "tomorrow_score": 63,
+      "tomorrow_light": "黃燈"
+    },
+    "2408": {
+      "symbol": "2408",
+      "symbol_name": "南亞科",
+      "score": 72,
+      "tomorrow_score": 89,
+      "tomorrow_light": "綠燈"
+    },
+    "2301": {
+      "symbol": "2301",
+      "symbol_name": "光寶科",
+      "score": 50,
+      "tomorrow_score": 47,
+      "tomorrow_light": "紅燈"
+    },
+    "3008": {
+      "symbol": "3008",
+      "symbol_name": "大立光",
+      "score": 70,
+      "tomorrow_score": 69,
+      "tomorrow_light": "黃燈"
+    },
+    "6770": {
+      "symbol": "6770",
+      "symbol_name": "力積電",
+      "score": 42,
+      "tomorrow_score": 49,
+      "tomorrow_light": "紅燈"
+    },
+    "3653": {
+      "symbol": "3653",
+      "symbol_name": "健策",
+      "score": 55,
+      "tomorrow_score": 58,
+      "tomorrow_light": "黃燈"
+    },
+    "2337": {
+      "symbol": "2337",
+      "symbol_name": "旺宏",
+      "score": 23,
+      "tomorrow_score": 33,
+      "tomorrow_light": "紅燈"
+    },
+    "2492": {
+      "symbol": "2492",
+      "symbol_name": "華新科",
+      "score": 47,
+      "tomorrow_score": 46,
+      "tomorrow_light": "紅燈"
+    },
+    "8046": {
+      "symbol": "8046",
+      "symbol_name": "南電",
+      "score": 51,
+      "tomorrow_score": 56,
+      "tomorrow_light": "黃燈"
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "2408",
+      "symbol_name": "南亞科",
+      "score": 72,
+      "tomorrow_score": 89,
+      "tomorrow_light": "綠燈",
+      "action": "可持有或拉回續看",
+      "recommendation_reason": "收盤 445.00 站上 MA20 411.23；利多：創高"
+    }
+  ],
+  "nightly_market": {
+    "market_bias": "偏空"
+  },
+  "raw_data": {
+    "0050": {
+      "prices": [
+        {
+          "date": "2026-08-05",
+          "open": 103.75,
+          "high": 104.75,
+          "low": 102.9,
+          "close": 103.8,
+          "volume": 168906182,
+          "turnover": 128323
+        }
+      ]
+    },
+    "2344": {
+      "prices": [
+        {
+          "date": "2026-08-05",
+          "open": 167.0,
+          "high": 172.5,
+          "low": 164.5,
+          "close": 169.0,
+          "volume": 232656923,
+          "turnover": 127092
+        }
+      ]
+    },
+    "3231": {
+      "prices": [
+        {
+          "date": "2026-08-05",
+          "open": 198.0,
+          "high": 202.5,
+          "low": 190.0,
+          "close": 193.0,
+          "volume": 206766416,
+          "turnover": 171301
+        }
+      ]
+    },
+    "3665": {
+      "prices": [
+        {
+          "date": "2026-08-05",
+          "open": 2400.0,
+          "high": 2450.0,
+          "low": 2330.0,
+          "close": 2355.0,
+          "volume": 3940517,
+          "turnover": 9531
+        }
+      ]
+    },
+    "2408": {
+      "prices": [
+        {
+          "date": "2026-08-05",
+          "open": 469.0,
+          "high": 470.5,
+          "low": 441.5,
+          "close": 445.0,
+          "volume": 144425745,
+          "turnover": 132780
+        }
+      ]
+    },
+    "2301": {
+      "prices": [
+        {
+          "date": "2026-08-05",
+          "open": 260.0,
+          "high": 268.5,
+          "low": 247.0,
+          "close": 249.0,
+          "volume": 90355678,
+          "turnover": 84772
+        }
+      ]
+    },
+    "3008": {
+      "prices": [
+        {
+          "date": "2026-08-05",
+          "open": 4410.0,
+          "high": 4730.0,
+          "low": 4340.0,
+          "close": 4575.0,
+          "volume": 4740431,
+          "turnover": 26063
+        }
+      ]
+    },
+    "6770": {
+      "prices": [
+        {
+          "date": "2026-08-05",
+          "open": 63.4,
+          "high": 66.1,
+          "low": 62.2,
+          "close": 66.1,
+          "volume": 240808216,
+          "turnover": 93862
+        }
+      ]
+    },
+    "3653": {
+      "prices": [
+        {
+          "date": "2026-08-05",
+          "open": 4200.0,
+          "high": 4430.0,
+          "low": 4180.0,
+          "close": 4340.0,
+          "volume": 3016143,
+          "turnover": 13486
+        }
+      ]
+    },
+    "2337": {
+      "prices": [
+        {
+          "date": "2026-08-05",
+          "open": 123.0,
+          "high": 127.5,
+          "low": 117.0,
+          "close": 117.5,
+          "volume": 173482291,
+          "turnover": 95746
+        }
+      ]
+    },
+    "2492": {
+      "prices": [
+        {
+          "date": "2026-08-05",
+          "open": 274.0,
+          "high": 283.5,
+          "low": 254.0,
+          "close": 259.5,
+          "volume": 43709111,
+          "turnover": 35729
+        }
+      ]
+    },
+    "8046": {
+      "prices": [
+        {
+          "date": "2026-08-05",
+          "open": 1140.0,
+          "high": 1145.0,
+          "low": 1055.0,
+          "close": 1060.0,
+          "volume": 5440142,
+          "turnover": 9743
+        }
+      ]
+    }
+  }
+}
