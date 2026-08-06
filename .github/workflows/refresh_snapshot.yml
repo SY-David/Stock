@@ -12,19 +12,9 @@ on:
       - "app_config.py"
       - "refresh_snapshot.py"
       - "requirements.txt"
-      - "modules/analysis_service.py"
-      - "modules/candidate_pool.py"
-      - "modules/scoring_engine.py"
-      - "modules/site_snapshot.py"
-      - "modules/paper_trading.py"
-      - "modules/storage.py"
+      - "modules/**"
       - "tests/**"
-      - "tools/optimize_streamlit_app.py"
-      - "tools/fix_history_cache.py"
-      - "tools/fix_portfolio_tracking.py"
-      - "tools/fix_repo_audit.py"
-      - "tools/restore_full_history.py"
-      - "tools/rebuild_snapshot_history.py"
+      - "tools/**"
 
 permissions:
   contents: write
@@ -53,48 +43,52 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
 
-      - name: Restore complete history behavior
-        run: python tools/restore_full_history.py
+      - name: Run maintenance pipeline with diagnostics
+        shell: bash
+        run: |
+          mkdir -p data
+          : > data/ci_diagnostic.log
+          rm -f data/ci_failed
 
-      - name: Rebuild compact history from Git
-        run: python tools/rebuild_snapshot_history.py
+          run_step() {
+            local label="$1"
+            shift
+            echo "===== ${label} =====" | tee -a data/ci_diagnostic.log
+            "$@" >> data/ci_diagnostic.log 2>&1
+            local code=$?
+            echo "exit=${code}" | tee -a data/ci_diagnostic.log
+            echo | tee -a data/ci_diagnostic.log
+            if [ "$code" -ne 0 ]; then
+              touch data/ci_failed
+            fi
+            return 0
+          }
 
-      - name: Optimize Streamlit app
-        run: python -c "from tools.optimize_streamlit_app import optimize_app; optimize_app()"
-
-      - name: Refresh history cache marker
-        run: python tools/fix_history_cache.py
-
-      - name: Apply repository audit fixes
-        run: python tools/fix_repo_audit.py
-
-      - name: Retain prices for paper positions
-        run: python tools/fix_portfolio_tracking.py
-
-      - name: Run unit tests
-        run: python -m unittest discover -s tests
+          set +e
+          run_step "restore_full_history" python tools/restore_full_history.py
+          run_step "rebuild_snapshot_history" python tools/rebuild_snapshot_history.py
+          run_step "optimize_streamlit_app" python -c "from tools.optimize_streamlit_app import optimize_app; optimize_app()"
+          run_step "fix_history_cache" python tools/fix_history_cache.py
+          run_step "fix_repo_audit" python tools/fix_repo_audit.py
+          run_step "fix_portfolio_tracking" python tools/fix_portfolio_tracking.py
+          run_step "unit_tests" python -m unittest discover -s tests
+          cat data/ci_diagnostic.log
 
       - name: Refresh snapshot
         id: refresh
         continue-on-error: true
         run: python refresh_snapshot.py --no-prompt
 
-      - name: Commit optimized app, complete history, snapshot, and status
+      - name: Commit generated files and diagnostics
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add app.py
-          git add app_config.py
-          git add modules/analysis_service.py
-          git add modules/paper_trading.py
-          git add modules/scoring_engine.py
-          git add modules/site_snapshot.py
-          git add modules/storage.py
-          git add README.md
-          git add data/site_snapshot.json
-          git add data/history
-          git add data/update_status.json
+          git add app.py app_config.py README.md
+          git add modules/analysis_service.py modules/paper_trading.py
+          git add modules/scoring_engine.py modules/site_snapshot.py modules/storage.py
+          git add data/site_snapshot.json data/history data/update_status.json
+          git add data/ci_diagnostic.log
           if git diff --cached --quiet; then
             echo "No generated changes to commit."
             exit 0
@@ -102,6 +96,9 @@ jobs:
           git commit -m "chore: apply audit fixes and refresh snapshot"
           git push
 
-      - name: Mark failed refresh
-        if: steps.refresh.outcome == 'failure'
-        run: exit 1
+      - name: Mark failed maintenance or refresh
+        if: always()
+        run: |
+          if [ -f data/ci_failed ] || [ "${{ steps.refresh.outcome }}" = "failure" ]; then
+            exit 1
+          fi
