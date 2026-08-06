@@ -59,10 +59,10 @@ class TWSEClientCacheTests(unittest.TestCase):
 
             persisted = json.loads(cache_path.read_text(encoding="utf-8"))
             temp_path = cache_path.with_suffix(cache_path.suffix + ".tmp")
+            self.assertFalse(temp_path.exists())
 
         self.assertEqual(result, fresh_payload)
         self.assertEqual(persisted, fresh_payload)
-        self.assertFalse(temp_path.exists())
         self.client.session.get.assert_called_once()
 
     def test_stale_valid_cache_is_used_when_refresh_fails(self):
