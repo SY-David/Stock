@@ -5,6 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 APP_PATH = ROOT / "app.py"
+CONFIG_PATH = ROOT / "app_config.py"
 PAPER_PATH = ROOT / "modules" / "paper_trading.py"
 SCORING_PATH = ROOT / "modules" / "scoring_engine.py"
 STORAGE_PATH = ROOT / "modules" / "storage.py"
@@ -50,8 +51,35 @@ def patch_app() -> None:
     print("Fixed Streamlit trade-table missing-value display")
 
 
+def patch_config() -> None:
+    text = CONFIG_PATH.read_text(encoding="utf-8")
+    text = replace_one(
+        text,
+        'PAPER_MAX_NEW_BUYS_PER_DAY = int(os.getenv("PAPER_MAX_NEW_BUYS_PER_DAY", "2"))\n',
+        'PAPER_MAX_NEW_BUYS_PER_DAY = int(os.getenv("PAPER_MAX_NEW_BUYS_PER_DAY", "2"))\nPAPER_ORDER_MAX_CALENDAR_DAYS = int(os.getenv("PAPER_ORDER_MAX_CALENDAR_DAYS", "7"))\n',
+        "paper-order expiry setting",
+    )
+    compile(text, str(CONFIG_PATH), "exec")
+    CONFIG_PATH.write_text(text, encoding="utf-8")
+    print("Added paper-order expiry setting")
+
+
 def patch_paper_trading() -> None:
     text = PAPER_PATH.read_text(encoding="utf-8")
+
+    if "from datetime import date\n" not in text:
+        text = text.replace(
+            "from dataclasses import dataclass\n",
+            "from dataclasses import dataclass\nfrom datetime import date\n",
+            1,
+        )
+
+    text = replace_one(
+        text,
+        '    PAPER_MAX_NEW_BUYS_PER_DAY,\n',
+        '    PAPER_MAX_NEW_BUYS_PER_DAY,\n    PAPER_ORDER_MAX_CALENDAR_DAYS,\n',
+        "paper-order expiry import",
+    )
 
     text = replace_one(
         text,
@@ -76,9 +104,36 @@ def patch_paper_trading() -> None:
 
     text = replace_one(
         text,
-        '        price_row = _get_price_row(snapshot, order["symbol"], current_date)\n',
-        '        price_row = _get_price_row(\n            snapshot,\n            order["symbol"],\n            current_date,\n            after_date=order["signal_date"],\n        )\n',
-        "next-trading-day order lookup",
+        '''    for order in pending_orders:
+        if order["execute_on_or_after"] > current_date:
+            still_pending.append(order)
+            continue
+
+        price_row = _get_price_row(snapshot, order["symbol"], current_date)
+''',
+        '''    for order in pending_orders:
+        if order["execute_on_or_after"] > current_date:
+            still_pending.append(order)
+            continue
+
+        try:
+            order_age_days = (
+                date.fromisoformat(current_date)
+                - date.fromisoformat(str(order["signal_date"])[:10])
+            ).days
+        except (KeyError, TypeError, ValueError):
+            order_age_days = 0
+        if order_age_days > PAPER_ORDER_MAX_CALENDAR_DAYS:
+            continue
+
+        price_row = _get_price_row(
+            snapshot,
+            order["symbol"],
+            current_date,
+            after_date=order["signal_date"],
+        )
+''',
+        "order expiry and next-trading-day lookup",
     )
 
     text = replace_one(
@@ -156,7 +211,7 @@ def patch_paper_trading() -> None:
 
     compile(text, str(PAPER_PATH), "exec")
     PAPER_PATH.write_text(text, encoding="utf-8")
-    print("Fixed paper-trading stale-price fills and trading-day counts")
+    print("Fixed paper-trading stale fills, order expiry and trading-day counts")
 
 
 def patch_scoring() -> None:
@@ -287,6 +342,11 @@ def patch_storage() -> None:
 def patch_readme() -> None:
     text = README_PATH.read_text(encoding="utf-8")
     text = text.replace("HISTORY_LIMIT=30", "HISTORY_LIMIT=0\nPAPER_HISTORY_LIMIT=0")
+    if "PAPER_ORDER_MAX_CALENDAR_DAYS=" not in text:
+        text = text.replace(
+            "PAPER_MAX_NEW_BUYS_PER_DAY=2\n",
+            "PAPER_MAX_NEW_BUYS_PER_DAY=2\nPAPER_ORDER_MAX_CALENDAR_DAYS=7\n",
+        )
     text = text.replace(
         "網站若找到 `data/site_snapshot.json`，會優先讀取快照；沒有快照時才會即時抓資料。",
         "網站只讀取 `data/site_snapshot.json`；沒有快照時會提示先執行 GitHub Actions，不會在免費主機上即時重跑完整分析。",
@@ -305,6 +365,7 @@ def patch_readme() -> None:
 
 def main() -> None:
     patch_app()
+    patch_config()
     patch_paper_trading()
     patch_scoring()
     patch_storage()
