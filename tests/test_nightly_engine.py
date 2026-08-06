@@ -104,6 +104,35 @@ class NightlyEngineCacheTests(unittest.TestCase):
             self.assertEqual(result, items)
             self.assertTrue(cache_path.exists())
 
+    def test_cache_write_failure_keeps_fetched_news(self):
+        raw_xml = """
+        <rss><channel>
+          <item>
+            <title>測試快取失敗 - Google News</title>
+            <link>https://example.test/news</link>
+            <pubDate>today</pubDate>
+          </item>
+        </channel></rss>
+        """
+        response = Mock()
+        response.text = raw_xml
+        response.raise_for_status.return_value = None
+        self.engine.session.get = Mock(return_value=response)
+        self.engine._write_cache = Mock(side_effect=OSError("read-only"))
+
+        result = self.engine._fetch_google_news(
+            "cache-write-failure",
+            limit=1,
+        )
+        repeated = self.engine._fetch_google_news(
+            "cache-write-failure",
+            limit=1,
+        )
+
+        self.assertEqual(result, repeated)
+        self.assertEqual(result[0]["title"], "測試快取失敗")
+        self.engine.session.get.assert_called_once()
+
 
 if __name__ == "__main__":
     unittest.main()
