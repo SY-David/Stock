@@ -155,7 +155,7 @@ def render_recommendations(recommendations: list[dict]) -> None:
             for item in recommendations
         ]
     )
-    st.dataframe(rec_df, use_container_width=True, hide_index=True)
+    st.dataframe(rec_df, width="stretch", hide_index=True)
 
 
 def render_rank_table(title: str, rows: list[dict]) -> None:
@@ -177,7 +177,7 @@ def render_rank_table(title: str, rows: list[dict]) -> None:
             for item in rows
         ]
     )
-    st.dataframe(df, use_container_width=True, hide_index=True)
+    st.dataframe(df, width="stretch", hide_index=True)
 
 
 def render_theme_table(title: str, rows: list[dict], score_label: str) -> None:
@@ -198,7 +198,7 @@ def render_theme_table(title: str, rows: list[dict], score_label: str) -> None:
             for item in rows
         ]
     )
-    st.dataframe(df, use_container_width=True, hide_index=True)
+    st.dataframe(df, width="stretch", hide_index=True)
 
 
 def render_night_signal_table(title: str, rows: list[dict]) -> None:
@@ -221,7 +221,7 @@ def render_night_signal_table(title: str, rows: list[dict]) -> None:
             for item in rows
         ]
     )
-    st.dataframe(df, use_container_width=True, hide_index=True)
+    st.dataframe(df, width="stretch", hide_index=True)
 
 
 def render_history_table(rows: list[dict]) -> None:
@@ -245,7 +245,7 @@ def render_history_table(rows: list[dict]) -> None:
             for row in rows
         ]
     )
-    st.dataframe(df, use_container_width=True, hide_index=True)
+    st.dataframe(df, width="stretch", hide_index=True)
 
 
 def render_paper_trading(result) -> None:
@@ -274,7 +274,7 @@ def render_paper_trading(result) -> None:
     if result.daily_records:
         curve_df = pd.DataFrame(result.daily_records)
         curve_df["date"] = pd.to_datetime(curve_df["date"])
-        st.line_chart(curve_df.set_index("date")[["total_assets"]], use_container_width=True)
+        st.line_chart(curve_df.set_index("date")[["total_assets"]], width="stretch")
 
         daily_df = pd.DataFrame(
             [
@@ -293,7 +293,7 @@ def render_paper_trading(result) -> None:
             ]
         )
         st.markdown("**最近 10 天結算**")
-        st.dataframe(daily_df, use_container_width=True, hide_index=True)
+        st.dataframe(daily_df, width="stretch", hide_index=True)
 
     if result.positions:
         positions_df = pd.DataFrame(
@@ -311,7 +311,7 @@ def render_paper_trading(result) -> None:
             ]
         )
         st.markdown("**目前持股**")
-        st.dataframe(positions_df, use_container_width=True, hide_index=True)
+        st.dataframe(positions_df, width="stretch", hide_index=True)
     else:
         st.info("目前模擬帳戶沒有持股。")
 
@@ -330,7 +330,7 @@ def render_paper_trading(result) -> None:
             ]
         )
         st.markdown("**待執行單**")
-        st.dataframe(pending_df, use_container_width=True, hide_index=True)
+        st.dataframe(pending_df, width="stretch", hide_index=True)
 
     if result.trades:
         trades_df = pd.DataFrame(
@@ -342,7 +342,7 @@ def render_paper_trading(result) -> None:
                     "價格": row["price"],
                     "數量": row["quantity"],
                     "金額": row["amount"],
-                    "損益": row["pnl"] if row["pnl"] is not None else "",
+                    "損益": float(row["pnl"]) if row["pnl"] is not None else None,
                     "報酬率": f"{row['return_pct']:.2f}%" if row.get("return_pct") is not None else "",
                     "原因": row["reason"],
                     "訊號日": row["signal_date"],
@@ -351,7 +351,7 @@ def render_paper_trading(result) -> None:
             ]
         )
         st.markdown("**最近 20 筆交易**")
-        st.dataframe(trades_df, use_container_width=True, hide_index=True)
+        st.dataframe(trades_df, width="stretch", hide_index=True)
 
 
 def render_glossary() -> None:
@@ -380,7 +380,7 @@ def render_stock_detail(symbol: str, stock_data: dict, result: dict) -> None:
             price_df = pd.DataFrame(stock_data["prices"]).copy()
             price_df["date"] = pd.to_datetime(price_df["date"])
             chart_df = price_df.set_index("date")[["close"]]
-            st.line_chart(chart_df, use_container_width=True)
+            st.line_chart(chart_df, width="stretch")
 
         with right:
             st.markdown(
@@ -477,7 +477,7 @@ def main() -> None:
         st.header("設定")
         watchlist_text = st.text_area("固定追蹤", value=default_watchlist_text, height=90)
         candidate_text = st.text_area("每日候選池", value=default_candidate_text, height=180)
-        reload_button = st.button("重新載入每日快照", type="primary", use_container_width=True)
+        reload_button = st.button("重新載入每日快照", type="primary", width="stretch")
         st.caption("網站只讀取 GitHub Actions 產生的每日快照，避免在免費主機上重跑大量抓取與模型訓練。")
 
     if "bundle" not in st.session_state:

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T14:53:19",
+  "generated_at": "2026-08-06T15:10:29",
   "watchlist_symbols": [
     "0050",
     "2344"
@@ -8194,7 +8194,9 @@
       "institutional_history": [],
       "revenue_history": [],
       "margin_history": [],
-      "warnings": [],
+      "warnings": [
+        "202403 月資料抓取失敗：HTTPSConnectionPool(host='www.twse.com.tw', port=443): Read timed out. (read timeout=20)"
+      ],
       "source": "twse_official"
     },
     "2313": {
@@ -11478,6 +11480,195 @@
       },
       "prices": [
         {
+          "date": "2025-10-07",
+          "open": 71.7,
+          "high": 72.2,
+          "low": 71.3,
+          "close": 71.9,
+          "volume": 1400384,
+          "turnover": 1663
+        },
+        {
+          "date": "2025-10-08",
+          "open": 71.5,
+          "high": 71.6,
+          "low": 70.7,
+          "close": 71.2,
+          "volume": 1594750,
+          "turnover": 1749
+        },
+        {
+          "date": "2025-10-09",
+          "open": 71.2,
+          "high": 71.5,
+          "low": 69.9,
+          "close": 69.9,
+          "volume": 2835377,
+          "turnover": 2253
+        },
+        {
+          "date": "2025-10-13",
+          "open": 64.3,
+          "high": 68.4,
+          "low": 64.3,
+          "close": 67.9,
+          "volume": 3763388,
+          "turnover": 2742
+        },
+        {
+          "date": "2025-10-14",
+          "open": 68.6,
+          "high": 70.5,
+          "low": 66.9,
+          "close": 67.1,
+          "volume": 3125719,
+          "turnover": 3052
+        },
+        {
+          "date": "2025-10-15",
+          "open": 67.3,
+          "high": 68.8,
+          "low": 66.2,
+          "close": 68.2,
+          "volume": 2096467,
+          "turnover": 1694
+        },
+        {
+          "date": "2025-10-16",
+          "open": 68.5,
+          "high": 69.5,
+          "low": 68.1,
+          "close": 68.6,
+          "volume": 1972634,
+          "turnover": 1674
+        },
+        {
+          "date": "2025-10-17",
+          "open": 68.2,
+          "high": 69.5,
+          "low": 67.7,
+          "close": 67.9,
+          "volume": 1718942,
+          "turnover": 1950
+        },
+        {
+          "date": "2025-10-20",
+          "open": 68.2,
+          "high": 68.9,
+          "low": 67.7,
+          "close": 68.0,
+          "volume": 1243809,
+          "turnover": 1178
+        },
+        {
+          "date": "2025-10-21",
+          "open": 68.2,
+          "high": 70.0,
+          "low": 68.2,
+          "close": 69.5,
+          "volume": 1922321,
+          "turnover": 1838
+        },
+        {
+          "date": "2025-10-22",
+          "open": 69.5,
+          "high": 72.2,
+          "low": 69.3,
+          "close": 70.8,
+          "volume": 3323199,
+          "turnover": 2972
+        },
+        {
+          "date": "2025-10-23",
+          "open": 70.1,
+          "high": 72.4,
+          "low": 70.1,
+          "close": 71.8,
+          "volume": 3199360,
+          "turnover": 3573
+        },
+        {
+          "date": "2025-10-27",
+          "open": 72.6,
+          "high": 73.0,
+          "low": 71.7,
+          "close": 72.7,
+          "volume": 3198233,
+          "turnover": 2410
+        },
+        {
+          "date": "2025-10-28",
+          "open": 73.1,
+          "high": 73.1,
+          "low": 70.7,
+          "close": 70.9,
+          "volume": 2380268,
+          "turnover": 3641
+        },
+        {
+          "date": "2025-10-29",
+          "open": 71.3,
+          "high": 71.6,
+          "low": 69.1,
+          "close": 69.1,
+          "volume": 3084452,
+          "turnover": 2599
+        },
+        {
+          "date": "2025-10-30",
+          "open": 69.2,
+          "high": 69.9,
+          "low": 67.7,
+          "close": 68.4,
+          "volume": 2364551,
+          "turnover": 1896
+        },
+        {
+          "date": "2025-10-31",
+          "open": 68.4,
+          "high": 69.1,
+          "low": 68.0,
+          "close": 69.0,
+          "volume": 1414721,
+          "turnover": 1406
+        },
+        {
+          "date": "2025-11-03",
+          "open": 69.1,
+          "high": 70.0,
+          "low": 68.7,
+          "close": 69.3,
+          "volume": 1384854,
+          "turnover": 1729
+        },
+        {
+          "date": "2025-11-04",
+          "open": 70.0,
+          "high": 72.5,
+          "low": 68.2,
+          "close": 68.2,
+          "volume": 4679132,
+          "turnover": 3850
+        },
+        {
+          "date": "2025-11-05",
+          "open": 66.4,
+          "high": 69.7,
+          "low": 66.4,
+          "close": 69.3,
+          "volume": 1885741,
+          "turnover": 1910
+        },
+        {
+          "date": "2025-11-06",
+          "open": 69.8,
+          "high": 70.0,
+          "low": 68.9,
+          "close": 70.0,
+          "volume": 1076056,
+          "turnover": 1612
+        },
+        {
           "date": "2025-11-07",
           "open": 69.5,
           "high": 72.3,
@@ -11818,195 +12009,6 @@
           "close": 62.2,
           "volume": 4351556,
           "turnover": 3566
-        },
-        {
-          "date": "2026-01-02",
-          "open": 62.0,
-          "high": 64.5,
-          "low": 61.3,
-          "close": 63.4,
-          "volume": 4137365,
-          "turnover": 3254
-        },
-        {
-          "date": "2026-01-05",
-          "open": 64.9,
-          "high": 65.8,
-          "low": 62.0,
-          "close": 63.8,
-          "volume": 4748915,
-          "turnover": 3995
-        },
-        {
-          "date": "2026-01-06",
-          "open": 63.6,
-          "high": 63.7,
-          "low": 62.2,
-          "close": 63.0,
-          "volume": 1640908,
-          "turnover": 1332
-        },
-        {
-          "date": "2026-01-07",
-          "open": 63.1,
-          "high": 63.6,
-          "low": 61.9,
-          "close": 62.3,
-          "volume": 1654345,
-          "turnover": 1307
-        },
-        {
-          "date": "2026-01-08",
-          "open": 61.8,
-          "high": 62.4,
-          "low": 60.7,
-          "close": 60.9,
-          "volume": 1684712,
-          "turnover": 1290
-        },
-        {
-          "date": "2026-01-09",
-          "open": 61.0,
-          "high": 61.2,
-          "low": 59.4,
-          "close": 59.9,
-          "volume": 1398425,
-          "turnover": 1290
-        },
-        {
-          "date": "2026-01-12",
-          "open": 60.0,
-          "high": 62.2,
-          "low": 60.0,
-          "close": 62.2,
-          "volume": 1536071,
-          "turnover": 1202
-        },
-        {
-          "date": "2026-01-13",
-          "open": 62.5,
-          "high": 63.2,
-          "low": 61.6,
-          "close": 62.0,
-          "volume": 1648169,
-          "turnover": 1501
-        },
-        {
-          "date": "2026-01-14",
-          "open": 62.5,
-          "high": 63.6,
-          "low": 61.9,
-          "close": 62.8,
-          "volume": 1802645,
-          "turnover": 1552
-        },
-        {
-          "date": "2026-01-15",
-          "open": 63.2,
-          "high": 63.3,
-          "low": 61.8,
-          "close": 61.8,
-          "volume": 1264574,
-          "turnover": 1671
-        },
-        {
-          "date": "2026-01-16",
-          "open": 62.6,
-          "high": 63.7,
-          "low": 62.0,
-          "close": 62.3,
-          "volume": 1672817,
-          "turnover": 1226
-        },
-        {
-          "date": "2026-01-19",
-          "open": 62.9,
-          "high": 64.9,
-          "low": 62.7,
-          "close": 63.2,
-          "volume": 3018952,
-          "turnover": 2297
-        },
-        {
-          "date": "2026-01-20",
-          "open": 63.5,
-          "high": 63.8,
-          "low": 62.1,
-          "close": 62.3,
-          "volume": 1590115,
-          "turnover": 1846
-        },
-        {
-          "date": "2026-01-21",
-          "open": 62.1,
-          "high": 64.4,
-          "low": 61.8,
-          "close": 62.9,
-          "volume": 1910576,
-          "turnover": 1696
-        },
-        {
-          "date": "2026-01-22",
-          "open": 63.4,
-          "high": 65.4,
-          "low": 63.0,
-          "close": 65.0,
-          "volume": 3174705,
-          "turnover": 2703
-        },
-        {
-          "date": "2026-01-23",
-          "open": 65.4,
-          "high": 66.0,
-          "low": 63.3,
-          "close": 63.6,
-          "volume": 3342598,
-          "turnover": 3315
-        },
-        {
-          "date": "2026-01-26",
-          "open": 63.6,
-          "high": 64.0,
-          "low": 62.7,
-          "close": 63.6,
-          "volume": 1528225,
-          "turnover": 1162
-        },
-        {
-          "date": "2026-01-27",
-          "open": 63.8,
-          "high": 69.3,
-          "low": 63.3,
-          "close": 67.7,
-          "volume": 10334155,
-          "turnover": 6827
-        },
-        {
-          "date": "2026-01-28",
-          "open": 67.9,
-          "high": 70.5,
-          "low": 67.3,
-          "close": 69.3,
-          "volume": 13871191,
-          "turnover": 11378
-        },
-        {
-          "date": "2026-01-29",
-          "open": 68.4,
-          "high": 68.6,
-          "low": 65.4,
-          "close": 66.4,
-          "volume": 4437266,
-          "turnover": 4166
-        },
-        {
-          "date": "2026-01-30",
-          "open": 66.0,
-          "high": 66.3,
-          "low": 64.2,
-          "close": 64.6,
-          "volume": 2463251,
-          "turnover": 1947
         },
         {
           "date": "2026-02-02",
@@ -13102,7 +13104,9 @@
       "institutional_history": [],
       "revenue_history": [],
       "margin_history": [],
-      "warnings": [],
+      "warnings": [
+        "202601 月資料抓取失敗：HTTPSConnectionPool(host='www.twse.com.tw', port=443): Read timed out. (read timeout=20)"
+      ],
       "source": "twse_official"
     },
     "2049": {
@@ -14738,7 +14742,9 @@
       "institutional_history": [],
       "revenue_history": [],
       "margin_history": [],
-      "warnings": [],
+      "warnings": [
+        "202312 月資料抓取失敗：HTTPSConnectionPool(host='www.twse.com.tw', port=443): Read timed out. (read timeout=20)"
+      ],
       "source": "twse_official"
     },
     "3702": {
@@ -18022,6 +18028,204 @@
       },
       "prices": [
         {
+          "date": "2025-10-03",
+          "open": 76.6,
+          "high": 82.5,
+          "low": 76.1,
+          "close": 82.5,
+          "volume": 55433401,
+          "turnover": 36323
+        },
+        {
+          "date": "2025-10-07",
+          "open": 84.0,
+          "high": 90.0,
+          "low": 83.0,
+          "close": 86.7,
+          "volume": 66607125,
+          "turnover": 49276
+        },
+        {
+          "date": "2025-10-08",
+          "open": 83.0,
+          "high": 86.4,
+          "low": 82.1,
+          "close": 83.5,
+          "volume": 22942225,
+          "turnover": 16686
+        },
+        {
+          "date": "2025-10-09",
+          "open": 85.2,
+          "high": 86.5,
+          "low": 82.6,
+          "close": 84.2,
+          "volume": 26291801,
+          "turnover": 17899
+        },
+        {
+          "date": "2025-10-13",
+          "open": 77.6,
+          "high": 81.7,
+          "low": 77.5,
+          "close": 81.7,
+          "volume": 12021879,
+          "turnover": 11898
+        },
+        {
+          "date": "2025-10-14",
+          "open": 83.8,
+          "high": 84.2,
+          "low": 77.0,
+          "close": 77.5,
+          "volume": 22422843,
+          "turnover": 16651
+        },
+        {
+          "date": "2025-10-15",
+          "open": 78.3,
+          "high": 81.1,
+          "low": 76.2,
+          "close": 80.4,
+          "volume": 9636063,
+          "turnover": 9833
+        },
+        {
+          "date": "2025-10-16",
+          "open": 80.4,
+          "high": 87.9,
+          "low": 80.4,
+          "close": 86.7,
+          "volume": 39565759,
+          "turnover": 32214
+        },
+        {
+          "date": "2025-10-17",
+          "open": 85.5,
+          "high": 88.5,
+          "low": 85.1,
+          "close": 86.0,
+          "volume": 27227927,
+          "turnover": 24009
+        },
+        {
+          "date": "2025-10-20",
+          "open": 87.3,
+          "high": 87.4,
+          "low": 83.8,
+          "close": 85.2,
+          "volume": 15131394,
+          "turnover": 10159
+        },
+        {
+          "date": "2025-10-21",
+          "open": 85.6,
+          "high": 86.0,
+          "low": 83.2,
+          "close": 84.2,
+          "volume": 9763660,
+          "turnover": 16928
+        },
+        {
+          "date": "2025-10-22",
+          "open": 83.2,
+          "high": 84.5,
+          "low": 82.1,
+          "close": 83.8,
+          "volume": 6700132,
+          "turnover": 9329
+        },
+        {
+          "date": "2025-10-23",
+          "open": 83.2,
+          "high": 84.1,
+          "low": 82.1,
+          "close": 83.6,
+          "volume": 4678397,
+          "turnover": 7028
+        },
+        {
+          "date": "2025-10-27",
+          "open": 88.4,
+          "high": 91.9,
+          "low": 86.1,
+          "close": 91.9,
+          "volume": 47518904,
+          "turnover": 31427
+        },
+        {
+          "date": "2025-10-28",
+          "open": 91.0,
+          "high": 91.8,
+          "low": 87.2,
+          "close": 89.8,
+          "volume": 35688197,
+          "turnover": 41271
+        },
+        {
+          "date": "2025-10-29",
+          "open": 90.2,
+          "high": 90.4,
+          "low": 87.0,
+          "close": 87.6,
+          "volume": 14931042,
+          "turnover": 12849
+        },
+        {
+          "date": "2025-10-30",
+          "open": 88.0,
+          "high": 96.3,
+          "low": 88.0,
+          "close": 96.3,
+          "volume": 46680089,
+          "turnover": 25004
+        },
+        {
+          "date": "2025-10-31",
+          "open": 97.4,
+          "high": 98.0,
+          "low": 88.4,
+          "close": 90.3,
+          "volume": 43269173,
+          "turnover": 28796
+        },
+        {
+          "date": "2025-11-03",
+          "open": 91.3,
+          "high": 94.8,
+          "low": 88.8,
+          "close": 89.9,
+          "volume": 23064024,
+          "turnover": 25133
+        },
+        {
+          "date": "2025-11-04",
+          "open": 90.6,
+          "high": 91.4,
+          "low": 87.8,
+          "close": 87.8,
+          "volume": 12243290,
+          "turnover": 10122
+        },
+        {
+          "date": "2025-11-05",
+          "open": 83.7,
+          "high": 89.9,
+          "low": 82.2,
+          "close": 88.7,
+          "volume": 14730488,
+          "turnover": 12412
+        },
+        {
+          "date": "2025-11-06",
+          "open": 90.0,
+          "high": 97.5,
+          "low": 89.5,
+          "close": 95.6,
+          "volume": 41656255,
+          "turnover": 30940
+        },
+        {
           "date": "2025-11-07",
           "open": 94.0,
           "high": 95.1,
@@ -18659,204 +18863,6 @@
           "close": 156.5,
           "volume": 11071056,
           "turnover": 8535
-        },
-        {
-          "date": "2026-03-02",
-          "open": 149.0,
-          "high": 172.0,
-          "low": 149.0,
-          "close": 170.0,
-          "volume": 26557256,
-          "turnover": 20274
-        },
-        {
-          "date": "2026-03-03",
-          "open": 170.0,
-          "high": 172.5,
-          "low": 153.0,
-          "close": 155.0,
-          "volume": 24538935,
-          "turnover": 27621
-        },
-        {
-          "date": "2026-03-04",
-          "open": 149.5,
-          "high": 154.0,
-          "low": 143.0,
-          "close": 146.5,
-          "volume": 19915052,
-          "turnover": 11537
-        },
-        {
-          "date": "2026-03-05",
-          "open": 158.0,
-          "high": 158.0,
-          "low": 147.5,
-          "close": 148.0,
-          "volume": 21179165,
-          "turnover": 12554
-        },
-        {
-          "date": "2026-03-06",
-          "open": 146.5,
-          "high": 156.5,
-          "low": 144.5,
-          "close": 146.5,
-          "volume": 16590661,
-          "turnover": 12432
-        },
-        {
-          "date": "2026-03-09",
-          "open": 132.0,
-          "high": 134.0,
-          "low": 132.0,
-          "close": 132.0,
-          "volume": 6532283,
-          "turnover": 6460
-        },
-        {
-          "date": "2026-03-10",
-          "open": 140.0,
-          "high": 145.0,
-          "low": 135.5,
-          "close": 145.0,
-          "volume": 14485506,
-          "turnover": 11011
-        },
-        {
-          "date": "2026-03-11",
-          "open": 152.0,
-          "high": 159.5,
-          "low": 150.5,
-          "close": 159.5,
-          "volume": 19480847,
-          "turnover": 12782
-        },
-        {
-          "date": "2026-03-12",
-          "open": 160.5,
-          "high": 168.5,
-          "low": 159.5,
-          "close": 163.5,
-          "volume": 34570771,
-          "turnover": 24849
-        },
-        {
-          "date": "2026-03-13",
-          "open": 161.0,
-          "high": 166.0,
-          "low": 152.0,
-          "close": 161.0,
-          "volume": 33236779,
-          "turnover": 22510
-        },
-        {
-          "date": "2026-03-16",
-          "open": 167.5,
-          "high": 177.0,
-          "low": 167.0,
-          "close": 177.0,
-          "volume": 18964594,
-          "turnover": 13791
-        },
-        {
-          "date": "2026-03-17",
-          "open": 190.0,
-          "high": 194.5,
-          "low": 187.5,
-          "close": 194.5,
-          "volume": 46191350,
-          "turnover": 30925
-        },
-        {
-          "date": "2026-03-18",
-          "open": 203.5,
-          "high": 213.5,
-          "low": 197.5,
-          "close": 213.5,
-          "volume": 52713943,
-          "turnover": 36191
-        },
-        {
-          "date": "2026-03-19",
-          "open": 200.5,
-          "high": 223.5,
-          "low": 197.5,
-          "close": 217.0,
-          "volume": 54409823,
-          "turnover": 38171
-        },
-        {
-          "date": "2026-03-20",
-          "open": 219.0,
-          "high": 219.0,
-          "low": 195.5,
-          "close": 195.5,
-          "volume": 12293122,
-          "turnover": 13597
-        },
-        {
-          "date": "2026-03-23",
-          "open": 176.5,
-          "high": 185.0,
-          "low": 176.0,
-          "close": 180.0,
-          "volume": 7868980,
-          "turnover": 8740
-        },
-        {
-          "date": "2026-03-24",
-          "open": 181.5,
-          "high": 181.5,
-          "low": 162.0,
-          "close": 162.0,
-          "volume": 11730903,
-          "turnover": 11638
-        },
-        {
-          "date": "2026-03-25",
-          "open": 170.0,
-          "high": 178.0,
-          "low": 166.5,
-          "close": 177.5,
-          "volume": 6360424,
-          "turnover": 6355
-        },
-        {
-          "date": "2026-03-26",
-          "open": 172.0,
-          "high": 176.0,
-          "low": 164.0,
-          "close": 168.5,
-          "volume": 6364298,
-          "turnover": 7075
-        },
-        {
-          "date": "2026-03-27",
-          "open": 157.5,
-          "high": 173.5,
-          "low": 153.0,
-          "close": 172.0,
-          "volume": 5943705,
-          "turnover": 6560
-        },
-        {
-          "date": "2026-03-30",
-          "open": 169.0,
-          "high": 173.0,
-          "low": 165.5,
-          "close": 166.5,
-          "volume": 4051451,
-          "turnover": 4175
-        },
-        {
-          "date": "2026-03-31",
-          "open": 160.0,
-          "high": 160.0,
-          "low": 150.0,
-          "close": 150.0,
-          "volume": 6035737,
-          "turnover": 6926
         },
         {
           "date": "2026-04-01",
@@ -19646,7 +19652,9 @@
       "institutional_history": [],
       "revenue_history": [],
       "margin_history": [],
-      "warnings": [],
+      "warnings": [
+        "202603 月資料抓取失敗：('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      ],
       "source": "twse_official"
     }
   },
@@ -19791,18 +19799,18 @@
       "tomorrow_score": 47,
       "night_action": "夜間消息偏中性",
       "event_tags": [
+        "AI",
         "半導體",
         "戰爭",
         "油價",
-        "法說",
-        "獲利"
+        "法說"
       ],
       "headline_summary": "利多：創高",
       "headlines": [
         {
           "title": "華邦電法說／26Q2 EPS 5.4元創高，記憶體營收季增73%、CMS營收年增467%｜股市話題｜豐雲學堂2026 年 08 月 - sinotrade.com.tw",
           "link": "https://news.google.com/rss/articles/CBMiswNBVV95cUxNMGluUEJtdUdNS1JwVWNTU3pvUGNfclJyeTR4WlN1bDliY3lrSGRzQ0FORWNZcVduNklwRXo4Yi0xTjlBUi1PX01sSTRwYnJZeVVYR2ZYUDdFRDlsd05zUENucndKaW83NFlYRF9BVUEtTS1yV2NLMlQyRE1TZVVUNzV3cFRPd2Rud0VQbnJyenZTSUJDS0FPZ3VfTVdPanc0bExMMVlRMi1MaXV6Yno3OWRjMzJfbm95bFYzS3VNV2pIWGI0eV9oSjRwQ1dPSEs4SGRBLU9SUGVVTnhIMGZWLTdZLVZGYmM3SjFuZl83Z0tkM2FpR0JEaEhocHZBaE1VT195TW85VFZva3pqT1pXZmdrQTY5MTlEUExfNVhrUmVOY2VENFd3WmpoWjJ6bUhlY2ZYQkRqRGxRVmtLNXp0YTFtUWFXLUNvazFzc1NaNC0tUEhVNGJtelJGYjlPSnFHRVM1eVM0ZVpDcWtGaHdXbFdZaGZCZ05fN0N1WUVvbXZ6cWM2NjV5RVdBX2RpeTg0QzN4YzBrM0NBa0d6UmgzOTY3bWpLMlVZWEc1VlRQSkkyNFk?oc=5",
-          "published": "Thu, 06 Aug 2026 08:37:12 GMT"
+          "published": "Thu, 06 Aug 2026 11:45:54 GMT"
         },
         {
           "title": "Q2每股大賺5.4元創高！「記憶體大廠」今小漲1%守住連5紅 自營商卻脫手449張、抱回7549萬元 - Yahoo",
@@ -20002,16 +20010,16 @@
       "has_revenue_data": false,
       "rating": "Watch",
       "action": "列入優先觀察",
-      "score": 64,
+      "score": 63,
       "rule_score": 70,
       "trend": "多頭延續",
-      "signal_strength": "48% (中性)",
+      "signal_strength": "44% (中性)",
       "ml_source": "trained_model",
       "ml_model_name": "Logistic Regression",
-      "ml_probability": 0.4843922689054103,
-      "ml_validation_accuracy": 0.6166666666666667,
-      "ml_usable_samples": 990,
-      "ml_train_samples": 930,
+      "ml_probability": 0.4404382257239597,
+      "ml_validation_accuracy": 0.6333333333333333,
+      "ml_usable_samples": 969,
+      "ml_train_samples": 909,
       "ml_validation_samples": 60,
       "ml_features_used": 10,
       "ml_note": "使用歷史日線與籌碼/估值特徵訓練",
@@ -20045,7 +20053,7 @@
       "margin_usage": null,
       "night_score": 4,
       "night_bias": "中性",
-      "tomorrow_score": 68,
+      "tomorrow_score": 67,
       "night_action": "夜間消息偏中性",
       "event_tags": [
         "AI",
@@ -20263,13 +20271,13 @@
       "score": 71,
       "rule_score": 86,
       "trend": "多頭延續",
-      "signal_strength": "31% (偏空)",
+      "signal_strength": "34% (偏空)",
       "ml_source": "trained_model",
       "ml_model_name": "Logistic Regression",
-      "ml_probability": 0.31154243749577554,
-      "ml_validation_accuracy": 0.7666666666666667,
-      "ml_usable_samples": 990,
-      "ml_train_samples": 930,
+      "ml_probability": 0.33561192160280245,
+      "ml_validation_accuracy": 0.7833333333333333,
+      "ml_usable_samples": 969,
+      "ml_train_samples": 909,
       "ml_validation_samples": 60,
       "ml_features_used": 10,
       "ml_note": "使用歷史日線與籌碼/估值特徵訓練",
@@ -20287,7 +20295,7 @@
       "close": 108.0,
       "ma5": 93.06,
       "ma20": 87.93499999999999,
-      "ma60": 81.81333333333333,
+      "ma60": 81.81333333333332,
       "return_5d": 0.3793103448275863,
       "return_20d": 0.18942731277533054,
       "volume": 22514018,
@@ -20351,13 +20359,13 @@
       "score": 50,
       "rule_score": 46,
       "trend": "短線轉強",
-      "signal_strength": "60% (中性)",
+      "signal_strength": "61% (中性)",
       "ml_source": "trained_model",
       "ml_model_name": "Logistic Regression",
-      "ml_probability": 0.6013195444657762,
-      "ml_validation_accuracy": 0.5666666666666667,
-      "ml_usable_samples": 990,
-      "ml_train_samples": 930,
+      "ml_probability": 0.6136095093531929,
+      "ml_validation_accuracy": 0.5833333333333334,
+      "ml_usable_samples": 969,
+      "ml_train_samples": 909,
       "ml_validation_samples": 60,
       "ml_features_used": 10,
       "ml_note": "使用歷史日線與籌碼/估值特徵訓練",
@@ -20495,7 +20503,7 @@
           "published": "Thu, 06 Aug 2026 05:06:23 GMT"
         },
         {
-          "title": "台股急殺我照飆！文曄、大聯大強鎖漲停 電子通路為何逆勢爆發？ - money.udn.com",
+          "title": "台股急殺我照飆！文曄、大聯大強鎖漲停 電子通路為何逆勢爆發？ - 經濟日報",
           "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE90TE9IQ3dfd0oyS29Tek44T204SklSTkh4bXNrZ09FOFZvQV80THJKVm90RlR5RGFRdlBWMHBMRHl6WkVYeWctSjlNVENrVmJrN1ZObUtRM1NqM2w2cHZXRzNFUzhHOHA4ZUNlM3J6U1BIUFnSAV9BVV95cUxOTUotYnNhbUp4TUVlUjc3elY1ZGUyc2VEeENDU2FMREg2OGRYb0hUeXZjc0RYYUI0dUN0ci1RM3U5WnVXeUMyTUM2aUZhQVlxVVhvdmxNanRlaEdncTU3OA?oc=5",
           "published": "Tue, 04 Aug 2026 09:00:00 GMT"
         },
@@ -20587,7 +20595,7 @@
           "published": "Thu, 23 Jul 2026 07:00:00 GMT"
         },
         {
-          "title": "【26Q2財報公告】研華(2395) Q2 營收261.2629億元，創歷史新高，季增28.16%、年成長46.48%-CMoney 小編 - CMoney投資網誌",
+          "title": "【26Q2財報公告】研華(2395) Q2 營收261.2629億元，創歷史新高，季增28.16%、年成長46.48%-CMoney 小編 - cmnews.com.tw",
           "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPb05sbWlpR1BYYnVwS0dHUDRHTmFuNGUxUGxTdk5MdS0wbDl5SXJmVmZjbXRSdDJ4STZ3cm05WUduY3pIQzdfdE44YjFZenhudWxBZXNWZnA4STREcko5NW91UmpfWUZHSjA4T05YY2ZBVjN3Y283Y0hyZWp3NDhQSU9sZF9fVGlUcFE?oc=5",
           "published": "Tue, 04 Aug 2026 10:20:07 GMT"
         }
@@ -20608,16 +20616,16 @@
       "has_revenue_data": false,
       "rating": "Watch",
       "action": "列入優先觀察",
-      "score": 61,
+      "score": 60,
       "rule_score": 68,
       "trend": "短線轉強",
-      "signal_strength": "42% (中性)",
+      "signal_strength": "38% (偏空)",
       "ml_source": "trained_model",
       "ml_model_name": "Logistic Regression",
-      "ml_probability": 0.42368783319294206,
+      "ml_probability": 0.3772569749354946,
       "ml_validation_accuracy": 0.5333333333333333,
-      "ml_usable_samples": 990,
-      "ml_train_samples": 930,
+      "ml_usable_samples": 968,
+      "ml_train_samples": 908,
       "ml_validation_samples": 60,
       "ml_features_used": 10,
       "ml_note": "使用歷史日線與籌碼/估值特徵訓練",
@@ -20652,7 +20660,7 @@
       "margin_usage": null,
       "night_score": 9,
       "night_bias": "偏多",
-      "tomorrow_score": 70,
+      "tomorrow_score": 69,
       "night_action": "明早可優先留意",
       "event_tags": [
         "半導體",
@@ -20869,6 +20877,96 @@
   ],
   "overheated_watchlist": [
     {
+      "symbol": "3006",
+      "symbol_name": "晶豪科",
+      "sector": "上市個股",
+      "market": "twse_open_data",
+      "has_institutional_data": false,
+      "has_valuation_data": false,
+      "has_revenue_data": false,
+      "rating": "Watch",
+      "action": "列入優先觀察",
+      "score": 60,
+      "rule_score": 68,
+      "trend": "短線轉強",
+      "signal_strength": "38% (偏空)",
+      "ml_source": "trained_model",
+      "ml_model_name": "Logistic Regression",
+      "ml_probability": 0.3772569749354946,
+      "ml_validation_accuracy": 0.5333333333333333,
+      "ml_usable_samples": 968,
+      "ml_train_samples": 908,
+      "ml_validation_samples": 60,
+      "ml_features_used": 10,
+      "ml_note": "使用歷史日線與籌碼/估值特徵訓練",
+      "reasons": [
+        "收盤 258.00 站上 MA20 209.75",
+        "近 20 日漲幅 19.7%",
+        "今日量能為 20 日均量的 2.61 倍，且收盤未轉弱"
+      ],
+      "risks": [
+        "MA20 209.75 仍低於 MA60 223.63，中期趨勢未翻正"
+      ],
+      "warnings": [],
+      "latest_price_date": "2026-08-06",
+      "close": 258.0,
+      "ma5": 218.5,
+      "ma20": 209.75,
+      "ma60": 223.63333333333333,
+      "return_5d": 0.5731707317073171,
+      "return_20d": 0.19721577726218098,
+      "volume": 30664323,
+      "volume_ratio": 2.6136563075260533,
+      "institutional_trend": "偏空",
+      "foreign_net_buy_3d": 0,
+      "trust_net_buy_3d": 0,
+      "dealer_net_buy_3d": 0,
+      "pe_ratio": null,
+      "pb_ratio": null,
+      "dividend_yield": null,
+      "revenue_yoy": null,
+      "revenue_mom": null,
+      "latest_revenue_month": null,
+      "margin_usage": null,
+      "night_score": 9,
+      "night_bias": "偏多",
+      "tomorrow_score": 69,
+      "night_action": "明早可優先留意",
+      "event_tags": [
+        "半導體",
+        "戰爭",
+        "油價",
+        "法說",
+        "獲利率"
+      ],
+      "headline_summary": "利多：創高",
+      "headlines": [
+        {
+          "title": "0805 台股盤前｜營收創高策略鎖定【南亞科、晶豪科、倉和、南電】記憶體與 ABF 載板強攻噴發！加權震盪守 43,300 點、櫃買勁揚 - news.cnyes.com",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1JV3NuS1BHTlRNWWE2OGt5Q3RHQlRmMWxsMmxXVHpOVmN4MDRvanFPV0Y0bmd0bktnTGctMFlmSnhDQ28xd0dwVF9DUWVaOW8?oc=5",
+          "published": "Wed, 05 Aug 2026 00:30:14 GMT"
+        },
+        {
+          "title": "南亞科7月營收暴衝438億元、晶豪科同步創高，台廠記憶體股連日漲停，DRAM缺口延續至何時？｜股市話題 - sinotrade.com.tw",
+          "link": "https://news.google.com/rss/articles/CBMi1gRBVV95cUxNYzM0Y2N3a2hlQzQyVmRMdVhSbDltZExuLXYzWi1SSnNiS0hUd2x0WkFYbl95MTQxTFUwV2FuZ1M1ZU43dXFKY1VSRTdXN0Rib29GOEM3X2VpU09mM2FiTkJIRi0zMEthVlRxWkc0aGtlbng4M2NRUTFHMzJqMmVJUGx4SEZTa2ZWWGI1akNXN2F5aG5weFBqaDNlR3o4aTlHMGdXNF9XTjJWLVJIeUtTUDRwMFdpdVVVZUcwa0JPRmQ3cjBBMnhFTURGMUd2WjNtVGI3NkNueGkxMzlwQVdaWnJ6elM3UjgzbVpENFdYUk1YVEp3ejVTS245ZWpWc1pCY3BnUzJGaFZyMTFjQUZuY29ZVHJzZ21ZaFFwODRHY0g1YlA4aFVXbVBwS1k1VUVLbTNjNzZ2UTUwWTF6NElYSnpVRG9aUG9GdUcyMk5IYnBISHZRLUhzMUZGQmhXS19IVmE5NE9PamN3N29LTkdVQmJOSHhNQ1BGR1d3UFlOY3o3MHNWTFg4eEdGa2MwQ3dpNGhCSUs1VUY0Z1ozOXlEN1R1SHhNbnZibk9qejcwX3VqNXhlNHc0RVNQMUY0LVhPelhFd2U1QjZsVzZ4Y2NUdnVOcWJjNVdOaVRTQjJPdFdwVDFJMUo3QVN5N0JVYUYxRHgyZEdIbWZBdHp0TjZ1a1laTThNaEtrSXdWTE04T3ZwNXFPZ0J4M0JKYmh4LVRPVzBMMUVTUUt2V2pBVzVYYkd3NUZqUFlnSDA0cWpRTGlsMG14ZzdDOE9ncDg1X1hmQVpJb0NR?oc=5",
+          "published": "Wed, 05 Aug 2026 02:03:21 GMT"
+        },
+        {
+          "title": "晶豪科董事會決議發行國內第二次有擔保轉換公司債，上限20億元 - 台視全球資訊網",
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPSTBCaHJ1dWVhX0wweDVIVENLTUpMX1VGaUdEU0JZeEZhdmZ0ejdNLVV5SkUyZG5fenZtT1VBamZ4NWdNMXZGNXV3Q3Rqd2dpczNTRlFMQlJPMmtsSW5SYkxYRkkzWU9sSTQ4bWJ2M3ZMM2hJZk8tUURNbFFaNU5VcFNVSkN5T1ZTVFd2cmZTUVY3Zw?oc=5",
+          "published": "Fri, 22 May 2026 07:00:00 GMT"
+        }
+      ],
+      "tomorrow_delta": 9,
+      "tomorrow_light": "黃燈",
+      "tomorrow_action": "可觀察，等開盤或拉回確認",
+      "tomorrow_reason": "收盤 258.00 站上 MA20 209.75；利多：創高",
+      "recommendation_reason": "收盤 258.00 站上 MA20 209.75；利多：創高",
+      "theme": "overheated_pullback",
+      "theme_score": 88,
+      "theme_reason": "近 5 日漲幅 57.3%；近 20 日漲幅 19.7%；收盤高於 MA20 23.0%"
+    },
+    {
       "symbol": "3605",
       "symbol_name": "宏致",
       "sector": "上市個股",
@@ -20881,13 +20979,13 @@
       "score": 71,
       "rule_score": 86,
       "trend": "多頭延續",
-      "signal_strength": "31% (偏空)",
+      "signal_strength": "34% (偏空)",
       "ml_source": "trained_model",
       "ml_model_name": "Logistic Regression",
-      "ml_probability": 0.31154243749577554,
-      "ml_validation_accuracy": 0.7666666666666667,
-      "ml_usable_samples": 990,
-      "ml_train_samples": 930,
+      "ml_probability": 0.33561192160280245,
+      "ml_validation_accuracy": 0.7833333333333333,
+      "ml_usable_samples": 969,
+      "ml_train_samples": 909,
       "ml_validation_samples": 60,
       "ml_features_used": 10,
       "ml_note": "使用歷史日線與籌碼/估值特徵訓練",
@@ -20905,7 +21003,7 @@
       "close": 108.0,
       "ma5": 93.06,
       "ma20": 87.93499999999999,
-      "ma60": 81.81333333333333,
+      "ma60": 81.81333333333332,
       "return_5d": 0.3793103448275863,
       "return_20d": 0.18942731277533054,
       "volume": 22514018,
@@ -20958,96 +21056,6 @@
       "theme": "overheated_pullback",
       "theme_score": 87,
       "theme_reason": "近 5 日漲幅 37.9%；近 20 日漲幅 18.9%；收盤高於 MA20 22.8%"
-    },
-    {
-      "symbol": "3006",
-      "symbol_name": "晶豪科",
-      "sector": "上市個股",
-      "market": "twse_open_data",
-      "has_institutional_data": false,
-      "has_valuation_data": false,
-      "has_revenue_data": false,
-      "rating": "Watch",
-      "action": "列入優先觀察",
-      "score": 61,
-      "rule_score": 68,
-      "trend": "短線轉強",
-      "signal_strength": "42% (中性)",
-      "ml_source": "trained_model",
-      "ml_model_name": "Logistic Regression",
-      "ml_probability": 0.42368783319294206,
-      "ml_validation_accuracy": 0.5333333333333333,
-      "ml_usable_samples": 990,
-      "ml_train_samples": 930,
-      "ml_validation_samples": 60,
-      "ml_features_used": 10,
-      "ml_note": "使用歷史日線與籌碼/估值特徵訓練",
-      "reasons": [
-        "收盤 258.00 站上 MA20 209.75",
-        "近 20 日漲幅 19.7%",
-        "今日量能為 20 日均量的 2.61 倍，且收盤未轉弱"
-      ],
-      "risks": [
-        "MA20 209.75 仍低於 MA60 223.63，中期趨勢未翻正"
-      ],
-      "warnings": [],
-      "latest_price_date": "2026-08-06",
-      "close": 258.0,
-      "ma5": 218.5,
-      "ma20": 209.75,
-      "ma60": 223.63333333333333,
-      "return_5d": 0.5731707317073171,
-      "return_20d": 0.19721577726218098,
-      "volume": 30664323,
-      "volume_ratio": 2.6136563075260533,
-      "institutional_trend": "偏空",
-      "foreign_net_buy_3d": 0,
-      "trust_net_buy_3d": 0,
-      "dealer_net_buy_3d": 0,
-      "pe_ratio": null,
-      "pb_ratio": null,
-      "dividend_yield": null,
-      "revenue_yoy": null,
-      "revenue_mom": null,
-      "latest_revenue_month": null,
-      "margin_usage": null,
-      "night_score": 9,
-      "night_bias": "偏多",
-      "tomorrow_score": 70,
-      "night_action": "明早可優先留意",
-      "event_tags": [
-        "半導體",
-        "戰爭",
-        "油價",
-        "法說",
-        "獲利率"
-      ],
-      "headline_summary": "利多：創高",
-      "headlines": [
-        {
-          "title": "0805 台股盤前｜營收創高策略鎖定【南亞科、晶豪科、倉和、南電】記憶體與 ABF 載板強攻噴發！加權震盪守 43,300 點、櫃買勁揚 - news.cnyes.com",
-          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1JV3NuS1BHTlRNWWE2OGt5Q3RHQlRmMWxsMmxXVHpOVmN4MDRvanFPV0Y0bmd0bktnTGctMFlmSnhDQ28xd0dwVF9DUWVaOW8?oc=5",
-          "published": "Wed, 05 Aug 2026 00:30:14 GMT"
-        },
-        {
-          "title": "南亞科7月營收暴衝438億元、晶豪科同步創高，台廠記憶體股連日漲停，DRAM缺口延續至何時？｜股市話題 - sinotrade.com.tw",
-          "link": "https://news.google.com/rss/articles/CBMi1gRBVV95cUxNYzM0Y2N3a2hlQzQyVmRMdVhSbDltZExuLXYzWi1SSnNiS0hUd2x0WkFYbl95MTQxTFUwV2FuZ1M1ZU43dXFKY1VSRTdXN0Rib29GOEM3X2VpU09mM2FiTkJIRi0zMEthVlRxWkc0aGtlbng4M2NRUTFHMzJqMmVJUGx4SEZTa2ZWWGI1akNXN2F5aG5weFBqaDNlR3o4aTlHMGdXNF9XTjJWLVJIeUtTUDRwMFdpdVVVZUcwa0JPRmQ3cjBBMnhFTURGMUd2WjNtVGI3NkNueGkxMzlwQVdaWnJ6elM3UjgzbVpENFdYUk1YVEp3ejVTS245ZWpWc1pCY3BnUzJGaFZyMTFjQUZuY29ZVHJzZ21ZaFFwODRHY0g1YlA4aFVXbVBwS1k1VUVLbTNjNzZ2UTUwWTF6NElYSnpVRG9aUG9GdUcyMk5IYnBISHZRLUhzMUZGQmhXS19IVmE5NE9PamN3N29LTkdVQmJOSHhNQ1BGR1d3UFlOY3o3MHNWTFg4eEdGa2MwQ3dpNGhCSUs1VUY0Z1ozOXlEN1R1SHhNbnZibk9qejcwX3VqNXhlNHc0RVNQMUY0LVhPelhFd2U1QjZsVzZ4Y2NUdnVOcWJjNVdOaVRTQjJPdFdwVDFJMUo3QVN5N0JVYUYxRHgyZEdIbWZBdHp0TjZ1a1laTThNaEtrSXdWTE04T3ZwNXFPZ0J4M0JKYmh4LVRPVzBMMUVTUUt2V2pBVzVYYkd3NUZqUFlnSDA0cWpRTGlsMG14ZzdDOE9ncDg1X1hmQVpJb0NR?oc=5",
-          "published": "Wed, 05 Aug 2026 02:03:21 GMT"
-        },
-        {
-          "title": "晶豪科董事會決議發行國內第二次有擔保轉換公司債，上限20億元 - 台視全球資訊網",
-          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPSTBCaHJ1dWVhX0wweDVIVENLTUpMX1VGaUdEU0JZeEZhdmZ0ejdNLVV5SkUyZG5fenZtT1VBamZ4NWdNMXZGNXV3Q3Rqd2dpczNTRlFMQlJPMmtsSW5SYkxYRkkzWU9sSTQ4bWJ2M3ZMM2hJZk8tUURNbFFaNU5VcFNVSkN5T1ZTVFd2cmZTUVY3Zw?oc=5",
-          "published": "Fri, 22 May 2026 07:00:00 GMT"
-        }
-      ],
-      "tomorrow_delta": 9,
-      "tomorrow_light": "黃燈",
-      "tomorrow_action": "可觀察，等開盤或拉回確認",
-      "tomorrow_reason": "收盤 258.00 站上 MA20 209.75；利多：創高",
-      "recommendation_reason": "收盤 258.00 站上 MA20 209.75；利多：創高",
-      "theme": "overheated_pullback",
-      "theme_score": 78,
-      "theme_reason": "近 5 日漲幅 57.3%；近 20 日漲幅 19.7%；收盤高於 MA20 23.0%"
     },
     {
       "symbol": "3702",
@@ -21120,7 +21128,7 @@
           "published": "Thu, 06 Aug 2026 05:06:23 GMT"
         },
         {
-          "title": "台股急殺我照飆！文曄、大聯大強鎖漲停 電子通路為何逆勢爆發？ - money.udn.com",
+          "title": "台股急殺我照飆！文曄、大聯大強鎖漲停 電子通路為何逆勢爆發？ - 經濟日報",
           "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE90TE9IQ3dfd0oyS29Tek44T204SklSTkh4bXNrZ09FOFZvQV80THJKVm90RlR5RGFRdlBWMHBMRHl6WkVYeWctSjlNVENrVmJrN1ZObUtRM1NqM2w2cHZXRzNFUzhHOHA4ZUNlM3J6U1BIUFnSAV9BVV95cUxOTUotYnNhbUp4TUVlUjc3elY1ZGUyc2VEeENDU2FMREg2OGRYb0hUeXZjc0RYYUI0dUN0ci1RM3U5WnVXeUMyTUM2aUZhQVlxVVhvdmxNanRlaEdncTU3OA?oc=5",
           "published": "Tue, 04 Aug 2026 09:00:00 GMT"
         },
@@ -21194,18 +21202,18 @@
       "tomorrow_score": 47,
       "night_action": "夜間消息偏中性",
       "event_tags": [
+        "AI",
         "半導體",
         "戰爭",
         "油價",
-        "法說",
-        "獲利"
+        "法說"
       ],
       "headline_summary": "利多：創高",
       "headlines": [
         {
           "title": "華邦電法說／26Q2 EPS 5.4元創高，記憶體營收季增73%、CMS營收年增467%｜股市話題｜豐雲學堂2026 年 08 月 - sinotrade.com.tw",
           "link": "https://news.google.com/rss/articles/CBMiswNBVV95cUxNMGluUEJtdUdNS1JwVWNTU3pvUGNfclJyeTR4WlN1bDliY3lrSGRzQ0FORWNZcVduNklwRXo4Yi0xTjlBUi1PX01sSTRwYnJZeVVYR2ZYUDdFRDlsd05zUENucndKaW83NFlYRF9BVUEtTS1yV2NLMlQyRE1TZVVUNzV3cFRPd2Rud0VQbnJyenZTSUJDS0FPZ3VfTVdPanc0bExMMVlRMi1MaXV6Yno3OWRjMzJfbm95bFYzS3VNV2pIWGI0eV9oSjRwQ1dPSEs4SGRBLU9SUGVVTnhIMGZWLTdZLVZGYmM3SjFuZl83Z0tkM2FpR0JEaEhocHZBaE1VT195TW85VFZva3pqT1pXZmdrQTY5MTlEUExfNVhrUmVOY2VENFd3WmpoWjJ6bUhlY2ZYQkRqRGxRVmtLNXp0YTFtUWFXLUNvazFzc1NaNC0tUEhVNGJtelJGYjlPSnFHRVM1eVM0ZVpDcWtGaHdXbFdZaGZCZ05fN0N1WUVvbXZ6cWM2NjV5RVdBX2RpeTg0QzN4YzBrM0NBa0d6UmgzOTY3bWpLMlVZWEc1VlRQSkkyNFk?oc=5",
-          "published": "Thu, 06 Aug 2026 08:37:12 GMT"
+          "published": "Thu, 06 Aug 2026 11:45:54 GMT"
         },
         {
           "title": "Q2每股大賺5.4元創高！「記憶體大廠」今小漲1%守住連5紅 自營商卻脫手449張、抱回7549萬元 - Yahoo",
@@ -21237,16 +21245,16 @@
       "has_revenue_data": false,
       "rating": "Watch",
       "action": "列入優先觀察",
-      "score": 64,
+      "score": 63,
       "rule_score": 70,
       "trend": "多頭延續",
-      "signal_strength": "48% (中性)",
+      "signal_strength": "44% (中性)",
       "ml_source": "trained_model",
       "ml_model_name": "Logistic Regression",
-      "ml_probability": 0.4843922689054103,
-      "ml_validation_accuracy": 0.6166666666666667,
-      "ml_usable_samples": 990,
-      "ml_train_samples": 930,
+      "ml_probability": 0.4404382257239597,
+      "ml_validation_accuracy": 0.6333333333333333,
+      "ml_usable_samples": 969,
+      "ml_train_samples": 909,
       "ml_validation_samples": 60,
       "ml_features_used": 10,
       "ml_note": "使用歷史日線與籌碼/估值特徵訓練",
@@ -21280,7 +21288,7 @@
       "margin_usage": null,
       "night_score": 4,
       "night_bias": "中性",
-      "tomorrow_score": 68,
+      "tomorrow_score": 67,
       "night_action": "夜間消息偏中性",
       "event_tags": [
         "AI",
@@ -21394,7 +21402,7 @@
           "published": "Thu, 23 Jul 2026 07:00:00 GMT"
         },
         {
-          "title": "【26Q2財報公告】研華(2395) Q2 營收261.2629億元，創歷史新高，季增28.16%、年成長46.48%-CMoney 小編 - CMoney投資網誌",
+          "title": "【26Q2財報公告】研華(2395) Q2 營收261.2629億元，創歷史新高，季增28.16%、年成長46.48%-CMoney 小編 - cmnews.com.tw",
           "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPb05sbWlpR1BYYnVwS0dHUDRHTmFuNGUxUGxTdk5MdS0wbDl5SXJmVmZjbXRSdDJ4STZ3cm05WUduY3pIQzdfdE44YjFZenhudWxBZXNWZnA4STREcko5NW91UmpfWUZHSjA4T05YY2ZBVjN3Y283Y0hyZWp3NDhQSU9sZF9fVGlUcFE?oc=5",
           "published": "Tue, 04 Aug 2026 10:20:07 GMT"
         }
@@ -21415,16 +21423,16 @@
       "has_revenue_data": false,
       "rating": "Watch",
       "action": "列入優先觀察",
-      "score": 61,
+      "score": 60,
       "rule_score": 68,
       "trend": "短線轉強",
-      "signal_strength": "42% (中性)",
+      "signal_strength": "38% (偏空)",
       "ml_source": "trained_model",
       "ml_model_name": "Logistic Regression",
-      "ml_probability": 0.42368783319294206,
+      "ml_probability": 0.3772569749354946,
       "ml_validation_accuracy": 0.5333333333333333,
-      "ml_usable_samples": 990,
-      "ml_train_samples": 930,
+      "ml_usable_samples": 968,
+      "ml_train_samples": 908,
       "ml_validation_samples": 60,
       "ml_features_used": 10,
       "ml_note": "使用歷史日線與籌碼/估值特徵訓練",
@@ -21459,7 +21467,7 @@
       "margin_usage": null,
       "night_score": 9,
       "night_bias": "偏多",
-      "tomorrow_score": 70,
+      "tomorrow_score": 69,
       "night_action": "明早可優先留意",
       "event_tags": [
         "半導體",
@@ -21633,18 +21641,18 @@
       "tomorrow_score": 47,
       "night_action": "夜間消息偏中性",
       "event_tags": [
+        "AI",
         "半導體",
         "戰爭",
         "油價",
-        "法說",
-        "獲利"
+        "法說"
       ],
       "headline_summary": "利多：創高",
       "headlines": [
         {
           "title": "華邦電法說／26Q2 EPS 5.4元創高，記憶體營收季增73%、CMS營收年增467%｜股市話題｜豐雲學堂2026 年 08 月 - sinotrade.com.tw",
           "link": "https://news.google.com/rss/articles/CBMiswNBVV95cUxNMGluUEJtdUdNS1JwVWNTU3pvUGNfclJyeTR4WlN1bDliY3lrSGRzQ0FORWNZcVduNklwRXo4Yi0xTjlBUi1PX01sSTRwYnJZeVVYR2ZYUDdFRDlsd05zUENucndKaW83NFlYRF9BVUEtTS1yV2NLMlQyRE1TZVVUNzV3cFRPd2Rud0VQbnJyenZTSUJDS0FPZ3VfTVdPanc0bExMMVlRMi1MaXV6Yno3OWRjMzJfbm95bFYzS3VNV2pIWGI0eV9oSjRwQ1dPSEs4SGRBLU9SUGVVTnhIMGZWLTdZLVZGYmM3SjFuZl83Z0tkM2FpR0JEaEhocHZBaE1VT195TW85VFZva3pqT1pXZmdrQTY5MTlEUExfNVhrUmVOY2VENFd3WmpoWjJ6bUhlY2ZYQkRqRGxRVmtLNXp0YTFtUWFXLUNvazFzc1NaNC0tUEhVNGJtelJGYjlPSnFHRVM1eVM0ZVpDcWtGaHdXbFdZaGZCZ05fN0N1WUVvbXZ6cWM2NjV5RVdBX2RpeTg0QzN4YzBrM0NBa0d6UmgzOTY3bWpLMlVZWEc1VlRQSkkyNFk?oc=5",
-          "published": "Thu, 06 Aug 2026 08:37:12 GMT"
+          "published": "Thu, 06 Aug 2026 11:45:54 GMT"
         },
         {
           "title": "Q2每股大賺5.4元創高！「記憶體大廠」今小漲1%守住連5紅 自營商卻脫手449張、抱回7549萬元 - Yahoo",
@@ -21673,16 +21681,16 @@
       "has_revenue_data": false,
       "rating": "Watch",
       "action": "列入優先觀察",
-      "score": 64,
+      "score": 63,
       "rule_score": 70,
       "trend": "多頭延續",
-      "signal_strength": "48% (中性)",
+      "signal_strength": "44% (中性)",
       "ml_source": "trained_model",
       "ml_model_name": "Logistic Regression",
-      "ml_probability": 0.4843922689054103,
-      "ml_validation_accuracy": 0.6166666666666667,
-      "ml_usable_samples": 990,
-      "ml_train_samples": 930,
+      "ml_probability": 0.4404382257239597,
+      "ml_validation_accuracy": 0.6333333333333333,
+      "ml_usable_samples": 969,
+      "ml_train_samples": 909,
       "ml_validation_samples": 60,
       "ml_features_used": 10,
       "ml_note": "使用歷史日線與籌碼/估值特徵訓練",
@@ -21716,7 +21724,7 @@
       "margin_usage": null,
       "night_score": 4,
       "night_bias": "中性",
-      "tomorrow_score": 68,
+      "tomorrow_score": 67,
       "night_action": "夜間消息偏中性",
       "event_tags": [
         "AI",
@@ -21963,6 +21971,6 @@
     ],
     "warnings": []
   },
-  "report_text": "# 台股自選股研究日報 (2026-08-06)\n\n## 市場摘要\n- 候選池整體偏向: 中性\n- 固定追蹤檔數: 2\n- 候選池檔數: 10\n- 候選池平均分數: 60.0 / 100\n- 候選池綠燈數: 0 檔\n- 候選池紅燈數: 3 檔\n\n## 今晚到明早總覽\n- 夜間市場偏向: 偏空\n- 夜間市場分數: -15\n- 夜間摘要: 利空：戰爭；利空：關稅\n\n## 明日推薦\n- 今天沒有達到門檻的新推薦。\n\n## 候選池前段班\n- 2395 研華 | 明日 黃燈 | 明日分數 79 | 可觀察，等開盤或拉回確認\n- 3605 宏致 | 明日 黃燈 | 明日分數 72 | 可觀察，等開盤或拉回確認\n- 3702 大聯大 | 明日 黃燈 | 明日分數 72 | 可觀察，等開盤或拉回確認\n- 3006 晶豪科 | 明日 黃燈 | 明日分數 70 | 可觀察，等開盤或拉回確認\n- 6213 聯茂 | 明日 黃燈 | 明日分數 68 | 可觀察，等開盤或拉回確認\n\n## 偏弱或先觀望\n- 2313 華通 | 明日分數 49 | MA20 205.47 仍低於 MA60 237.45，中期趨勢未翻正；利空：戰爭；利空：關稅\n- 2049 上銀 | 明日分數 49 | MA20 319.50 仍低於 MA60 342.56，中期趨勢未翻正；利多：樂觀\n- 4958 臻鼎-KY | 明日分數 32 | 收盤 482.00 跌破 MA20 502.10；利空：爆炸；利多：上修\n\n## 超跌反彈觀察\n- 4958 臻鼎-KY | 反彈觀察分數 83 | 近 20 日跌幅 14.7%；收盤仍在 MA20 下方；結構仍偏弱，但可能接近超跌區\n- 6446 藥華藥 | 反彈觀察分數 57 | 近 20 日跌幅 15.7%；ML 勝率回升到中性偏多；近 5 日跌勢開始放緩\n\n## 超漲轉弱觀察\n- 3605 宏致 | 轉弱風險分數 87 | 近 5 日漲幅 37.9%；近 20 日漲幅 18.9%；收盤高於 MA20 22.8%\n- 3006 晶豪科 | 轉弱風險分數 78 | 近 5 日漲幅 57.3%；近 20 日漲幅 19.7%；收盤高於 MA20 23.0%\n- 3702 大聯大 | 轉弱風險分數 66 | 近 5 日漲幅 19.0%；近 20 日漲幅 19.0%；收盤高於 MA20 9.3%\n- 2344 華邦電 | 轉弱風險分數 54 | 近 5 日漲幅 44.3%；收盤高於 MA20 9.2%；ML 勝率已轉弱\n- 6213 聯茂 | 轉弱風險分數 51 | 近 5 日漲幅 56.6%；收盤高於 MA20 16.8%；ML 勝率只剩中性附近\n\n## 夜間消息偏多\n- 2395 研華 | 夜間分數 16 | 明早可優先留意 | 利多：成長；利多：獲利創高；利多：創高\n- 3006 晶豪科 | 夜間分數 9 | 明早可優先留意 | 利多：創高\n- 6770 力積電 | 夜間分數 5 | 夜間消息偏中性 | 利多：成長；利多：配息\n- 2344 華邦電 | 夜間分數 5 | 夜間消息偏中性 | 利多：創高\n- 6213 聯茂 | 夜間分數 4 | 夜間消息偏中性 | 利多：擴產；利多：創高\n\n## 夜間消息偏空\n- 0050 元大台灣50 | 夜間分數 -10 | 明早先觀望或留意風險 | 利空：暴跌；利空：賣超\n- 4958 臻鼎-KY | 夜間分數 -4 | 夜間消息偏中性 | 利空：爆炸；利多：上修\n\n## 固定追蹤清單\n### 2344 華邦電\n- 評級: Reduce (42 分)\n- 規則分數: 52 分\n- 明日燈號: 紅燈\n- 明日動作: 先觀望或留意減碼\n- 明日理由: MA20 156.55 仍低於 MA60 164.45，中期趨勢未翻正；先等更明確的止穩訊號\n- 趨勢: 短線轉強\n- ML: Logistic Regression | 16% (偏空) | 驗證準確率 51.7% | 樣本 990 / 訓練 930 / 驗證 60\n- 夜間評估: 中性 | 夜間分數 5 | 夜間消息偏中性 | 半導體、戰爭、油價\n- 加分理由: 收盤 171.00 站上 MA20 156.55\n- 風險提醒: MA20 156.55 仍低於 MA60 164.45，中期趨勢未翻正\n\n### 0050 元大台灣50\n- 評級: Neutral (55 分)\n- 規則分數: 52 分\n- 明日燈號: 紅燈\n- 明日動作: 先觀望或留意減碼\n- 明日理由: MA20 101.93 仍低於 MA60 102.78，中期趨勢未翻正；利空：暴跌；利空：賣超\n- 趨勢: 短線轉強\n- ML: Logistic Regression | 61% (中性) | 驗證準確率 61.7% | 樣本 985 / 訓練 925 / 驗證 60\n- 夜間評估: 偏空 | 夜間分數 -10 | 明早先觀望或留意風險 | AI、半導體、戰爭\n- 加分理由: 收盤 103.30 站上 MA20 101.93\n- 風險提醒: MA20 101.93 仍低於 MA60 102.78，中期趨勢未翻正\n\n\n## 明日決策細節\n- 今天沒有新推薦。\n\n## 使用說明\n- 明日燈號是把原始分數和夜間事件一起看後的結果，適合盤後到隔天開盤前參考。\n- 夜間事件層以公開新聞標題、重大訊息、法說與財經關鍵字做規則判讀，屬於輔助訊號。\n- 若更新失敗，網站會沿用上一版快照，不會直接清空。\n",
+  "report_text": "# 台股自選股研究日報 (2026-08-06)\n\n## 市場摘要\n- 候選池整體偏向: 中性\n- 固定追蹤檔數: 2\n- 候選池檔數: 10\n- 候選池平均分數: 59.8 / 100\n- 候選池綠燈數: 0 檔\n- 候選池紅燈數: 3 檔\n\n## 今晚到明早總覽\n- 夜間市場偏向: 偏空\n- 夜間市場分數: -15\n- 夜間摘要: 利空：戰爭；利空：關稅\n\n## 明日推薦\n- 今天沒有達到門檻的新推薦。\n\n## 候選池前段班\n- 2395 研華 | 明日 黃燈 | 明日分數 79 | 可觀察，等開盤或拉回確認\n- 3605 宏致 | 明日 黃燈 | 明日分數 72 | 可觀察，等開盤或拉回確認\n- 3702 大聯大 | 明日 黃燈 | 明日分數 72 | 可觀察，等開盤或拉回確認\n- 3006 晶豪科 | 明日 黃燈 | 明日分數 69 | 可觀察，等開盤或拉回確認\n- 6213 聯茂 | 明日 黃燈 | 明日分數 67 | 可觀察，等開盤或拉回確認\n\n## 偏弱或先觀望\n- 2313 華通 | 明日分數 49 | MA20 205.47 仍低於 MA60 237.45，中期趨勢未翻正；利空：戰爭；利空：關稅\n- 2049 上銀 | 明日分數 49 | MA20 319.50 仍低於 MA60 342.56，中期趨勢未翻正；利多：樂觀\n- 4958 臻鼎-KY | 明日分數 32 | 收盤 482.00 跌破 MA20 502.10；利空：爆炸；利多：上修\n\n## 超跌反彈觀察\n- 4958 臻鼎-KY | 反彈觀察分數 83 | 近 20 日跌幅 14.7%；收盤仍在 MA20 下方；結構仍偏弱，但可能接近超跌區\n- 6446 藥華藥 | 反彈觀察分數 57 | 近 20 日跌幅 15.7%；ML 勝率回升到中性偏多；近 5 日跌勢開始放緩\n\n## 超漲轉弱觀察\n- 3006 晶豪科 | 轉弱風險分數 88 | 近 5 日漲幅 57.3%；近 20 日漲幅 19.7%；收盤高於 MA20 23.0%\n- 3605 宏致 | 轉弱風險分數 87 | 近 5 日漲幅 37.9%；近 20 日漲幅 18.9%；收盤高於 MA20 22.8%\n- 3702 大聯大 | 轉弱風險分數 66 | 近 5 日漲幅 19.0%；近 20 日漲幅 19.0%；收盤高於 MA20 9.3%\n- 2344 華邦電 | 轉弱風險分數 54 | 近 5 日漲幅 44.3%；收盤高於 MA20 9.2%；ML 勝率已轉弱\n- 6213 聯茂 | 轉弱風險分數 51 | 近 5 日漲幅 56.6%；收盤高於 MA20 16.8%；ML 勝率只剩中性附近\n\n## 夜間消息偏多\n- 2395 研華 | 夜間分數 16 | 明早可優先留意 | 利多：成長；利多：獲利創高；利多：創高\n- 3006 晶豪科 | 夜間分數 9 | 明早可優先留意 | 利多：創高\n- 6770 力積電 | 夜間分數 5 | 夜間消息偏中性 | 利多：成長；利多：配息\n- 2344 華邦電 | 夜間分數 5 | 夜間消息偏中性 | 利多：創高\n- 6213 聯茂 | 夜間分數 4 | 夜間消息偏中性 | 利多：擴產；利多：創高\n\n## 夜間消息偏空\n- 0050 元大台灣50 | 夜間分數 -10 | 明早先觀望或留意風險 | 利空：暴跌；利空：賣超\n- 4958 臻鼎-KY | 夜間分數 -4 | 夜間消息偏中性 | 利空：爆炸；利多：上修\n\n## 固定追蹤清單\n### 2344 華邦電\n- 評級: Reduce (42 分)\n- 規則分數: 52 分\n- 明日燈號: 紅燈\n- 明日動作: 先觀望或留意減碼\n- 明日理由: MA20 156.55 仍低於 MA60 164.45，中期趨勢未翻正；先等更明確的止穩訊號\n- 趨勢: 短線轉強\n- ML: Logistic Regression | 16% (偏空) | 驗證準確率 51.7% | 樣本 990 / 訓練 930 / 驗證 60\n- 夜間評估: 中性 | 夜間分數 5 | 夜間消息偏中性 | AI、半導體、戰爭\n- 加分理由: 收盤 171.00 站上 MA20 156.55\n- 風險提醒: MA20 156.55 仍低於 MA60 164.45，中期趨勢未翻正\n\n### 0050 元大台灣50\n- 評級: Neutral (55 分)\n- 規則分數: 52 分\n- 明日燈號: 紅燈\n- 明日動作: 先觀望或留意減碼\n- 明日理由: MA20 101.93 仍低於 MA60 102.78，中期趨勢未翻正；利空：暴跌；利空：賣超\n- 趨勢: 短線轉強\n- ML: Logistic Regression | 61% (中性) | 驗證準確率 61.7% | 樣本 985 / 訓練 925 / 驗證 60\n- 夜間評估: 偏空 | 夜間分數 -10 | 明早先觀望或留意風險 | AI、半導體、戰爭\n- 加分理由: 收盤 103.30 站上 MA20 101.93\n- 風險提醒: MA20 101.93 仍低於 MA60 102.78，中期趨勢未翻正\n\n\n## 明日決策細節\n- 今天沒有新推薦。\n\n## 使用說明\n- 明日燈號是把原始分數和夜間事件一起看後的結果，適合盤後到隔天開盤前參考。\n- 夜間事件層以公開新聞標題、重大訊息、法說與財經關鍵字做規則判讀，屬於輔助訊號。\n- 若更新失敗，網站會沿用上一版快照，不會直接清空。\n",
   "prompt_text": null
 }

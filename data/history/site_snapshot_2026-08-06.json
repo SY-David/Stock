@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-06T14:53:19",
+  "generated_at": "2026-08-06T15:10:29",
   "candidate_symbols": [
     "6770",
     "4958",
@@ -45,8 +45,8 @@
     "6213": {
       "symbol": "6213",
       "symbol_name": "聯茂",
-      "score": 64,
-      "tomorrow_score": 68,
+      "score": 63,
+      "tomorrow_score": 67,
       "tomorrow_light": "黃燈"
     },
     "2313": {
@@ -94,8 +94,8 @@
     "3006": {
       "symbol": "3006",
       "symbol_name": "晶豪科",
-      "score": 61,
-      "tomorrow_score": 70,
+      "score": 60,
+      "tomorrow_score": 69,
       "tomorrow_light": "黃燈"
     }
   },
