@@ -21,6 +21,7 @@ on:
       - "tests/**"
       - "tools/optimize_streamlit_app.py"
       - "tools/fix_history_cache.py"
+      - "tools/fix_portfolio_tracking.py"
       - "tools/fix_repo_audit.py"
       - "tools/restore_full_history.py"
       - "tools/rebuild_snapshot_history.py"
@@ -67,6 +68,9 @@ jobs:
       - name: Apply repository audit fixes
         run: python tools/fix_repo_audit.py
 
+      - name: Retain prices for paper positions
+        run: python tools/fix_portfolio_tracking.py
+
       - name: Run unit tests
         run: python -m unittest discover -s tests
 
@@ -82,6 +86,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add app.py
           git add app_config.py
+          git add modules/analysis_service.py
           git add modules/paper_trading.py
           git add modules/scoring_engine.py
           git add modules/site_snapshot.py
