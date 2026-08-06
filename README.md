@@ -161,7 +161,7 @@ docker compose run --rm refresh
 
 你可以把 [deploy/cron.example](deploy/cron.example) 放進 Linux `crontab`，讓它在每個交易日 15:10 自動更新快照。
 
-如果你有自己的網域，可以配 Caddy 反向代理，範例在 [deploy/Caddyfile.example](/c:/Users/USER/Desktop/tw_stock_assistant/deploy/Caddyfile.example)。
+如果你有自己的網域，可以配 Caddy 反向代理，範例在 [deploy/Caddyfile.example](deploy/Caddyfile.example)。
 
 ## GitHub 最簡單方案
 
