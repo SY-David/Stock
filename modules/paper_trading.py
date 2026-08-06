@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 
 from app_config import (
@@ -13,6 +14,7 @@ from app_config import (
     PAPER_INITIAL_CASH,
     PAPER_MAX_HOLD_DAYS,
     PAPER_MAX_NEW_BUYS_PER_DAY,
+    PAPER_ORDER_MAX_CALENDAR_DAYS,
     SNAPSHOT_PATH,
 )
 
@@ -74,10 +76,12 @@ def simulate_paper_portfolio() -> PaperTradingResult:
         for symbol, position in positions.items():
             price_row = _get_price_row(snapshot, symbol, current_date)
             if price_row:
+                price_date = str(price_row.get("date", current_date))
                 position["last_open"] = float(price_row["open"])
                 position["last_close"] = float(price_row["close"])
-                position["last_mark_date"] = current_date
-                position["days_held"] = position.get("days_held", 0) + 1
+                if position.get("last_mark_date") != price_date:
+                    position["last_mark_date"] = price_date
+                    position["days_held"] = position.get("days_held", 0) + 1
 
             market_price = position.get("last_close", position["avg_cost"])
             position["market_value"] = round(position["quantity"] * market_price, 2)
@@ -359,11 +363,27 @@ def _execute_pending_orders(
             still_pending.append(order)
             continue
 
-        price_row = _get_price_row(snapshot, order["symbol"], current_date)
+        try:
+            order_age_days = (
+                date.fromisoformat(current_date)
+                - date.fromisoformat(str(order["signal_date"])[:10])
+            ).days
+        except (KeyError, TypeError, ValueError):
+            order_age_days = 0
+        if order_age_days > PAPER_ORDER_MAX_CALENDAR_DAYS:
+            continue
+
+        price_row = _get_price_row(
+            snapshot,
+            order["symbol"],
+            current_date,
+            after_date=order["signal_date"],
+        )
         if not price_row:
             still_pending.append(order)
             continue
 
+        execution_date = str(price_row.get("date", current_date))
         open_price = float(price_row["open"])
         if order["side"] == "BUY":
             if order["symbol"] in positions:
@@ -386,7 +406,8 @@ def _execute_pending_orders(
                 "quantity": quantity,
                 "avg_cost": open_price,
                 "days_held": 0,
-                "entered_on": current_date,
+                "entered_on": execution_date,
+                "last_mark_date": execution_date,
                 "signal_date": order["signal_date"],
                 "last_close": float(price_row["close"]),
                 "last_open": open_price,
@@ -395,7 +416,7 @@ def _execute_pending_orders(
             }
             trades.append(
                 {
-                    "date": current_date,
+                    "date": execution_date,
                     "side": "BUY",
                     "symbol": order["symbol"],
                     "symbol_name": order["symbol_name"],
@@ -428,7 +449,7 @@ def _execute_pending_orders(
             realized_pnl = round(realized_pnl + pnl, 2)
             trades.append(
                 {
-                    "date": current_date,
+                    "date": execution_date,
                     "side": "SELL",
                     "symbol": order["symbol"],
                     "symbol_name": order["symbol_name"],
@@ -448,12 +469,20 @@ def _execute_pending_orders(
     return still_pending, trades, cash, realized_pnl
 
 
-def _get_price_row(snapshot: dict, symbol: str, current_date: str) -> dict | None:
+def _get_price_row(
+    snapshot: dict,
+    symbol: str,
+    current_date: str,
+    after_date: str | None = None,
+) -> dict | None:
     rows = snapshot.get("raw_data", {}).get(symbol, {}).get("prices", [])
     for row in reversed(rows):
         row_date = str(row.get("date", ""))
-        if row_date <= current_date:
-            return row
+        if not row_date or row_date > current_date:
+            continue
+        if after_date is not None and row_date <= after_date:
+            continue
+        return row
     return None
 
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-06T15:10:29",
+  "generated_at": "2026-08-06T16:03:23",
   "candidate_symbols": [
     "6770",
     "4958",
@@ -45,8 +45,8 @@
     "6213": {
       "symbol": "6213",
       "symbol_name": "聯茂",
-      "score": 63,
-      "tomorrow_score": 67,
+      "score": 64,
+      "tomorrow_score": 68,
       "tomorrow_light": "黃燈"
     },
     "2313": {
@@ -88,14 +88,14 @@
       "symbol": "2395",
       "symbol_name": "研華",
       "score": 63,
-      "tomorrow_score": 79,
+      "tomorrow_score": 77,
       "tomorrow_light": "黃燈"
     },
     "3006": {
       "symbol": "3006",
       "symbol_name": "晶豪科",
-      "score": 60,
-      "tomorrow_score": 69,
+      "score": 61,
+      "tomorrow_score": 70,
       "tomorrow_light": "黃燈"
     }
   },
@@ -257,6 +257,188 @@
           "close": 258.0,
           "volume": 30664323,
           "turnover": 29913
+        }
+      ]
+    },
+    "1303": {
+      "prices": [
+        {
+          "date": "2026-08-06",
+          "open": 174.0,
+          "high": 182.0,
+          "low": 169.5,
+          "close": 178.5,
+          "volume": 57978687,
+          "turnover": 40152
+        }
+      ]
+    },
+    "2316": {
+      "prices": [
+        {
+          "date": "2026-08-06",
+          "open": 157.0,
+          "high": 165.5,
+          "low": 153.0,
+          "close": 162.5,
+          "volume": 1966798,
+          "turnover": 2022
+        }
+      ]
+    },
+    "2330": {
+      "prices": [
+        {
+          "date": "2026-08-06",
+          "open": 2395.0,
+          "high": 2395.0,
+          "low": 2360.0,
+          "close": 2365.0,
+          "volume": 25536816,
+          "turnover": 89846
+        }
+      ]
+    },
+    "2382": {
+      "prices": [
+        {
+          "date": "2026-08-06",
+          "open": 301.5,
+          "high": 305.0,
+          "low": 299.0,
+          "close": 302.0,
+          "volume": 13734715,
+          "turnover": 14844
+        }
+      ]
+    },
+    "2408": {
+      "prices": [
+        {
+          "date": "2026-08-06",
+          "open": 441.0,
+          "high": 462.5,
+          "low": 436.0,
+          "close": 459.0,
+          "volume": 106681466,
+          "turnover": 94936
+        }
+      ]
+    },
+    "3189": {
+      "prices": [
+        {
+          "date": "2026-08-06",
+          "open": 816.0,
+          "high": 853.0,
+          "low": 801.0,
+          "close": 853.0,
+          "volume": 23356386,
+          "turnover": 31305
+        }
+      ]
+    },
+    "3231": {
+      "prices": [
+        {
+          "date": "2026-08-06",
+          "open": 193.5,
+          "high": 199.0,
+          "low": 188.0,
+          "close": 189.5,
+          "volume": 83293423,
+          "turnover": 64047
+        }
+      ]
+    },
+    "4764": {
+      "prices": [
+        {
+          "date": "2026-08-06",
+          "open": 260.0,
+          "high": 268.0,
+          "low": 255.0,
+          "close": 262.5,
+          "volume": 1854780,
+          "turnover": 3398
+        }
+      ]
+    },
+    "6239": {
+      "prices": [
+        {
+          "date": "2026-08-06",
+          "open": 255.0,
+          "high": 271.0,
+          "low": 249.5,
+          "close": 269.5,
+          "volume": 18009887,
+          "turnover": 16822
+        }
+      ]
+    },
+    "6505": {
+      "prices": [
+        {
+          "date": "2026-08-06",
+          "open": 66.8,
+          "high": 67.4,
+          "low": 66.2,
+          "close": 67.1,
+          "volume": 13793136,
+          "turnover": 7625
+        }
+      ]
+    },
+    "8150": {
+      "prices": [
+        {
+          "date": "2026-08-06",
+          "open": 85.8,
+          "high": 88.7,
+          "low": 83.5,
+          "close": 86.9,
+          "volume": 30369153,
+          "turnover": 21002
+        }
+      ]
+    },
+    "8210": {
+      "prices": [
+        {
+          "date": "2026-08-06",
+          "open": 1155.0,
+          "high": 1265.0,
+          "low": 1155.0,
+          "close": 1235.0,
+          "volume": 2018941,
+          "turnover": 4777
+        }
+      ]
+    },
+    "8996": {
+      "prices": [
+        {
+          "date": "2026-08-06",
+          "open": 1055.0,
+          "high": 1135.0,
+          "low": 1040.0,
+          "close": 1135.0,
+          "volume": 4365556,
+          "turnover": 5390
+        }
+      ]
+    },
+    "9914": {
+      "prices": [
+        {
+          "date": "2026-08-06",
+          "open": 76.7,
+          "high": 79.5,
+          "low": 76.5,
+          "close": 79.5,
+          "volume": 2610395,
+          "turnover": 2277
         }
       ]
     }

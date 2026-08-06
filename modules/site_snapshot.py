@@ -16,6 +16,7 @@ from app_config import (
     WATCHLIST,
 )
 from modules.ai_reporter import AIReporter
+from modules.paper_trading import simulate_paper_portfolio
 from modules.analysis_service import (
     AnalysisBundle,
     NEUTRAL_NIGHTLY_MARKET,
@@ -88,7 +89,19 @@ def build_snapshot(
     watchlist = watchlist_symbols or WATCHLIST
     candidate_pool = candidate_symbols or DAILY_CANDIDATE_POOL
 
-    bundle = analyze_market(watchlist, candidate_pool)
+    paper_result = simulate_paper_portfolio()
+    paper_symbols = sorted(
+        {
+            item.get("symbol", "")
+            for item in [*paper_result.positions, *paper_result.pending_orders]
+            if item.get("symbol")
+        }
+    )
+    bundle = analyze_market(
+        watchlist,
+        candidate_pool,
+        price_only_symbols=paper_symbols,
+    )
     recommendations = get_recommendations(bundle)
     rebound_watchlist = get_rebound_watchlist(bundle)
     overheated_watchlist = get_overheated_watchlist(bundle)

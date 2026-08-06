@@ -199,7 +199,9 @@ class ScoringEngine:
             "return_20d": return_20d,
             "volume": volume,
             "volume_ratio": volume_ratio,
-            "institutional_trend": "偏多" if total_inst_3d > 0 else "偏空",
+            "institutional_trend": (
+                "偏多" if total_inst_3d > 0 else "偏空" if total_inst_3d < 0 else "中性"
+            ),
             "foreign_net_buy_3d": foreign_3d,
             "trust_net_buy_3d": trust_3d,
             "dealer_net_buy_3d": institutional_summary["dealer_net_buy_3d"],

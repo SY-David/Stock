@@ -48,6 +48,7 @@ class AnalysisBundle:
 def analyze_market(
     watchlist_symbols: list[str],
     candidate_symbols: list[str] | None = None,
+    price_only_symbols: list[str] | None = None,
 ) -> AnalysisBundle:
     storage = DataStorage()
     engine = ScoringEngine()
@@ -65,7 +66,14 @@ def analyze_market(
             exclude_symbols=normalized_watchlist,
             limit=AUTO_DAILY_CANDIDATE_COUNT,
         )
-    symbols_to_fetch = normalized_watchlist + normalized_candidates
+    normalized_price_only = [
+        symbol
+        for symbol in _normalize_unique_symbols(price_only_symbols or [])
+        if symbol not in normalized_watchlist and symbol not in normalized_candidates
+    ]
+    symbols_to_fetch = (
+        normalized_watchlist + normalized_candidates + normalized_price_only
+    )
 
     raw_data: dict[str, dict] = {}
     evaluations: dict[str, dict] = {}
@@ -76,6 +84,9 @@ def analyze_market(
             continue
 
         raw_data[symbol] = stock_data
+        if symbol in normalized_price_only:
+            continue
+
         result = engine.evaluate(stock_data)
         if result:
             evaluations[symbol] = result

@@ -44,13 +44,22 @@ class TWSEClient:
         return self._fetch_json(self.DAILY_ALL_URL, cache_path=cache_path)
 
     def fetch_stock_month(self, stock_id: str, year_month: str) -> dict:
-        cache_path = Path(CACHE_DIR) / f"twse_stock_day_{stock_id}_{year_month}.json"
+        today = date.today()
+        cache_suffix = (
+            f"{year_month}_{today.isoformat()}"
+            if year_month == today.strftime("%Y%m")
+            else year_month
+        )
+        cache_path = Path(CACHE_DIR) / f"twse_stock_day_{stock_id}_{cache_suffix}.json"
         params = {"response": "json", "date": f"{year_month}01", "stockNo": stock_id}
         return self._fetch_json(self.STOCK_DAY_URL, params=params, cache_path=cache_path)
 
     def _fetch_json(self, url: str, params: dict | None = None, cache_path: Path | None = None):
         if cache_path and cache_path.exists():
-            return self._read_cache(cache_path)
+            try:
+                return self._read_cache(cache_path)
+            except (OSError, json.JSONDecodeError, UnicodeDecodeError):
+                cache_path.unlink(missing_ok=True)
 
         try:
             response = self.session.get(url, params=params, timeout=self.timeout)
@@ -62,14 +71,14 @@ class TWSEClient:
         payload = response.json()
 
         if cache_path:
-            cache_path.write_text(response.text, encoding="utf-8")
+            temp_path = cache_path.with_suffix(cache_path.suffix + ".tmp")
+            temp_path.write_text(response.text, encoding="utf-8")
+            temp_path.replace(cache_path)
 
         return payload
 
     @staticmethod
     def _read_cache(cache_path: Path):
-        import json
-
         return json.loads(cache_path.read_text(encoding="utf-8"))
 
     def _should_retry_without_verify(self, url: str) -> bool:
@@ -218,10 +227,16 @@ class DataStorage:
     def _safe_float(value: object) -> float | None:
         if value in ("", None, "--", "---"):
             return None
-        return float(str(value).replace(",", ""))
+        try:
+            return float(str(value).replace(",", ""))
+        except (TypeError, ValueError):
+            return None
 
     @staticmethod
     def _safe_int(value: object) -> int:
         if value in ("", None, "--", "---"):
             return 0
-        return int(str(value).replace(",", ""))
+        try:
+            return int(str(value).replace(",", ""))
+        except (TypeError, ValueError):
+            return 0

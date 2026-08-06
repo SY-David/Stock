@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime
+import hashlib
 
 import pandas as pd
 import streamlit as st
@@ -74,10 +75,15 @@ def load_paper_trading_result(history_state: str, snapshot_mtime: float | None):
 def history_marker() -> str:
     if not HISTORY_DIR.exists():
         return "none"
-    rows = []
-    for path in sorted(HISTORY_DIR.glob("site_snapshot_*.json"))[-20:]:
-        rows.append(f"{path.name}:{int(path.stat().st_mtime)}")
-    return "|".join(rows)
+
+    paths = sorted(HISTORY_DIR.glob("site_snapshot_*.json"))
+    digest = hashlib.sha256()
+    for path in paths:
+        stat = path.stat()
+        digest.update(
+            f"{path.name}:{stat.st_size}:{stat.st_mtime_ns}\n".encode("utf-8")
+        )
+    return f"{len(paths)}:{digest.hexdigest()}"
 
 
 def render_status_banner(update_status: dict | None, data_source_label: str | None) -> None:
@@ -342,8 +348,12 @@ def render_paper_trading(result) -> None:
                     "價格": row["price"],
                     "數量": row["quantity"],
                     "金額": row["amount"],
-                    "損益": float(row["pnl"]) if row["pnl"] is not None else None,
-                    "報酬率": f"{row['return_pct']:.2f}%" if row.get("return_pct") is not None else "",
+                    "損益": (
+                        f"{float(row['pnl']):,.0f}"
+                        if row["pnl"] is not None
+                        else "—"
+                    ),
+                    "報酬率": f"{row['return_pct']:.2f}%" if row.get("return_pct") is not None else "—",
                     "原因": row["reason"],
                     "訊號日": row["signal_date"],
                 }

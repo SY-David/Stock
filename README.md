@@ -31,10 +31,12 @@ ML_LOOKBACK_DAYS=960
 ML_PREDICTION_HORIZON_DAYS=5
 RECOMMENDATION_TOP_N=3
 RECOMMENDATION_MIN_SCORE=65
-HISTORY_LIMIT=30
+HISTORY_LIMIT=0
+PAPER_HISTORY_LIMIT=0
 PAPER_INITIAL_CASH=50000
 PAPER_DAILY_BUDGET=5000
 PAPER_MAX_NEW_BUYS_PER_DAY=2
+PAPER_ORDER_MAX_CALENDAR_DAYS=7
 PAPER_MAX_HOLD_DAYS=5
 PAPER_CONTINUATION_MIN_SCORE=60
 PAPER_ALLOW_FRACTIONAL=true
@@ -102,7 +104,7 @@ GUI 會顯示：
 - 中學生版欄位說明
 - 日報與 prompt 匯出
 
-網站若找到 `data/site_snapshot.json`，會優先讀取快照；沒有快照時才會即時抓資料。
+網站只讀取 `data/site_snapshot.json`；沒有快照時會提示先執行 GitHub Actions，不會在免費主機上即時重跑完整分析。
 若排程更新失敗，會沿用上一版快照並在頁面上顯示 fallback 提示。
 若雲端環境對 TWSE 歷史月資料出現 SSL 驗證不相容，程式會對該公開端點自動退回不驗證重試；可用 `ALLOW_INSECURE_TWSE_SSL_FALLBACK=false` 關掉。
 
@@ -157,7 +159,7 @@ docker compose up -d web
 docker compose run --rm refresh
 ```
 
-你可以把 [deploy/cron.example](/c:/Users/USER/Desktop/tw_stock_assistant/deploy/cron.example) 放進 Linux `crontab`，讓它在每個交易日 15:10 自動更新快照。
+你可以把 [deploy/cron.example](deploy/cron.example) 放進 Linux `crontab`，讓它在每個交易日 15:10 自動更新快照。
 
 如果你有自己的網域，可以配 Caddy 反向代理，範例在 [deploy/Caddyfile.example](/c:/Users/USER/Desktop/tw_stock_assistant/deploy/Caddyfile.example)。
 
@@ -171,7 +173,7 @@ docker compose run --rm refresh
 4. 啟用 repo 內建的 GitHub Actions
 
 這個 repo 已經附好排程工作流：
-- [refresh_snapshot.yml](/c:/Users/USER/Desktop/tw_stock_assistant/.github/workflows/refresh_snapshot.yml)
+- [refresh_snapshot.yml](.github/workflows/refresh_snapshot.yml)
 
 它會在台北時間每個交易日約 `15:18` 自動更新 `data/site_snapshot.json`，並把變更 commit 回 GitHub。  
 同時也會保存 `data/history/` 與 `data/update_status.json`，讓歷史紀錄與模擬帳戶可以持續往前滾。  
