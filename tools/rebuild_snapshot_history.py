@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SNAPSHOT_REPO_PATH = "data/site_snapshot.json"
 HISTORY_DIR = ROOT / "data" / "history"
 SCHEMA_VERSION = 2
+# The portfolio history is reconstructed from every committed snapshot, not a rolling window.
 
 
 def git_output(*args: str) -> str:
