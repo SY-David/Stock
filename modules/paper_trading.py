@@ -6,10 +6,10 @@ from pathlib import Path
 
 from app_config import (
     HISTORY_DIR,
-    HISTORY_LIMIT,
     PAPER_ALLOW_FRACTIONAL,
     PAPER_CONTINUATION_MIN_SCORE,
     PAPER_DAILY_BUDGET,
+    PAPER_HISTORY_LIMIT,
     PAPER_INITIAL_CASH,
     PAPER_MAX_HOLD_DAYS,
     PAPER_MAX_NEW_BUYS_PER_DAY,
@@ -271,7 +271,9 @@ def _load_full_snapshots() -> list[dict]:
     payloads_by_date: dict[str, dict] = {}
 
     if HISTORY_DIR.exists():
-        paths = sorted(HISTORY_DIR.glob("site_snapshot_*.json"))[-HISTORY_LIMIT:]
+        paths = sorted(HISTORY_DIR.glob("site_snapshot_*.json"))
+        if PAPER_HISTORY_LIMIT > 0:
+            paths = paths[-PAPER_HISTORY_LIMIT:]
         for path in paths:
             payload = _read_snapshot_file(path)
             if payload:
@@ -450,10 +452,8 @@ def _get_price_row(snapshot: dict, symbol: str, current_date: str) -> dict | Non
     rows = snapshot.get("raw_data", {}).get(symbol, {}).get("prices", [])
     for row in reversed(rows):
         row_date = str(row.get("date", ""))
-        if row_date == current_date:
+        if row_date <= current_date:
             return row
-        if row_date < current_date:
-            break
     return None
 
 
