@@ -26,13 +26,13 @@ class PaperTradingDateTests(unittest.TestCase):
         }
 
     @staticmethod
-    def _buy_order() -> dict:
+    def _buy_order(signal_date: str = "2026-01-02") -> dict:
         return {
             "side": "BUY",
             "symbol": "2330",
             "symbol_name": "台積電",
-            "signal_date": "2026-01-02",
-            "execute_on_or_after": "2026-01-02",
+            "signal_date": signal_date,
+            "execute_on_or_after": signal_date,
             "budget": 1000.0,
             "reason": "測試訊號",
         }
@@ -71,6 +71,22 @@ class PaperTradingDateTests(unittest.TestCase):
         self.assertEqual(positions["2330"]["entered_on"], "2026-01-05")
         self.assertEqual(positions["2330"]["last_mark_date"], "2026-01-05")
         self.assertEqual(cash, 49000.0)
+        self.assertEqual(realized, 0.0)
+
+    def test_old_pending_order_expires_instead_of_filling_months_later(self):
+        pending, trades, cash, realized = _execute_pending_orders(
+            snapshot=self._snapshot("2026-02-02"),
+            current_date="2026-02-02",
+            pending_orders=[self._buy_order(signal_date="2026-01-02")],
+            positions={},
+            trades=[],
+            cash=50000.0,
+            realized_pnl=0.0,
+        )
+
+        self.assertEqual(pending, [])
+        self.assertEqual(trades, [])
+        self.assertEqual(cash, 50000.0)
         self.assertEqual(realized, 0.0)
 
     def test_price_lookup_can_require_a_strictly_later_date(self):
