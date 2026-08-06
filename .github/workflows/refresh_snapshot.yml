@@ -59,7 +59,7 @@ jobs:
         run: python tools/rebuild_snapshot_history.py
 
       - name: Optimize Streamlit app
-        run: python tools/optimize_streamlit_app.py
+        run: python -c "from tools.optimize_streamlit_app import optimize_app; optimize_app()"
 
       - name: Refresh history cache marker
         run: python tools/fix_history_cache.py
