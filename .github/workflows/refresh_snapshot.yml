@@ -8,6 +8,7 @@ on:
     branches:
       - main
     paths:
+      - ".github/workflows/refresh_snapshot.yml"
       - "app_config.py"
       - "refresh_snapshot.py"
       - "requirements.txt"
@@ -16,8 +17,11 @@ on:
       - "modules/scoring_engine.py"
       - "modules/site_snapshot.py"
       - "modules/paper_trading.py"
+      - "modules/storage.py"
+      - "tests/**"
       - "tools/optimize_streamlit_app.py"
       - "tools/fix_history_cache.py"
+      - "tools/fix_repo_audit.py"
       - "tools/restore_full_history.py"
       - "tools/rebuild_snapshot_history.py"
 
@@ -60,6 +64,9 @@ jobs:
       - name: Refresh history cache marker
         run: python tools/fix_history_cache.py
 
+      - name: Apply repository audit fixes
+        run: python tools/fix_repo_audit.py
+
       - name: Run unit tests
         run: python -m unittest discover -s tests
 
@@ -75,7 +82,10 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add app.py
           git add modules/paper_trading.py
+          git add modules/scoring_engine.py
           git add modules/site_snapshot.py
+          git add modules/storage.py
+          git add README.md
           git add data/site_snapshot.json
           git add data/history
           git add data/update_status.json
@@ -83,7 +93,7 @@ jobs:
             echo "No generated changes to commit."
             exit 0
           fi
-          git commit -m "chore: restore complete history and refresh snapshot"
+          git commit -m "chore: apply audit fixes and refresh snapshot"
           git push
 
       - name: Mark failed refresh
