@@ -13,8 +13,7 @@ on:
       - "refresh_snapshot.py"
       - "requirements.txt"
       - "modules/**"
-      - "tests/**"
-      - "tools/**"
+      - "tools/rebuild_snapshot_history.py"
 
 permissions:
   contents: write
@@ -43,62 +42,32 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
 
-      - name: Run maintenance pipeline with diagnostics
-        shell: bash
+      - name: Validate source and tests
         run: |
-          mkdir -p data
-          : > data/ci_diagnostic.log
-          rm -f data/ci_failed
+          python -m compileall -q app.py main.py refresh_snapshot.py modules tests tools
+          python -m unittest discover -s tests
 
-          run_step() {
-            local label="$1"
-            shift
-            echo "===== ${label} =====" | tee -a data/ci_diagnostic.log
-            "$@" >> data/ci_diagnostic.log 2>&1
-            local code=$?
-            echo "exit=${code}" | tee -a data/ci_diagnostic.log
-            echo | tee -a data/ci_diagnostic.log
-            if [ "$code" -ne 0 ]; then
-              touch data/ci_failed
-            fi
-            return 0
-          }
-
-          set +e
-          run_step "restore_full_history" python tools/restore_full_history.py
-          run_step "rebuild_snapshot_history" python tools/rebuild_snapshot_history.py
-          run_step "optimize_streamlit_app" python -c "from tools.optimize_streamlit_app import optimize_app; optimize_app()"
-          run_step "fix_history_cache" python tools/fix_history_cache.py
-          run_step "fix_repo_audit" python tools/fix_repo_audit.py
-          run_step "fix_portfolio_tracking" python tools/fix_portfolio_tracking.py
-          run_step "unit_tests" python -m unittest discover -s tests
-          cat data/ci_diagnostic.log
+      - name: Rebuild compact history from Git
+        run: python tools/rebuild_snapshot_history.py
 
       - name: Refresh snapshot
         id: refresh
         continue-on-error: true
         run: python refresh_snapshot.py --no-prompt
 
-      - name: Commit generated files and diagnostics
-        if: always()
+      - name: Commit generated data
+        if: always() && steps.refresh.outcome != 'skipped'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add app.py app_config.py README.md
-          git add modules/analysis_service.py modules/paper_trading.py
-          git add modules/scoring_engine.py modules/site_snapshot.py modules/storage.py
           git add data/site_snapshot.json data/history data/update_status.json
-          git add data/ci_diagnostic.log
           if git diff --cached --quiet; then
             echo "No generated changes to commit."
             exit 0
           fi
-          git commit -m "chore: apply audit fixes and refresh snapshot"
+          git commit -m "chore: refresh site snapshot"
           git push
 
-      - name: Mark failed maintenance or refresh
-        if: always()
-        run: |
-          if [ -f data/ci_failed ] || [ "${{ steps.refresh.outcome }}" = "failure" ]; then
-            exit 1
-          fi
+      - name: Mark failed refresh
+        if: steps.refresh.outcome == 'failure'
+        run: exit 1
