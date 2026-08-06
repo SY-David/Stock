@@ -182,7 +182,9 @@ def load_snapshot_history(limit: int = HISTORY_LIMIT) -> list[dict]:
         return []
 
     history_rows: list[dict] = []
-    paths = sorted(HISTORY_DIR.glob("site_snapshot_*.json"), reverse=True)[:limit]
+    paths = sorted(HISTORY_DIR.glob("site_snapshot_*.json"), reverse=True)
+    if limit > 0:
+        paths = paths[:limit]
     for path in paths:
         payload = _read_json(path)
         if not isinstance(payload, dict):
