@@ -2,5 +2,10 @@
 output/
 __pycache__/
 *.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
 .streamlit/secrets.toml
 data/cache/
+data/ci_diagnostic.log
+data/ci_failed
