@@ -105,8 +105,11 @@ class TWSEClient:
 
         if cache_path:
             temp_path = cache_path.with_suffix(cache_path.suffix + ".tmp")
-            temp_path.write_text(response.text, encoding="utf-8")
-            temp_path.replace(cache_path)
+            try:
+                temp_path.write_text(response.text, encoding="utf-8")
+                temp_path.replace(cache_path)
+            except OSError:
+                temp_path.unlink(missing_ok=True)
 
         return payload
 
