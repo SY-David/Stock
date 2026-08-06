@@ -52,7 +52,10 @@ SNAPSHOT_PRICE_DAYS = int(os.getenv("SNAPSHOT_PRICE_DAYS", "180"))
 REPORT_TOP_N = int(os.getenv("REPORT_TOP_N", "5"))
 RECOMMENDATION_TOP_N = int(os.getenv("RECOMMENDATION_TOP_N", "3"))
 RECOMMENDATION_MIN_SCORE = int(os.getenv("RECOMMENDATION_MIN_SCORE", "65"))
-HISTORY_LIMIT = int(os.getenv("HISTORY_LIMIT", "30"))
+# 0 means retain and display the complete compact history.
+HISTORY_LIMIT = int(os.getenv("HISTORY_LIMIT", "0"))
+# 0 means simulate from the earliest recoverable snapshot in Git history.
+PAPER_HISTORY_LIMIT = int(os.getenv("PAPER_HISTORY_LIMIT", "0"))
 PAPER_INITIAL_CASH = float(os.getenv("PAPER_INITIAL_CASH", "50000"))
 PAPER_DAILY_BUDGET = float(os.getenv("PAPER_DAILY_BUDGET", "5000"))
 PAPER_MAX_NEW_BUYS_PER_DAY = int(os.getenv("PAPER_MAX_NEW_BUYS_PER_DAY", "2"))
