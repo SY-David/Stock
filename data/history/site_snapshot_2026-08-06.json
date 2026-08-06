@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-06T10:08:25",
+  "generated_at": "2026-08-06T14:53:19",
   "candidate_symbols": [
     "6770",
     "4958",
@@ -32,7 +32,7 @@
       "symbol": "6770",
       "symbol_name": "力積電",
       "score": 46,
-      "tomorrow_score": 59,
+      "tomorrow_score": 51,
       "tomorrow_light": "黃燈"
     },
     "4958": {
@@ -88,7 +88,7 @@
       "symbol": "2395",
       "symbol_name": "研華",
       "score": 63,
-      "tomorrow_score": 77,
+      "tomorrow_score": 79,
       "tomorrow_light": "黃燈"
     },
     "3006": {

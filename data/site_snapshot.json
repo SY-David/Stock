@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T10:08:25",
+  "generated_at": "2026-08-06T14:53:19",
   "watchlist_symbols": [
     "0050",
     "2344"
@@ -1650,9 +1650,7 @@
       "institutional_history": [],
       "revenue_history": [],
       "margin_history": [],
-      "warnings": [
-        "202305 月資料抓取失敗：HTTPSConnectionPool(host='www.twse.com.tw', port=443): Read timed out. (read timeout=20)"
-      ],
+      "warnings": [],
       "source": "twse_official"
     },
     "2344": {
@@ -19666,13 +19664,13 @@
       "score": 55,
       "rule_score": 52,
       "trend": "短線轉強",
-      "signal_strength": "62% (中性)",
+      "signal_strength": "61% (中性)",
       "ml_source": "trained_model",
       "ml_model_name": "Logistic Regression",
-      "ml_probability": 0.6230700188159043,
-      "ml_validation_accuracy": 0.5833333333333334,
-      "ml_usable_samples": 963,
-      "ml_train_samples": 903,
+      "ml_probability": 0.6124489214664169,
+      "ml_validation_accuracy": 0.6166666666666667,
+      "ml_usable_samples": 985,
+      "ml_train_samples": 925,
       "ml_validation_samples": 60,
       "ml_features_used": 10,
       "ml_note": "使用歷史日線與籌碼/估值特徵訓練",
@@ -19686,7 +19684,7 @@
       "latest_price_date": "2026-08-06",
       "close": 103.3,
       "ma5": 102.52000000000001,
-      "ma20": 101.92999999999999,
+      "ma20": 101.93,
       "ma60": 102.775,
       "return_5d": 0.10481283422459886,
       "return_20d": -0.025931164545025975,
@@ -19717,9 +19715,9 @@
       "headline_summary": "利空：暴跌；利空：賣超",
       "headlines": [
         {
-          "title": "0050又一個月吸金破千億元！台股7月跌 散戶砸逾2000億元掃「2檔ETF」 - Yahoo股市",
-          "link": "https://news.google.com/rss/articles/CBMimgNBVV95cUxPRG9JZWZPSGpzQkVrSWdVRDgwVlhJX1VQLUt5d1dBZ2g0X2lIM2NYYk5LQ00zQm11R0cyczRZZDNtVUxwaTdmY2RUbjB0Wl9XSExSUnlQbEFBdFdDTVRwRVA2dVI4QnJLNVhUUGNENVNnc0tNelBBZmw4LVJUcGRZY1oyZUZHWmVZbjVCNWZ4WmhJeW9McDZNS0RuUUxENlRjcW40dnJiX3ZFS1BJM2c2Y01SbDRkRHU2cEppbHJLMUlTQ3RpRWE4N29sdHlKdjNKZW4xR3ZDclhUVDg2V3RsYVU4dmNPTkhyQjl5WlNIVTJMWjBQLW1DWkFEcUxYcElFRVR1c0dVZFBseXhySUdfUWNIaktyVlFZb2VuLU1kcmlGRFNXZkhpcVFFRVZmNVFFOHE1Z2g5Q1BiWk9fS3drSEpZamprbVYtTW1tdTRfdVJzTmlZU2lzTGJveHoyYU83eTVTRjdIanQtMWhpZWFvZHZpTFU2cHFRLWR4dVJVQWd0MU8zOUxlcThIdXNwWGNtaGljaHItNnh1UQ?oc=5",
-          "published": "Thu, 06 Aug 2026 01:36:55 GMT"
+          "title": "逢低加碼！台股急跌反吸金 ETF單月爆5500億 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMimwJBVV95cUxPNHI5SkxZMG11OE9FWnlzWVB4Zm5wMFJWNnBUc2tMZnRHcTU4ajVPN240OWxkeldJMG5Pa1Bhc2FWLWlFSTNIbnhraUl0Ukg5QTdQclZaMFppUXNQa3V5WXZ2a2VpTDhpanVjS0p6MDllZ1Z0Q2g1aDVILWNyMW5VN1FqQ0NfQzVqMnFiREktQUtmS1VGVDFDcUpjaUlTRGJfaU5oY0hOWWlIQVp6T1ZBRk9WQ2JIdzBucXJPUS1OZ1hKVXFGbVkxNEpZNExPR3FMa2tVdGlCdlpYVmFGeTVlU19jbmo2Qldxam5oQVMwem9XVEgzMGxvOVZlM04taGlOQU1QeFRhMzNiQzA5MjU0bkZVY3Fibi1ZY0hn?oc=5",
+          "published": "Thu, 06 Aug 2026 14:45:00 GMT"
         },
         {
           "title": "【零股排行榜】 盤中零股排行榜TOP 20｜0050 元大台灣50、00878 國泰永續高股息、2317 鴻海、00919 群益台灣精選高息、2303 聯電 (0806)｜豐雲學堂2026 年 08 月 - sinotrade.com.tw",
@@ -19799,17 +19797,17 @@
         "法說",
         "獲利"
       ],
-      "headline_summary": "利多：獲利創高；利多：創高",
+      "headline_summary": "利多：創高",
       "headlines": [
         {
-          "title": "不要只看南亞科華邦電！旺宏群聯和它都漲停，8記憶體股各擁啥利多？華邦電法說時間就在今天，牛肉大塊嗎 - 今周刊",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxONnJucEZ3NkZaMGwzeTBBMGt4aTZwbkNCWUxPTzRRMnhZbFlaNmFLT1lBeU1lc3FDLURKVjFJOFJwSUlfSm1TbVIydk85dGc1dWxSLWVDYnlFbmt2WkdweDNaN25HalBTbk5jbjlvQ00ybjM2UHVQZkFwYlEwX0ctcw?oc=5",
-          "published": "Thu, 06 Aug 2026 03:45:00 GMT"
+          "title": "華邦電法說／26Q2 EPS 5.4元創高，記憶體營收季增73%、CMS營收年增467%｜股市話題｜豐雲學堂2026 年 08 月 - sinotrade.com.tw",
+          "link": "https://news.google.com/rss/articles/CBMiswNBVV95cUxNMGluUEJtdUdNS1JwVWNTU3pvUGNfclJyeTR4WlN1bDliY3lrSGRzQ0FORWNZcVduNklwRXo4Yi0xTjlBUi1PX01sSTRwYnJZeVVYR2ZYUDdFRDlsd05zUENucndKaW83NFlYRF9BVUEtTS1yV2NLMlQyRE1TZVVUNzV3cFRPd2Rud0VQbnJyenZTSUJDS0FPZ3VfTVdPanc0bExMMVlRMi1MaXV6Yno3OWRjMzJfbm95bFYzS3VNV2pIWGI0eV9oSjRwQ1dPSEs4SGRBLU9SUGVVTnhIMGZWLTdZLVZGYmM3SjFuZl83Z0tkM2FpR0JEaEhocHZBaE1VT195TW85VFZva3pqT1pXZmdrQTY5MTlEUExfNVhrUmVOY2VENFd3WmpoWjJ6bUhlY2ZYQkRqRGxRVmtLNXp0YTFtUWFXLUNvazFzc1NaNC0tUEhVNGJtelJGYjlPSnFHRVM1eVM0ZVpDcWtGaHdXbFdZaGZCZ05fN0N1WUVvbXZ6cWM2NjV5RVdBX2RpeTg0QzN4YzBrM0NBa0d6UmgzOTY3bWpLMlVZWEc1VlRQSkkyNFk?oc=5",
+          "published": "Thu, 06 Aug 2026 08:37:12 GMT"
         },
         {
-          "title": "【零股排行榜】 盤中零股排行榜TOP 20｜0050 元大台灣50、2344 華邦電、3037 欣興、2330 台積電、2408 南亞科 - sinotrade.com.tw",
-          "link": "https://news.google.com/rss/articles/CBMigARBVV95cUxOaWFSdzFJV21GX0lfSF9ObHotcFd5bjFsNThJVWwxcjNlTVljNnRwRXFGTVJYZVVlYlJ0ZlZkR2dOVkx1LXptSDM0b1RUN3hyellWN1RNbVF3NkRhTDAyYTRWVmlyMGhmeGt4Qk9BZmJfbUNYNzN0QklabUk2bkZBNS1uY01VUDJCalFvbDRoMU8wUHd0WkN6Z0lvdjV5WmJsWXVTN21ZbHg4ajRWNTRNdm9ubEVGZmFUT3pqcU9fOVhBT2hybG5Vdklhd0l5Z1Y4am9lbl9uUGhsMklRQm9PSFpnVTEwczBxQmxnOUN3cTg0X0dxbHZFUGxsSXZuTTc0Q0hzeDZ6eFlZTF9HZkpFNmpPUDdYWHBVSE5pdFdjWURSMlFrb19RWUdvQU4xVnowLVBHZmxqXzMyOE9oZ2ZjU1JweFk0VDZHbWw4YW95OHpHNHhzbW9vWFVHY0YwaFBBUjg2cnBYeF9MY1h3S2cxZ3VSY0NYd1NsTnl0aUlpZlVnUEFUc1RiM1oxekEtM0pmR2hFck5YNmpmRmlkU1hqZEZhdzZmeHVhbWlodXM3dkJXa0RlR1VyRGRETkd3ZnY5T1dQcWV4Vy05cWM0YnRyVmhOUDBIV1hKUXRQS3p0b1doRHg0RlFWU3ZOLTdwQXlmRXpXVVZzNkVabmc1TUFCNg?oc=5",
-          "published": "Wed, 05 Aug 2026 12:24:13 GMT"
+          "title": "Q2每股大賺5.4元創高！「記憶體大廠」今小漲1%守住連5紅 自營商卻脫手449張、抱回7549萬元 - Yahoo",
+          "link": "https://news.google.com/rss/articles/CBMivgJBVV95cUxOS0daWGRUZWJVQ2RYdm1TR28wRzRwUW1ycE93MjRrRElDX3BKckhIbXV3MzRodmQ3Wmt5c2djQjNUUWZCdU5CcnpndVdaWU5Qdzh3RUNzVHVhSkJfS00wbTBtUGprckMtN0tqREt3a0JqT3pUMmdTLUZuVWk2NEM0cHcwNVdXUmd6VFU1dnBYTHlpR21vaGM4emtocV9sdjRfS0pwY3hpdGpXTXJNLWM3eG82RDI4Sm9FdHZORXp1SDNESlcybVc2S3E5U0RrWWpKVGdpVXNqNFRUMWFaWHBZY0l1R2pJVDdWdUtLWDdOVGUyeHA2QjNHUnlQQWtYQzljUUY5RVJsZXk5aFZhMGNRS0I2SHlERTJmZTA5QUdxcjJMclNiZHBiQ012SjJJM2ZKTVRmenFqaEF2WTV0V2c?oc=5",
+          "published": "Thu, 06 Aug 2026 14:45:00 GMT"
         },
         {
           "title": "華邦電4月每股獲利衝1.66元 年暴增逾216倍 - 自由財經",
@@ -19874,10 +19872,10 @@
       "revenue_mom": null,
       "latest_revenue_month": null,
       "margin_usage": null,
-      "night_score": 13,
-      "night_bias": "偏多",
-      "tomorrow_score": 59,
-      "night_action": "明早可優先留意",
+      "night_score": 5,
+      "night_bias": "中性",
+      "tomorrow_score": 51,
+      "night_action": "夜間消息偏中性",
       "event_tags": [
         "AI",
         "半導體",
@@ -19885,29 +19883,29 @@
         "油價",
         "法說"
       ],
-      "headline_summary": "利多：成長；利多：配息；利多：獲利創高",
+      "headline_summary": "利多：成長；利多：配息",
       "headlines": [
-        {
-          "title": "英特爾報捷！力積電、愛普傳利多？台積電CoWoS會被搶單嗎？｜股市話題｜豐雲學堂2026 年 08 月 - sinotrade.com.tw",
-          "link": "https://news.google.com/rss/articles/CBMitgNBVV95cUxPLXdCV3RoLUpSZzkydjE4bzltdUlTSnZfcVphamR3UXllcVVnUFRqMGN5Qy1fVnhiMlFQTUJvdE9Pd05YM1ZDU2ljR2NTQWQ2ajdHQk1PVEtBSmt1QVlYU1Q3azllVjd3YmsxSHRpLUhtWGgtTUY0YjhyeS13cXZYd1FhODRfdVZQbjhzSzl2blNBNTNoVDE2R1lqSGZiTUpFcWR1WEZJMWgwWlVTM0Q1UVExVnZBbkZwVmJtZzJaNUNqTGNEZFhFOHh4d21lS250bzJXdUZ6RTFDLXdUaEZzczhqMTZoT2xVWFpKN04yV0NCV1lXU2E5cHFiX0dOYTlkN20tRXlzc1VlTGVCQmNReDUyM2pwLW5rTmRscWtmUlFOZEs2X2RxRWtBRXBMRV80S2hIbHFvWVdrS3dqS0FITVJYVHlIMHZheW12VmJqT0I1aEhTRUVqTTJ1eTY1S0FyMmdoM2laLTg0U2Q2WXp5aFR1NWxocFVmZDZuYXpDSmZqOTZXbU5VQnpwUFlWeXdOallPX3BaMk1rbGd5dU9tTFRDd2ZNYXlGc0VCS2g1MmMzMF9FbWc?oc=5",
-          "published": "Thu, 06 Aug 2026 09:45:45 GMT"
-        },
         {
           "title": "力積電穩軍心奏效！奪台股成交王鎖漲停還有12萬張排隊等買 分析師看好挑戰前高 - Yahoo股市",
           "link": "https://news.google.com/rss/articles/CBMigwRBVV95cUxOU1daaFp2R2MzdEkyYVVRM1ZFN0ZCaFRKcjlHLU04U1FtSzRFSUVEaW5kSWY0M3RreHZvbDU5YmczQzhlLWlfZlFyTGJfWVM0MnNNQTI5Wno5eGcyOEc1U0JJZ2o1QkoyVTIzVklNMXJkelNKR2FqX1EyTjRHVWFFNC1qclNLQmpXZEVPbEhpZ1JMRGJwdlZjcXNkU2VBb2ZCejZ0QWYxdjR5bWdKalFnajdYU3BacEVBcnFQa245ZXFBTkhES3k0d0I2OTNUbVhoWFI2NzJRRW41bVRBZEpCQWtfalNQWTJKZktmekRlSlF0SE00eTJCWU9wdGRXZGgwVURPOVZqUXNVd2JWTnNCYWktUlZ2M0hUa3p4bWdHNmc2UXpnX1dISmNrWWw1bmM2b3ptWDZSVDVwWHJ2bEJ6THdocUhqVGpmMG5jTW5hcVkxUEFGOGpfT3Z4RlZONTVRN01ISnk0T1hhNHZkb014Wk9iOUlROHlQQzFVZVBXZ2t6NG1aM2V6UTduUC04elFUREFkT1JBZ0xRYUdUUEhJd3AwVlg3V3pWdWZnN2dzZHNjV2RsS2MxcWw0eXRXRzV2UWlzTlNsZGdKUWJKRl9mZEp6UWlfbkFTV0dvenI3c2cxRm0yZVlTeGN0OFB3ZDBVT29Lcm1iOFRDQWQtQVJNVVhfNA?oc=5",
           "published": "Wed, 05 Aug 2026 02:32:06 GMT"
         },
         {
-          "title": "快訊／黃崇仁「九命怪貓」突逝世　挺過1200億債務危機成傳奇 - ETtoday財經雲",
-          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1KOHJlT2xKcUdlLWJFdktDeE1CTExIOE9paUMza0QydGV1Y3JoeTVKckppdHlWZUttR3VOd0Vxa2hWWFl1MTFKcFZUNkpnZjJBSVHSAVBBVV95cUxONTVpTnNoQW1QNzFXOUhBVHJfcy1fOTQ1T3psNkpES3VMZENKbzZFX1dBdGNtTmg4cE5ucGFiWGVwd0lPSG5IcmlSamNPUDFUMQ?oc=5",
-          "published": "Fri, 31 Jul 2026 10:11:00 GMT"
+          "title": "記憶體接管量價榜！力積電獲外資大買3.8萬張 華邦電卻遭倒貨1.8萬張 - UDN",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE4zenktdlREMmVGOS01YkpMYXc0R1NjMXp1MnljUXV4VjJGSXBxVGxWYUZOWWRRT3VpNzZMVXZJLVU4SHB2QnduNHFsLV93aVVi0gFWQVVfeXFMUFRsLTZjZVRsdFVrR0ZCTFlhbFNpS3gtZGt3RkhPTWllbTkxTDVueFVfcU1BSzFRMmkyTlJTYTc3bUFuZ3hpTHVBWjdObDlTVkxpQWFCYVE?oc=5",
+          "published": "Thu, 06 Aug 2026 13:25:34 GMT"
+        },
+        {
+          "title": "英特爾報捷！力積電、愛普傳利多？台積電CoWoS會被搶單嗎？｜股市話題｜豐雲學堂2026 年 08 月 - sinotrade.com.tw",
+          "link": "https://news.google.com/rss/articles/CBMitgNBVV95cUxPLXdCV3RoLUpSZzkydjE4bzltdUlTSnZfcVphamR3UXllcVVnUFRqMGN5Qy1fVnhiMlFQTUJvdE9Pd05YM1ZDU2ljR2NTQWQ2ajdHQk1PVEtBSmt1QVlYU1Q3azllVjd3YmsxSHRpLUhtWGgtTUY0YjhyeS13cXZYd1FhODRfdVZQbjhzSzl2blNBNTNoVDE2R1lqSGZiTUpFcWR1WEZJMWgwWlVTM0Q1UVExVnZBbkZwVmJtZzJaNUNqTGNEZFhFOHh4d21lS250bzJXdUZ6RTFDLXdUaEZzczhqMTZoT2xVWFpKN04yV0NCV1lXU2E5cHFiX0dOYTlkN20tRXlzc1VlTGVCQmNReDUyM2pwLW5rTmRscWtmUlFOZEs2X2RxRWtBRXBMRV80S2hIbHFvWVdrS3dqS0FITVJYVHlIMHZheW12VmJqT0I1aEhTRUVqTTJ1eTY1S0FyMmdoM2laLTg0U2Q2WXp5aFR1NWxocFVmZDZuYXpDSmZqOTZXbU5VQnpwUFlWeXdOallPX3BaMk1rbGd5dU9tTFRDd2ZNYXlGc0VCS2g1MmMzMF9FbWc?oc=5",
+          "published": "Tue, 04 Aug 2026 05:49:57 GMT"
         }
       ],
-      "tomorrow_delta": 13,
+      "tomorrow_delta": 5,
       "tomorrow_light": "黃燈",
       "tomorrow_action": "可觀察，等開盤或拉回確認",
-      "tomorrow_reason": "收盤 66.60 站上 MA20 63.70；利多：成長；利多：配息；利多：獲利創高",
-      "recommendation_reason": "收盤 66.60 站上 MA20 63.70；利多：成長；利多：配息；利多：獲利創高"
+      "tomorrow_reason": "收盤 66.60 站上 MA20 63.70；利多：成長；利多：配息",
+      "recommendation_reason": "收盤 66.60 站上 MA20 63.70；利多：成長；利多：配息"
     },
     "4958": {
       "symbol": "4958",
@@ -20154,7 +20152,7 @@
           "published": "Mon, 03 Aug 2026 08:57:00 GMT"
         },
         {
-          "title": "86.1億全到齊！ 華通現增落袋 7/27上市交易 - fnc.ebc.net.tw",
+          "title": "86.1億全到齊！ 華通現增落袋 7/27上市交易 - 東森電視",
           "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5fUXJzVFotNFNCX1ZnUXhVZWd2R0haR0dKSVZOb0ZtNXdqMHF4elFoMXNPQWx1MjJodkZzWXF3am9hd2R0QjhJQ2VpUDhXQ1h4bk1CUTJR?oc=5",
           "published": "Wed, 22 Jul 2026 07:00:00 GMT"
         }
@@ -20241,7 +20239,7 @@
           "published": "Wed, 05 Aug 2026 03:45:33 GMT"
         },
         {
-          "title": "藥華藥公告該公司及子公司泛泰醫療遭網路攻擊 - ithome.com.tw",
+          "title": "藥華藥公告該公司及子公司泛泰醫療遭網路攻擊 - iThome",
           "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9wNUJlWDNXUE9rVlhJRTJ1OUdtWXlNU01jNzZEOFlkNkpKOU5PSHlPRkRBdDFxOVVtU09NczUtcDB4Nmx5LUE1RWJtOTh6UQ?oc=5",
           "published": "Tue, 04 Aug 2026 03:00:15 GMT"
         }
@@ -20314,7 +20312,7 @@
         "半導體",
         "戰爭",
         "油價",
-        "法說"
+        "獲利率"
       ],
       "headline_summary": "利多：訂單；利多：成長",
       "headlines": [
@@ -20405,9 +20403,9 @@
       "headline_summary": "利多：樂觀",
       "headlines": [
         {
-          "title": "盤中速報 - 上銀(2049)大跌7.08%，報308.5元 - news.cnyes.com",
-          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBReHotY2ctWkV2a08wMXZPWkxlX0ppdWFaSERXSnUzZ1B1cS1hYnEwV0lQNEpqak1pSG9kbW5DNllRTVFJR3g2NUVWNFVLajA?oc=5",
-          "published": "Fri, 17 Jul 2026 07:00:00 GMT"
+          "title": "上銀7月營收26.8億元創近4年新高 大銀微系統續寫單月新高 - news.cnyes.com",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9qdzJJVHNFSldmeDZiY3hYT2U0Q3pETE90bjhVMXBLUjBtMUF4QjA3NzFEUE04dFRIN1RocEV0dTFaZ0tyRU4tT2FubENNVW8?oc=5",
+          "published": "Thu, 06 Aug 2026 08:51:46 GMT"
         },
         {
           "title": "台股強彈過程「舊王落，新王立」 未來的主流看好哪些族群? - 華冠投顧",
@@ -20415,7 +20413,7 @@
           "published": "Wed, 05 Aug 2026 07:50:00 GMT"
         },
         {
-          "title": "上銀公告義大利子公司部分資訊系統遭到攻擊 - ithome.com.tw",
+          "title": "上銀公告義大利子公司部分資訊系統遭到攻擊 - iThome",
           "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1VUkdwbEdwekRQNXQ4OHpPa3F4TktwTXNsaFhxOGFRN3BkU3RDamloMnRyT1NDRF9tblIyTm1oNVl3SXFUSkNVMXkyNkltQQ?oc=5",
           "published": "Wed, 29 Jul 2026 10:12:27 GMT"
         }
@@ -20497,7 +20495,7 @@
           "published": "Thu, 06 Aug 2026 05:06:23 GMT"
         },
         {
-          "title": "台股急殺我照飆！文曄、大聯大強鎖漲停 電子通路為何逆勢爆發？ - 經濟日報",
+          "title": "台股急殺我照飆！文曄、大聯大強鎖漲停 電子通路為何逆勢爆發？ - money.udn.com",
           "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE90TE9IQ3dfd0oyS29Tek44T204SklSTkh4bXNrZ09FOFZvQV80THJKVm90RlR5RGFRdlBWMHBMRHl6WkVYeWctSjlNVENrVmJrN1ZObUtRM1NqM2w2cHZXRzNFUzhHOHA4ZUNlM3J6U1BIUFnSAV9BVV95cUxOTUotYnNhbUp4TUVlUjc3elY1ZGUyc2VEeENDU2FMREg2OGRYb0hUeXZjc0RYYUI0dUN0ci1RM3U5WnVXeUMyTUM2aUZhQVlxVVhvdmxNanRlaEdncTU3OA?oc=5",
           "published": "Tue, 04 Aug 2026 09:00:00 GMT"
         },
@@ -20565,9 +20563,9 @@
       "revenue_mom": null,
       "latest_revenue_month": null,
       "margin_usage": null,
-      "night_score": 14,
+      "night_score": 16,
       "night_bias": "偏多",
-      "tomorrow_score": 77,
+      "tomorrow_score": 79,
       "night_action": "明早可優先留意",
       "event_tags": [
         "AI",
@@ -20579,14 +20577,14 @@
       "headline_summary": "利多：成長；利多：獲利創高；利多：創高",
       "headlines": [
         {
+          "title": "研華(2395) Q2營收、獲利同步創下歷史新高！但是~這還不是全部？ - news.cnyes.com",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBndVpkTFdieHNfV2xHbWN0MkhSS0huUnFJeWF5Nk9yUldiT1oyMjNfX0FKZ0p0WWl5TEs2S2FSRkdiVExja0JXeDZGQjRpWms?oc=5",
+          "published": "Thu, 06 Aug 2026 10:30:04 GMT"
+        },
+        {
           "title": "工業電腦是什麼？從工廠機台到AI邊緣大腦，台股IPC族群一次看懂｜股市話題｜豐雲學堂2026 年 08 月 - sinotrade.com.tw",
           "link": "https://news.google.com/rss/articles/CBMi4wNBVV95cUxPM0NWbS04MDFoeXB1ajAzb1RwOTQ3LUxFenJNY2E3bjRqNmR0RFlZcjJvOE90THFBZl9pNGNCTEdHd3VuTmZEVTN0d1FnenFYc3ZCUE9vc1dNdXN3amdaUHdHUHdHUHlNMzEwUktDOVRLRTdKb1JMLS1OZExOMXJvRVg1bjJ3aWxDSExvWFQ0djNDYUlOYWJmMGh2RlY1d3ZjVEpYVWs5NzAycDN0MUIyZlZteE5UZXBMVGo2OExOTTNhdU94SU1OSjRzNjY1aXBOdFJWcjhFV0Nkc1l0dmlweGpSOE9FcWJlYVRDWTZtd3lJcDIyMmxBWWdhd3pyVGMtUWNVNC1WX1BSbUR4VDJoSFhkSlYxMllxeXpUSGxaTnllUC1YSDZVU2FNMGZHb0VCWkp3OHRhLUVYN0wxd1dzU1hzQ1ltZlEyaFRmZzVud2liU2IzdVVDRjlZU3I1RWVGRUE2NUF5U3JURlJISHlYSXFrel9hajhhUmE0QldqZzFzU21DQ1lPckVuUlVLUVJlei0ycjlpME5PTUg1cUNSZFNhdkZCTkhqSFdmVVg4ajdsR2hQV05VdUtLRVdpZThXbFVyUjJfZmxwbEJjYkJIRl9vaEh2Y0g2OFZlRzNyMVZDSUU?oc=5",
           "published": "Thu, 23 Jul 2026 07:00:00 GMT"
-        },
-        {
-          "title": "台股焦點：研華(2395.TW) - 台視全球資訊網",
-          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNVEE0bDA1aGZERmY3YWNDYWtHMlVXR3FjYmc5ckJQMlNQNzR1ODFLbi0yaE00WUJIRXNhc2Y4cUp4akotLUVGSUVDbngxUW5idE5TMkVLa0VReVQxWk5QS2M4N25STWF6TmY3a1I0RmFOOVJJOHk5QzdGQWJKNk9md0NielR6VUJpZ0tycjM2LXdMUQ?oc=5",
-          "published": "Mon, 27 Apr 2026 07:00:00 GMT"
         },
         {
           "title": "【26Q2財報公告】研華(2395) Q2 營收261.2629億元，創歷史新高，季增28.16%、年成長46.48%-CMoney 小編 - CMoney投資網誌",
@@ -20594,7 +20592,7 @@
           "published": "Tue, 04 Aug 2026 10:20:07 GMT"
         }
       ],
-      "tomorrow_delta": 14,
+      "tomorrow_delta": 16,
       "tomorrow_light": "黃燈",
       "tomorrow_action": "可觀察，等開盤或拉回確認",
       "tomorrow_reason": "收盤 622.00 站上 MA20 562.05；利多：成長；利多：獲利創高；利多：創高",
@@ -20854,7 +20852,7 @@
           "published": "Wed, 05 Aug 2026 03:45:33 GMT"
         },
         {
-          "title": "藥華藥公告該公司及子公司泛泰醫療遭網路攻擊 - ithome.com.tw",
+          "title": "藥華藥公告該公司及子公司泛泰醫療遭網路攻擊 - iThome",
           "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9wNUJlWDNXUE9rVlhJRTJ1OUdtWXlNU01jNzZEOFlkNkpKOU5PSHlPRkRBdDFxOVVtU09NczUtcDB4Nmx5LUE1RWJtOTh6UQ?oc=5",
           "published": "Tue, 04 Aug 2026 03:00:15 GMT"
         }
@@ -20932,7 +20930,7 @@
         "半導體",
         "戰爭",
         "油價",
-        "法說"
+        "獲利率"
       ],
       "headline_summary": "利多：訂單；利多：成長",
       "headlines": [
@@ -21122,7 +21120,7 @@
           "published": "Thu, 06 Aug 2026 05:06:23 GMT"
         },
         {
-          "title": "台股急殺我照飆！文曄、大聯大強鎖漲停 電子通路為何逆勢爆發？ - 經濟日報",
+          "title": "台股急殺我照飆！文曄、大聯大強鎖漲停 電子通路為何逆勢爆發？ - money.udn.com",
           "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE90TE9IQ3dfd0oyS29Tek44T204SklSTkh4bXNrZ09FOFZvQV80THJKVm90RlR5RGFRdlBWMHBMRHl6WkVYeWctSjlNVENrVmJrN1ZObUtRM1NqM2w2cHZXRzNFUzhHOHA4ZUNlM3J6U1BIUFnSAV9BVV95cUxOTUotYnNhbUp4TUVlUjc3elY1ZGUyc2VEeENDU2FMREg2OGRYb0hUeXZjc0RYYUI0dUN0ci1RM3U5WnVXeUMyTUM2aUZhQVlxVVhvdmxNanRlaEdncTU3OA?oc=5",
           "published": "Tue, 04 Aug 2026 09:00:00 GMT"
         },
@@ -21202,17 +21200,17 @@
         "法說",
         "獲利"
       ],
-      "headline_summary": "利多：獲利創高；利多：創高",
+      "headline_summary": "利多：創高",
       "headlines": [
         {
-          "title": "不要只看南亞科華邦電！旺宏群聯和它都漲停，8記憶體股各擁啥利多？華邦電法說時間就在今天，牛肉大塊嗎 - 今周刊",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxONnJucEZ3NkZaMGwzeTBBMGt4aTZwbkNCWUxPTzRRMnhZbFlaNmFLT1lBeU1lc3FDLURKVjFJOFJwSUlfSm1TbVIydk85dGc1dWxSLWVDYnlFbmt2WkdweDNaN25HalBTbk5jbjlvQ00ybjM2UHVQZkFwYlEwX0ctcw?oc=5",
-          "published": "Thu, 06 Aug 2026 03:45:00 GMT"
+          "title": "華邦電法說／26Q2 EPS 5.4元創高，記憶體營收季增73%、CMS營收年增467%｜股市話題｜豐雲學堂2026 年 08 月 - sinotrade.com.tw",
+          "link": "https://news.google.com/rss/articles/CBMiswNBVV95cUxNMGluUEJtdUdNS1JwVWNTU3pvUGNfclJyeTR4WlN1bDliY3lrSGRzQ0FORWNZcVduNklwRXo4Yi0xTjlBUi1PX01sSTRwYnJZeVVYR2ZYUDdFRDlsd05zUENucndKaW83NFlYRF9BVUEtTS1yV2NLMlQyRE1TZVVUNzV3cFRPd2Rud0VQbnJyenZTSUJDS0FPZ3VfTVdPanc0bExMMVlRMi1MaXV6Yno3OWRjMzJfbm95bFYzS3VNV2pIWGI0eV9oSjRwQ1dPSEs4SGRBLU9SUGVVTnhIMGZWLTdZLVZGYmM3SjFuZl83Z0tkM2FpR0JEaEhocHZBaE1VT195TW85VFZva3pqT1pXZmdrQTY5MTlEUExfNVhrUmVOY2VENFd3WmpoWjJ6bUhlY2ZYQkRqRGxRVmtLNXp0YTFtUWFXLUNvazFzc1NaNC0tUEhVNGJtelJGYjlPSnFHRVM1eVM0ZVpDcWtGaHdXbFdZaGZCZ05fN0N1WUVvbXZ6cWM2NjV5RVdBX2RpeTg0QzN4YzBrM0NBa0d6UmgzOTY3bWpLMlVZWEc1VlRQSkkyNFk?oc=5",
+          "published": "Thu, 06 Aug 2026 08:37:12 GMT"
         },
         {
-          "title": "【零股排行榜】 盤中零股排行榜TOP 20｜0050 元大台灣50、2344 華邦電、3037 欣興、2330 台積電、2408 南亞科 - sinotrade.com.tw",
-          "link": "https://news.google.com/rss/articles/CBMigARBVV95cUxOaWFSdzFJV21GX0lfSF9ObHotcFd5bjFsNThJVWwxcjNlTVljNnRwRXFGTVJYZVVlYlJ0ZlZkR2dOVkx1LXptSDM0b1RUN3hyellWN1RNbVF3NkRhTDAyYTRWVmlyMGhmeGt4Qk9BZmJfbUNYNzN0QklabUk2bkZBNS1uY01VUDJCalFvbDRoMU8wUHd0WkN6Z0lvdjV5WmJsWXVTN21ZbHg4ajRWNTRNdm9ubEVGZmFUT3pqcU9fOVhBT2hybG5Vdklhd0l5Z1Y4am9lbl9uUGhsMklRQm9PSFpnVTEwczBxQmxnOUN3cTg0X0dxbHZFUGxsSXZuTTc0Q0hzeDZ6eFlZTF9HZkpFNmpPUDdYWHBVSE5pdFdjWURSMlFrb19RWUdvQU4xVnowLVBHZmxqXzMyOE9oZ2ZjU1JweFk0VDZHbWw4YW95OHpHNHhzbW9vWFVHY0YwaFBBUjg2cnBYeF9MY1h3S2cxZ3VSY0NYd1NsTnl0aUlpZlVnUEFUc1RiM1oxekEtM0pmR2hFck5YNmpmRmlkU1hqZEZhdzZmeHVhbWlodXM3dkJXa0RlR1VyRGRETkd3ZnY5T1dQcWV4Vy05cWM0YnRyVmhOUDBIV1hKUXRQS3p0b1doRHg0RlFWU3ZOLTdwQXlmRXpXVVZzNkVabmc1TUFCNg?oc=5",
-          "published": "Wed, 05 Aug 2026 12:24:13 GMT"
+          "title": "Q2每股大賺5.4元創高！「記憶體大廠」今小漲1%守住連5紅 自營商卻脫手449張、抱回7549萬元 - Yahoo",
+          "link": "https://news.google.com/rss/articles/CBMivgJBVV95cUxOS0daWGRUZWJVQ2RYdm1TR28wRzRwUW1ycE93MjRrRElDX3BKckhIbXV3MzRodmQ3Wmt5c2djQjNUUWZCdU5CcnpndVdaWU5Qdzh3RUNzVHVhSkJfS00wbTBtUGprckMtN0tqREt3a0JqT3pUMmdTLUZuVWk2NEM0cHcwNVdXUmd6VFU1dnBYTHlpR21vaGM4emtocV9sdjRfS0pwY3hpdGpXTXJNLWM3eG82RDI4Sm9FdHZORXp1SDNESlcybVc2S3E5U0RrWWpKVGdpVXNqNFRUMWFaWHBZY0l1R2pJVDdWdUtLWDdOVGUyeHA2QjNHUnlQQWtYQzljUUY5RVJsZXk5aFZhMGNRS0I2SHlERTJmZTA5QUdxcjJMclNiZHBiQ012SjJJM2ZKTVRmenFqaEF2WTV0V2c?oc=5",
+          "published": "Thu, 06 Aug 2026 14:45:00 GMT"
         },
         {
           "title": "華邦電4月每股獲利衝1.66元 年暴增逾216倍 - 自由財經",
@@ -21372,9 +21370,9 @@
       "revenue_mom": null,
       "latest_revenue_month": null,
       "margin_usage": null,
-      "night_score": 14,
+      "night_score": 16,
       "night_bias": "偏多",
-      "tomorrow_score": 77,
+      "tomorrow_score": 79,
       "night_action": "明早可優先留意",
       "event_tags": [
         "AI",
@@ -21386,14 +21384,14 @@
       "headline_summary": "利多：成長；利多：獲利創高；利多：創高",
       "headlines": [
         {
+          "title": "研華(2395) Q2營收、獲利同步創下歷史新高！但是~這還不是全部？ - news.cnyes.com",
+          "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBndVpkTFdieHNfV2xHbWN0MkhSS0huUnFJeWF5Nk9yUldiT1oyMjNfX0FKZ0p0WWl5TEs2S2FSRkdiVExja0JXeDZGQjRpWms?oc=5",
+          "published": "Thu, 06 Aug 2026 10:30:04 GMT"
+        },
+        {
           "title": "工業電腦是什麼？從工廠機台到AI邊緣大腦，台股IPC族群一次看懂｜股市話題｜豐雲學堂2026 年 08 月 - sinotrade.com.tw",
           "link": "https://news.google.com/rss/articles/CBMi4wNBVV95cUxPM0NWbS04MDFoeXB1ajAzb1RwOTQ3LUxFenJNY2E3bjRqNmR0RFlZcjJvOE90THFBZl9pNGNCTEdHd3VuTmZEVTN0d1FnenFYc3ZCUE9vc1dNdXN3amdaUHdHUHdHUHlNMzEwUktDOVRLRTdKb1JMLS1OZExOMXJvRVg1bjJ3aWxDSExvWFQ0djNDYUlOYWJmMGh2RlY1d3ZjVEpYVWs5NzAycDN0MUIyZlZteE5UZXBMVGo2OExOTTNhdU94SU1OSjRzNjY1aXBOdFJWcjhFV0Nkc1l0dmlweGpSOE9FcWJlYVRDWTZtd3lJcDIyMmxBWWdhd3pyVGMtUWNVNC1WX1BSbUR4VDJoSFhkSlYxMllxeXpUSGxaTnllUC1YSDZVU2FNMGZHb0VCWkp3OHRhLUVYN0wxd1dzU1hzQ1ltZlEyaFRmZzVud2liU2IzdVVDRjlZU3I1RWVGRUE2NUF5U3JURlJISHlYSXFrel9hajhhUmE0QldqZzFzU21DQ1lPckVuUlVLUVJlei0ycjlpME5PTUg1cUNSZFNhdkZCTkhqSFdmVVg4ajdsR2hQV05VdUtLRVdpZThXbFVyUjJfZmxwbEJjYkJIRl9vaEh2Y0g2OFZlRzNyMVZDSUU?oc=5",
           "published": "Thu, 23 Jul 2026 07:00:00 GMT"
-        },
-        {
-          "title": "台股焦點：研華(2395.TW) - 台視全球資訊網",
-          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNVEE0bDA1aGZERmY3YWNDYWtHMlVXR3FjYmc5ckJQMlNQNzR1ODFLbi0yaE00WUJIRXNhc2Y4cUp4akotLUVGSUVDbngxUW5idE5TMkVLa0VReVQxWk5QS2M4N25STWF6TmY3a1I0RmFOOVJJOHk5QzdGQWJKNk9md0NielR6VUJpZ0tycjM2LXdMUQ?oc=5",
-          "published": "Mon, 27 Apr 2026 07:00:00 GMT"
         },
         {
           "title": "【26Q2財報公告】研華(2395) Q2 營收261.2629億元，創歷史新高，季增28.16%、年成長46.48%-CMoney 小編 - CMoney投資網誌",
@@ -21401,97 +21399,11 @@
           "published": "Tue, 04 Aug 2026 10:20:07 GMT"
         }
       ],
-      "tomorrow_delta": 14,
+      "tomorrow_delta": 16,
       "tomorrow_light": "黃燈",
       "tomorrow_action": "可觀察，等開盤或拉回確認",
       "tomorrow_reason": "收盤 622.00 站上 MA20 562.05；利多：成長；利多：獲利創高；利多：創高",
       "recommendation_reason": "收盤 622.00 站上 MA20 562.05；利多：成長；利多：獲利創高；利多：創高"
-    },
-    {
-      "symbol": "6770",
-      "symbol_name": "力積電",
-      "sector": "上市個股",
-      "market": "twse_open_data",
-      "has_institutional_data": false,
-      "has_valuation_data": false,
-      "has_revenue_data": false,
-      "rating": "Reduce",
-      "action": "偏保守，只能等轉強",
-      "score": 46,
-      "rule_score": 60,
-      "trend": "短線轉強",
-      "signal_strength": "9% (偏空)",
-      "ml_source": "trained_model",
-      "ml_model_name": "Logistic Regression",
-      "ml_probability": 0.08523244101334838,
-      "ml_validation_accuracy": 0.4,
-      "ml_usable_samples": 990,
-      "ml_train_samples": 930,
-      "ml_validation_samples": 60,
-      "ml_features_used": 10,
-      "ml_note": "使用歷史日線與籌碼/估值特徵訓練",
-      "reasons": [
-        "收盤 66.60 站上 MA20 63.70",
-        "今日量能為 20 日均量的 2.35 倍，且收盤未轉弱"
-      ],
-      "risks": [
-        "MA20 63.70 仍低於 MA60 69.71，中期趨勢未翻正"
-      ],
-      "warnings": [],
-      "latest_price_date": "2026-08-06",
-      "close": 66.6,
-      "ma5": 60.4,
-      "ma20": 63.7025,
-      "ma60": 69.7075,
-      "return_5d": 0.3440968718466195,
-      "return_20d": -0.06460674157303381,
-      "volume": 444029387,
-      "volume_ratio": 2.345752862309986,
-      "institutional_trend": "偏空",
-      "foreign_net_buy_3d": 0,
-      "trust_net_buy_3d": 0,
-      "dealer_net_buy_3d": 0,
-      "pe_ratio": null,
-      "pb_ratio": null,
-      "dividend_yield": null,
-      "revenue_yoy": null,
-      "revenue_mom": null,
-      "latest_revenue_month": null,
-      "margin_usage": null,
-      "night_score": 13,
-      "night_bias": "偏多",
-      "tomorrow_score": 59,
-      "night_action": "明早可優先留意",
-      "event_tags": [
-        "AI",
-        "半導體",
-        "戰爭",
-        "油價",
-        "法說"
-      ],
-      "headline_summary": "利多：成長；利多：配息；利多：獲利創高",
-      "headlines": [
-        {
-          "title": "英特爾報捷！力積電、愛普傳利多？台積電CoWoS會被搶單嗎？｜股市話題｜豐雲學堂2026 年 08 月 - sinotrade.com.tw",
-          "link": "https://news.google.com/rss/articles/CBMitgNBVV95cUxPLXdCV3RoLUpSZzkydjE4bzltdUlTSnZfcVphamR3UXllcVVnUFRqMGN5Qy1fVnhiMlFQTUJvdE9Pd05YM1ZDU2ljR2NTQWQ2ajdHQk1PVEtBSmt1QVlYU1Q3azllVjd3YmsxSHRpLUhtWGgtTUY0YjhyeS13cXZYd1FhODRfdVZQbjhzSzl2blNBNTNoVDE2R1lqSGZiTUpFcWR1WEZJMWgwWlVTM0Q1UVExVnZBbkZwVmJtZzJaNUNqTGNEZFhFOHh4d21lS250bzJXdUZ6RTFDLXdUaEZzczhqMTZoT2xVWFpKN04yV0NCV1lXU2E5cHFiX0dOYTlkN20tRXlzc1VlTGVCQmNReDUyM2pwLW5rTmRscWtmUlFOZEs2X2RxRWtBRXBMRV80S2hIbHFvWVdrS3dqS0FITVJYVHlIMHZheW12VmJqT0I1aEhTRUVqTTJ1eTY1S0FyMmdoM2laLTg0U2Q2WXp5aFR1NWxocFVmZDZuYXpDSmZqOTZXbU5VQnpwUFlWeXdOallPX3BaMk1rbGd5dU9tTFRDd2ZNYXlGc0VCS2g1MmMzMF9FbWc?oc=5",
-          "published": "Thu, 06 Aug 2026 09:45:45 GMT"
-        },
-        {
-          "title": "力積電穩軍心奏效！奪台股成交王鎖漲停還有12萬張排隊等買 分析師看好挑戰前高 - Yahoo股市",
-          "link": "https://news.google.com/rss/articles/CBMigwRBVV95cUxOU1daaFp2R2MzdEkyYVVRM1ZFN0ZCaFRKcjlHLU04U1FtSzRFSUVEaW5kSWY0M3RreHZvbDU5YmczQzhlLWlfZlFyTGJfWVM0MnNNQTI5Wno5eGcyOEc1U0JJZ2o1QkoyVTIzVklNMXJkelNKR2FqX1EyTjRHVWFFNC1qclNLQmpXZEVPbEhpZ1JMRGJwdlZjcXNkU2VBb2ZCejZ0QWYxdjR5bWdKalFnajdYU3BacEVBcnFQa245ZXFBTkhES3k0d0I2OTNUbVhoWFI2NzJRRW41bVRBZEpCQWtfalNQWTJKZktmekRlSlF0SE00eTJCWU9wdGRXZGgwVURPOVZqUXNVd2JWTnNCYWktUlZ2M0hUa3p4bWdHNmc2UXpnX1dISmNrWWw1bmM2b3ptWDZSVDVwWHJ2bEJ6THdocUhqVGpmMG5jTW5hcVkxUEFGOGpfT3Z4RlZONTVRN01ISnk0T1hhNHZkb014Wk9iOUlROHlQQzFVZVBXZ2t6NG1aM2V6UTduUC04elFUREFkT1JBZ0xRYUdUUEhJd3AwVlg3V3pWdWZnN2dzZHNjV2RsS2MxcWw0eXRXRzV2UWlzTlNsZGdKUWJKRl9mZEp6UWlfbkFTV0dvenI3c2cxRm0yZVlTeGN0OFB3ZDBVT29Lcm1iOFRDQWQtQVJNVVhfNA?oc=5",
-          "published": "Wed, 05 Aug 2026 02:32:06 GMT"
-        },
-        {
-          "title": "快訊／黃崇仁「九命怪貓」突逝世　挺過1200億債務危機成傳奇 - ETtoday財經雲",
-          "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1KOHJlT2xKcUdlLWJFdktDeE1CTExIOE9paUMza0QydGV1Y3JoeTVKckppdHlWZUttR3VOd0Vxa2hWWFl1MTFKcFZUNkpnZjJBSVHSAVBBVV95cUxONTVpTnNoQW1QNzFXOUhBVHJfcy1fOTQ1T3psNkpES3VMZENKbzZFX1dBdGNtTmg4cE5ucGFiWGVwd0lPSG5IcmlSamNPUDFUMQ?oc=5",
-          "published": "Fri, 31 Jul 2026 10:11:00 GMT"
-        }
-      ],
-      "tomorrow_delta": 13,
-      "tomorrow_light": "黃燈",
-      "tomorrow_action": "可觀察，等開盤或拉回確認",
-      "tomorrow_reason": "收盤 66.60 站上 MA20 63.70；利多：成長；利多：配息；利多：獲利創高",
-      "recommendation_reason": "收盤 66.60 站上 MA20 63.70；利多：成長；利多：配息；利多：獲利創高"
     },
     {
       "symbol": "3006",
@@ -21581,6 +21493,92 @@
       "recommendation_reason": "收盤 258.00 站上 MA20 209.75；利多：創高"
     },
     {
+      "symbol": "6770",
+      "symbol_name": "力積電",
+      "sector": "上市個股",
+      "market": "twse_open_data",
+      "has_institutional_data": false,
+      "has_valuation_data": false,
+      "has_revenue_data": false,
+      "rating": "Reduce",
+      "action": "偏保守，只能等轉強",
+      "score": 46,
+      "rule_score": 60,
+      "trend": "短線轉強",
+      "signal_strength": "9% (偏空)",
+      "ml_source": "trained_model",
+      "ml_model_name": "Logistic Regression",
+      "ml_probability": 0.08523244101334838,
+      "ml_validation_accuracy": 0.4,
+      "ml_usable_samples": 990,
+      "ml_train_samples": 930,
+      "ml_validation_samples": 60,
+      "ml_features_used": 10,
+      "ml_note": "使用歷史日線與籌碼/估值特徵訓練",
+      "reasons": [
+        "收盤 66.60 站上 MA20 63.70",
+        "今日量能為 20 日均量的 2.35 倍，且收盤未轉弱"
+      ],
+      "risks": [
+        "MA20 63.70 仍低於 MA60 69.71，中期趨勢未翻正"
+      ],
+      "warnings": [],
+      "latest_price_date": "2026-08-06",
+      "close": 66.6,
+      "ma5": 60.4,
+      "ma20": 63.7025,
+      "ma60": 69.7075,
+      "return_5d": 0.3440968718466195,
+      "return_20d": -0.06460674157303381,
+      "volume": 444029387,
+      "volume_ratio": 2.345752862309986,
+      "institutional_trend": "偏空",
+      "foreign_net_buy_3d": 0,
+      "trust_net_buy_3d": 0,
+      "dealer_net_buy_3d": 0,
+      "pe_ratio": null,
+      "pb_ratio": null,
+      "dividend_yield": null,
+      "revenue_yoy": null,
+      "revenue_mom": null,
+      "latest_revenue_month": null,
+      "margin_usage": null,
+      "night_score": 5,
+      "night_bias": "中性",
+      "tomorrow_score": 51,
+      "night_action": "夜間消息偏中性",
+      "event_tags": [
+        "AI",
+        "半導體",
+        "戰爭",
+        "油價",
+        "法說"
+      ],
+      "headline_summary": "利多：成長；利多：配息",
+      "headlines": [
+        {
+          "title": "力積電穩軍心奏效！奪台股成交王鎖漲停還有12萬張排隊等買 分析師看好挑戰前高 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMigwRBVV95cUxOU1daaFp2R2MzdEkyYVVRM1ZFN0ZCaFRKcjlHLU04U1FtSzRFSUVEaW5kSWY0M3RreHZvbDU5YmczQzhlLWlfZlFyTGJfWVM0MnNNQTI5Wno5eGcyOEc1U0JJZ2o1QkoyVTIzVklNMXJkelNKR2FqX1EyTjRHVWFFNC1qclNLQmpXZEVPbEhpZ1JMRGJwdlZjcXNkU2VBb2ZCejZ0QWYxdjR5bWdKalFnajdYU3BacEVBcnFQa245ZXFBTkhES3k0d0I2OTNUbVhoWFI2NzJRRW41bVRBZEpCQWtfalNQWTJKZktmekRlSlF0SE00eTJCWU9wdGRXZGgwVURPOVZqUXNVd2JWTnNCYWktUlZ2M0hUa3p4bWdHNmc2UXpnX1dISmNrWWw1bmM2b3ptWDZSVDVwWHJ2bEJ6THdocUhqVGpmMG5jTW5hcVkxUEFGOGpfT3Z4RlZONTVRN01ISnk0T1hhNHZkb014Wk9iOUlROHlQQzFVZVBXZ2t6NG1aM2V6UTduUC04elFUREFkT1JBZ0xRYUdUUEhJd3AwVlg3V3pWdWZnN2dzZHNjV2RsS2MxcWw0eXRXRzV2UWlzTlNsZGdKUWJKRl9mZEp6UWlfbkFTV0dvenI3c2cxRm0yZVlTeGN0OFB3ZDBVT29Lcm1iOFRDQWQtQVJNVVhfNA?oc=5",
+          "published": "Wed, 05 Aug 2026 02:32:06 GMT"
+        },
+        {
+          "title": "記憶體接管量價榜！力積電獲外資大買3.8萬張 華邦電卻遭倒貨1.8萬張 - UDN",
+          "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE4zenktdlREMmVGOS01YkpMYXc0R1NjMXp1MnljUXV4VjJGSXBxVGxWYUZOWWRRT3VpNzZMVXZJLVU4SHB2QnduNHFsLV93aVVi0gFWQVVfeXFMUFRsLTZjZVRsdFVrR0ZCTFlhbFNpS3gtZGt3RkhPTWllbTkxTDVueFVfcU1BSzFRMmkyTlJTYTc3bUFuZ3hpTHVBWjdObDlTVkxpQWFCYVE?oc=5",
+          "published": "Thu, 06 Aug 2026 13:25:34 GMT"
+        },
+        {
+          "title": "英特爾報捷！力積電、愛普傳利多？台積電CoWoS會被搶單嗎？｜股市話題｜豐雲學堂2026 年 08 月 - sinotrade.com.tw",
+          "link": "https://news.google.com/rss/articles/CBMitgNBVV95cUxPLXdCV3RoLUpSZzkydjE4bzltdUlTSnZfcVphamR3UXllcVVnUFRqMGN5Qy1fVnhiMlFQTUJvdE9Pd05YM1ZDU2ljR2NTQWQ2ajdHQk1PVEtBSmt1QVlYU1Q3azllVjd3YmsxSHRpLUhtWGgtTUY0YjhyeS13cXZYd1FhODRfdVZQbjhzSzl2blNBNTNoVDE2R1lqSGZiTUpFcWR1WEZJMWgwWlVTM0Q1UVExVnZBbkZwVmJtZzJaNUNqTGNEZFhFOHh4d21lS250bzJXdUZ6RTFDLXdUaEZzczhqMTZoT2xVWFpKN04yV0NCV1lXU2E5cHFiX0dOYTlkN20tRXlzc1VlTGVCQmNReDUyM2pwLW5rTmRscWtmUlFOZEs2X2RxRWtBRXBMRV80S2hIbHFvWVdrS3dqS0FITVJYVHlIMHZheW12VmJqT0I1aEhTRUVqTTJ1eTY1S0FyMmdoM2laLTg0U2Q2WXp5aFR1NWxocFVmZDZuYXpDSmZqOTZXbU5VQnpwUFlWeXdOallPX3BaMk1rbGd5dU9tTFRDd2ZNYXlGc0VCS2g1MmMzMF9FbWc?oc=5",
+          "published": "Tue, 04 Aug 2026 05:49:57 GMT"
+        }
+      ],
+      "tomorrow_delta": 5,
+      "tomorrow_light": "黃燈",
+      "tomorrow_action": "可觀察，等開盤或拉回確認",
+      "tomorrow_reason": "收盤 66.60 站上 MA20 63.70；利多：成長；利多：配息",
+      "recommendation_reason": "收盤 66.60 站上 MA20 63.70；利多：成長；利多：配息"
+    },
+    {
       "symbol": "2344",
       "symbol_name": "華邦電",
       "sector": "上市個股",
@@ -21641,17 +21639,17 @@
         "法說",
         "獲利"
       ],
-      "headline_summary": "利多：獲利創高；利多：創高",
+      "headline_summary": "利多：創高",
       "headlines": [
         {
-          "title": "不要只看南亞科華邦電！旺宏群聯和它都漲停，8記憶體股各擁啥利多？華邦電法說時間就在今天，牛肉大塊嗎 - 今周刊",
-          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxONnJucEZ3NkZaMGwzeTBBMGt4aTZwbkNCWUxPTzRRMnhZbFlaNmFLT1lBeU1lc3FDLURKVjFJOFJwSUlfSm1TbVIydk85dGc1dWxSLWVDYnlFbmt2WkdweDNaN25HalBTbk5jbjlvQ00ybjM2UHVQZkFwYlEwX0ctcw?oc=5",
-          "published": "Thu, 06 Aug 2026 03:45:00 GMT"
+          "title": "華邦電法說／26Q2 EPS 5.4元創高，記憶體營收季增73%、CMS營收年增467%｜股市話題｜豐雲學堂2026 年 08 月 - sinotrade.com.tw",
+          "link": "https://news.google.com/rss/articles/CBMiswNBVV95cUxNMGluUEJtdUdNS1JwVWNTU3pvUGNfclJyeTR4WlN1bDliY3lrSGRzQ0FORWNZcVduNklwRXo4Yi0xTjlBUi1PX01sSTRwYnJZeVVYR2ZYUDdFRDlsd05zUENucndKaW83NFlYRF9BVUEtTS1yV2NLMlQyRE1TZVVUNzV3cFRPd2Rud0VQbnJyenZTSUJDS0FPZ3VfTVdPanc0bExMMVlRMi1MaXV6Yno3OWRjMzJfbm95bFYzS3VNV2pIWGI0eV9oSjRwQ1dPSEs4SGRBLU9SUGVVTnhIMGZWLTdZLVZGYmM3SjFuZl83Z0tkM2FpR0JEaEhocHZBaE1VT195TW85VFZva3pqT1pXZmdrQTY5MTlEUExfNVhrUmVOY2VENFd3WmpoWjJ6bUhlY2ZYQkRqRGxRVmtLNXp0YTFtUWFXLUNvazFzc1NaNC0tUEhVNGJtelJGYjlPSnFHRVM1eVM0ZVpDcWtGaHdXbFdZaGZCZ05fN0N1WUVvbXZ6cWM2NjV5RVdBX2RpeTg0QzN4YzBrM0NBa0d6UmgzOTY3bWpLMlVZWEc1VlRQSkkyNFk?oc=5",
+          "published": "Thu, 06 Aug 2026 08:37:12 GMT"
         },
         {
-          "title": "【零股排行榜】 盤中零股排行榜TOP 20｜0050 元大台灣50、2344 華邦電、3037 欣興、2330 台積電、2408 南亞科 - sinotrade.com.tw",
-          "link": "https://news.google.com/rss/articles/CBMigARBVV95cUxOaWFSdzFJV21GX0lfSF9ObHotcFd5bjFsNThJVWwxcjNlTVljNnRwRXFGTVJYZVVlYlJ0ZlZkR2dOVkx1LXptSDM0b1RUN3hyellWN1RNbVF3NkRhTDAyYTRWVmlyMGhmeGt4Qk9BZmJfbUNYNzN0QklabUk2bkZBNS1uY01VUDJCalFvbDRoMU8wUHd0WkN6Z0lvdjV5WmJsWXVTN21ZbHg4ajRWNTRNdm9ubEVGZmFUT3pqcU9fOVhBT2hybG5Vdklhd0l5Z1Y4am9lbl9uUGhsMklRQm9PSFpnVTEwczBxQmxnOUN3cTg0X0dxbHZFUGxsSXZuTTc0Q0hzeDZ6eFlZTF9HZkpFNmpPUDdYWHBVSE5pdFdjWURSMlFrb19RWUdvQU4xVnowLVBHZmxqXzMyOE9oZ2ZjU1JweFk0VDZHbWw4YW95OHpHNHhzbW9vWFVHY0YwaFBBUjg2cnBYeF9MY1h3S2cxZ3VSY0NYd1NsTnl0aUlpZlVnUEFUc1RiM1oxekEtM0pmR2hFck5YNmpmRmlkU1hqZEZhdzZmeHVhbWlodXM3dkJXa0RlR1VyRGRETkd3ZnY5T1dQcWV4Vy05cWM0YnRyVmhOUDBIV1hKUXRQS3p0b1doRHg0RlFWU3ZOLTdwQXlmRXpXVVZzNkVabmc1TUFCNg?oc=5",
-          "published": "Wed, 05 Aug 2026 12:24:13 GMT"
+          "title": "Q2每股大賺5.4元創高！「記憶體大廠」今小漲1%守住連5紅 自營商卻脫手449張、抱回7549萬元 - Yahoo",
+          "link": "https://news.google.com/rss/articles/CBMivgJBVV95cUxOS0daWGRUZWJVQ2RYdm1TR28wRzRwUW1ycE93MjRrRElDX3BKckhIbXV3MzRodmQ3Wmt5c2djQjNUUWZCdU5CcnpndVdaWU5Qdzh3RUNzVHVhSkJfS00wbTBtUGprckMtN0tqREt3a0JqT3pUMmdTLUZuVWk2NEM0cHcwNVdXUmd6VFU1dnBYTHlpR21vaGM4emtocV9sdjRfS0pwY3hpdGpXTXJNLWM3eG82RDI4Sm9FdHZORXp1SDNESlcybVc2S3E5U0RrWWpKVGdpVXNqNFRUMWFaWHBZY0l1R2pJVDdWdUtLWDdOVGUyeHA2QjNHUnlQQWtYQzljUUY5RVJsZXk5aFZhMGNRS0I2SHlERTJmZTA5QUdxcjJMclNiZHBiQ012SjJJM2ZKTVRmenFqaEF2WTV0V2c?oc=5",
+          "published": "Thu, 06 Aug 2026 14:45:00 GMT"
         },
         {
           "title": "華邦電4月每股獲利衝1.66元 年暴增逾216倍 - 自由財經",
@@ -21766,13 +21764,13 @@
       "score": 55,
       "rule_score": 52,
       "trend": "短線轉強",
-      "signal_strength": "62% (中性)",
+      "signal_strength": "61% (中性)",
       "ml_source": "trained_model",
       "ml_model_name": "Logistic Regression",
-      "ml_probability": 0.6230700188159043,
-      "ml_validation_accuracy": 0.5833333333333334,
-      "ml_usable_samples": 963,
-      "ml_train_samples": 903,
+      "ml_probability": 0.6124489214664169,
+      "ml_validation_accuracy": 0.6166666666666667,
+      "ml_usable_samples": 985,
+      "ml_train_samples": 925,
       "ml_validation_samples": 60,
       "ml_features_used": 10,
       "ml_note": "使用歷史日線與籌碼/估值特徵訓練",
@@ -21786,7 +21784,7 @@
       "latest_price_date": "2026-08-06",
       "close": 103.3,
       "ma5": 102.52000000000001,
-      "ma20": 101.92999999999999,
+      "ma20": 101.93,
       "ma60": 102.775,
       "return_5d": 0.10481283422459886,
       "return_20d": -0.025931164545025975,
@@ -21817,9 +21815,9 @@
       "headline_summary": "利空：暴跌；利空：賣超",
       "headlines": [
         {
-          "title": "0050又一個月吸金破千億元！台股7月跌 散戶砸逾2000億元掃「2檔ETF」 - Yahoo股市",
-          "link": "https://news.google.com/rss/articles/CBMimgNBVV95cUxPRG9JZWZPSGpzQkVrSWdVRDgwVlhJX1VQLUt5d1dBZ2g0X2lIM2NYYk5LQ00zQm11R0cyczRZZDNtVUxwaTdmY2RUbjB0Wl9XSExSUnlQbEFBdFdDTVRwRVA2dVI4QnJLNVhUUGNENVNnc0tNelBBZmw4LVJUcGRZY1oyZUZHWmVZbjVCNWZ4WmhJeW9McDZNS0RuUUxENlRjcW40dnJiX3ZFS1BJM2c2Y01SbDRkRHU2cEppbHJLMUlTQ3RpRWE4N29sdHlKdjNKZW4xR3ZDclhUVDg2V3RsYVU4dmNPTkhyQjl5WlNIVTJMWjBQLW1DWkFEcUxYcElFRVR1c0dVZFBseXhySUdfUWNIaktyVlFZb2VuLU1kcmlGRFNXZkhpcVFFRVZmNVFFOHE1Z2g5Q1BiWk9fS3drSEpZamprbVYtTW1tdTRfdVJzTmlZU2lzTGJveHoyYU83eTVTRjdIanQtMWhpZWFvZHZpTFU2cHFRLWR4dVJVQWd0MU8zOUxlcThIdXNwWGNtaGljaHItNnh1UQ?oc=5",
-          "published": "Thu, 06 Aug 2026 01:36:55 GMT"
+          "title": "逢低加碼！台股急跌反吸金 ETF單月爆5500億 - Yahoo股市",
+          "link": "https://news.google.com/rss/articles/CBMimwJBVV95cUxPNHI5SkxZMG11OE9FWnlzWVB4Zm5wMFJWNnBUc2tMZnRHcTU4ajVPN240OWxkeldJMG5Pa1Bhc2FWLWlFSTNIbnhraUl0Ukg5QTdQclZaMFppUXNQa3V5WXZ2a2VpTDhpanVjS0p6MDllZ1Z0Q2g1aDVILWNyMW5VN1FqQ0NfQzVqMnFiREktQUtmS1VGVDFDcUpjaUlTRGJfaU5oY0hOWWlIQVp6T1ZBRk9WQ2JIdzBucXJPUS1OZ1hKVXFGbVkxNEpZNExPR3FMa2tVdGlCdlpYVmFGeTVlU19jbmo2Qldxam5oQVMwem9XVEgzMGxvOVZlM04taGlOQU1QeFRhMzNiQzA5MjU0bkZVY3Fibi1ZY0hn?oc=5",
+          "published": "Thu, 06 Aug 2026 14:45:00 GMT"
         },
         {
           "title": "【零股排行榜】 盤中零股排行榜TOP 20｜0050 元大台灣50、00878 國泰永續高股息、2317 鴻海、00919 群益台灣精選高息、2303 聯電 (0806)｜豐雲學堂2026 年 08 月 - sinotrade.com.tw",
@@ -21953,18 +21951,18 @@
         "published": "Mon, 03 Aug 2026 22:30:42 GMT"
       },
       {
-        "title": "石油巨頭發戰爭財川普逼降油價- 焦點新聞1 - 新聞 - 華人今日網",
-        "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5FdXEtSlpWSlZYTTNhbGw2cnRDNXdtWHpJd1ZYZ0dncDhuUkItZ1RkXzZQTjVfUFUyeXA2YXQyWFZDUEttNkpnMkx4RVlEMEZpRU1yZnNFVGV3YVVSOHlyZjV1X1hoQQ?oc=5",
-        "published": "Tue, 04 Aug 2026 00:39:04 GMT"
+        "title": "時隔2個月! 國際油價又飆破100美元 分析師：上看150美元 - 自由財經",
+        "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5DeFpDcmZNdEd1dFJSZDAzSVJOaVVFdzMzc3NHUk9ield0TF9mMVIzZVk3Z2JuQzl1d0ItbmhoV1RnZWpWY19QTWtPN2EzMkxjTGpUQllrVDA1YW5DM2pr0gFkQVVfeXFMTkk2VUNPYTdURHZDZE05Mjk4SEtTdWZXWkxESHFMamVtVVBlQUpQM0dDbDA5VVFHWXdFWGYyNDlMN3lrVjFjTXBzYUVtWnpneFktSGhxeWVSQzlYSTBFZlNvSEhCcA?oc=5",
+        "published": "Fri, 24 Jul 2026 07:00:00 GMT"
       },
       {
-        "title": "川普出招！擬對「晶片關鍵原料」祭15%關稅 | NOWNEWS今日新聞 - LINE TODAY",
-        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9OZFQ5TTVSZzFOd3Q5c2JmZWdNWkl5UkU1SjJsRGk5Sk9XVE9vSVNfeUFLWkhfVnBNNWlMMHZtX2xTTXJfZGRsM2ZKWTFBWVZEdk5KbV9n?oc=5",
-        "published": "Thu, 06 Aug 2026 02:45:30 GMT"
+        "title": "美擬對多晶矽徵15%關稅恐衝擊太陽能 產發署緊急回應：不含半導體晶片 - news.cnyes.com",
+        "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE53b05obXRYTFp6cC1YWVJKaWNOdjVVNlB5QXZHdmhIS19ZS0pzS0RjX0FuMkwyS0QzR25rci03bFE4ZGlDMXc3OHZaYmxjX2s?oc=5",
+        "published": "Thu, 06 Aug 2026 11:51:32 GMT"
       }
     ],
     "warnings": []
   },
-  "report_text": "# 台股自選股研究日報 (2026-08-06)\n\n## 市場摘要\n- 候選池整體偏向: 中性\n- 固定追蹤檔數: 2\n- 候選池檔數: 10\n- 候選池平均分數: 60.6 / 100\n- 候選池綠燈數: 0 檔\n- 候選池紅燈數: 3 檔\n\n## 今晚到明早總覽\n- 夜間市場偏向: 偏空\n- 夜間市場分數: -15\n- 夜間摘要: 利空：戰爭；利空：關稅\n\n## 明日推薦\n- 今天沒有達到門檻的新推薦。\n\n## 候選池前段班\n- 2395 研華 | 明日 黃燈 | 明日分數 77 | 可觀察，等開盤或拉回確認\n- 3605 宏致 | 明日 黃燈 | 明日分數 72 | 可觀察，等開盤或拉回確認\n- 3702 大聯大 | 明日 黃燈 | 明日分數 72 | 可觀察，等開盤或拉回確認\n- 3006 晶豪科 | 明日 黃燈 | 明日分數 70 | 可觀察，等開盤或拉回確認\n- 6213 聯茂 | 明日 黃燈 | 明日分數 68 | 可觀察，等開盤或拉回確認\n\n## 偏弱或先觀望\n- 2313 華通 | 明日分數 49 | MA20 205.47 仍低於 MA60 237.45，中期趨勢未翻正；利空：戰爭；利空：關稅\n- 2049 上銀 | 明日分數 49 | MA20 319.50 仍低於 MA60 342.56，中期趨勢未翻正；利多：樂觀\n- 4958 臻鼎-KY | 明日分數 32 | 收盤 482.00 跌破 MA20 502.10；利空：爆炸；利多：上修\n\n## 超跌反彈觀察\n- 4958 臻鼎-KY | 反彈觀察分數 83 | 近 20 日跌幅 14.7%；收盤仍在 MA20 下方；結構仍偏弱，但可能接近超跌區\n- 6446 藥華藥 | 反彈觀察分數 57 | 近 20 日跌幅 15.7%；ML 勝率回升到中性偏多；近 5 日跌勢開始放緩\n\n## 超漲轉弱觀察\n- 3605 宏致 | 轉弱風險分數 87 | 近 5 日漲幅 37.9%；近 20 日漲幅 18.9%；收盤高於 MA20 22.8%\n- 3006 晶豪科 | 轉弱風險分數 78 | 近 5 日漲幅 57.3%；近 20 日漲幅 19.7%；收盤高於 MA20 23.0%\n- 3702 大聯大 | 轉弱風險分數 66 | 近 5 日漲幅 19.0%；近 20 日漲幅 19.0%；收盤高於 MA20 9.3%\n- 2344 華邦電 | 轉弱風險分數 54 | 近 5 日漲幅 44.3%；收盤高於 MA20 9.2%；ML 勝率已轉弱\n- 6213 聯茂 | 轉弱風險分數 51 | 近 5 日漲幅 56.6%；收盤高於 MA20 16.8%；ML 勝率只剩中性附近\n\n## 夜間消息偏多\n- 2395 研華 | 夜間分數 14 | 明早可優先留意 | 利多：成長；利多：獲利創高；利多：創高\n- 6770 力積電 | 夜間分數 13 | 明早可優先留意 | 利多：成長；利多：配息；利多：獲利創高\n- 3006 晶豪科 | 夜間分數 9 | 明早可優先留意 | 利多：創高\n- 2344 華邦電 | 夜間分數 5 | 夜間消息偏中性 | 利多：獲利創高；利多：創高\n- 6213 聯茂 | 夜間分數 4 | 夜間消息偏中性 | 利多：擴產；利多：創高\n\n## 夜間消息偏空\n- 0050 元大台灣50 | 夜間分數 -10 | 明早先觀望或留意風險 | 利空：暴跌；利空：賣超\n- 4958 臻鼎-KY | 夜間分數 -4 | 夜間消息偏中性 | 利空：爆炸；利多：上修\n\n## 固定追蹤清單\n### 2344 華邦電\n- 評級: Reduce (42 分)\n- 規則分數: 52 分\n- 明日燈號: 紅燈\n- 明日動作: 先觀望或留意減碼\n- 明日理由: MA20 156.55 仍低於 MA60 164.45，中期趨勢未翻正；先等更明確的止穩訊號\n- 趨勢: 短線轉強\n- ML: Logistic Regression | 16% (偏空) | 驗證準確率 51.7% | 樣本 990 / 訓練 930 / 驗證 60\n- 夜間評估: 中性 | 夜間分數 5 | 夜間消息偏中性 | 半導體、戰爭、油價\n- 加分理由: 收盤 171.00 站上 MA20 156.55\n- 風險提醒: MA20 156.55 仍低於 MA60 164.45，中期趨勢未翻正\n\n### 0050 元大台灣50\n- 評級: Neutral (55 分)\n- 規則分數: 52 分\n- 明日燈號: 紅燈\n- 明日動作: 先觀望或留意減碼\n- 明日理由: MA20 101.93 仍低於 MA60 102.78，中期趨勢未翻正；利空：暴跌；利空：賣超\n- 趨勢: 短線轉強\n- ML: Logistic Regression | 62% (中性) | 驗證準確率 58.3% | 樣本 963 / 訓練 903 / 驗證 60\n- 夜間評估: 偏空 | 夜間分數 -10 | 明早先觀望或留意風險 | AI、半導體、戰爭\n- 加分理由: 收盤 103.30 站上 MA20 101.93\n- 風險提醒: MA20 101.93 仍低於 MA60 102.78，中期趨勢未翻正\n\n\n## 明日決策細節\n- 今天沒有新推薦。\n\n## 使用說明\n- 明日燈號是把原始分數和夜間事件一起看後的結果，適合盤後到隔天開盤前參考。\n- 夜間事件層以公開新聞標題、重大訊息、法說與財經關鍵字做規則判讀，屬於輔助訊號。\n- 若更新失敗，網站會沿用上一版快照，不會直接清空。\n",
+  "report_text": "# 台股自選股研究日報 (2026-08-06)\n\n## 市場摘要\n- 候選池整體偏向: 中性\n- 固定追蹤檔數: 2\n- 候選池檔數: 10\n- 候選池平均分數: 60.0 / 100\n- 候選池綠燈數: 0 檔\n- 候選池紅燈數: 3 檔\n\n## 今晚到明早總覽\n- 夜間市場偏向: 偏空\n- 夜間市場分數: -15\n- 夜間摘要: 利空：戰爭；利空：關稅\n\n## 明日推薦\n- 今天沒有達到門檻的新推薦。\n\n## 候選池前段班\n- 2395 研華 | 明日 黃燈 | 明日分數 79 | 可觀察，等開盤或拉回確認\n- 3605 宏致 | 明日 黃燈 | 明日分數 72 | 可觀察，等開盤或拉回確認\n- 3702 大聯大 | 明日 黃燈 | 明日分數 72 | 可觀察，等開盤或拉回確認\n- 3006 晶豪科 | 明日 黃燈 | 明日分數 70 | 可觀察，等開盤或拉回確認\n- 6213 聯茂 | 明日 黃燈 | 明日分數 68 | 可觀察，等開盤或拉回確認\n\n## 偏弱或先觀望\n- 2313 華通 | 明日分數 49 | MA20 205.47 仍低於 MA60 237.45，中期趨勢未翻正；利空：戰爭；利空：關稅\n- 2049 上銀 | 明日分數 49 | MA20 319.50 仍低於 MA60 342.56，中期趨勢未翻正；利多：樂觀\n- 4958 臻鼎-KY | 明日分數 32 | 收盤 482.00 跌破 MA20 502.10；利空：爆炸；利多：上修\n\n## 超跌反彈觀察\n- 4958 臻鼎-KY | 反彈觀察分數 83 | 近 20 日跌幅 14.7%；收盤仍在 MA20 下方；結構仍偏弱，但可能接近超跌區\n- 6446 藥華藥 | 反彈觀察分數 57 | 近 20 日跌幅 15.7%；ML 勝率回升到中性偏多；近 5 日跌勢開始放緩\n\n## 超漲轉弱觀察\n- 3605 宏致 | 轉弱風險分數 87 | 近 5 日漲幅 37.9%；近 20 日漲幅 18.9%；收盤高於 MA20 22.8%\n- 3006 晶豪科 | 轉弱風險分數 78 | 近 5 日漲幅 57.3%；近 20 日漲幅 19.7%；收盤高於 MA20 23.0%\n- 3702 大聯大 | 轉弱風險分數 66 | 近 5 日漲幅 19.0%；近 20 日漲幅 19.0%；收盤高於 MA20 9.3%\n- 2344 華邦電 | 轉弱風險分數 54 | 近 5 日漲幅 44.3%；收盤高於 MA20 9.2%；ML 勝率已轉弱\n- 6213 聯茂 | 轉弱風險分數 51 | 近 5 日漲幅 56.6%；收盤高於 MA20 16.8%；ML 勝率只剩中性附近\n\n## 夜間消息偏多\n- 2395 研華 | 夜間分數 16 | 明早可優先留意 | 利多：成長；利多：獲利創高；利多：創高\n- 3006 晶豪科 | 夜間分數 9 | 明早可優先留意 | 利多：創高\n- 6770 力積電 | 夜間分數 5 | 夜間消息偏中性 | 利多：成長；利多：配息\n- 2344 華邦電 | 夜間分數 5 | 夜間消息偏中性 | 利多：創高\n- 6213 聯茂 | 夜間分數 4 | 夜間消息偏中性 | 利多：擴產；利多：創高\n\n## 夜間消息偏空\n- 0050 元大台灣50 | 夜間分數 -10 | 明早先觀望或留意風險 | 利空：暴跌；利空：賣超\n- 4958 臻鼎-KY | 夜間分數 -4 | 夜間消息偏中性 | 利空：爆炸；利多：上修\n\n## 固定追蹤清單\n### 2344 華邦電\n- 評級: Reduce (42 分)\n- 規則分數: 52 分\n- 明日燈號: 紅燈\n- 明日動作: 先觀望或留意減碼\n- 明日理由: MA20 156.55 仍低於 MA60 164.45，中期趨勢未翻正；先等更明確的止穩訊號\n- 趨勢: 短線轉強\n- ML: Logistic Regression | 16% (偏空) | 驗證準確率 51.7% | 樣本 990 / 訓練 930 / 驗證 60\n- 夜間評估: 中性 | 夜間分數 5 | 夜間消息偏中性 | 半導體、戰爭、油價\n- 加分理由: 收盤 171.00 站上 MA20 156.55\n- 風險提醒: MA20 156.55 仍低於 MA60 164.45，中期趨勢未翻正\n\n### 0050 元大台灣50\n- 評級: Neutral (55 分)\n- 規則分數: 52 分\n- 明日燈號: 紅燈\n- 明日動作: 先觀望或留意減碼\n- 明日理由: MA20 101.93 仍低於 MA60 102.78，中期趨勢未翻正；利空：暴跌；利空：賣超\n- 趨勢: 短線轉強\n- ML: Logistic Regression | 61% (中性) | 驗證準確率 61.7% | 樣本 985 / 訓練 925 / 驗證 60\n- 夜間評估: 偏空 | 夜間分數 -10 | 明早先觀望或留意風險 | AI、半導體、戰爭\n- 加分理由: 收盤 103.30 站上 MA20 101.93\n- 風險提醒: MA20 101.93 仍低於 MA60 102.78，中期趨勢未翻正\n\n\n## 明日決策細節\n- 今天沒有新推薦。\n\n## 使用說明\n- 明日燈號是把原始分數和夜間事件一起看後的結果，適合盤後到隔天開盤前參考。\n- 夜間事件層以公開新聞標題、重大訊息、法說與財經關鍵字做規則判讀，屬於輔助訊號。\n- 若更新失敗，網站會沿用上一版快照，不會直接清空。\n",
   "prompt_text": null
 }

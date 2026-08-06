@@ -1,0 +1,232 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-04-11T08:09:55",
+  "candidate_symbols": [
+    "2330",
+    "2317",
+    "2454",
+    "2382",
+    "2308",
+    "3231",
+    "2603",
+    "2881"
+  ],
+  "evaluations": {
+    "0050": {
+      "symbol": "0050",
+      "symbol_name": "元大台灣50",
+      "score": 63,
+      "tomorrow_score": 62,
+      "tomorrow_light": "黃燈"
+    },
+    "2344": {
+      "symbol": "2344",
+      "symbol_name": "華邦電",
+      "score": 34,
+      "tomorrow_score": 29,
+      "tomorrow_light": "紅燈"
+    },
+    "2330": {
+      "symbol": "2330",
+      "symbol_name": "台積電",
+      "score": 64,
+      "tomorrow_score": 61,
+      "tomorrow_light": "黃燈"
+    },
+    "2317": {
+      "symbol": "2317",
+      "symbol_name": "鴻海",
+      "score": 30,
+      "tomorrow_score": 30,
+      "tomorrow_light": "紅燈"
+    },
+    "2454": {
+      "symbol": "2454",
+      "symbol_name": "聯發科",
+      "score": 33,
+      "tomorrow_score": 36,
+      "tomorrow_light": "紅燈"
+    },
+    "2382": {
+      "symbol": "2382",
+      "symbol_name": "廣達",
+      "score": 72,
+      "tomorrow_score": 81,
+      "tomorrow_light": "綠燈"
+    },
+    "2308": {
+      "symbol": "2308",
+      "symbol_name": "台達電",
+      "score": 70,
+      "tomorrow_score": 73,
+      "tomorrow_light": "黃燈"
+    },
+    "3231": {
+      "symbol": "3231",
+      "symbol_name": "緯創",
+      "score": 50,
+      "tomorrow_score": 59,
+      "tomorrow_light": "黃燈"
+    },
+    "2603": {
+      "symbol": "2603",
+      "symbol_name": "長榮",
+      "score": 51,
+      "tomorrow_score": 46,
+      "tomorrow_light": "紅燈"
+    },
+    "2881": {
+      "symbol": "2881",
+      "symbol_name": "富邦金",
+      "score": 38,
+      "tomorrow_score": 37,
+      "tomorrow_light": "紅燈"
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "2382",
+      "symbol_name": "廣達",
+      "score": 72,
+      "tomorrow_score": 81,
+      "tomorrow_light": "綠燈",
+      "action": "可持有或拉回續看",
+      "recommendation_reason": "收盤 321.50 站上 MA20 290.32；利多：成長；利多：訂單；利多：配息"
+    }
+  ],
+  "nightly_market": {
+    "market_bias": "偏空"
+  },
+  "raw_data": {
+    "0050": {
+      "prices": [
+        {
+          "date": "2026-04-10",
+          "open": 80.0,
+          "high": 80.8,
+          "low": 79.95,
+          "close": 80.75,
+          "volume": 120838644,
+          "turnover": 98770
+        }
+      ]
+    },
+    "2344": {
+      "prices": [
+        {
+          "date": "2026-04-10",
+          "open": 93.0,
+          "high": 97.5,
+          "low": 92.3,
+          "close": 93.5,
+          "volume": 166460245,
+          "turnover": 92459
+        }
+      ]
+    },
+    "2330": {
+      "prices": [
+        {
+          "date": "2026-04-10",
+          "open": 1975.0,
+          "high": 2000.0,
+          "low": 1970.0,
+          "close": 2000.0,
+          "volume": 39096242,
+          "turnover": 125121
+        }
+      ]
+    },
+    "2317": {
+      "prices": [
+        {
+          "date": "2026-04-10",
+          "open": 200.5,
+          "high": 202.5,
+          "low": 199.5,
+          "close": 200.5,
+          "volume": 60470665,
+          "turnover": 37467
+        }
+      ]
+    },
+    "2454": {
+      "prices": [
+        {
+          "date": "2026-04-10",
+          "open": 1600.0,
+          "high": 1605.0,
+          "low": 1570.0,
+          "close": 1575.0,
+          "volume": 5738781,
+          "turnover": 17938
+        }
+      ]
+    },
+    "2382": {
+      "prices": [
+        {
+          "date": "2026-04-10",
+          "open": 315.0,
+          "high": 327.5,
+          "low": 312.0,
+          "close": 321.5,
+          "volume": 39034675,
+          "turnover": 37508
+        }
+      ]
+    },
+    "2308": {
+      "prices": [
+        {
+          "date": "2026-04-10",
+          "open": 1690.0,
+          "high": 1750.0,
+          "low": 1675.0,
+          "close": 1735.0,
+          "volume": 11557080,
+          "turnover": 31879
+        }
+      ]
+    },
+    "3231": {
+      "prices": [
+        {
+          "date": "2026-04-10",
+          "open": 134.0,
+          "high": 136.5,
+          "low": 133.0,
+          "close": 135.0,
+          "volume": 42081754,
+          "turnover": 27272
+        }
+      ]
+    },
+    "2603": {
+      "prices": [
+        {
+          "date": "2026-04-10",
+          "open": 203.5,
+          "high": 204.0,
+          "low": 201.5,
+          "close": 202.5,
+          "volume": 8319682,
+          "turnover": 6735
+        }
+      ]
+    },
+    "2881": {
+      "prices": [
+        {
+          "date": "2026-04-10",
+          "open": 87.5,
+          "high": 88.2,
+          "low": 87.3,
+          "close": 87.6,
+          "volume": 20801353,
+          "turnover": 15367
+        }
+      ]
+    }
+  }
+}
