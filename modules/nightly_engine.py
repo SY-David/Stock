@@ -281,7 +281,10 @@ class NightlyEngine:
         )
         response.raise_for_status()
         items = self._parse_rss_items(response.text)
-        self._write_cache(cache_path, items)
+        try:
+            self._write_cache(cache_path, items)
+        except OSError:
+            pass
         self._query_cache[query] = items
         return items[:limit]
 
