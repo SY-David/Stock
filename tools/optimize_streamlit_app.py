@@ -169,6 +169,12 @@ def optimize_app() -> None:
 '''
         text = text[:start] + lazy_section + text[end:]
 
+    text = text.replace("use_container_width=True", 'width="stretch"')
+    text = text.replace(
+        '"損益": row["pnl"] if row["pnl"] is not None else "",',
+        '"損益": float(row["pnl"]) if row["pnl"] is not None else None,',
+    )
+
     compile(text, str(APP_PATH), "exec")
     APP_PATH.write_text(text, encoding="utf-8")
     print("Optimized app.py for snapshot-only, lazy rendering and bounded caches")
