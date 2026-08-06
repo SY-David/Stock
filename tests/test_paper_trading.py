@@ -1,4 +1,5 @@
 import unittest
+from datetime import date, timedelta
 
 from modules.paper_trading import _execute_pending_orders, _get_price_row
 from modules.scoring_engine import ScoringEngine
@@ -87,11 +88,13 @@ class PaperTradingDateTests(unittest.TestCase):
 
 class ScoringSemanticsTests(unittest.TestCase):
     def test_zero_institutional_flow_is_neutral(self):
+        start = date(2026, 1, 1)
         prices = []
         for index in range(65):
+            trade_date = (start + timedelta(days=index)).isoformat()
             prices.append(
                 {
-                    "date": f"2026-03-{(index % 28) + 1:02d}-{index:03d}",
+                    "date": trade_date,
                     "open": 100.0,
                     "high": 101.0,
                     "low": 99.0,
