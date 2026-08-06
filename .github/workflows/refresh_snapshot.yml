@@ -17,6 +17,7 @@ on:
       - "modules/site_snapshot.py"
       - "modules/paper_trading.py"
       - "tools/optimize_streamlit_app.py"
+      - "tools/fix_history_cache.py"
       - "tools/restore_full_history.py"
       - "tools/rebuild_snapshot_history.py"
 
@@ -55,6 +56,9 @@ jobs:
 
       - name: Optimize Streamlit app
         run: python tools/optimize_streamlit_app.py
+
+      - name: Refresh history cache marker
+        run: python tools/fix_history_cache.py
 
       - name: Run unit tests
         run: python -m unittest discover -s tests
