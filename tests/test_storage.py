@@ -103,6 +103,22 @@ class TWSEClientCacheTests(unittest.TestCase):
         self.assertEqual(result, fresh_payload)
         self.assertEqual(persisted, fresh_payload)
 
+    def test_cache_write_failure_does_not_discard_network_payload(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            cache_path = Path(temp_dir) / "missing" / "cache.json"
+            payload = {"value": "network-result"}
+            self.client.session.get = Mock(
+                return_value=self._response(payload)
+            )
+
+            result = self.client._fetch_json(
+                "https://example.test/data",
+                cache_path=cache_path,
+            )
+
+        self.assertEqual(result, payload)
+        self.client.session.get.assert_called_once()
+
 
 if __name__ == "__main__":
     unittest.main()
