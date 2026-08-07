@@ -1,10 +1,9 @@
 from __future__ import annotations
 
 import json
-from datetime import datetime, timedelta
+from datetime import UTC, datetime, timedelta
 from hashlib import md5
 from pathlib import Path
-from urllib.parse import quote_plus
 from xml.etree import ElementTree
 
 import requests
@@ -90,7 +89,11 @@ class NightlyEngine:
         "配息": "股利",
     }
 
-    def __init__(self, timeout: int = NIGHTLY_REQUEST_TIMEOUT, news_limit: int = NIGHTLY_NEWS_LIMIT):
+    def __init__(
+        self,
+        timeout: int = NIGHTLY_REQUEST_TIMEOUT,
+        news_limit: int = NIGHTLY_NEWS_LIMIT,
+    ):
         self.timeout = timeout
         self.news_limit = news_limit
         self.session = requests.Session()
@@ -102,14 +105,34 @@ class NightlyEngine:
         )
         self.cache_dir = Path(CACHE_DIR) / "nightly"
         self.cache_dir.mkdir(parents=True, exist_ok=True)
+        self._query_cache: dict[str, list[dict]] = {}
+        self._ordered_positive_keywords = sorted(
+            self.POSITIVE_KEYWORDS.items(),
+            key=lambda item: len(item[0]),
+            reverse=True,
+        )
+        self._ordered_negative_keywords = sorted(
+            self.NEGATIVE_KEYWORDS.items(),
+            key=lambda item: len(item[0]),
+            reverse=True,
+        )
 
-    def analyze(self, raw_data: dict[str, dict], evaluations: dict[str, dict]) -> tuple[dict, dict[str, dict]]:
+    def analyze(
+        self,
+        raw_data: dict[str, dict],
+        evaluations: dict[str, dict],
+    ) -> tuple[dict, dict[str, dict]]:
         market_overview = self._build_market_overview()
         nightly_signals: dict[str, dict] = {}
 
         for symbol, evaluation in evaluations.items():
             stock_data = raw_data.get(symbol, {})
-            nightly_signals[symbol] = self._build_symbol_signal(symbol, stock_data, evaluation, market_overview)
+            nightly_signals[symbol] = self._build_symbol_signal(
+                symbol,
+                stock_data,
+                evaluation,
+                market_overview,
+            )
 
         return market_overview, nightly_signals
 
@@ -128,7 +151,9 @@ class NightlyEngine:
                 continue
 
             for item in items:
-                if item["title"] in {headline["title"] for headline in headlines}:
+                if item["title"] in {
+                    headline["title"] for headline in headlines
+                }:
                     continue
                 headlines.append(item)
                 score, hits, found_tags = self._score_text(item["title"])
@@ -171,7 +196,10 @@ class NightlyEngine:
         score = 0
 
         seen_titles: set[str] = set()
-        queries = [f"{stock_name} {symbol} 台股"] + [f"{stock_name} {symbol} {suffix}" for suffix in self.EVENT_SUFFIX_QUERIES]
+        queries = [f"{stock_name} {symbol} 台股"] + [
+            f"{stock_name} {symbol} {suffix}"
+            for suffix in self.EVENT_SUFFIX_QUERIES
+        ]
         for query in queries:
             try:
                 for item in self._fetch_google_news(query, limit=2):
@@ -214,7 +242,9 @@ class NightlyEngine:
 
         summary_parts = self._unique_items(reasons, limit=3)
         if not summary_parts:
-            summary_parts = [market_overview.get("summary", "夜間消息偏中性")]
+            summary_parts = [
+                market_overview.get("summary", "夜間消息偏中性")
+            ]
 
         return {
             "night_score": night_score,
@@ -228,10 +258,14 @@ class NightlyEngine:
         }
 
     def _fetch_google_news(self, query: str, limit: int) -> list[dict]:
+        if query in self._query_cache:
+            return self._query_cache[query][:limit]
+
         cache_key = md5(query.encode("utf-8")).hexdigest()
         cache_path = self.cache_dir / f"{cache_key}.json"
         cached_items = self._read_cache(cache_path)
         if cached_items is not None:
+            self._query_cache[query] = cached_items
             return cached_items[:limit]
 
         params = {
@@ -240,10 +274,18 @@ class NightlyEngine:
             "gl": "TW",
             "ceid": "TW:zh-Hant",
         }
-        response = self.session.get(self.GOOGLE_NEWS_RSS, params=params, timeout=self.timeout)
+        response = self.session.get(
+            self.GOOGLE_NEWS_RSS,
+            params=params,
+            timeout=self.timeout,
+        )
         response.raise_for_status()
         items = self._parse_rss_items(response.text)
-        self._write_cache(cache_path, items)
+        try:
+            self._write_cache(cache_path, items)
+        except OSError:
+            pass
+        self._query_cache[query] = items
         return items[:limit]
 
     @staticmethod
@@ -253,7 +295,11 @@ class NightlyEngine:
         seen_titles: set[str] = set()
 
         for item in root.findall(".//item"):
-            title = (item.findtext("title") or "").replace(" - Google News", "").strip()
+            title = (
+                (item.findtext("title") or "")
+                .replace(" - Google News", "")
+                .strip()
+            )
             if not title or title in seen_titles:
                 continue
             seen_titles.add(title)
@@ -271,32 +317,55 @@ class NightlyEngine:
         if not path.exists():
             return None
 
-        payload = json.loads(path.read_text(encoding="utf-8"))
-        fetched_at = datetime.fromisoformat(payload["fetched_at"])
-        if datetime.utcnow() - fetched_at > timedelta(minutes=self.CACHE_TTL_MINUTES):
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            fetched_at = datetime.fromisoformat(str(payload["fetched_at"]))
+            if fetched_at.tzinfo is None:
+                fetched_at = fetched_at.replace(tzinfo=UTC)
+            else:
+                fetched_at = fetched_at.astimezone(UTC)
+            items = payload["items"]
+            if not isinstance(items, list):
+                raise TypeError("cache items must be a list")
+        except (
+            OSError,
+            json.JSONDecodeError,
+            KeyError,
+            TypeError,
+            ValueError,
+        ):
+            path.unlink(missing_ok=True)
             return None
-        return payload["items"]
+
+        if datetime.now(UTC) - fetched_at > timedelta(
+            minutes=self.CACHE_TTL_MINUTES
+        ):
+            return None
+        return [item for item in items if isinstance(item, dict)]
 
     def _write_cache(self, path: Path, items: list[dict]) -> None:
+        path.parent.mkdir(parents=True, exist_ok=True)
         payload = {
-            "fetched_at": datetime.utcnow().isoformat(timespec="seconds"),
+            "fetched_at": datetime.now(UTC).isoformat(timespec="seconds"),
             "items": items,
         }
-        path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+        temp_path = path.with_suffix(path.suffix + ".tmp")
+        temp_path.write_text(
+            json.dumps(payload, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+        temp_path.replace(path)
 
     def _score_text(self, text: str) -> tuple[int, list[str], set[str]]:
-        ordered_positive = sorted(self.POSITIVE_KEYWORDS.items(), key=lambda item: len(item[0]), reverse=True)
-        ordered_negative = sorted(self.NEGATIVE_KEYWORDS.items(), key=lambda item: len(item[0]), reverse=True)
-
         score = 0
         reasons: list[str] = []
         tags: set[str] = set()
 
-        for keyword, value in ordered_positive:
+        for keyword, value in self._ordered_positive_keywords:
             if keyword in text:
                 score += value
                 reasons.append(f"利多：{keyword}")
-        for keyword, value in ordered_negative:
+        for keyword, value in self._ordered_negative_keywords:
             if keyword in text:
                 score += value
                 reasons.append(f"利空：{keyword}")
