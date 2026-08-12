@@ -1,0 +1,287 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-08-12T08:49:03",
+  "candidate_symbols": [
+    "2492",
+    "3443",
+    "3026",
+    "6446",
+    "6213",
+    "2327",
+    "8112",
+    "3090",
+    "8033",
+    "8150"
+  ],
+  "evaluations": {
+    "0050": {
+      "symbol": "0050",
+      "symbol_name": "元大台灣50",
+      "score": 50,
+      "tomorrow_score": 51,
+      "tomorrow_light": "黃燈"
+    },
+    "2344": {
+      "symbol": "2344",
+      "symbol_name": "華邦電",
+      "score": 58,
+      "tomorrow_score": 70,
+      "tomorrow_light": "黃燈"
+    },
+    "2492": {
+      "symbol": "2492",
+      "symbol_name": "華新科",
+      "score": 41,
+      "tomorrow_score": 46,
+      "tomorrow_light": "紅燈"
+    },
+    "3443": {
+      "symbol": "3443",
+      "symbol_name": "創意",
+      "score": 57,
+      "tomorrow_score": 58,
+      "tomorrow_light": "黃燈"
+    },
+    "3026": {
+      "symbol": "3026",
+      "symbol_name": "禾伸堂",
+      "score": 59,
+      "tomorrow_score": 61,
+      "tomorrow_light": "黃燈"
+    },
+    "6446": {
+      "symbol": "6446",
+      "symbol_name": "藥華藥",
+      "score": 76,
+      "tomorrow_score": 87,
+      "tomorrow_light": "綠燈"
+    },
+    "6213": {
+      "symbol": "6213",
+      "symbol_name": "聯茂",
+      "score": 67,
+      "tomorrow_score": 68,
+      "tomorrow_light": "黃燈"
+    },
+    "2327": {
+      "symbol": "2327",
+      "symbol_name": "國巨*",
+      "score": 34,
+      "tomorrow_score": 49,
+      "tomorrow_light": "紅燈"
+    },
+    "8112": {
+      "symbol": "8112",
+      "symbol_name": "至上",
+      "score": 48,
+      "tomorrow_score": 51,
+      "tomorrow_light": "黃燈"
+    },
+    "3090": {
+      "symbol": "3090",
+      "symbol_name": "日電貿",
+      "score": 49,
+      "tomorrow_score": 52,
+      "tomorrow_light": "黃燈"
+    },
+    "8033": {
+      "symbol": "8033",
+      "symbol_name": "雷虎",
+      "score": 38,
+      "tomorrow_score": 41,
+      "tomorrow_light": "紅燈"
+    },
+    "8150": {
+      "symbol": "8150",
+      "symbol_name": "南茂",
+      "score": 42,
+      "tomorrow_score": 46,
+      "tomorrow_light": "紅燈"
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "6446",
+      "symbol_name": "藥華藥",
+      "score": 76,
+      "tomorrow_score": 87,
+      "tomorrow_light": "綠燈",
+      "action": "可持有或拉回續看",
+      "recommendation_reason": "收盤 1440.00 站上 MA20 1211.00；利多：庫藏股；利多：創高"
+    }
+  ],
+  "nightly_market": {
+    "market_bias": "中性"
+  },
+  "raw_data": {
+    "0050": {
+      "prices": [
+        {
+          "date": "2026-08-12",
+          "open": 105.0,
+          "high": 105.25,
+          "low": 104.45,
+          "close": 105.2,
+          "volume": 64685056,
+          "turnover": 154245
+        }
+      ]
+    },
+    "2344": {
+      "prices": [
+        {
+          "date": "2026-08-12",
+          "open": 186.5,
+          "high": 193.0,
+          "low": 174.5,
+          "close": 177.0,
+          "volume": 207278220,
+          "turnover": 145909
+        }
+      ]
+    },
+    "2492": {
+      "prices": [
+        {
+          "date": "2026-08-12",
+          "open": 298.0,
+          "high": 312.0,
+          "low": 288.0,
+          "close": 288.0,
+          "volume": 66915986,
+          "turnover": 70817
+        }
+      ]
+    },
+    "3443": {
+      "prices": [
+        {
+          "date": "2026-08-12",
+          "open": 5025.0,
+          "high": 5180.0,
+          "low": 4945.0,
+          "close": 5130.0,
+          "volume": 2712101,
+          "turnover": 13542
+        }
+      ]
+    },
+    "3026": {
+      "prices": [
+        {
+          "date": "2026-08-12",
+          "open": 646.0,
+          "high": 710.0,
+          "low": 631.0,
+          "close": 685.0,
+          "volume": 24162223,
+          "turnover": 29414
+        }
+      ]
+    },
+    "6446": {
+      "prices": [
+        {
+          "date": "2026-08-12",
+          "open": 1465.0,
+          "high": 1550.0,
+          "low": 1415.0,
+          "close": 1440.0,
+          "volume": 6003196,
+          "turnover": 14532
+        }
+      ]
+    },
+    "6213": {
+      "prices": [
+        {
+          "date": "2026-08-12",
+          "open": 459.0,
+          "high": 475.0,
+          "low": 451.5,
+          "close": 464.0,
+          "volume": 8182733,
+          "turnover": 11631
+        }
+      ]
+    },
+    "2327": {
+      "prices": [
+        {
+          "date": "2026-08-12",
+          "open": 607.0,
+          "high": 625.0,
+          "low": 600.0,
+          "close": 602.0,
+          "volume": 56066841,
+          "turnover": 105382
+        }
+      ]
+    },
+    "8112": {
+      "prices": [
+        {
+          "date": "2026-08-12",
+          "open": 100.0,
+          "high": 101.5,
+          "low": 96.6,
+          "close": 96.9,
+          "volume": 37212675,
+          "turnover": 72030
+        }
+      ]
+    },
+    "3090": {
+      "prices": [
+        {
+          "date": "2026-08-12",
+          "open": 175.5,
+          "high": 177.0,
+          "low": 168.0,
+          "close": 170.5,
+          "volume": 20350162,
+          "turnover": 19669
+        }
+      ]
+    },
+    "8033": {
+      "prices": [
+        {
+          "date": "2026-08-12",
+          "open": 185.0,
+          "high": 185.0,
+          "low": 172.5,
+          "close": 173.0,
+          "volume": 13435330,
+          "turnover": 13337
+        }
+      ]
+    },
+    "8150": {
+      "prices": [
+        {
+          "date": "2026-08-12",
+          "open": 96.6,
+          "high": 97.4,
+          "low": 92.0,
+          "close": 92.2,
+          "volume": 86136843,
+          "turnover": 63899
+        }
+      ]
+    },
+    "6426": {
+      "prices": [
+        {
+          "date": "2026-08-12",
+          "open": 233.0,
+          "high": 233.0,
+          "low": 220.0,
+          "close": 222.0,
+          "volume": 824448,
+          "turnover": 1018
+        }
+      ]
+    }
+  }
+}
