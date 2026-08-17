@@ -1,0 +1,292 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-08-17T08:14:31",
+  "candidate_symbols": [
+    "8039",
+    "2324",
+    "1303",
+    "2634",
+    "8046",
+    "2383",
+    "8033",
+    "2645",
+    "9945",
+    "6753"
+  ],
+  "evaluations": {
+    "0050": {
+      "symbol": "0050",
+      "symbol_name": "元大台灣50",
+      "score": 50,
+      "tomorrow_score": 44,
+      "tomorrow_light": "紅燈"
+    },
+    "2344": {
+      "symbol": "2344",
+      "symbol_name": "華邦電",
+      "score": 60,
+      "tomorrow_score": 65,
+      "tomorrow_light": "黃燈"
+    },
+    "8039": {
+      "symbol": "8039",
+      "symbol_name": "台虹",
+      "score": 69,
+      "tomorrow_score": 70,
+      "tomorrow_light": "黃燈"
+    },
+    "2324": {
+      "symbol": "2324",
+      "symbol_name": "仁寶",
+      "score": 64,
+      "tomorrow_score": 63,
+      "tomorrow_light": "黃燈"
+    },
+    "1303": {
+      "symbol": "1303",
+      "symbol_name": "南亞",
+      "score": 67,
+      "tomorrow_score": 66,
+      "tomorrow_light": "黃燈"
+    },
+    "2634": {
+      "symbol": "2634",
+      "symbol_name": "漢翔",
+      "score": 70,
+      "tomorrow_score": 75,
+      "tomorrow_light": "黃燈"
+    },
+    "8046": {
+      "symbol": "8046",
+      "symbol_name": "南電",
+      "score": 72,
+      "tomorrow_score": 69,
+      "tomorrow_light": "黃燈"
+    },
+    "2383": {
+      "symbol": "2383",
+      "symbol_name": "台光電",
+      "score": 58,
+      "tomorrow_score": 58,
+      "tomorrow_light": "黃燈"
+    },
+    "8033": {
+      "symbol": "8033",
+      "symbol_name": "雷虎",
+      "score": 53,
+      "tomorrow_score": 46,
+      "tomorrow_light": "紅燈"
+    },
+    "2645": {
+      "symbol": "2645",
+      "symbol_name": "長榮航太",
+      "score": 34,
+      "tomorrow_score": 41,
+      "tomorrow_light": "紅燈"
+    },
+    "9945": {
+      "symbol": "9945",
+      "symbol_name": "潤泰新",
+      "score": 70,
+      "tomorrow_score": 71,
+      "tomorrow_light": "黃燈"
+    },
+    "6753": {
+      "symbol": "6753",
+      "symbol_name": "龍德造船",
+      "score": 64,
+      "tomorrow_score": 70,
+      "tomorrow_light": "綠燈"
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "6753",
+      "symbol_name": "龍德造船",
+      "score": 64,
+      "tomorrow_score": 70,
+      "tomorrow_light": "綠燈",
+      "action": "列入優先觀察",
+      "recommendation_reason": "收盤 147.00 站上 MA20 138.28；利多：成長；利多：訂單；利多：接單"
+    },
+    {
+      "symbol": "8046",
+      "symbol_name": "南電",
+      "score": 72,
+      "tomorrow_score": 69,
+      "tomorrow_light": "黃燈",
+      "action": "可持有或拉回續看",
+      "recommendation_reason": "收盤 1295.00 站上 MA20 1106.25；但夜間消息有雜訊，追價要保守"
+    },
+    {
+      "symbol": "1303",
+      "symbol_name": "南亞",
+      "score": 67,
+      "tomorrow_score": 66,
+      "tomorrow_light": "黃燈",
+      "action": "列入優先觀察",
+      "recommendation_reason": "收盤 200.50 站上 MA20 179.75；但夜間消息有雜訊，追價要保守"
+    }
+  ],
+  "nightly_market": {
+    "market_bias": "偏空"
+  },
+  "raw_data": {
+    "0050": {
+      "prices": [
+        {
+          "date": "2026-08-17",
+          "open": 106.4,
+          "high": 106.95,
+          "low": 106.0,
+          "close": 106.45,
+          "volume": 58016480,
+          "turnover": 85240
+        }
+      ]
+    },
+    "2344": {
+      "prices": [
+        {
+          "date": "2026-08-17",
+          "open": 185.5,
+          "high": 190.0,
+          "low": 181.5,
+          "close": 181.5,
+          "volume": 128521974,
+          "turnover": 106236
+        }
+      ]
+    },
+    "8039": {
+      "prices": [
+        {
+          "date": "2026-08-17",
+          "open": 274.0,
+          "high": 286.5,
+          "low": 253.0,
+          "close": 259.0,
+          "volume": 32146039,
+          "turnover": 28150
+        }
+      ]
+    },
+    "2324": {
+      "prices": [
+        {
+          "date": "2026-08-17",
+          "open": 43.35,
+          "high": 44.95,
+          "low": 40.95,
+          "close": 41.65,
+          "volume": 263419042,
+          "turnover": 88897
+        }
+      ]
+    },
+    "1303": {
+      "prices": [
+        {
+          "date": "2026-08-17",
+          "open": 213.5,
+          "high": 215.0,
+          "low": 200.0,
+          "close": 200.5,
+          "volume": 139718650,
+          "turnover": 98663
+        }
+      ]
+    },
+    "2634": {
+      "prices": [
+        {
+          "date": "2026-08-17",
+          "open": 72.2,
+          "high": 73.7,
+          "low": 65.8,
+          "close": 71.0,
+          "volume": 134348819,
+          "turnover": 75213
+        }
+      ]
+    },
+    "8046": {
+      "prices": [
+        {
+          "date": "2026-08-17",
+          "open": 1310.0,
+          "high": 1380.0,
+          "low": 1295.0,
+          "close": 1295.0,
+          "volume": 19223157,
+          "turnover": 25477
+        }
+      ]
+    },
+    "2383": {
+      "prices": [
+        {
+          "date": "2026-08-17",
+          "open": 6165.0,
+          "high": 6445.0,
+          "low": 6110.0,
+          "close": 6350.0,
+          "volume": 1910755,
+          "turnover": 15657
+        }
+      ]
+    },
+    "8033": {
+      "prices": [
+        {
+          "date": "2026-08-17",
+          "open": 206.5,
+          "high": 213.5,
+          "low": 188.0,
+          "close": 191.5,
+          "volume": 31630547,
+          "turnover": 32212
+        }
+      ]
+    },
+    "2645": {
+      "prices": [
+        {
+          "date": "2026-08-17",
+          "open": 197.5,
+          "high": 197.5,
+          "low": 181.5,
+          "close": 182.0,
+          "volume": 11416360,
+          "turnover": 12663
+        }
+      ]
+    },
+    "9945": {
+      "prices": [
+        {
+          "date": "2026-08-17",
+          "open": 30.1,
+          "high": 30.85,
+          "low": 29.8,
+          "close": 30.2,
+          "volume": 20253757,
+          "turnover": 8682
+        }
+      ]
+    },
+    "6753": {
+      "prices": [
+        {
+          "date": "2026-08-17",
+          "open": 158.0,
+          "high": 159.0,
+          "low": 144.0,
+          "close": 147.0,
+          "volume": 5345295,
+          "turnover": 5048
+        }
+      ]
+    }
+  }
+}
