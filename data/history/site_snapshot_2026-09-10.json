@@ -1,0 +1,282 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-09-10T12:20:55",
+  "candidate_symbols": [
+    "8996",
+    "6505",
+    "8046",
+    "1409",
+    "3406",
+    "3715",
+    "6531",
+    "3008",
+    "3532",
+    "6805"
+  ],
+  "evaluations": {
+    "0050": {
+      "symbol": "0050",
+      "symbol_name": "元大台灣50",
+      "score": 64,
+      "tomorrow_score": 58,
+      "tomorrow_light": "紅燈"
+    },
+    "2344": {
+      "symbol": "2344",
+      "symbol_name": "華邦電",
+      "score": 56,
+      "tomorrow_score": 68,
+      "tomorrow_light": "黃燈"
+    },
+    "8996": {
+      "symbol": "8996",
+      "symbol_name": "高力",
+      "score": 59,
+      "tomorrow_score": 52,
+      "tomorrow_light": "紅燈"
+    },
+    "6505": {
+      "symbol": "6505",
+      "symbol_name": "台塑化",
+      "score": 77,
+      "tomorrow_score": 79,
+      "tomorrow_light": "綠燈"
+    },
+    "8046": {
+      "symbol": "8046",
+      "symbol_name": "南電",
+      "score": 42,
+      "tomorrow_score": 39,
+      "tomorrow_light": "紅燈"
+    },
+    "3406": {
+      "symbol": "3406",
+      "symbol_name": "玉晶光",
+      "score": 56,
+      "tomorrow_score": 57,
+      "tomorrow_light": "黃燈"
+    },
+    "6531": {
+      "symbol": "6531",
+      "symbol_name": "愛普*",
+      "score": 77,
+      "tomorrow_score": 82,
+      "tomorrow_light": "綠燈"
+    },
+    "3008": {
+      "symbol": "3008",
+      "symbol_name": "大立光",
+      "score": 75,
+      "tomorrow_score": 68,
+      "tomorrow_light": "紅燈"
+    },
+    "3532": {
+      "symbol": "3532",
+      "symbol_name": "台勝科",
+      "score": 62,
+      "tomorrow_score": 55,
+      "tomorrow_light": "紅燈"
+    },
+    "6805": {
+      "symbol": "6805",
+      "symbol_name": "富世達",
+      "score": 50,
+      "tomorrow_score": 57,
+      "tomorrow_light": "黃燈"
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "6531",
+      "symbol_name": "愛普*",
+      "score": 77,
+      "tomorrow_score": 82,
+      "tomorrow_light": "綠燈",
+      "action": "可持有或拉回續看",
+      "recommendation_reason": "收盤 1030.00 站上 MA20 915.20；利多：成長；利多：創高"
+    },
+    {
+      "symbol": "6505",
+      "symbol_name": "台塑化",
+      "score": 77,
+      "tomorrow_score": 79,
+      "tomorrow_light": "綠燈",
+      "action": "可持有或拉回續看",
+      "recommendation_reason": "收盤 73.50 站上 MA20 70.80；利多：上修"
+    }
+  ],
+  "nightly_market": {
+    "market_bias": "偏空"
+  },
+  "raw_data": {
+    "0050": {
+      "prices": [
+        {
+          "date": "2026-09-10",
+          "open": 108.6,
+          "high": 109.15,
+          "low": 108.4,
+          "close": 109.15,
+          "volume": 45765227,
+          "turnover": 99806
+        }
+      ]
+    },
+    "2344": {
+      "prices": [
+        {
+          "date": "2026-09-10",
+          "open": 181.0,
+          "high": 182.5,
+          "low": 178.0,
+          "close": 179.5,
+          "volume": 67914754,
+          "turnover": 46062
+        }
+      ]
+    },
+    "8996": {
+      "prices": [
+        {
+          "date": "2026-09-10",
+          "open": 1320.0,
+          "high": 1340.0,
+          "low": 1280.0,
+          "close": 1300.0,
+          "volume": 4932329,
+          "turnover": 9106
+        }
+      ]
+    },
+    "6505": {
+      "prices": [
+        {
+          "date": "2026-08-31",
+          "open": 71.9,
+          "high": 73.9,
+          "low": 71.1,
+          "close": 73.5,
+          "volume": 17193364,
+          "turnover": 10356
+        }
+      ]
+    },
+    "8046": {
+      "prices": [
+        {
+          "date": "2026-09-10",
+          "open": 1085.0,
+          "high": 1105.0,
+          "low": 1055.0,
+          "close": 1070.0,
+          "volume": 6755869,
+          "turnover": 13638
+        }
+      ]
+    },
+    "3406": {
+      "prices": [
+        {
+          "date": "2026-09-10",
+          "open": 1120.0,
+          "high": 1125.0,
+          "low": 1040.0,
+          "close": 1070.0,
+          "volume": 9554384,
+          "turnover": 11571
+        }
+      ]
+    },
+    "6531": {
+      "prices": [
+        {
+          "date": "2026-09-10",
+          "open": 993.0,
+          "high": 1065.0,
+          "low": 991.0,
+          "close": 1030.0,
+          "volume": 6397932,
+          "turnover": 11614
+        }
+      ]
+    },
+    "3008": {
+      "prices": [
+        {
+          "date": "2026-09-10",
+          "open": 6770.0,
+          "high": 6875.0,
+          "low": 6680.0,
+          "close": 6720.0,
+          "volume": 1755962,
+          "turnover": 16398
+        }
+      ]
+    },
+    "3532": {
+      "prices": [
+        {
+          "date": "2026-09-10",
+          "open": 417.0,
+          "high": 423.0,
+          "low": 410.0,
+          "close": 410.0,
+          "volume": 4334630,
+          "turnover": 6384
+        }
+      ]
+    },
+    "6805": {
+      "prices": [
+        {
+          "date": "2026-09-10",
+          "open": 2260.0,
+          "high": 2310.0,
+          "low": 2155.0,
+          "close": 2190.0,
+          "volume": 1486989,
+          "turnover": 3856
+        }
+      ]
+    },
+    "2454": {
+      "prices": [
+        {
+          "date": "2026-09-10",
+          "open": 4560.0,
+          "high": 4730.0,
+          "low": 4520.0,
+          "close": 4720.0,
+          "volume": 6662243,
+          "turnover": 42835
+        }
+      ]
+    },
+    "2884": {
+      "prices": [
+        {
+          "date": "2026-09-10",
+          "open": 45.0,
+          "high": 45.75,
+          "low": 44.3,
+          "close": 44.95,
+          "volume": 56865315,
+          "turnover": 16763
+        }
+      ]
+    },
+    "2887": {
+      "prices": [
+        {
+          "date": "2026-09-10",
+          "open": 42.0,
+          "high": 42.8,
+          "low": 41.7,
+          "close": 42.15,
+          "volume": 38539925,
+          "turnover": 15197
+        }
+      ]
+    }
+  }
+}
