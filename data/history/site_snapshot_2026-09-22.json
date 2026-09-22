@@ -1,0 +1,53 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-09-22T12:40:16",
+  "candidate_symbols": [],
+  "evaluations": {
+    "0050": {
+      "symbol": "0050",
+      "symbol_name": "0050",
+      "score": 64,
+      "tomorrow_score": 63,
+      "tomorrow_light": "黃燈"
+    },
+    "2344": {
+      "symbol": "2344",
+      "symbol_name": "2344",
+      "score": 50,
+      "tomorrow_score": 55,
+      "tomorrow_light": "黃燈"
+    }
+  },
+  "recommendations": [],
+  "nightly_market": {
+    "market_bias": "偏空"
+  },
+  "raw_data": {
+    "0050": {
+      "prices": [
+        {
+          "date": "2026-09-22",
+          "open": 113.35,
+          "high": 113.75,
+          "low": 111.85,
+          "close": 111.85,
+          "volume": 84309564,
+          "turnover": 88513
+        }
+      ]
+    },
+    "2344": {
+      "prices": [
+        {
+          "date": "2026-09-22",
+          "open": 179.0,
+          "high": 180.5,
+          "low": 170.5,
+          "close": 171.0,
+          "volume": 97424949,
+          "turnover": 79019
+        }
+      ]
+    }
+  }
+}
