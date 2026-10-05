@@ -1,0 +1,292 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-10-05T16:11:28",
+  "candidate_symbols": [
+    "6672",
+    "3042",
+    "2492",
+    "2409",
+    "8150",
+    "4958",
+    "3016",
+    "3673",
+    "4919",
+    "1727"
+  ],
+  "evaluations": {
+    "0050": {
+      "symbol": "0050",
+      "symbol_name": "元大台灣50",
+      "score": 68,
+      "tomorrow_score": 69,
+      "tomorrow_light": "黃燈"
+    },
+    "2344": {
+      "symbol": "2344",
+      "symbol_name": "華邦電",
+      "score": 64,
+      "tomorrow_score": 65,
+      "tomorrow_light": "黃燈"
+    },
+    "6672": {
+      "symbol": "6672",
+      "symbol_name": "騰輝電子-KY",
+      "score": 71,
+      "tomorrow_score": 70,
+      "tomorrow_light": "黃燈"
+    },
+    "3042": {
+      "symbol": "3042",
+      "symbol_name": "晶技",
+      "score": 67,
+      "tomorrow_score": 70,
+      "tomorrow_light": "黃燈"
+    },
+    "2492": {
+      "symbol": "2492",
+      "symbol_name": "華新科",
+      "score": 70,
+      "tomorrow_score": 71,
+      "tomorrow_light": "黃燈"
+    },
+    "2409": {
+      "symbol": "2409",
+      "symbol_name": "友達",
+      "score": 72,
+      "tomorrow_score": 64,
+      "tomorrow_light": "紅燈"
+    },
+    "8150": {
+      "symbol": "8150",
+      "symbol_name": "南茂",
+      "score": 56,
+      "tomorrow_score": 53,
+      "tomorrow_light": "黃燈"
+    },
+    "4958": {
+      "symbol": "4958",
+      "symbol_name": "臻鼎-KY",
+      "score": 66,
+      "tomorrow_score": 78,
+      "tomorrow_light": "黃燈"
+    },
+    "3016": {
+      "symbol": "3016",
+      "symbol_name": "嘉晶",
+      "score": 67,
+      "tomorrow_score": 69,
+      "tomorrow_light": "綠燈"
+    },
+    "3673": {
+      "symbol": "3673",
+      "symbol_name": "TPK-KY",
+      "score": 71,
+      "tomorrow_score": 70,
+      "tomorrow_light": "綠燈"
+    },
+    "4919": {
+      "symbol": "4919",
+      "symbol_name": "新唐",
+      "score": 54,
+      "tomorrow_score": 59,
+      "tomorrow_light": "黃燈"
+    },
+    "1727": {
+      "symbol": "1727",
+      "symbol_name": "中華化",
+      "score": 77,
+      "tomorrow_score": 78,
+      "tomorrow_light": "綠燈"
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "1727",
+      "symbol_name": "中華化",
+      "score": 77,
+      "tomorrow_score": 78,
+      "tomorrow_light": "綠燈",
+      "action": "可持有或拉回續看",
+      "recommendation_reason": "收盤 117.50 站上 MA20 102.67；利多：創高"
+    },
+    {
+      "symbol": "3673",
+      "symbol_name": "TPK-KY",
+      "score": 71,
+      "tomorrow_score": 70,
+      "tomorrow_light": "綠燈",
+      "action": "列入優先觀察",
+      "recommendation_reason": "收盤 76.80 站上 MA20 66.88；夜間沒有明顯利空"
+    },
+    {
+      "symbol": "3016",
+      "symbol_name": "嘉晶",
+      "score": 67,
+      "tomorrow_score": 69,
+      "tomorrow_light": "綠燈",
+      "action": "列入優先觀察",
+      "recommendation_reason": "收盤 181.50 站上 MA20 131.12；利多：成長；利多：擴產"
+    }
+  ],
+  "nightly_market": {
+    "market_bias": "偏空"
+  },
+  "raw_data": {
+    "0050": {
+      "prices": [
+        {
+          "date": "2026-10-05",
+          "open": 115.75,
+          "high": 116.15,
+          "low": 115.25,
+          "close": 115.95,
+          "volume": 102872428,
+          "turnover": 108438
+        }
+      ]
+    },
+    "2344": {
+      "prices": [
+        {
+          "date": "2026-10-05",
+          "open": 177.5,
+          "high": 181.0,
+          "low": 174.0,
+          "close": 181.0,
+          "volume": 90976614,
+          "turnover": 65795
+        }
+      ]
+    },
+    "6672": {
+      "prices": [
+        {
+          "date": "2026-10-05",
+          "open": 444.0,
+          "high": 457.5,
+          "low": 435.0,
+          "close": 451.0,
+          "volume": 13344761,
+          "turnover": 15013
+        }
+      ]
+    },
+    "3042": {
+      "prices": [
+        {
+          "date": "2026-10-05",
+          "open": 232.0,
+          "high": 235.5,
+          "low": 221.0,
+          "close": 222.0,
+          "volume": 35474796,
+          "turnover": 53829
+        }
+      ]
+    },
+    "2492": {
+      "prices": [
+        {
+          "date": "2026-10-05",
+          "open": 377.5,
+          "high": 396.0,
+          "low": 365.0,
+          "close": 368.5,
+          "volume": 95779681,
+          "turnover": 94979
+        }
+      ]
+    },
+    "2409": {
+      "prices": [
+        {
+          "date": "2026-10-05",
+          "open": 41.55,
+          "high": 43.55,
+          "low": 39.0,
+          "close": 39.05,
+          "volume": 965082115,
+          "turnover": 356424
+        }
+      ]
+    },
+    "8150": {
+      "prices": [
+        {
+          "date": "2026-10-05",
+          "open": 133.0,
+          "high": 133.0,
+          "low": 123.0,
+          "close": 124.0,
+          "volume": 98413877,
+          "turnover": 60129
+        }
+      ]
+    },
+    "4958": {
+      "prices": [
+        {
+          "date": "2026-10-05",
+          "open": 582.0,
+          "high": 590.0,
+          "low": 568.0,
+          "close": 576.0,
+          "volume": 56786688,
+          "turnover": 70333
+        }
+      ]
+    },
+    "3016": {
+      "prices": [
+        {
+          "date": "2026-10-05",
+          "open": 186.0,
+          "high": 189.5,
+          "low": 178.0,
+          "close": 181.5,
+          "volume": 5285840,
+          "turnover": 7697
+        }
+      ]
+    },
+    "3673": {
+      "prices": [
+        {
+          "date": "2026-10-05",
+          "open": 80.8,
+          "high": 81.0,
+          "low": 76.6,
+          "close": 76.8,
+          "volume": 29000616,
+          "turnover": 20836
+        }
+      ]
+    },
+    "4919": {
+      "prices": [
+        {
+          "date": "2026-10-05",
+          "open": 162.5,
+          "high": 162.5,
+          "low": 154.0,
+          "close": 155.5,
+          "volume": 31573293,
+          "turnover": 27707
+        }
+      ]
+    },
+    "1727": {
+      "prices": [
+        {
+          "date": "2026-10-05",
+          "open": 128.0,
+          "high": 130.0,
+          "low": 116.0,
+          "close": 117.5,
+          "volume": 22433842,
+          "turnover": 16702
+        }
+      ]
+    }
+  }
+}
