@@ -1,0 +1,335 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-10-06T14:20:20",
+  "candidate_symbols": [
+    "6213",
+    "6672",
+    "1303",
+    "2313",
+    "2368",
+    "3406",
+    "2426",
+    "8261",
+    "2367",
+    "6196"
+  ],
+  "evaluations": {
+    "0050": {
+      "symbol": "0050",
+      "symbol_name": "元大台灣50",
+      "score": 63,
+      "tomorrow_score": 60,
+      "tomorrow_light": "黃燈"
+    },
+    "2344": {
+      "symbol": "2344",
+      "symbol_name": "華邦電",
+      "score": 63,
+      "tomorrow_score": 60,
+      "tomorrow_light": "黃燈"
+    },
+    "6213": {
+      "symbol": "6213",
+      "symbol_name": "聯茂",
+      "score": 69,
+      "tomorrow_score": 71,
+      "tomorrow_light": "黃燈"
+    },
+    "6672": {
+      "symbol": "6672",
+      "symbol_name": "騰輝電子-KY",
+      "score": 73,
+      "tomorrow_score": 70,
+      "tomorrow_light": "黃燈"
+    },
+    "1303": {
+      "symbol": "1303",
+      "symbol_name": "南亞",
+      "score": 70,
+      "tomorrow_score": 71,
+      "tomorrow_light": "黃燈"
+    },
+    "2313": {
+      "symbol": "2313",
+      "symbol_name": "華通",
+      "score": 73,
+      "tomorrow_score": 76,
+      "tomorrow_light": "綠燈"
+    },
+    "2368": {
+      "symbol": "2368",
+      "symbol_name": "金像電",
+      "score": 77,
+      "tomorrow_score": 74,
+      "tomorrow_light": "黃燈"
+    },
+    "3406": {
+      "symbol": "3406",
+      "symbol_name": "玉晶光",
+      "score": 59,
+      "tomorrow_score": 56,
+      "tomorrow_light": "黃燈"
+    },
+    "2426": {
+      "symbol": "2426",
+      "symbol_name": "鼎元",
+      "score": 56,
+      "tomorrow_score": 57,
+      "tomorrow_light": "黃燈"
+    },
+    "8261": {
+      "symbol": "8261",
+      "symbol_name": "富鼎",
+      "score": 61,
+      "tomorrow_score": 61,
+      "tomorrow_light": "黃燈"
+    },
+    "2367": {
+      "symbol": "2367",
+      "symbol_name": "燿華",
+      "score": 33,
+      "tomorrow_score": 14,
+      "tomorrow_light": "紅燈"
+    },
+    "6196": {
+      "symbol": "6196",
+      "symbol_name": "帆宣",
+      "score": 54,
+      "tomorrow_score": 59,
+      "tomorrow_light": "黃燈"
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "2368",
+      "symbol_name": "金像電",
+      "score": 77,
+      "tomorrow_score": 74,
+      "tomorrow_light": "黃燈",
+      "action": "可持有或拉回續看",
+      "recommendation_reason": "收盤 1260.00 站上 MA20 1049.20；但夜間消息有雜訊，追價要保守"
+    },
+    {
+      "symbol": "6672",
+      "symbol_name": "騰輝電子-KY",
+      "score": 73,
+      "tomorrow_score": 70,
+      "tomorrow_light": "黃燈",
+      "action": "可持有或拉回續看",
+      "recommendation_reason": "收盤 459.50 站上 MA20 334.25；但夜間消息有雜訊，追價要保守"
+    }
+  ],
+  "nightly_market": {
+    "market_bias": "偏空"
+  },
+  "raw_data": {
+    "0050": {
+      "prices": [
+        {
+          "date": "2026-10-06",
+          "open": 116.3,
+          "high": 116.6,
+          "low": 115.7,
+          "close": 116.5,
+          "volume": 70945715,
+          "turnover": 94076
+        }
+      ]
+    },
+    "2344": {
+      "prices": [
+        {
+          "date": "2026-10-06",
+          "open": 181.5,
+          "high": 183.0,
+          "low": 177.5,
+          "close": 177.5,
+          "volume": 58643976,
+          "turnover": 42716
+        }
+      ]
+    },
+    "6213": {
+      "prices": [
+        {
+          "date": "2026-10-06",
+          "open": 797.0,
+          "high": 818.0,
+          "low": 762.0,
+          "close": 787.0,
+          "volume": 32339830,
+          "turnover": 39922
+        }
+      ]
+    },
+    "6672": {
+      "prices": [
+        {
+          "date": "2026-10-06",
+          "open": 456.0,
+          "high": 459.5,
+          "low": 435.0,
+          "close": 459.5,
+          "volume": 2951206,
+          "turnover": 5505
+        }
+      ]
+    },
+    "1303": {
+      "prices": [
+        {
+          "date": "2026-10-06",
+          "open": 288.0,
+          "high": 300.0,
+          "low": 274.5,
+          "close": 293.0,
+          "volume": 115482642,
+          "turnover": 97550
+        }
+      ]
+    },
+    "2313": {
+      "prices": [
+        {
+          "date": "2026-10-06",
+          "open": 254.0,
+          "high": 256.0,
+          "low": 245.0,
+          "close": 252.0,
+          "volume": 97517769,
+          "turnover": 83837
+        }
+      ]
+    },
+    "2368": {
+      "prices": [
+        {
+          "date": "2026-10-06",
+          "open": 1220.0,
+          "high": 1295.0,
+          "low": 1200.0,
+          "close": 1260.0,
+          "volume": 21853878,
+          "turnover": 36500
+        }
+      ]
+    },
+    "3406": {
+      "prices": [
+        {
+          "date": "2026-10-06",
+          "open": 1085.0,
+          "high": 1095.0,
+          "low": 1020.0,
+          "close": 1045.0,
+          "volume": 8029521,
+          "turnover": 10551
+        }
+      ]
+    },
+    "2426": {
+      "prices": [
+        {
+          "date": "2026-10-06",
+          "open": 117.5,
+          "high": 118.0,
+          "low": 105.5,
+          "close": 105.5,
+          "volume": 42807087,
+          "turnover": 28973
+        }
+      ]
+    },
+    "8261": {
+      "prices": [
+        {
+          "date": "2026-10-06",
+          "open": 204.5,
+          "high": 204.5,
+          "low": 191.0,
+          "close": 199.5,
+          "volume": 15024849,
+          "turnover": 15433
+        }
+      ]
+    },
+    "2367": {
+      "prices": [
+        {
+          "date": "2026-10-06",
+          "open": 49.65,
+          "high": 49.65,
+          "low": 47.25,
+          "close": 47.65,
+          "volume": 38654137,
+          "turnover": 25341
+        }
+      ]
+    },
+    "6196": {
+      "prices": [
+        {
+          "date": "2026-10-06",
+          "open": 684.0,
+          "high": 684.0,
+          "low": 649.0,
+          "close": 663.0,
+          "volume": 3306714,
+          "turnover": 9012
+        }
+      ]
+    },
+    "1727": {
+      "prices": [
+        {
+          "date": "2026-10-06",
+          "open": 115.5,
+          "high": 115.5,
+          "low": 106.0,
+          "close": 106.0,
+          "volume": 21867123,
+          "turnover": 17115
+        }
+      ]
+    },
+    "2492": {
+      "prices": [
+        {
+          "date": "2026-10-06",
+          "open": 370.0,
+          "high": 395.0,
+          "low": 362.5,
+          "close": 389.5,
+          "volume": 56423288,
+          "turnover": 57100
+        }
+      ]
+    },
+    "3042": {
+      "prices": [
+        {
+          "date": "2026-10-06",
+          "open": 218.0,
+          "high": 218.5,
+          "low": 203.5,
+          "close": 204.5,
+          "volume": 25656732,
+          "turnover": 26534
+        }
+      ]
+    },
+    "3673": {
+      "prices": [
+        {
+          "date": "2026-10-06",
+          "open": 77.4,
+          "high": 79.5,
+          "low": 76.0,
+          "close": 76.8,
+          "volume": 17692813,
+          "turnover": 12169
+        }
+      ]
+    }
+  }
+}
