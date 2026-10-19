@@ -1,0 +1,277 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-10-19T14:49:27",
+  "candidate_symbols": [
+    "2368",
+    "6505",
+    "2313",
+    "8039",
+    "6209",
+    "3167",
+    "6269",
+    "3017",
+    "1326",
+    "2340"
+  ],
+  "evaluations": {
+    "0050": {
+      "symbol": "0050",
+      "symbol_name": "元大台灣50",
+      "score": 52,
+      "tomorrow_score": 53,
+      "tomorrow_light": "黃燈"
+    },
+    "2344": {
+      "symbol": "2344",
+      "symbol_name": "華邦電",
+      "score": 51,
+      "tomorrow_score": 46,
+      "tomorrow_light": "紅燈"
+    },
+    "2368": {
+      "symbol": "2368",
+      "symbol_name": "金像電",
+      "score": 70,
+      "tomorrow_score": 75,
+      "tomorrow_light": "黃燈"
+    },
+    "6505": {
+      "symbol": "6505",
+      "symbol_name": "台塑化",
+      "score": 71,
+      "tomorrow_score": 64,
+      "tomorrow_light": "紅燈"
+    },
+    "2313": {
+      "symbol": "2313",
+      "symbol_name": "華通",
+      "score": 71,
+      "tomorrow_score": 70,
+      "tomorrow_light": "黃燈"
+    },
+    "8039": {
+      "symbol": "8039",
+      "symbol_name": "台虹",
+      "score": 65,
+      "tomorrow_score": 58,
+      "tomorrow_light": "紅燈"
+    },
+    "6209": {
+      "symbol": "6209",
+      "symbol_name": "今國光",
+      "score": 75,
+      "tomorrow_score": 76,
+      "tomorrow_light": "黃燈"
+    },
+    "3167": {
+      "symbol": "3167",
+      "symbol_name": "大量",
+      "score": 68,
+      "tomorrow_score": 65,
+      "tomorrow_light": "黃燈"
+    },
+    "6269": {
+      "symbol": "6269",
+      "symbol_name": "台郡",
+      "score": 55,
+      "tomorrow_score": 41,
+      "tomorrow_light": "紅燈"
+    },
+    "3017": {
+      "symbol": "3017",
+      "symbol_name": "奇鋐",
+      "score": 51,
+      "tomorrow_score": 40,
+      "tomorrow_light": "紅燈"
+    },
+    "1326": {
+      "symbol": "1326",
+      "symbol_name": "台化",
+      "score": 72,
+      "tomorrow_score": 64,
+      "tomorrow_light": "紅燈"
+    },
+    "2340": {
+      "symbol": "2340",
+      "symbol_name": "台亞",
+      "score": 66,
+      "tomorrow_score": 53,
+      "tomorrow_light": "紅燈"
+    }
+  },
+  "recommendations": [],
+  "nightly_market": {
+    "market_bias": "偏空"
+  },
+  "raw_data": {
+    "0050": {
+      "prices": [
+        {
+          "date": "2026-10-19",
+          "open": 107.45,
+          "high": 108.3,
+          "low": 107.1,
+          "close": 108.15,
+          "volume": 165406652,
+          "turnover": 318849
+        }
+      ]
+    },
+    "2344": {
+      "prices": [
+        {
+          "date": "2026-10-19",
+          "open": 153.0,
+          "high": 156.0,
+          "low": 151.0,
+          "close": 155.5,
+          "volume": 57768585,
+          "turnover": 44701
+        }
+      ]
+    },
+    "2368": {
+      "prices": [
+        {
+          "date": "2026-10-19",
+          "open": 1195.0,
+          "high": 1265.0,
+          "low": 1185.0,
+          "close": 1250.0,
+          "volume": 12121167,
+          "turnover": 19520
+        }
+      ]
+    },
+    "6505": {
+      "prices": [
+        {
+          "date": "2026-10-19",
+          "open": 125.5,
+          "high": 128.0,
+          "low": 115.5,
+          "close": 116.0,
+          "volume": 73816328,
+          "turnover": 42114
+        }
+      ]
+    },
+    "2313": {
+      "prices": [
+        {
+          "date": "2026-10-19",
+          "open": 239.0,
+          "high": 252.0,
+          "low": 237.0,
+          "close": 248.0,
+          "volume": 32526338,
+          "turnover": 32140
+        }
+      ]
+    },
+    "8039": {
+      "prices": [
+        {
+          "date": "2026-10-19",
+          "open": 306.0,
+          "high": 320.5,
+          "low": 298.0,
+          "close": 299.0,
+          "volume": 79875560,
+          "turnover": 85025
+        }
+      ]
+    },
+    "6209": {
+      "prices": [
+        {
+          "date": "2026-10-19",
+          "open": 99.0,
+          "high": 104.5,
+          "low": 95.8,
+          "close": 102.0,
+          "volume": 48023425,
+          "turnover": 33396
+        }
+      ]
+    },
+    "3167": {
+      "prices": [
+        {
+          "date": "2026-10-19",
+          "open": 1000.0,
+          "high": 1035.0,
+          "low": 977.0,
+          "close": 989.0,
+          "volume": 7271236,
+          "turnover": 11634
+        }
+      ]
+    },
+    "6269": {
+      "prices": [
+        {
+          "date": "2026-10-19",
+          "open": 83.0,
+          "high": 90.0,
+          "low": 79.3,
+          "close": 80.3,
+          "volume": 180081775,
+          "turnover": 100421
+        }
+      ]
+    },
+    "3017": {
+      "prices": [
+        {
+          "date": "2026-10-19",
+          "open": 3220.0,
+          "high": 3350.0,
+          "low": 3180.0,
+          "close": 3320.0,
+          "volume": 2406224,
+          "turnover": 8384
+        }
+      ]
+    },
+    "1326": {
+      "prices": [
+        {
+          "date": "2026-10-19",
+          "open": 77.5,
+          "high": 77.9,
+          "low": 75.2,
+          "close": 75.5,
+          "volume": 32457532,
+          "turnover": 22360
+        }
+      ]
+    },
+    "2340": {
+      "prices": [
+        {
+          "date": "2026-10-19",
+          "open": 49.15,
+          "high": 50.7,
+          "low": 47.3,
+          "close": 47.7,
+          "volume": 25946011,
+          "turnover": 15280
+        }
+      ]
+    },
+    "2478": {
+      "prices": [
+        {
+          "date": "2026-10-19",
+          "open": 127.5,
+          "high": 128.0,
+          "low": 120.0,
+          "close": 122.0,
+          "volume": 7841917,
+          "turnover": 8157
+        }
+      ]
+    }
+  }
+}
