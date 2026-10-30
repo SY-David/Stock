@@ -1,7 +1,7 @@
 {
   "status": "success",
-  "last_attempt_at": "2026-10-29T14:26:14",
-  "snapshot_generated_at": "2026-10-29T14:31:34",
+  "last_attempt_at": "2026-10-30T14:16:21",
+  "snapshot_generated_at": "2026-10-30T14:20:35",
   "snapshot_path": "/home/runner/work/Stock/Stock/data/site_snapshot.json",
   "message": "快照更新成功",
   "error": null
