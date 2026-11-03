@@ -1,0 +1,290 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-11-03T15:23:47",
+  "candidate_symbols": [
+    "6456",
+    "2468",
+    "3481",
+    "6271",
+    "2465",
+    "2368",
+    "8996",
+    "6505",
+    "1528",
+    "2408"
+  ],
+  "evaluations": {
+    "0050": {
+      "symbol": "0050",
+      "symbol_name": "元大台灣50",
+      "score": 46,
+      "tomorrow_score": 33,
+      "tomorrow_light": "紅燈"
+    },
+    "2344": {
+      "symbol": "2344",
+      "symbol_name": "華邦電",
+      "score": 30,
+      "tomorrow_score": 29,
+      "tomorrow_light": "紅燈"
+    },
+    "6456": {
+      "symbol": "6456",
+      "symbol_name": "GIS-KY",
+      "score": 51,
+      "tomorrow_score": 51,
+      "tomorrow_light": "黃燈"
+    },
+    "2468": {
+      "symbol": "2468",
+      "symbol_name": "華經",
+      "score": 67,
+      "tomorrow_score": 64,
+      "tomorrow_light": "黃燈"
+    },
+    "3481": {
+      "symbol": "3481",
+      "symbol_name": "群創",
+      "score": 32,
+      "tomorrow_score": 29,
+      "tomorrow_light": "紅燈"
+    },
+    "6271": {
+      "symbol": "6271",
+      "symbol_name": "同欣電",
+      "score": 46,
+      "tomorrow_score": 49,
+      "tomorrow_light": "紅燈"
+    },
+    "2465": {
+      "symbol": "2465",
+      "symbol_name": "麗臺",
+      "score": 72,
+      "tomorrow_score": 74,
+      "tomorrow_light": "黃燈"
+    },
+    "2368": {
+      "symbol": "2368",
+      "symbol_name": "金像電",
+      "score": 44,
+      "tomorrow_score": 33,
+      "tomorrow_light": "紅燈"
+    },
+    "8996": {
+      "symbol": "8996",
+      "symbol_name": "高力",
+      "score": 41,
+      "tomorrow_score": 38,
+      "tomorrow_light": "紅燈"
+    },
+    "6505": {
+      "symbol": "6505",
+      "symbol_name": "台塑化",
+      "score": 55,
+      "tomorrow_score": 43,
+      "tomorrow_light": "紅燈"
+    },
+    "1528": {
+      "symbol": "1528",
+      "symbol_name": "恩德",
+      "score": 63,
+      "tomorrow_score": 63,
+      "tomorrow_light": "黃燈"
+    },
+    "2408": {
+      "symbol": "2408",
+      "symbol_name": "南亞科",
+      "score": 28,
+      "tomorrow_score": 29,
+      "tomorrow_light": "紅燈"
+    }
+  },
+  "recommendations": [],
+  "nightly_market": {
+    "market_bias": "偏空"
+  },
+  "raw_data": {
+    "0050": {
+      "prices": [
+        {
+          "date": "2026-11-03",
+          "open": 102.5,
+          "high": 103.35,
+          "low": 100.5,
+          "close": 100.6,
+          "volume": 302407473,
+          "turnover": 732782
+        }
+      ]
+    },
+    "2344": {
+      "prices": [
+        {
+          "date": "2026-11-03",
+          "open": 157.5,
+          "high": 158.0,
+          "low": 146.0,
+          "close": 146.0,
+          "volume": 90748935,
+          "turnover": 74621
+        }
+      ]
+    },
+    "6456": {
+      "prices": [
+        {
+          "date": "2026-11-03",
+          "open": 92.3,
+          "high": 94.5,
+          "low": 87.3,
+          "close": 87.7,
+          "volume": 28890501,
+          "turnover": 18137
+        }
+      ]
+    },
+    "2468": {
+      "prices": [
+        {
+          "date": "2026-11-03",
+          "open": 61.8,
+          "high": 64.0,
+          "low": 54.9,
+          "close": 55.3,
+          "volume": 61261551,
+          "turnover": 35294
+        }
+      ]
+    },
+    "3481": {
+      "prices": [
+        {
+          "date": "2026-11-03",
+          "open": 43.45,
+          "high": 44.4,
+          "low": 41.2,
+          "close": 41.2,
+          "volume": 132628433,
+          "turnover": 63502
+        }
+      ]
+    },
+    "6271": {
+      "prices": [
+        {
+          "date": "2026-11-03",
+          "open": 218.0,
+          "high": 219.5,
+          "low": 197.5,
+          "close": 198.5,
+          "volume": 8587649,
+          "turnover": 8096
+        }
+      ]
+    },
+    "2465": {
+      "prices": [
+        {
+          "date": "2026-11-03",
+          "open": 119.0,
+          "high": 119.0,
+          "low": 106.0,
+          "close": 114.0,
+          "volume": 32889346,
+          "turnover": 22252
+        }
+      ]
+    },
+    "2368": {
+      "prices": [
+        {
+          "date": "2026-11-03",
+          "open": 1020.0,
+          "high": 1050.0,
+          "low": 960.0,
+          "close": 970.0,
+          "volume": 11415300,
+          "turnover": 23734
+        }
+      ]
+    },
+    "8996": {
+      "prices": [
+        {
+          "date": "2026-11-03",
+          "open": 1485.0,
+          "high": 1495.0,
+          "low": 1360.0,
+          "close": 1360.0,
+          "volume": 3368675,
+          "turnover": 7634
+        }
+      ]
+    },
+    "6505": {
+      "prices": [
+        {
+          "date": "2026-11-03",
+          "open": 99.0,
+          "high": 100.5,
+          "low": 94.3,
+          "close": 94.9,
+          "volume": 29596423,
+          "turnover": 18697
+        }
+      ]
+    },
+    "1528": {
+      "prices": [
+        {
+          "date": "2026-11-03",
+          "open": 26.3,
+          "high": 26.7,
+          "low": 24.95,
+          "close": 25.15,
+          "volume": 12099638,
+          "turnover": 7333
+        }
+      ]
+    },
+    "2408": {
+      "prices": [
+        {
+          "date": "2026-11-03",
+          "open": 438.0,
+          "high": 442.5,
+          "low": 411.0,
+          "close": 411.0,
+          "volume": 51250064,
+          "turnover": 71207
+        }
+      ]
+    },
+    "2379": {
+      "prices": [
+        {
+          "date": "2026-11-03",
+          "open": 775.0,
+          "high": 785.0,
+          "low": 752.0,
+          "close": 756.0,
+          "volume": 2780452,
+          "turnover": 5336
+        }
+      ]
+    },
+    "2615": {
+      "prices": [
+        {
+          "date": "2026-11-03",
+          "open": 119.5,
+          "high": 120.5,
+          "low": 115.0,
+          "close": 115.5,
+          "volume": 9051455,
+          "turnover": 7375
+        }
+      ]
+    }
+  }
+}
