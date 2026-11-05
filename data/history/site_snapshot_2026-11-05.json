@@ -1,0 +1,292 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-11-05T15:37:28",
+  "candidate_symbols": [
+    "6456",
+    "2465",
+    "1709",
+    "2468",
+    "4977",
+    "3653",
+    "1528",
+    "4526",
+    "4960",
+    "8996"
+  ],
+  "evaluations": {
+    "0050": {
+      "symbol": "0050",
+      "symbol_name": "元大台灣50",
+      "score": 49,
+      "tomorrow_score": 46,
+      "tomorrow_light": "紅燈"
+    },
+    "2344": {
+      "symbol": "2344",
+      "symbol_name": "華邦電",
+      "score": 33,
+      "tomorrow_score": 32,
+      "tomorrow_light": "紅燈"
+    },
+    "6456": {
+      "symbol": "6456",
+      "symbol_name": "GIS-KY",
+      "score": 51,
+      "tomorrow_score": 64,
+      "tomorrow_light": "黃燈"
+    },
+    "2465": {
+      "symbol": "2465",
+      "symbol_name": "麗臺",
+      "score": 61,
+      "tomorrow_score": 63,
+      "tomorrow_light": "黃燈"
+    },
+    "1709": {
+      "symbol": "1709",
+      "symbol_name": "和益",
+      "score": 71,
+      "tomorrow_score": 70,
+      "tomorrow_light": "綠燈"
+    },
+    "2468": {
+      "symbol": "2468",
+      "symbol_name": "華經",
+      "score": 59,
+      "tomorrow_score": 56,
+      "tomorrow_light": "黃燈"
+    },
+    "4977": {
+      "symbol": "4977",
+      "symbol_name": "眾達-KY",
+      "score": 61,
+      "tomorrow_score": 58,
+      "tomorrow_light": "黃燈"
+    },
+    "3653": {
+      "symbol": "3653",
+      "symbol_name": "健策",
+      "score": 67,
+      "tomorrow_score": 65,
+      "tomorrow_light": "黃燈"
+    },
+    "1528": {
+      "symbol": "1528",
+      "symbol_name": "恩德",
+      "score": 35,
+      "tomorrow_score": 38,
+      "tomorrow_light": "紅燈"
+    },
+    "4526": {
+      "symbol": "4526",
+      "symbol_name": "東台",
+      "score": 67,
+      "tomorrow_score": 74,
+      "tomorrow_light": "綠燈"
+    },
+    "4960": {
+      "symbol": "4960",
+      "symbol_name": "誠美材",
+      "score": 50,
+      "tomorrow_score": 30,
+      "tomorrow_light": "紅燈"
+    },
+    "8996": {
+      "symbol": "8996",
+      "symbol_name": "高力",
+      "score": 42,
+      "tomorrow_score": 37,
+      "tomorrow_light": "紅燈"
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "4526",
+      "symbol_name": "東台",
+      "score": 67,
+      "tomorrow_score": 74,
+      "tomorrow_light": "綠燈",
+      "action": "列入優先觀察",
+      "recommendation_reason": "收盤 54.50 站上 MA20 42.25；利多：成長；利多：訂單"
+    },
+    {
+      "symbol": "1709",
+      "symbol_name": "和益",
+      "score": 71,
+      "tomorrow_score": 70,
+      "tomorrow_light": "綠燈",
+      "action": "列入優先觀察",
+      "recommendation_reason": "收盤 45.80 站上 MA20 27.27；夜間沒有明顯利空"
+    },
+    {
+      "symbol": "3653",
+      "symbol_name": "健策",
+      "score": 67,
+      "tomorrow_score": 65,
+      "tomorrow_light": "黃燈",
+      "action": "列入優先觀察",
+      "recommendation_reason": "收盤 5805.00 站上 MA20 5361.00；但夜間消息有雜訊，追價要保守"
+    }
+  ],
+  "nightly_market": {
+    "market_bias": "偏空"
+  },
+  "raw_data": {
+    "0050": {
+      "prices": [
+        {
+          "date": "2026-11-05",
+          "open": 99.4,
+          "high": 99.75,
+          "low": 96.9,
+          "close": 97.15,
+          "volume": 487502467,
+          "turnover": 891503
+        }
+      ]
+    },
+    "2344": {
+      "prices": [
+        {
+          "date": "2026-11-05",
+          "open": 133.5,
+          "high": 136.0,
+          "low": 127.5,
+          "close": 127.5,
+          "volume": 82273253,
+          "turnover": 63504
+        }
+      ]
+    },
+    "6456": {
+      "prices": [
+        {
+          "date": "2026-11-05",
+          "open": 90.8,
+          "high": 93.9,
+          "low": 86.8,
+          "close": 87.2,
+          "volume": 47894726,
+          "turnover": 31158
+        }
+      ]
+    },
+    "2465": {
+      "prices": [
+        {
+          "date": "2026-11-05",
+          "open": 124.5,
+          "high": 130.0,
+          "low": 118.0,
+          "close": 119.5,
+          "volume": 44065799,
+          "turnover": 27496
+        }
+      ]
+    },
+    "1709": {
+      "prices": [
+        {
+          "date": "2026-11-05",
+          "open": 48.4,
+          "high": 48.5,
+          "low": 45.4,
+          "close": 45.8,
+          "volume": 26161331,
+          "turnover": 17097
+        }
+      ]
+    },
+    "2468": {
+      "prices": [
+        {
+          "date": "2026-09-30",
+          "open": 46.3,
+          "high": 46.5,
+          "low": 45.3,
+          "close": 45.5,
+          "volume": 817306,
+          "turnover": 977
+        }
+      ]
+    },
+    "4977": {
+      "prices": [
+        {
+          "date": "2026-11-05",
+          "open": 177.5,
+          "high": 192.5,
+          "low": 170.5,
+          "close": 175.5,
+          "volume": 23767721,
+          "turnover": 20929
+        }
+      ]
+    },
+    "3653": {
+      "prices": [
+        {
+          "date": "2026-11-05",
+          "open": 6050.0,
+          "high": 6180.0,
+          "low": 5805.0,
+          "close": 5805.0,
+          "volume": 2440971,
+          "turnover": 7956
+        }
+      ]
+    },
+    "1528": {
+      "prices": [
+        {
+          "date": "2026-11-05",
+          "open": 27.4,
+          "high": 27.6,
+          "low": 24.9,
+          "close": 24.9,
+          "volume": 24899737,
+          "turnover": 13693
+        }
+      ]
+    },
+    "4526": {
+      "prices": [
+        {
+          "date": "2026-11-05",
+          "open": 57.0,
+          "high": 60.0,
+          "low": 54.5,
+          "close": 54.5,
+          "volume": 9515186,
+          "turnover": 7132
+        }
+      ]
+    },
+    "4960": {
+      "prices": [
+        {
+          "date": "2026-11-05",
+          "open": 32.2,
+          "high": 32.5,
+          "low": 29.65,
+          "close": 29.65,
+          "volume": 30635563,
+          "turnover": 15447
+        }
+      ]
+    },
+    "8996": {
+      "prices": [
+        {
+          "date": "2026-11-05",
+          "open": 1350.0,
+          "high": 1370.0,
+          "low": 1290.0,
+          "close": 1290.0,
+          "volume": 3373093,
+          "turnover": 9260
+        }
+      ]
+    }
+  }
+}
