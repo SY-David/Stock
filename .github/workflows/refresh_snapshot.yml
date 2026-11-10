@@ -14,6 +14,7 @@ on:
       - "requirements.txt"
       - "modules/**"
       - "tools/rebuild_snapshot_history.py"
+      - "tools/push_snapshot.py"
 
 permissions:
   contents: write
@@ -66,7 +67,7 @@ jobs:
             exit 0
           fi
           git commit -m "chore: refresh site snapshot"
-          git push
+          python tools/push_snapshot.py
 
       - name: Mark failed refresh
         if: steps.refresh.outcome == 'failure'
