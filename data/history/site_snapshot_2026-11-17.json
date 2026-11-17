@@ -1,0 +1,283 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-11-17T17:00:14",
+  "candidate_symbols": [
+    "2471",
+    "2468",
+    "2355",
+    "6949",
+    "2323",
+    "2466",
+    "1802",
+    "1416",
+    "9904",
+    "6214"
+  ],
+  "evaluations": {
+    "0050": {
+      "symbol": "0050",
+      "symbol_name": "元大台灣50",
+      "score": 38,
+      "tomorrow_score": 35,
+      "tomorrow_light": "紅燈"
+    },
+    "2344": {
+      "symbol": "2344",
+      "symbol_name": "華邦電",
+      "score": 33,
+      "tomorrow_score": 30,
+      "tomorrow_light": "紅燈"
+    },
+    "2471": {
+      "symbol": "2471",
+      "symbol_name": "資通",
+      "score": 60,
+      "tomorrow_score": 57,
+      "tomorrow_light": "黃燈"
+    },
+    "2468": {
+      "symbol": "2468",
+      "symbol_name": "華經",
+      "score": 67,
+      "tomorrow_score": 59,
+      "tomorrow_light": "紅燈"
+    },
+    "2355": {
+      "symbol": "2355",
+      "symbol_name": "敬鵬",
+      "score": 69,
+      "tomorrow_score": 67,
+      "tomorrow_light": "黃燈"
+    },
+    "6949": {
+      "symbol": "6949",
+      "symbol_name": "沛爾生醫*-創",
+      "score": 59,
+      "tomorrow_score": 42,
+      "tomorrow_light": "紅燈"
+    },
+    "2323": {
+      "symbol": "2323",
+      "symbol_name": "中環",
+      "score": 60,
+      "tomorrow_score": 61,
+      "tomorrow_light": "黃燈"
+    },
+    "2466": {
+      "symbol": "2466",
+      "symbol_name": "冠西電",
+      "score": 66,
+      "tomorrow_score": 49,
+      "tomorrow_light": "紅燈"
+    },
+    "1802": {
+      "symbol": "1802",
+      "symbol_name": "台玻",
+      "score": 66,
+      "tomorrow_score": 72,
+      "tomorrow_light": "黃燈"
+    },
+    "1416": {
+      "symbol": "1416",
+      "symbol_name": "廣豐",
+      "score": 72,
+      "tomorrow_score": 79,
+      "tomorrow_light": "綠燈"
+    },
+    "9904": {
+      "symbol": "9904",
+      "symbol_name": "寶成",
+      "score": 64,
+      "tomorrow_score": 57,
+      "tomorrow_light": "紅燈"
+    },
+    "6214": {
+      "symbol": "6214",
+      "symbol_name": "精誠",
+      "score": 46,
+      "tomorrow_score": 47,
+      "tomorrow_light": "紅燈"
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "1416",
+      "symbol_name": "廣豐",
+      "score": 72,
+      "tomorrow_score": 79,
+      "tomorrow_light": "綠燈",
+      "action": "可持有或拉回續看",
+      "recommendation_reason": "收盤 17.55 站上 MA20 15.45；利多：成長；利多：獲利成長"
+    },
+    {
+      "symbol": "2355",
+      "symbol_name": "敬鵬",
+      "score": 69,
+      "tomorrow_score": 67,
+      "tomorrow_light": "黃燈",
+      "action": "列入優先觀察",
+      "recommendation_reason": "收盤 56.50 站上 MA20 53.05；但夜間消息有雜訊，追價要保守"
+    }
+  ],
+  "nightly_market": {
+    "market_bias": "偏空"
+  },
+  "raw_data": {
+    "0050": {
+      "prices": [
+        {
+          "date": "2026-11-17",
+          "open": 94.55,
+          "high": 97.45,
+          "low": 93.25,
+          "close": 94.0,
+          "volume": 408719094,
+          "turnover": 535571
+        }
+      ]
+    },
+    "2344": {
+      "prices": [
+        {
+          "date": "2026-11-17",
+          "open": 108.5,
+          "high": 114.0,
+          "low": 104.0,
+          "close": 110.5,
+          "volume": 65787306,
+          "turnover": 36489
+        }
+      ]
+    },
+    "2471": {
+      "prices": [
+        {
+          "date": "2026-11-17",
+          "open": 70.4,
+          "high": 70.4,
+          "low": 70.4,
+          "close": 70.4,
+          "volume": 2284822,
+          "turnover": 1276
+        }
+      ]
+    },
+    "2468": {
+      "prices": [
+        {
+          "date": "2026-11-17",
+          "open": 81.6,
+          "high": 82.1,
+          "low": 73.5,
+          "close": 73.5,
+          "volume": 17749428,
+          "turnover": 9990
+        }
+      ]
+    },
+    "2355": {
+      "prices": [
+        {
+          "date": "2026-11-17",
+          "open": 58.8,
+          "high": 60.2,
+          "low": 55.7,
+          "close": 56.5,
+          "volume": 39655153,
+          "turnover": 28024
+        }
+      ]
+    },
+    "6949": {
+      "prices": [
+        {
+          "date": "2026-11-17",
+          "open": 44.95,
+          "high": 50.9,
+          "low": 44.7,
+          "close": 45.35,
+          "volume": 14995413,
+          "turnover": 7424
+        }
+      ]
+    },
+    "2323": {
+      "prices": [
+        {
+          "date": "2026-11-17",
+          "open": 11.3,
+          "high": 12.2,
+          "low": 11.2,
+          "close": 11.9,
+          "volume": 37940432,
+          "turnover": 9768
+        }
+      ]
+    },
+    "2466": {
+      "prices": [
+        {
+          "date": "2026-11-17",
+          "open": 415.0,
+          "high": 437.5,
+          "low": 406.0,
+          "close": 435.5,
+          "volume": 640110,
+          "turnover": 1363
+        }
+      ]
+    },
+    "1802": {
+      "prices": [
+        {
+          "date": "2026-11-17",
+          "open": 72.8,
+          "high": 75.5,
+          "low": 69.0,
+          "close": 69.0,
+          "volume": 153808798,
+          "turnover": 127559
+        }
+      ]
+    },
+    "1416": {
+      "prices": [
+        {
+          "date": "2026-11-17",
+          "open": 19.25,
+          "high": 19.4,
+          "low": 17.55,
+          "close": 17.55,
+          "volume": 5773965,
+          "turnover": 2774
+        }
+      ]
+    },
+    "9904": {
+      "prices": [
+        {
+          "date": "2026-11-17",
+          "open": 27.1,
+          "high": 27.35,
+          "low": 26.25,
+          "close": 26.3,
+          "volume": 25705325,
+          "turnover": 9304
+        }
+      ]
+    },
+    "6214": {
+      "prices": [
+        {
+          "date": "2026-11-17",
+          "open": 187.5,
+          "high": 189.5,
+          "low": 179.0,
+          "close": 180.5,
+          "volume": 1395830,
+          "turnover": 1540
+        }
+      ]
+    }
+  }
+}
