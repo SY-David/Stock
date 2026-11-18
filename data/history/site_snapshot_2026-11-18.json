@@ -1,0 +1,300 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-11-18T16:37:59",
+  "candidate_symbols": [
+    "9933",
+    "6919",
+    "3704",
+    "2355",
+    "4977",
+    "6285",
+    "2887",
+    "1303",
+    "2454",
+    "2618"
+  ],
+  "evaluations": {
+    "0050": {
+      "symbol": "0050",
+      "symbol_name": "元大台灣50",
+      "score": 37,
+      "tomorrow_score": 36,
+      "tomorrow_light": "紅燈"
+    },
+    "2344": {
+      "symbol": "2344",
+      "symbol_name": "華邦電",
+      "score": 35,
+      "tomorrow_score": 32,
+      "tomorrow_light": "紅燈"
+    },
+    "9933": {
+      "symbol": "9933",
+      "symbol_name": "中鼎",
+      "score": 74,
+      "tomorrow_score": 77,
+      "tomorrow_light": "黃燈"
+    },
+    "6919": {
+      "symbol": "6919",
+      "symbol_name": "康霈*",
+      "score": 54,
+      "tomorrow_score": 38,
+      "tomorrow_light": "紅燈"
+    },
+    "3704": {
+      "symbol": "3704",
+      "symbol_name": "合勤控",
+      "score": 33,
+      "tomorrow_score": 30,
+      "tomorrow_light": "紅燈"
+    },
+    "2355": {
+      "symbol": "2355",
+      "symbol_name": "敬鵬",
+      "score": 82,
+      "tomorrow_score": 77,
+      "tomorrow_light": "黃燈"
+    },
+    "4977": {
+      "symbol": "4977",
+      "symbol_name": "眾達-KY",
+      "score": 76,
+      "tomorrow_score": 73,
+      "tomorrow_light": "黃燈"
+    },
+    "6285": {
+      "symbol": "6285",
+      "symbol_name": "啟碁",
+      "score": 39,
+      "tomorrow_score": 44,
+      "tomorrow_light": "紅燈"
+    },
+    "2887": {
+      "symbol": "2887",
+      "symbol_name": "台新新光金",
+      "score": 36,
+      "tomorrow_score": 33,
+      "tomorrow_light": "紅燈"
+    },
+    "1303": {
+      "symbol": "1303",
+      "symbol_name": "南亞",
+      "score": 56,
+      "tomorrow_score": 48,
+      "tomorrow_light": "紅燈"
+    },
+    "2454": {
+      "symbol": "2454",
+      "symbol_name": "聯發科",
+      "score": 59,
+      "tomorrow_score": 58,
+      "tomorrow_light": "黃燈"
+    },
+    "2618": {
+      "symbol": "2618",
+      "symbol_name": "長榮航",
+      "score": 69,
+      "tomorrow_score": 62,
+      "tomorrow_light": "紅燈"
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "2355",
+      "symbol_name": "敬鵬",
+      "score": 82,
+      "tomorrow_score": 77,
+      "tomorrow_light": "黃燈",
+      "action": "可持有或拉回續看",
+      "recommendation_reason": "收盤 58.60 站上 MA20 53.33；但夜間消息有雜訊，追價要保守"
+    }
+  ],
+  "nightly_market": {
+    "market_bias": "偏空"
+  },
+  "raw_data": {
+    "0050": {
+      "prices": [
+        {
+          "date": "2026-11-18",
+          "open": 95.7,
+          "high": 95.95,
+          "low": 92.35,
+          "close": 94.1,
+          "volume": 303494049,
+          "turnover": 274694
+        }
+      ]
+    },
+    "2344": {
+      "prices": [
+        {
+          "date": "2026-11-18",
+          "open": 114.0,
+          "high": 115.0,
+          "low": 102.5,
+          "close": 108.0,
+          "volume": 61716797,
+          "turnover": 34826
+        }
+      ]
+    },
+    "9933": {
+      "prices": [
+        {
+          "date": "2026-11-18",
+          "open": 56.8,
+          "high": 59.3,
+          "low": 55.3,
+          "close": 57.5,
+          "volume": 71173275,
+          "turnover": 40497
+        }
+      ]
+    },
+    "6919": {
+      "prices": [
+        {
+          "date": "2026-11-18",
+          "open": 74.0,
+          "high": 74.4,
+          "low": 70.5,
+          "close": 72.0,
+          "volume": 9593308,
+          "turnover": 5810
+        }
+      ]
+    },
+    "3704": {
+      "prices": [
+        {
+          "date": "2026-11-18",
+          "open": 37.65,
+          "high": 38.1,
+          "low": 34.65,
+          "close": 36.0,
+          "volume": 10277214,
+          "turnover": 6027
+        }
+      ]
+    },
+    "2355": {
+      "prices": [
+        {
+          "date": "2026-11-18",
+          "open": 58.3,
+          "high": 60.6,
+          "low": 53.1,
+          "close": 58.6,
+          "volume": 60364145,
+          "turnover": 40249
+        }
+      ]
+    },
+    "4977": {
+      "prices": [
+        {
+          "date": "2026-11-18",
+          "open": 187.0,
+          "high": 197.0,
+          "low": 175.0,
+          "close": 197.0,
+          "volume": 31331647,
+          "turnover": 27779
+        }
+      ]
+    },
+    "6285": {
+      "prices": [
+        {
+          "date": "2026-11-18",
+          "open": 187.5,
+          "high": 202.0,
+          "low": 178.0,
+          "close": 202.0,
+          "volume": 30732313,
+          "turnover": 22680
+        }
+      ]
+    },
+    "2887": {
+      "prices": [
+        {
+          "date": "2026-11-18",
+          "open": 39.5,
+          "high": 39.55,
+          "low": 36.9,
+          "close": 37.1,
+          "volume": 86247953,
+          "turnover": 28938
+        }
+      ]
+    },
+    "1303": {
+      "prices": [
+        {
+          "date": "2026-11-18",
+          "open": 278.0,
+          "high": 280.0,
+          "low": 239.5,
+          "close": 253.5,
+          "volume": 128045331,
+          "turnover": 111021
+        }
+      ]
+    },
+    "2454": {
+      "prices": [
+        {
+          "date": "2026-11-18",
+          "open": 3995.0,
+          "high": 4075.0,
+          "low": 3775.0,
+          "close": 3940.0,
+          "volume": 16765172,
+          "turnover": 65183
+        }
+      ]
+    },
+    "2618": {
+      "prices": [
+        {
+          "date": "2026-11-18",
+          "open": 48.2,
+          "high": 48.65,
+          "low": 45.7,
+          "close": 46.8,
+          "volume": 32295656,
+          "turnover": 19392
+        }
+      ]
+    },
+    "1416": {
+      "prices": [
+        {
+          "date": "2025-09-30",
+          "open": 11.5,
+          "high": 11.7,
+          "low": 11.45,
+          "close": 11.5,
+          "volume": 237094,
+          "turnover": 161
+        }
+      ]
+    },
+    "1802": {
+      "prices": [
+        {
+          "date": "2026-11-18",
+          "open": 72.0,
+          "high": 72.2,
+          "low": 62.1,
+          "close": 65.2,
+          "volume": 194526361,
+          "turnover": 99498
+        }
+      ]
+    }
+  }
+}
