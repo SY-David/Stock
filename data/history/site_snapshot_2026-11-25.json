@@ -1,0 +1,292 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-11-25T18:04:46",
+  "candidate_symbols": [
+    "2603",
+    "2618",
+    "2886",
+    "2382",
+    "2890",
+    "2891",
+    "2881",
+    "2882",
+    "2887",
+    "2330"
+  ],
+  "evaluations": {
+    "0050": {
+      "symbol": "0050",
+      "symbol_name": "元大台灣50",
+      "score": 41,
+      "tomorrow_score": 40,
+      "tomorrow_light": "紅燈"
+    },
+    "2344": {
+      "symbol": "2344",
+      "symbol_name": "華邦電",
+      "score": 30,
+      "tomorrow_score": 28,
+      "tomorrow_light": "紅燈"
+    },
+    "2603": {
+      "symbol": "2603",
+      "symbol_name": "長榮",
+      "score": 45,
+      "tomorrow_score": 44,
+      "tomorrow_light": "紅燈"
+    },
+    "2618": {
+      "symbol": "2618",
+      "symbol_name": "長榮航",
+      "score": 63,
+      "tomorrow_score": 56,
+      "tomorrow_light": "紅燈"
+    },
+    "2886": {
+      "symbol": "2886",
+      "symbol_name": "兆豐金",
+      "score": 59,
+      "tomorrow_score": 64,
+      "tomorrow_light": "黃燈"
+    },
+    "2382": {
+      "symbol": "2382",
+      "symbol_name": "廣達",
+      "score": 45,
+      "tomorrow_score": 49,
+      "tomorrow_light": "紅燈"
+    },
+    "2890": {
+      "symbol": "2890",
+      "symbol_name": "永豐金",
+      "score": 77,
+      "tomorrow_score": 82,
+      "tomorrow_light": "綠燈"
+    },
+    "2891": {
+      "symbol": "2891",
+      "symbol_name": "中信金",
+      "score": 77,
+      "tomorrow_score": 74,
+      "tomorrow_light": "黃燈"
+    },
+    "2881": {
+      "symbol": "2881",
+      "symbol_name": "富邦金",
+      "score": 44,
+      "tomorrow_score": 40,
+      "tomorrow_light": "紅燈"
+    },
+    "2882": {
+      "symbol": "2882",
+      "symbol_name": "國泰金",
+      "score": 77,
+      "tomorrow_score": 80,
+      "tomorrow_light": "綠燈"
+    },
+    "2887": {
+      "symbol": "2887",
+      "symbol_name": "台新新光金",
+      "score": 42,
+      "tomorrow_score": 39,
+      "tomorrow_light": "紅燈"
+    },
+    "2330": {
+      "symbol": "2330",
+      "symbol_name": "台積電",
+      "score": 27,
+      "tomorrow_score": 42,
+      "tomorrow_light": "紅燈"
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "2890",
+      "symbol_name": "永豐金",
+      "score": 77,
+      "tomorrow_score": 82,
+      "tomorrow_light": "綠燈",
+      "action": "可持有或拉回續看",
+      "recommendation_reason": "收盤 46.50 站上 MA20 44.33；利多：獲利創高；利多：創高"
+    },
+    {
+      "symbol": "2882",
+      "symbol_name": "國泰金",
+      "score": 77,
+      "tomorrow_score": 80,
+      "tomorrow_light": "綠燈",
+      "action": "可持有或拉回續看",
+      "recommendation_reason": "收盤 116.00 站上 MA20 111.47；利多：創高；利多：配息"
+    },
+    {
+      "symbol": "2891",
+      "symbol_name": "中信金",
+      "score": 77,
+      "tomorrow_score": 74,
+      "tomorrow_light": "黃燈",
+      "action": "可持有或拉回續看",
+      "recommendation_reason": "收盤 75.80 站上 MA20 70.58；但夜間消息有雜訊，追價要保守"
+    }
+  ],
+  "nightly_market": {
+    "market_bias": "偏空"
+  },
+  "raw_data": {
+    "0050": {
+      "prices": [
+        {
+          "date": "2026-11-25",
+          "open": 91.7,
+          "high": 91.85,
+          "low": 86.2,
+          "close": 90.3,
+          "volume": 464126099,
+          "turnover": 490847
+        }
+      ]
+    },
+    "2344": {
+      "prices": [
+        {
+          "date": "2026-11-25",
+          "open": 98.5,
+          "high": 101.0,
+          "low": 94.5,
+          "close": 94.5,
+          "volume": 75172823,
+          "turnover": 48953
+        }
+      ]
+    },
+    "2603": {
+      "prices": [
+        {
+          "date": "2026-11-25",
+          "open": 250.0,
+          "high": 256.5,
+          "low": 244.5,
+          "close": 252.5,
+          "volume": 29602949,
+          "turnover": 16804
+        }
+      ]
+    },
+    "2618": {
+      "prices": [
+        {
+          "date": "2026-11-25",
+          "open": 47.0,
+          "high": 47.4,
+          "low": 44.65,
+          "close": 45.7,
+          "volume": 39649301,
+          "turnover": 15991
+        }
+      ]
+    },
+    "2886": {
+      "prices": [
+        {
+          "date": "2026-10-30",
+          "open": 54.2,
+          "high": 54.9,
+          "low": 53.9,
+          "close": 54.8,
+          "volume": 13435587,
+          "turnover": 6076
+        }
+      ]
+    },
+    "2382": {
+      "prices": [
+        {
+          "date": "2026-11-25",
+          "open": 270.0,
+          "high": 273.5,
+          "low": 254.5,
+          "close": 261.0,
+          "volume": 23376087,
+          "turnover": 18349
+        }
+      ]
+    },
+    "2890": {
+      "prices": [
+        {
+          "date": "2026-10-30",
+          "open": 46.0,
+          "high": 46.7,
+          "low": 45.5,
+          "close": 46.5,
+          "volume": 22407896,
+          "turnover": 11710
+        }
+      ]
+    },
+    "2891": {
+      "prices": [
+        {
+          "date": "2026-10-30",
+          "open": 75.0,
+          "high": 75.8,
+          "low": 74.0,
+          "close": 75.8,
+          "volume": 50114684,
+          "turnover": 16885
+        }
+      ]
+    },
+    "2881": {
+      "prices": [
+        {
+          "date": "2026-11-25",
+          "open": 140.0,
+          "high": 142.0,
+          "low": 129.5,
+          "close": 132.5,
+          "volume": 35928469,
+          "turnover": 19993
+        }
+      ]
+    },
+    "2882": {
+      "prices": [
+        {
+          "date": "2026-10-30",
+          "open": 114.5,
+          "high": 116.5,
+          "low": 113.0,
+          "close": 116.0,
+          "volume": 20393127,
+          "turnover": 7777
+        }
+      ]
+    },
+    "2887": {
+      "prices": [
+        {
+          "date": "2026-11-25",
+          "open": 35.5,
+          "high": 35.6,
+          "low": 33.0,
+          "close": 34.0,
+          "volume": 93786222,
+          "turnover": 24936
+        }
+      ]
+    },
+    "2330": {
+      "prices": [
+        {
+          "date": "2026-11-25",
+          "open": 2150.0,
+          "high": 2170.0,
+          "low": 2020.0,
+          "close": 2150.0,
+          "volume": 84911914,
+          "turnover": 286506
+        }
+      ]
+    }
+  }
+}
